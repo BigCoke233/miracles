@@ -1,0 +1,632 @@
+{
+  "颜文字": {
+    "type": "emoticon",
+    "container": [
+      {
+        "icon": "OωO",
+        "text": "Author: DIYgod"
+      },
+      {
+        "icon": "|´・ω・)ノ",
+        "text": "Hi"
+      },
+      {
+        "icon": "ヾ(≧∇≦*)ゝ",
+        "text": "开心"
+      },
+      {
+        "icon": "(☆ω☆)",
+        "text": "星星眼"
+      },
+      {
+        "icon": "（╯‵□′）╯︵┴─┴",
+        "text": "掀桌"
+      },
+      {
+        "icon": "￣﹃￣",
+        "text": "流口水"
+      },
+      {
+        "icon": "(/ω＼)",
+        "text": "捂脸"
+      },
+      {
+        "icon": "∠( ᐛ 」∠)＿",
+        "text": "给跪"
+      },
+      {
+        "icon": "(๑•̀ㅁ•́ฅ)",
+        "text": "Hi"
+      },
+      {
+        "icon": "→_→",
+        "text": "斜眼"
+      },
+      {
+        "icon": "୧(๑•̀⌄•́๑)૭",
+        "text": "加油"
+      },
+      {
+        "icon": "٩(ˊᗜˋ*)و",
+        "text": "有木有WiFi"
+      },
+      {
+        "icon": "(ノ°ο°)ノ",
+        "text": "前方高能预警"
+      },
+      {
+        "icon": "(´இ皿இ｀)",
+        "text": "我从未见过如此厚颜无耻之人"
+      },
+      {
+        "icon": "⌇●﹏●⌇",
+        "text": "吓死宝宝惹"
+      },
+      {
+        "icon": "(ฅ´ω`ฅ)",
+        "text": "已阅留爪"
+      },
+      {
+        "icon": "(╯°A°)╯︵○○○",
+        "text": "去吧大师球"
+      },
+      {
+        "icon": "φ(￣∇￣o)",
+        "text": "太萌惹"
+      },
+      {
+        "icon": "ヾ(´･ ･｀｡)ノ\"",
+        "text": "咦咦咦"
+      },
+      {
+        "icon": "( ง ᵒ̌皿ᵒ̌)ง⁼³₌₃",
+        "text": "气呼呼"
+      },
+      {
+        "icon": "(ó﹏ò｡)",
+        "text": "我受到了惊吓"
+      },
+      {
+        "icon": "Σ(っ °Д °;)っ",
+        "text": "什么鬼"
+      },
+      {
+        "icon": "( ,,´･ω･)ﾉ\"(´っω･｀｡)",
+        "text": "摸摸头"
+      },
+      {
+        "icon": "╮(╯▽╰)╭ ",
+        "text": "无奈"
+      },
+      {
+        "icon": "o(*////▽////*)q ",
+        "text": "脸红"
+      },
+      {
+        "icon": "＞﹏＜",
+        "text": ""
+      },
+      {
+        "icon": "( ๑´•ω•) \"(ㆆᴗㆆ)",
+        "text": ""
+      },
+      {
+        "icon": "(｡•ˇ‸ˇ•｡)",
+        "text": ""
+      }
+    ]
+  },
+  "阿鲁": {
+    "name": "aru",
+    "type": "image",
+    "container": [
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/despise.png\" class=\"owo-img\">",
+        "text": "鄙视"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/knife.png\" class=\"owo-img\">",
+        "text": "插刀"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/pouting.png\" class=\"owo-img\">",
+        "text": "亲嘴"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/shutup.png\" class=\"owo-img\">",
+        "text": "闭嘴"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/unhappy.png\" class=\"owo-img\">",
+        "text": "不开心"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/discovertruth.png\" class=\"owo-img\">",
+        "text": "发现真相"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/shit.png\" class=\"owo-img\">",
+        "text": "便便"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/distressed.png\" class=\"owo-img\">",
+        "text": "烦恼"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/shy.png\" class=\"owo-img\">",
+        "text": "捂脸"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/speechless.png\" class=\"owo-img\">",
+        "text": "无语"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/confuse.png\" class=\"owo-img\">",
+        "text": "迷惑"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/frown.png\" class=\"owo-img\">",
+        "text": "皱眉"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/proud.png\" class=\"owo-img\">",
+        "text": "得意"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/cheer.png\" class=\"owo-img\">",
+        "text": "欢呼"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/meditation.png\" class=\"owo-img\">",
+        "text": "沉思"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/diving.png\" class=\"owo-img\">",
+        "text": "潜水"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/cryingface.png\" class=\"owo-img\">",
+        "text": "掩面哭泣"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/lurking.png\" class=\"owo-img\">",
+        "text": "潜伏"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/thumb.png\" class=\"owo-img\">",
+        "text": "大拇指"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/smile.png\" class=\"owo-img\">",
+        "text": "微笑"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/clap.png\" class=\"owo-img\">",
+        "text": "拍掌"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/envious.png\" class=\"owo-img\">",
+        "text": "眼馋"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/surrender.png\" class=\"owo-img\">",
+        "text": "投降"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/bigeye.png\" class=\"owo-img\">",
+        "text": "大眼睛"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/nose.png\" class=\"owo-img\">",
+        "text": "抠鼻"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/sweat.png\" class=\"owo-img\">",
+        "text": "流汗"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/flower.png\" class=\"owo-img\">",
+        "text": "小花花"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/crying.png\" class=\"owo-img\">",
+        "text": "流泪"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/spit.png\" class=\"owo-img\">",
+        "text": "吐"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/surprised.png\" class=\"owo-img\">",
+        "text": "吃惊"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/blood.png\" class=\"owo-img\">",
+        "text": "一滩血"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/blood2.png\" class=\"owo-img\">",
+        "text": "吐血"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/shy2.png\" class=\"owo-img\">",
+        "text": "脸红"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/angry.png\" class=\"owo-img\">",
+        "text": "生气"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/nomatter.png\" class=\"owo-img\">",
+        "text": "无所谓"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/dead.png\" class=\"owo-img\">",
+        "text": "死翘翘"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/insidious.png\" class=\"owo-img\">",
+        "text": "阴险"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/aru/tongue.png\" class=\"owo-img\">",
+        "text": "吐舌"
+      }
+    ]
+  },
+  "推特":{
+    "type": "image",
+    "name": "twemoji",
+    "container":[
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/smile.png\" class=\"owo-img\">",
+        "text": "微笑"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/tongue.png\" class=\"owo-img\">",
+        "text": "吐舌"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/tilted.png\" class=\"owo-img\">",
+        "text": "歪头"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/tiaomei.png\" class=\"owo-img\">",
+        "text": "挑眉"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/shy.png\" class=\"owo-img\">",
+        "text": "害羞"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/sweat.png\" class=\"owo-img\">",
+        "text": "流汗"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/proud.png\" class=\"owo-img\">",
+        "text": "得意"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/uncomfort.png\" class=\"owo-img\">",
+        "text": "难受"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/smilecry.png\" class=\"owo-img\">",
+        "text": "笑哭"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/love.png\" class=\"owo-img\">",
+        "text": "喜欢"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/notalk.png\" class=\"owo-img\">",
+        "text": "不说话"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/happy.png\" class=\"owo-img\">",
+        "text": "开心"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/frightened.png\" class=\"owo-img\">",
+        "text": "惊恐"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/dtongue.png\" class=\"owo-img\">",
+        "text": "吐舌"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/cry.png\" class=\"owo-img\">",
+        "text": "哭泣"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/cool.png\" class=\"owo-img\">",
+        "text": "炫酷"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/bigsmile.png\" class=\"owo-img\">",
+        "text": "红脸笑"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/ok.png\" class=\"owo-img\">",
+        "text": "可以"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/kiss.png\" class=\"owo-img\">",
+        "text": "亲亲"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/angry.png\" class=\"owo-img\">",
+        "text": "生气"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/family.png\" class=\"owo-img\">",
+        "text": "家庭"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/congratulate.png\" class=\"owo-img\">",
+        "text": "祝贺"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/gift.png\" class=\"owo-img\">",
+        "text": "礼物"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/prayer.png\" class=\"owo-img\">",
+        "text": "祈祷"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/twemoji/star.png\" class=\"owo-img\">",
+        "text": "星星"
+      }
+    ]
+  },
+	  "贴吧":{
+    "type": "image",
+    "name": "paopao",
+    "container":[
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/1.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_02.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_03.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_04.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_05.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_06.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_07.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_08.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_09.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },
+      {
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_10.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_11.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_12.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_13.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_14.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_15.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_16.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_17.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_18.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_19.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_20.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_21.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_22.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_23.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_24.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_25.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_26.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_27.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_28.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_29.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_30.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_31.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_32.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_33.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_34.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_35.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_36.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_37.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_38.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_39.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_40.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_41.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_42.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_43.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_44.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_45.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_46.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_47.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_48.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_49.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_50.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_52.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_53.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_54.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_55.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_56.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_57.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_58.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_59.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_60.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_61.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_62.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_71.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_72.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_73.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_74.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_75.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_76.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_77.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_78.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_79.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_80.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_81.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_82.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_83.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_84.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_85.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_86.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_87.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_88.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_89.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_90.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_91.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_92.png\" class=\"owo-img\">",
+        "text": "泡泡"
+      },{
+        "icon": "<img src=\"/usr/themes/Miracles/images/biaoqing/paopao/tieba_emotion_93.png\" class=\"owo-img\">",
+        "text": "泡泡"
+    }
+    ]
+  }
+}
