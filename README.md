@@ -21,5 +21,25 @@ As you see, 这是一款花费了我很大精力的 Typecho 主题，原定准�
 - 极简的设置项，不让设置成为累赘
 - 前台登录
 
+# 使用 Usage
+1. 到 [Releases](https://github.com/BigCoke233/miracles/releases) 页面下载最新发行版。
+2. Star 本项目
+3. 解压后，检查文件名是否为`Miracles`，若不是请修改。
+4. 根据 [Wiki](https://github.com/BigCoke233/miracles/wiki) 配置本主题
+
 # 漏洞 Bugs
-- 一些样式在夜间模式下未良好兼容
+- 「待优化」一些样式在夜间模式下未良好兼容
+- 「待优化」点击图片呼出 FancyBox 之后会自动返回顶部（F12 未报错，会不会是 css 冲突？）
+
+# 版权 Copyright
+本项目使用 MIT License 作为开源协议，所以无论你做什么都**请保留主题包中的版权信息**。  
+本项目引入了一下的开源项目：
+- [jQuery](https://github.com/jquery/jquery)
+- [FancyBox](https://github.com/fancyapps/fancybox)
+- [Prism.js](https://github.com/PrismJS/prism)
+- [Nprogress](https://github.com/rstacruz/nprogress)
+- [OwO](https://github.com/DIYgod/OwO)
+- [Pjax](https://github.com/defunkt/jquery-pjax)
+- [LazyLoad](https://github.com/tuupola/lazyload)
+
+> Juse enjoy it~
