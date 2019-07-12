@@ -42,4 +42,4 @@ As you see, 这是一款花费了我很大精力的 Typecho 主题，原定准�
 - [Pjax](https://github.com/defunkt/jquery-pjax)
 - [LazyLoad](https://github.com/tuupola/lazyload)
 
-> Juse enjoy it~
+> Just enjoy it~
