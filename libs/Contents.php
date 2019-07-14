@@ -10,7 +10,9 @@ class Contents
     {
         $text = preg_replace('/<pre><code>/s','<pre><code class="language-html">',$text);
 	    $text = preg_replace('/<img(.*?)src="(.*?)"(.*?)alt="(.*?)"(.*?)>/s','<center><a data-fancybox="gallery" href="${2}" class="gallery-link"><img${1}src="${2}"${3}></a></center>',$text); 
-	    
+	    //LazyLoad
+		$text = preg_replace('/<img (.*?)src(.*?)(\/)?>/','<img $1src="/usr/themes/Miracles/images/loading.gif"'.$style.' data-original$2 />',$text);
+		
 		//解析友链盒子
 	    $reg = '/\[links\](.*?)\[\/links\]/s';
         $rp = '<div class="links-box container-fluid"><div class="row">${1}</div></div>';

@@ -16,11 +16,13 @@ a {
 body,html {
 	padding: 0;
 	margin: 0;
-	height: 100%;
-	width: 100%;
 	background: #fafafa;
 	overflow: auto;
 	transition: background 0.2s
+}
+body {
+	height: 100%;
+	width: 100%;
 }
 
 hr {
@@ -52,12 +54,9 @@ hr {
 }
 
 .body-dark .post-content code {
-	background: #505050
+	background: #505050;
 }
 
-.body-dark .post-content pre code {
-	background: #2d2d2d!important
-}
 
 .body-dark .post-content img {
 	box-shadow: 0 2px 10px #323232;
@@ -79,8 +78,26 @@ hr {
 	background: #646464
 }
 
-.body-dark .search-form input,.body-dark .comment-form input,.body-dark .comment-form textarea,.body-dark .comment-reply a:hover,.body-dark .dark-button,.body-dark .gotop-button,.body-dark .links-item,.body-dark .post-body,.body-dark .post-content th,.body-dark .post-item,.body-dark .post-pagenav a {
+.body-dark .search-form input,
+.body-dark .comment-form input,
+.body-dark .OwO-logo,
+.body-dark .comment-form textarea,
+.body-dark .comment-reply a:hover,
+.body-dark .dark-button,
+.body-dark .gotop-button,
+.body-dark .links-item,
+.body-dark .post-body,
+.body-dark .post-content th,
+.body-dark .post-item,
+.body-dark .post-pagenav a,
+.body-dark .OwO-body,
+.body-dark .OwO-package-active,
+.body-dark .OwO-packages li:hover {
 	background: #5a5a5a!important
+}
+.body-dark .OwO-item,
+.body-dark .OwO-bar {
+	background: rgb(110,110,110)!important;
 }
 
 .body-dark .links-item {
@@ -96,6 +113,7 @@ hr {
 .body-dark .comment-content p,
 .body-dark .comment-form input,
 .body-dark .comment-form textarea,
+.body-dark .OwO-logo,
 .body-dark .dark-button,
 .body-dark .footer-info,
 .body-dark .footer-info a,
@@ -111,7 +129,8 @@ hr {
 .body-dark .search-close,
 .body-dark .login,
 .body-dark .login-close,
-.body-darl .login a {
+.body-darl .login a,
+.body-dark .OwO-bar {
 	color: #fafafa!important
 }
 
@@ -125,8 +144,10 @@ hr {
 .body-dark .post-content table,
 .body-dark .post-content td,
 .body-dark .post-content th,
-.body-dark .post-content tr {
-	border-color: #6e6e6e
+.body-dark .post-content tr,
+.body-dark .OwO-logo,
+.body-dark .OwO-body {
+	border-color: #6e6e6e!important;
 }
 
 .body-dark .dark-cover {
@@ -156,6 +177,13 @@ hr {
 }
 .body-dark .post-content hr {
 	background: rgb(120,120,120)
+}
+.body-dark img {
+	filter: brightness(90%);
+}
+.body-dark .post-banner,
+.body-dark iframe {
+	filter: brightness(75%);
 }
 
 .nav {
@@ -271,8 +299,9 @@ hr {
 	margin-top: 10px
 }
 
-.post-list {
-	margin-top: -140px
+.post-list,
+.post-body {
+	margin-top: -110px
 }
 
 .post-body,.post-item {
@@ -353,10 +382,6 @@ hr {
 	background: #f5f5f5
 }
 
-.post-body {
-	margin-top: -140px
-}
-
 .post-content {
 	padding: 26px;
 	font-size: 18px;
@@ -375,7 +400,7 @@ hr {
 }
 
 .post-content code {
-	font-size: .8em;
+	font-size: 0.8em;
 	background: #f0f0f0;
 	border-radius: 3px;
 	font-family: font-family: 'Noto Sans SC',sans-serif!important;
@@ -447,6 +472,20 @@ hr {
 .post-content a:not(.no-line):hover::before {
 	transform-origin: bottom left;
 	transform: scaleX(1)
+}
+
+.post-content p {
+	vertical-align: middle;
+}
+
+.post-content .owo-img {
+	box-shadow: 0 0 0 #fff;
+	-moz-box-shadow: 0 0 0 #fff;
+	-webkit-box-shadow: 0 0 0 #fff;
+	display: inline;
+	height: 26px;
+	width: 26px;
+	vertical-align: middle
 }
 
 .post-pagenav {
@@ -976,6 +1015,10 @@ iframe[src*="//player.bilibili.com/player.html"] {
     .login-form button	{
 		width: 350px;
 	}
+	.post-list,
+    .post-body {
+	    margin-top: -130px
+    }
 }
 
 @media (min-width:992px) {
@@ -1050,6 +1093,10 @@ iframe[src*="//player.bilibili.com/player.html"] {
     .login-form button	{
 		width: 400px;
 	}
+	.post-list,
+    .post-body {
+	    margin-top: -134px
+    }
 }
 
 @media (min-width:1200px) {
@@ -1097,7 +1144,6 @@ iframe[src*="//player.bilibili.com/player.html"] {
 		line-height: 30px;
 		letter-spacing: 2px
 	}
-
 	.dark-button,.gotop-button {
 		padding: 18px 23px;
 		right: 38px
@@ -1123,4 +1169,8 @@ iframe[src*="//player.bilibili.com/player.html"] {
     .login-form button	{
 		width: 550px;
 	}
+	.post-list,
+    .post-body {
+	    margin-top: -140px
+    }
 }

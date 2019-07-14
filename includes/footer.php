@@ -50,6 +50,13 @@
         width: '400px',
         maxHeight: '250px'
       });
+	  jQuery(function() {          
+          jQuery("img").lazyload({threshold: 200,effect: "fadeIn"});
+      });
+    });
+	//LazyLoad
+	jQuery(function() {          
+        jQuery("img").lazyload({threshold: 200,effect: "fadeIn"});
     });
 	//解决刷新后不显示行号的问题
     var pres = document.getElementsByTagName('pre');
