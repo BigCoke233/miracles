@@ -958,6 +958,75 @@ hr {
 	margin-top: 0;
 }
 
+.saying-form {
+	margin-bottom: 20px;
+}
+.saying-OwO {
+	float: left;
+	margin-left: 0
+}
+.saying-submit {
+	float: right;
+	background: var(--theme-color);
+	border-radius: 5px;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	font-size: 15px;
+	cursor: pointer;
+}
+.saying-content p {
+	padding: 10px 20px;
+}
+.saying-content a {
+	color: white;
+}
+.saying-author,
+.saying-meta,
+.saying-author a {
+	position: absolute;
+	color: rgb(250,250,250)!important;
+	font-size: 12px;
+}
+.saying-meta {
+	bottom: 3px;
+	right: 10px;
+}
+.saying-author {
+	top: 3px;
+	left: 20px;
+}
+.saying-meta i {
+	font-size: 12px;
+}
+
+/* 气泡 */
+.bubble {
+    position: relative;
+    background: var(--theme-color);
+	border-radius: 2px;
+	padding: 0;
+	color: white;
+	display: inline-block;
+	min-width: 300px;
+	transition: all 0.3s;
+}
+.bubble:before{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    right: 100%;
+    top: 8px;
+    border-top: 8px solid transparent;
+    border-right: 16px solid var(--theme-color);
+    border-bottom: 8px solid transparent;
+}
+.bubble:hover {
+	transform: translateY(-6px);
+	box-shadow: 2px 8px 17px #bababa;
+}
+
 .pio-container .pio-dialog {
 	margin-bottom: -60px;
 	border-color: rgba(255,255,255,.9);
