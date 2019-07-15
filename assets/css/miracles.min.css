@@ -499,7 +499,6 @@ hr {
 .post-content p {
 	vertical-align: middle;
 }
-
 .post-content .owo-img {
 	box-shadow: 0 0 0 #fff;
 	-moz-box-shadow: 0 0 0 #fff;
@@ -508,6 +507,44 @@ hr {
 	height: 26px;
 	width: 26px;
 	vertical-align: middle
+}
+
+.tip {
+	border: 1px solid rgb(240,240,240);
+	border-radius: 3px;
+	padding: 15px;
+	border-left: 5px solid var(--theme-color);
+}
+.tip-icon {
+	color: var(--theme-color);
+}
+.tip.red {
+	border-left-color: #DD4B39;
+}
+.tip.red .tip-icon {
+	color: #DD4B39;
+}
+.tip.blue {
+	border-left-color: #4D90FE;
+}
+.tip.blue .tip-icon {
+	color: #4D90FE;
+}
+.tip.green {
+	border-left-color: #2FBB4F;
+}
+.tip.green .tip-icon {
+	color: #2FBB4F;
+}
+.tip.yellow {
+	border-left-color: #FFDD11;
+}
+.tip.yellow .tip-icon {
+	color: #FFDD11;
+}
+
+.post-bubble .saying-content p {
+	padding: 0 20px!important;
 }
 
 .post-pagenav {
