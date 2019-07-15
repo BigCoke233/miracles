@@ -18,10 +18,7 @@ body,html {
 	margin: 0;
 	background: #fafafa;
 	overflow: auto;
-	transition: background 0.2s
-}
-body {
-	height: 100%;
+	transition: background 0.2s;
 	width: 100%;
 }
 
@@ -130,7 +127,11 @@ hr {
 .body-dark .login,
 .body-dark .login-close,
 .body-darl .login a,
-.body-dark .OwO-bar {
+.body-dark .OwO-bar,
+.body-dark .mobile-menu,
+.body-dark .mobile-menu a,
+.body-dark .mobile-menu-close,
+.body-dark .mobile-menu-footer {
 	color: #fafafa!important
 }
 
@@ -146,7 +147,9 @@ hr {
 .body-dark .post-content th,
 .body-dark .post-content tr,
 .body-dark .OwO-logo,
-.body-dark .OwO-body {
+.body-dark .OwO-body,
+.body-dark .mobile-menu-title,
+.body-dark .mobile-menu-footer {
 	border-color: #6e6e6e!important;
 }
 
@@ -169,7 +172,9 @@ hr {
 	-moz-box-shadow: 0 0 30px #000
 }
 
-.body-dark .nav a:hover {
+.body-dark .nav a:hover,
+.body-dark .nav-mobile-title:hover,
+.mobile-menu-pagelist a:hover {
 	background: #646464
 }
 .body-dark .nav-icon-button {
@@ -187,7 +192,7 @@ hr {
 }
 
 .nav {
-	background: rgba(255,255,255,.9);
+	background: rgba(255,255,255,0.96);
 	width: 100%;
 	position: absolute;
 	box-shadow: 0 0 20px #ddd;
@@ -219,7 +224,9 @@ hr {
 	font-size: 16px
 }
 
-.nav-content a:hover {
+.nav-content a:hover,
+.nav-mobile-content a:hover,
+.nav-mobile-content button:hover {
 	background: #f0f0f0
 }
 
@@ -242,6 +249,21 @@ hr {
 	position: absolute;
 	top: 20px;
 }
+
+
+.nav-mobile {
+	background: rgba(255,255,255,0.99);
+	word-break: keep-all;
+}
+.nav-mobile-content {
+	padding: 0 5px;
+}
+.nav-mobile-content a,
+.nav-mobile-content button {
+	margin: 0;
+	padding: 16px 10px;
+}
+
 .search-button {
 	right: 20px;
 }
@@ -599,20 +621,20 @@ hr {
 
 .links-item {
 	background: #fff;
-	box-shadow: 0 3px 1px #ddd;
-	-webkit-box-shadow: 0 1px 3px #ddd;
-	-moz-box-shadow: 0 3px 1px #ddd;
+	box-shadow: 0 3px 1px #ccc;
+	-webkit-box-shadow: 0 1px 3px #ccc;
+	-moz-box-shadow: 0 3px 1px #ccc;
 	overflow: hidden;
 	transition: all .2s!important;
-	margin-bottom: 20px;
+	margin-bottom: 5px;
 	border-radius: 3px
 }
 
 .links-item:hover {
 	transform: scale(1.05);
-	box-shadow: 0 6px 28px #ddd;
-	-webkit-box-shadow: 0 6px 28px #ddd;
-	-moz-box-shadow: 0 6px 28px #ddd;
+	box-shadow: 0 6px 28px #ccc;
+	-webkit-box-shadow: 0 6px 28px #ccc;
+	-moz-box-shadow: 0 6px 28px #ccc;
 	transform: translateY(-6px)
 }
 
@@ -621,14 +643,18 @@ hr {
 }
 
 .links-title {
-	text-align: Center
+	text-align: center
 }
 
 .links-title h4 {
 	font-weight: 700;
 	letter-spacing: 2px;
 	white-space: nowrap;
-	margin: 10px 0
+	font-size: 15px;
+	margin: 14px 0
+}
+.links-container {
+	padding: 6px;
 }
 
 .archive-title {
@@ -646,33 +672,63 @@ hr {
 	margin-bottom: 5px
 }
 
-.search,.login {
+.search,.login,.mobile-menu {
 	position: fixed;
 	top: 0;
 	bottom: 0;
 	right: 0;
 	left: 0;
-	background-color: rgba(255,255,255,.95);
+	background-color: rgba(255,255,255,0.96);
 	transition: all .2s;
 	z-index: 1000;
+}
+.search,.login {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 .body-dark .search,
-.body-dark .login {
+.body-dark .login,
+.body-dark .mobile-menu {
 	background: rgba(90,90,90,.95)
 }
 .search.ready,
-.login.ready {
+.login.ready,
+.mobile-menu.ready {
 	bottom: 120vh;
 	top: -120vh;
 	visibility: hidden;
 }
 .search-close.ready,
-.login-close.ready {
+.login-close.ready,
+.mobile-menu-close.ready {
 	display: none
 }
+.mobile-menu-pagelist a {
+	display: block;
+	border-radius: 4px;
+	padding: 10px 5px;
+	text-align: center;
+	transition: all 0.2s;
+}
+.mobile-menu-pagelist a:hover {
+	background: rgb(240,240,240)
+}
+.mobile-menu-title {
+	text-align: center;
+	border-bottom: 1px solid rgb(220,220,220);
+	padding-bottom: 20px;
+}
+.mobile-menu-footer {
+	position: absolute;
+	text-align: center;
+	bottom: 10px;
+	right: 0;
+	left: 0;
+	border-top: 1px solid rgb(220,220,220);
+	padding-top: 10px;
+}
+
 .search-form input {
 	border: 1px solid #bababa;
 	padding: 10px 25px;
@@ -691,7 +747,8 @@ hr {
 	outline: 0
 }
 .search-close,
-.login-close {
+.login-close,
+.mobile-menu-close {
 	position: fixed;
 	top: 20px;
 	right: 20px;
@@ -948,6 +1005,7 @@ iframe[src*="//player.bilibili.com/player.html"] {
 .login-form button {
 	width: 260px;
 }
+
 @media (min-width:768px) {
 	.nav-content a {
 		font-size: 19px;
@@ -1018,6 +1076,9 @@ iframe[src*="//player.bilibili.com/player.html"] {
 	.post-list,
     .post-body {
 	    margin-top: -130px
+    }
+	.links-container {
+	    padding: 10px;
     }
 }
 
@@ -1097,6 +1158,9 @@ iframe[src*="//player.bilibili.com/player.html"] {
     .post-body {
 	    margin-top: -134px
     }
+	.links-container {
+	    padding: 12px;
+    }
 }
 
 @media (min-width:1200px) {
@@ -1172,5 +1236,8 @@ iframe[src*="//player.bilibili.com/player.html"] {
 	.post-list,
     .post-body {
 	    margin-top: -140px
+    }
+	.links-container {
+	    padding: 15px;
     }
 }

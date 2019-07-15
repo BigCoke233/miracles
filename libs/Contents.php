@@ -20,7 +20,7 @@ class Contents
 		
 		//解析友链项目
 	    $reg = '/\[(.*?)\]\{(.*?)\}\((.*?)\)/s';
-        $rp = '<div class="col-md-2 col-xs-4 col-sm-3">
+        $rp = '<div class="col-lg-2 col-4 col-md-3 links-container">
 		    <a href="${2}" target="_blank" class="links-link">
 			  <div class="links-item">
 			    <div class="links-img" style="background:url(\'${3}\');width: 100%;padding-top: 100%;background-repeat: no-repeat;background-size: cover;"></div>

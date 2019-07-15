@@ -41,48 +41,22 @@
         pres[i].className  = 'line-numbers';}
       Prism.highlightAll(true,null);}
 	  $('form#login-form').addClass('need-refresh');
-	  var OwO_demo = new OwO({
-        logo: 'OωO表情',
-        container: document.getElementsByClassName('OwO')[0],
-        target: document.getElementsByClassName('OwO-textarea')[0],
-        api: '<?php Utils::indexTheme('assets/OwO.json'); ?>',
-        position: 'down',
-        width: '400px',
-        maxHeight: '250px'
-      });
-	  jQuery(function() {          
-          jQuery("img").lazyload({threshold: 200,effect: "fadeIn"});
-      });
+	  var OwO_demo = new OwO({logo: 'OωO表情',container: document.getElementsByClassName('OwO')[0],target: document.getElementsByClassName('OwO-textarea')[0],api: '<?php Utils::indexTheme('assets/OwO.json'); ?>',position: 'down',width: '400px',maxHeight: '250px'});
+	  jQuery(function() {jQuery("img").lazyload({threshold: 200,effect: "fadeIn"});});
     });
 	//LazyLoad
-	jQuery(function() {          
-        jQuery("img").lazyload({threshold: 200,effect: "fadeIn"});
-    });
+	jQuery(function() {jQuery("img").lazyload({threshold: 200,effect: "fadeIn"});});
 	//解决刷新后不显示行号的问题
     var pres = document.getElementsByTagName('pre');
-    for (var i = 0; i < pres.length; i++){
-      if (pres[i].getElementsByTagName('code').length > 0)
-      pres[i].className  = 'line-numbers';
-    }
+    for (var i = 0; i < pres.length; i++){if (pres[i].getElementsByTagName('code').length > 0)pres[i].className  = 'line-numbers';}
 	//Search
-    function Search() {
-	  $(".search").toggleClass("ready");
-	  $(".search-close").toggleClass("ready");
-    }
+    function Search() {$(".search").toggleClass("ready");$(".search-close").toggleClass("ready");}
+    //mobileMenu
+	function toggleMobileMenu() {$(".mobile-menu").toggleClass("ready");$(".mobile-menu-close").toggleClass("ready");}
 	//Login
-    function Login() {
-	  $(".login").toggleClass("ready");
-	  $(".login-close").toggleClass("ready");
-    }
-	var OwO_demo = new OwO({
-      logo: 'OωO表情',
-      container: document.getElementsByClassName('OwO')[0],
-      target: document.getElementsByClassName('OwO-textarea')[0],
-      api: '<?php Utils::indexTheme('assets/OwO.json'); ?>',
-      position: 'down',
-      width: '400px',
-      maxHeight: '250px'
-    });</script>
+    function Login() {$(".login").toggleClass("ready");$(".login-close").toggleClass("ready");}
+	//OwO
+	var OwO_demo = new OwO({logo: 'OωO表情',container: document.getElementsByClassName('OwO')[0],target: document.getElementsByClassName('OwO-textarea')[0],api: '<?php Utils::indexTheme('assets/OwO.json'); ?>',position: 'down',width: '400px',maxHeight: '250px'});
 	</script>
     <?php $this->footer(); ?>
 	

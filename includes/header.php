@@ -1,4 +1,5 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+      <!-- 搜索 -->
       <div class="search ready">
 	    <button class="search-close ready" onclick="Search()"><i class="iconfont icon-x"></i></button>
 	    <form method="post" action="">
@@ -8,6 +9,7 @@
 		  </div>
         </form>
 	  </div>
+	  <!-- 登录面板 -->
 	  <div class="login ready">
 	    <button class="login-close ready" onclick="Login()"><i class="iconfont icon-x"></i></button>
 		<?php if($this->user->hasLogin()): ?>
@@ -26,7 +28,22 @@
         </form>
 		<?php endif; ?>
 	  </div>
-      <nav class="nav<?php if($this->options->nav_position && $this->options->nav_position=1): ?> nav-fixed<?php endif; ?>">
+      <!-- 移动端导航面板 -->
+	  <div class="mobile-menu ready">
+	    <button class="mobile-menu-close ready" onclick="toggleMobileMenu()"><i class="iconfont icon-x"></i></button>
+		<h2 class="mobile-menu-title">页面导航</h2>
+		<div class="mobile-menu-pagelist"><div class="container-fluid"><div class="row">
+		  <?php $this->widget('Widget_Contents_Page_List')
+          ->parse('<div class="col-6"><a href="{permalink}">{title}</a></div>'); ?>
+		</div></div></div>
+		<div class="mobile-menu-footer">
+		  <p>&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->SiteUrl(); ?>"><?php $this->options->title(); ?></a> | Theme <a href="https://github.com/BigCoke233/miracles">Miracles</a></p>
+		</div>
+	  </div>
+	  
+	  <!-- 导航 -->
+	  <!-- > 大屏幕导航 -->
+      <nav class="large-screen nav<?php if($this->options->nav_position && $this->options->nav_position=1): ?> nav-fixed<?php endif; ?>">
 	    <div class="container">
 		  <p class="nav-content">
 		    <a href="<?php $this->options->SiteUrl(); ?>" class="nav-title"><?php $this->options->title(); ?></a>
@@ -39,6 +56,16 @@
 		  <button class="nav-icon-button login-button" onclick="Login()"><i class="iconfont icon-user"></i></button>
 		</div>
 	  </nav>
+	  <!--> 小屏幕导航 -->
+	  <nav class="small-screen nav nav-mobile<?php if($this->options->nav_position && $this->options->nav_position=1): ?> nav-fixed<?php endif; ?>">
+        <div class="nav-mobile-content">
+		  <a href="<?php $this->options->SiteUrl(); ?>" style="float:left"><i class="iconfont icon-xuanzhongshangcheng"></i></a>
+		  <a onclick="Search()" style="float:left"><i class="iconfont icon-chaxun"></i></a>
+		  <a onclick="Login()" style="float:left"><i class="iconfont icon-user"></i></a>
+		  <a onclick="toggleMobileMenu()" style="float:right">MENU <i class="iconfont icon-list"></i></a>
+		</div>
+	  </nav>
+	  
 	  <div id="pjax-container">
 	  <header>
 	    <?php if($this->is('post') || $this->is('page')): ?>
