@@ -34,7 +34,7 @@
 		<h2 class="mobile-menu-title">页面导航</h2>
 		<div class="mobile-menu-pagelist"><div class="container-fluid"><div class="row">
 		  <?php $this->widget('Widget_Contents_Page_List')
-          ->parse('<div class="col-6"><a href="{permalink}">{title}</a></div>'); ?>
+          ->parse('<div class="col-6"><a href="{permalink}" onclick="toggleMobileMenu()">{title}</a></div>'); ?>
 		</div></div></div>
 		<div class="mobile-menu-footer">
 		  <p>&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->SiteUrl(); ?>"><?php $this->options->title(); ?></a> | Theme <a href="https://github.com/BigCoke233/miracles">Miracles</a></p>
