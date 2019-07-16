@@ -18,6 +18,7 @@ $this->need('includes/header.php');
     } 
     $commentLevelClass = $comments->_levels > 0 ? ' comment-child' : ' comment-parent';  //评论层数大于0为子级，否则是父级
 ?>
+<div>
 <div id="li-<?php $comments->theId(); ?>" class="bubble saying-body comment-body<?php 
 if ($comments->_levels > 0) {
     echo ' comment-child';
@@ -33,6 +34,7 @@ echo $commentClass;
     <?php $comments->content(); ?>
 	<span class="saying-meta"><i class="iconfont icon-clock"></i> <?php $comments->date('F jS, Y'); ?></span>
   </div>
+</div>
 </div>
 <?php } ?>
 
