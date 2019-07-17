@@ -221,7 +221,8 @@ hr {
 
 .nav-content a:hover,
 .nav-mobile-content a:hover,
-.nav-mobile-content button:hover {
+.nav-mobile-content button:hover,
+.nav-sorts-content {
 	background: #f0f0f0
 }
 
@@ -880,11 +881,19 @@ hr {
 }
 
 .comment-list {
-	margin-left: -25px
+	margin-left: 0;
+}
+.comment-children .comment-list {
+	margin: 0;
 }
 
+.comment-children .comment-body {
+	margin-bottom: 5px;
+	margin-left: 0;
+}
 .comment-body {
-	margin: 30px 0
+	margin: 30px 0;
+	position: relative
 }
 
 .comment-author-avatar img {
@@ -916,25 +925,70 @@ hr {
 	font-size: 22px;
 	word-break: break-all;
 	vertical-align: center;
+	padding: 10px 16px;
 }
 
 .comment-content img {
 	max-width: 100%
 }
 
+.comment-meta {
+	font-size: 17px;
+}
+.comment-author {
+	font-size: 0.8em;
+	background: rgb(240,240,240);
+	border-radius: 3px;
+	padding: 2px 3px;
+	letter-spacing: 2px;
+	transition: all 0.2s;
+}
+.comment-author:hover {
+	background: rgb(235,235,235);
+}
+
+.bubble.comment-content {
+	background: rgb(238,238,238);
+	padding: 3px 8px;
+	padding-top: -3px;
+	border-radius: 4px;
+}
+.bubble.comment-content:before {
+    border-right-color: rgb(238,238,238);
+}
+.bubble.comment-content:hover {
+	transform: none;
+	box-shadow: 0 0 0 #fff;
+	-moz-box-shadow: 0 0 0 #fff;
+	-webkit-box-shadow: 0 0 0 #fff;
+}
+.comment-by-author .bubble.comment-content {
+	background: var(--theme-color)
+}
+.comment-by-author .bubble.comment-content p {
+	color: #fff!important;
+}
+.comment-by-author .bubble.comment-content:before {
+	border-right-color: var(--theme-color)
+}
+.comment-by-author .bubble.comment-content .comment-reply a {
+	color:#fff!important;
+}
+
 .comment-reply a {
+	position: absolute;
+	top: 5px;
+	right: 4px;
 	display: inline-block;
 	font-size: 90%;
-	color: gray;
-	background: #ebebeb;
 	border-radius: 2px;
 	padding: 3px 4px;
-	margin-top: 10px;
-	transition: background .2s
+	transition: color 0.2s;
+	color: rgb(120,120,120);
 }
 
 .comment-reply a:hover {
-	background: #e6e6e6
+	color: rgb(150,150,150)
 }
 
 .comment-submit button {
@@ -961,7 +1015,8 @@ hr {
 	border: 2px solid #ddd;
 	border-radius: 5px;
 	width: 100%;
-	padding: 14px
+	padding: 14px;
+	outline: none;
 }
 
 .comment-input {
