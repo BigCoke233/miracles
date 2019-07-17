@@ -1,4 +1,6 @@
 ![](banner.jpg)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/makes-people-smile.svg)](https://forthebadge.com)
 > 🙌 You're the Miracles. 你即是奇迹
 
 # 介绍 Introduction
@@ -29,8 +31,7 @@ As you see, 这是一款花费了我很大精力的 Typecho 主题，原定准�
 4. 根据 [Wiki](https://github.com/BigCoke233/miracles/wiki) 配置本主题
 
 # 漏洞 Bugs
-- 「开发版已修复」一些样式在夜间模式下未良好兼容
-- 「开发版已修复」点击图片呼出 FancyBox 之后会自动返回顶部（F12 未报错，会不会是 css 冲突？）
+- Pjax 跳转页面后前台登录不生效。
 
 # 版权 Copyright
 本项目使用 MIT License 作为开源协议，所以无论你做什么都**请保留主题包中的版权信息**。  
