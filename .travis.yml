@@ -1,1 +1,2 @@
 language: php
+php: 5.5
