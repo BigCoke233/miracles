@@ -31,7 +31,14 @@ $this->need('includes/header.php');
 			    <a href="<?php $this->permalink(); ?>" class="post-link">
 				  <h1 class="post-title"><?php $this->sticky(); ?><?php $this->title(); ?></h1>
 				</a>
-				<p class="post-excerpt"><?php $this->excerpt(); ?></p>
+				<p class="post-excerpt">
+				  <?php if($this->fields->excerpt && $this->fields->excerpt!='') {
+				    echo $this->fields->excerpt;
+				  }else{
+					echo $this->excerpt(130);
+				  }
+				  ?>
+				</p>
 				<p class="post-meta"><i class="iconfont icon-block"></i> <?php $this->category(','); ?>&emsp;<i class="iconfont icon-comments"></i> <?php $this->commentsNum('None', 'Only 1', '%d'); ?>&emsp;<i class="iconfont icon-clock"></i> <?php $this->date(); ?></p>
 				<p class="post-button-box"><a href="<?php $this->permalink(); ?>" class="post-button">Read More</a></p>
 			  </div>

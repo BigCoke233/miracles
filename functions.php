@@ -82,6 +82,9 @@ function themeConfig($form) {
  * 文章与独立页自定义字段
  */
 function themeFields(Typecho_Widget_Helper_Layout $layout) {
-    $banner = new Typecho_Widget_Helper_Form_Element_Text('banner', NULL, NULL,_t('缩略图'), _t('输入一个图片 url，作为缩略图显示在文章列表，没有则不显示'));
+    $banner = new Typecho_Widget_Helper_Form_Element_Text('banner', NULL, NULL,_t('文章头图'), _t('输入一个图片 url，作为缩略图显示在文章列表，没有则不显示'));
     $layout->addItem($banner);
+	
+	$excerpt = new Typecho_Widget_Helper_Form_Element_Text('excerpt', NULL, NULL,_t('文章摘要'), _t('输入一段文本来自定义摘要，如果为空则自动提取文章前 130 字。'));
+    $layout->addItem($excerpt);
 }
