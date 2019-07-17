@@ -41,7 +41,7 @@
         pres[i].className  = 'line-numbers';}
       Prism.highlightAll(true,null);}
 	  $('form#login-form').addClass('need-refresh');
-	  var OwO_demo = new OwO({logo: 'OωO表情',container: document.getElementsByClassName('OwO')[0],target: document.getElementsByClassName('OwO-textarea')[0],api: '<?php Utils::indexTheme('assets/OwO.json'); ?>',position: 'down',width: '400px',maxHeight: '250px'});
+	  var OwO_demo = new OwO({logo: 'OωO表情',container: document.getElementsByClassName('OwO')[0],target: document.getElementsByClassName('OwO-textarea')[0],api: '<?php Utils::indexTheme('assets/OwO.json'); ?>',position: 'down',width: '350px',maxHeight: '250px'});
 	  jQuery(function() {jQuery("img").lazyload({threshold: 200,effect: "fadeIn"});});
     });
 	//LazyLoad
@@ -56,7 +56,7 @@
 	//Login
     function Login() {$(".login").toggleClass("ready");$(".login-close").toggleClass("ready");}
 	//OwO
-	var OwO_demo = new OwO({logo: 'OωO表情',container: document.getElementsByClassName('OwO')[0],target: document.getElementsByClassName('OwO-textarea')[0],api: '<?php Utils::indexTheme('assets/OwO.json'); ?>',position: 'down',width: '400px',maxHeight: '250px'});
+	var OwO_demo = new OwO({logo: 'OωO表情',container: document.getElementsByClassName('OwO')[0],target: document.getElementsByClassName('OwO-textarea')[0],api: '<?php Utils::indexTheme('assets/OwO.json'); ?>',position: 'down',width: '350px',maxHeight: '250px'});
 	</script>
     <?php $this->footer(); ?>
 	

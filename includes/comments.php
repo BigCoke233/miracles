@@ -9,7 +9,7 @@
     } 
     $commentLevelClass = $comments->_levels > 0 ? ' comment-child' : ' comment-parent';  //评论层数大于0为子级，否则是父级
 ?>
-<li id="li-<?php $comments->theId(); ?>" class="comment-body<?php 
+<div id="li-<?php $comments->theId(); ?>" class="comment-body<?php 
 if ($comments->_levels > 0) {
     echo ' comment-child';
     $comments->levelsAlt(' comment-level-odd', ' comment-level-even');
@@ -21,38 +21,43 @@ echo $commentClass;
 ?>">
   <div class="container-fluid">
     <div class="row">
-      <div class="comment-author-avatar col-md-1">
+      <div class="comment-author-avatar col-1">
         <?php $comments->gravatar('100', ''); ?>
       </div>
-	  <div class="comment-author-info col-md-11">
-	    <h4><?php $comments->author(); ?></h4>
-		<p><?php $comments->date('Y-m-d H:i'); ?></p>
-		<div class="comment-content">
+	  <div class="comment-main comment-author-info col-11">
+		<div class="comment-content bubble">
+		  <span class="comment-reply"><?php $comments->reply('<i class="iconfont icon-return"></i>'); ?></span>
 	      <?php $comments->content(); ?>
-		  <p class="comment-reply">
-		    <?php $comments->reply(); ?>
-		  </p>
 	    </div>
+		<p class="comment-meta">
+		  <span class="comment-author"><?php $comments->author(); ?></span>
+		  <span class="comment-date"><?php $comments->date('Y-m-d H:i'); ?></span>
+		</p>
 		<?php if ($comments->children) { ?>
-          <div class="comment-children">
-            <?php $comments->threadedComments($options); ?>
-          </div>
+        <div class="comment-children">
+          <?php $comments->threadedComments($options); ?>
+        </div>
         <?php } ?>
 	  </div>
 	</div>
   </div>
-</li>
+</div>
 <?php } ?>
       <div class="comment">
 	    <?php $this->comments()->to($comments); ?>
 		<h3 class="comment-title">
-		  <span style="color:#ccc">- </span>
 		  <?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?>
-		  <span style="color:#ddd"> -</span>
 		</h3>
         <?php if ($comments->have()): ?>
-		<div class="comment-list">
-          <?php $comments->listComments(); ?>
+		<div class="comment-container">
+          <?php $comments->listComments(array(
+            'before'        =>  '<div class="comment-list">',
+            'after'         =>  '</div>',
+            'avatarSize'    =>  200,
+            'dateFormat'    =>  'Y-m-d H:i'
+            )); ?>
+		</div>
+		<div class="comment-pagenav">
           <?php $comments->pageNav('<i class="iconfont icon-chevron-left"></i>', '<i class="iconfont icon-chevron-right"></i>'); ?>
         </div>
         <?php endif; ?>

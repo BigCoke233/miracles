@@ -52,7 +52,7 @@ if (isset($_POST['action'])) {
 	<link rel="stylesheet" href="<?php Utils::indexTheme('assets/css/fancybox.css'); ?>" />
 	<link rel="stylesheet" href="<?php Utils::indexTheme('assets/css/miracles.min.css'); ?>" />
 	<!-- icon font -->
-	<link rel="stylesheet" href="//at.alicdn.com/t/font_1165190_hilot65sdef.css" />
+	<link rel="stylesheet" href="//at.alicdn.com/t/font_1165190_maespcngb4g.css" />
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300|Noto+Serif+SC:300&display=swap" rel="stylesheet">
 	
