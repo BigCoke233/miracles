@@ -32,9 +32,10 @@ As you see, 这是一款花费了我很大精力的 Typecho 主题，原定准�
 2. Star 本项目
 3. 解压后，检查文件名是否为`Miracles`，若不是请修改。
 4. 根据 [Wiki](https://github.com/BigCoke233/miracles/wiki) 配置本主题
+> 现在可以在 [Projects](https://github.com/BigCoke233/miracles/projects) 页面查看主题开发进度了~
 
 # 漏洞 Bugs
-- Pjax 跳转页面后前台登录不生效。
+所有已知 bug 已在开发版被修复
 
 # 版权 Copyright
 本项目使用 MIT License 作为开源协议，所以无论你做什么都**请保留主题包中的版权信息**。  
