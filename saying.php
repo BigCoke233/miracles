@@ -37,13 +37,14 @@ echo $commentClass;
 </div>
 </div>
 <?php } ?>
-
     <main class="main-container container">
 	  <div class="post-body">
 	    <div class="post-content">
-		  <?php if($this->user->hasLogin()): ?>
+		  <?php //判断当前用户是否登陆
+		  if($this->user->hasLogin()): 
+		  //已登录则输出说说表单 ?>
 		  <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" class="saying-form" role="form">
-		    <textarea rows="8" cols="50" name="text" id="textarea" class="OwO-textarea comment-textarea textarea" required ><?php $this->remember('text'); ?></textarea>
+		    <textarea rows="8" cols="50" name="text" id="textarea" class="OwO-textarea comment-textarea textarea saying-textarea" required ><?php $this->remember('text'); ?></textarea>
 		    <p class="saying-action">
 			  <div title="OwO" class="saying-OwO OwO"></div>
 			  <button type="submit" class="saying-submit submit"><?php _e('发表动态'); ?></button>
@@ -51,7 +52,8 @@ echo $commentClass;
 		  </form>
 		  <hr>
 		  <?php endif; ?>
-		  <?php $this->comments()->to($comments); ?>
+		  <?php //输出说说列表
+		  $this->comments()->to($comments); ?>
 		  <h3 class="comment-title">
 		    <span style="color:#ccc">- </span>
 		    <?php $this->commentsNum(_t('暂无动态'), _t('仅有一条动态'), _t('已有 %d 条动态')); ?>
@@ -59,11 +61,11 @@ echo $commentClass;
 		  </h3>
 		  <?php if ($comments->have()): ?>
 		    <?php $comments->listComments(); ?>
-            <?php $comments->pageNav('<i class="iconfont icon-chevron-left"></i>', '<i class="iconfont icon-chevron-right"></i>'); ?>
+			<div class="comment-pagenav saying-pagenav">
+              <?php $comments->pageNav('<i class="iconfont icon-chevron-left"></i>', '<i class="iconfont icon-chevron-right"></i>'); ?>
+            </div>
           <?php endif; ?>
 		</div>
 	  </div>
 	</main>
-
-
 <?php $this->need('includes/footer.php'); ?>

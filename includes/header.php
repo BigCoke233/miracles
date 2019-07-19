@@ -1,4 +1,5 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+
       <!-- 搜索 -->
       <div class="search ready">
 	    <button class="search-close ready" onclick="Search()"><i class="iconfont icon-x"></i></button>
@@ -66,7 +67,7 @@
 		</div>
 	  </nav>
 	  
-	  <div id="pjax-container">
+	  <div id="pjax-container"><!-- 开始 pjax-container -->
 	  <header>
 	    <?php if($this->is('post') || $this->is('page')): ?>
 		<div class="index-banner" style="background:url('<?php if($this->fields->banner && $this->fields->banner=!''): ?><?php $this->fields->banner(); ?><?php else: ?><?php $this->options->bannerUrl(); ?><?php endif; ?>') no-repeat;height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;">

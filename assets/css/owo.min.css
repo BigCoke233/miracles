@@ -12,7 +12,6 @@
 
 .OwO.OwO-open .OwO-logo {
 	border-radius: 4px 4px 0 0;
-	border: none;
 	color: #444;
 	box-shadow: 0 8px 20px #bababa;
 }
@@ -43,11 +42,10 @@
 	display: inline-block;
 	color: #888;
 	background: #fff;
-	border: 2px solid rgb(221,221,221);
+	border: 1px solid rgb(221,221,221);
 	border-radius: 4px;
 	font-size: 13px;
-	padding: 4px 7px;
-	padding-bottom: 5px!important;
+	padding: 2px 3px;
 	cursor: pointer;
 	height: 22px;
 	box-sizing: border-box;

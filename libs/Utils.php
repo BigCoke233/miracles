@@ -1,11 +1,10 @@
 <?php
-/**
- * Utils.php
- * 
- * 提供某些 Typecho 方法的封装，以及一些常用方法实现
- * 
- * @author      熊猫小A
+
+/* 
+ * 该文件代码来自 熊猫小A(AlanDecode) 的项目，感谢~
+ * https://github.com/AlanDecode/typecho-theme-dev-framework
  */
+ 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 class Utils

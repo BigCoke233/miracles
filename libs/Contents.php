@@ -1,35 +1,42 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
+/* 
+ * 该文件大部分代码来自 熊猫小A(AlanDecode) 的项目，感谢~
+ * https://github.com/AlanDecode/typecho-theme-dev-framework
+ */
+ 
 class Contents
 {
     /**
      * 内容解析器入口
      * 传入的是经过 Markdown 解析后的文本
      */
-    static public function parseContent($text)
+    static public function parseContent($data, $widget, $last)
     {
-        //Prism 高亮
-        $text = preg_replace('/<pre><code>/s','<pre><code class="language-html">',$text);
-		//FancyBox
-	    $text = preg_replace('/<img(.*?)src="(.*?)"(.*?)alt="(.*?)"(.*?)>/s','<center><a data-fancybox="gallery" href="${2}" class="gallery-link"><img${1}src="${2}"${3}></a></center>',$text); 
-	    //LazyLoad
-		$text = preg_replace('/<img (.*?)src(.*?)(\/)?>/','<img $1src="/usr/themes/Miracles/images/loading.gif"'.$style.' data-original$2 />',$text);
+        $text = empty($last) ? $data : $last;
+        if ($widget instanceof Widget_Archive) {
+            //Prism 高亮
+            $text = preg_replace('/<pre><code>/s','<pre><code class="language-html">',$text);
+		    //FancyBox
+	        $text = preg_replace('/<img(.*?)src="(.*?)"(.*?)alt="(.*?)"(.*?)>/s','<center><a data-fancybox="gallery" href="${2}" class="gallery-link"><img${1}src="${2}"${3}></a></center>',$text); 
+	        //LazyLoad
+		    $text = preg_replace('/<img (.*?)src(.*?)(\/)?>/','<img $1src="/usr/themes/Miracles/images/loading.gif"'.$style.' data-original$2 />',$text);
 		
-		//气泡
-		$text = preg_replace('/\[bubble\](.*?)\[\/bubble\]/s','<div class="bubble post-bubble"><div class="saying-content"><p>${1}</p></div></div>',$text);
+		    //气泡
+		    $text = preg_replace('/\[bubble\](.*?)\[\/bubble\]/s','<div class="bubble post-bubble"><div class="saying-content"><p>${1}</p></div></div>',$text);
 		
-		//Tip without var
-		$text = preg_replace('/\[tip\](.*?)\[\/tip\]/s','<div class="tip"><div class="container-fluid"><div class="row"><div class="col-1 tip-icon"><i class="iconfont icon-info"></i></div><div class="col-11 tip-content">${1}</div></div></div></div>',$text);
-		//Tip
-		$text = preg_replace('/\[tip type="(.*?)"\](.*?)\[\/tip\]/s','<div class="tip ${1}"><div class="container-fluid"><div class="row"><div class="col-1 tip-icon"><i class="iconfont icon-info"></i></div><div class="col-11 tip-content">${2}</div></div></div></div>',$text);
+		    //Tip without var
+		    $text = preg_replace('/\[tip\](.*?)\[\/tip\]/s','<div class="tip"><div class="container-fluid"><div class="row"><div class="col-1 tip-icon"><i class="iconfont icon-info"></i></div><div class="col-11 tip-content">${1}</div></div></div></div>',$text);
+		    //Tip
+		    $text = preg_replace('/\[tip type="(.*?)"\](.*?)\[\/tip\]/s','<div class="tip ${1}"><div class="container-fluid"><div class="row"><div class="col-1 tip-icon"><i class="iconfont icon-info"></i></div><div class="col-11 tip-content">${2}</div></div></div></div>',$text);
 		
-		//解析友链盒子
-	    $reg = '/\[links\](.*?)\[\/links\]/s';
-        $rp = '<div class="links-box container-fluid"><div class="row">${1}</div></div>';
-        $text = preg_replace($reg,$rp,$text);
-		//解析友链项目
-	    $reg = '/\[(.*?)\]\{(.*?)\}\((.*?)\)/s';
-        $rp = '<div class="col-lg-2 col-4 col-md-3 links-container">
+		    //解析友链盒子
+	        $reg = '/\[links\](.*?)\[\/links\]/s';
+            $rp = '<div class="links-box container-fluid"><div class="row">${1}</div></div>';
+            $text = preg_replace($reg,$rp,$text);
+		    //解析友链项目
+	        $reg = '/\[(.*?)\]\{(.*?)\}\((.*?)\)/s';
+            $rp = '<div class="col-lg-2 col-4 col-md-3 links-container">
 		    <a href="${2}" target="_blank" class="links-link">
 			  <div class="links-item">
 			    <div class="links-img" style="background:url(\'${3}\');width: 100%;padding-top: 100%;background-repeat: no-repeat;background-size: cover;"></div>
@@ -39,8 +46,8 @@ class Contents
 		      </div>
 			  </a>
 			</div>';
-        $text = preg_replace($reg,$rp,$text);
-		
+            $text = preg_replace($reg,$rp,$text);
+        }
         return $text;
     }
 

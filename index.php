@@ -61,7 +61,7 @@ $this->need('includes/header.php');
 		  </div>
         <br />
 		<?php endwhile; ?>
-		
+		<!-- 文章分页 -->
 		<div class="post-pagenav">
           <span class="post-pagenav-left"><?php $this->pageLink('<i class="iconfont icon-chevron-left"></i>'); ?></span>
 		  <span class="post-pagenav-right"><?php $this->pageLink('<i class="iconfont icon-chevron-right"></i>','next'); ?></span>

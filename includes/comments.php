@@ -58,7 +58,7 @@ echo $commentClass;
             )); ?>
 		</div>
 		<div class="comment-pagenav">
-          <?php $comments->pageNav('<i class="iconfont icon-chevron-left"></i>', '<i class="iconfont icon-chevron-right"></i>'); ?>
+          <?php $comments->pageNav('<i class="iconfont icon-chevron-left comment-pagenav-icon"></i>', '<i class="iconfont icon-chevron-right comment-pagenav-icon"></i>'); ?>
         </div>
         <?php endif; ?>
 		

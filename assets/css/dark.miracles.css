@@ -1,8 +1,11 @@
 @charset 'utf-8';
+
 /*
  * DarkTheme for Miracles
- * Author: Eltrac
+ * Author:  Eltrac
+ * Lisence: MIT
  */
+ 
 /* Body */
 .body-dark {
 	background: #4b4b4b;
@@ -13,7 +16,7 @@
 .body-dark .post-content code {
 	background: #505050;
 }
-.body-dark .post-content img {
+.body-dark .post-content img:not(.OwO-img) {
 	box-shadow: 0 2px 10px #323232;
 	-moz-box-shadow: 0 2px 10px #323232;
 	-webkit-box-shadow: 0 2px 10px #323232
@@ -37,7 +40,11 @@
 .body-dark .gotop-button,
 .body-dark .post-body,
 .body-dark .post-item,
-.body-dark .post-pagenav a {
+.body-dark .post-pagenav a,
+.body-dark .bubble.saying-body:hover,
+.body-dark .OwO-body,
+.body-dark .OwO-open .OwO-logo,
+.body-dark .OwO .OwO-body .OwO-items .OwO-item:hover {
 	box-shadow: 0 0 36px #323232!important;
 	-moz-box-shadow: 0 0 36px #323232!important;
 	-webkit-box-shadow: 0 0 36px #323232!important
@@ -53,7 +60,8 @@
 .body-dark .comment-submit button,
 .body-dark .comment-by-author .bubble.comment-content,
 .body-dark .bubble.comment-content,
-.body-dark .comment-author {
+.body-dark .comment-author,
+.body-dark .bubble.saying-body {
 	background: #646464
 }
 /* Need #5a5a5a bg */
@@ -71,7 +79,8 @@
 .body-dark .post-pagenav a,
 .body-dark .OwO-body,
 .body-dark .OwO-package-active,
-.body-dark .OwO-packages li:hover {
+.body-dark .OwO-packages li:hover,
+.body-dark .saying-textarea {
 	background: #5a5a5a!important
 }
 /* OwO */
@@ -120,11 +129,13 @@
 .body-dark .OwO-logo,
 .body-dark .OwO-body,
 .body-dark .mobile-menu-title,
-.body-dark .mobile-menu-footer {
+.body-dark .mobile-menu-footer,
+.body-dark .saying-textarea {
 	border-color: #6e6e6e!important;
 }
 .body-dark .comment-by-author .bubble.comment-content:before,
-.body-dark .bubble.comment-content:before {
+.body-dark .bubble.comment-content:before,
+.body-dark .bubble.saying-body:before {
 	border-right-color: #646464;
 }
 /* Darker Mask */

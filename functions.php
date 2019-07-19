@@ -1,16 +1,5 @@
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php
-/**
- * functions.php
- * 
- * 初始化
- * 
- * @author      熊猫小A
- */
-if (!defined('__TYPECHO_ROOT_DIR__')) exit;
-?>
-
-<?php
-
 require_once("libs/Utils.php");
 require_once("libs/Contents.php");
 
