@@ -7,6 +7,7 @@ require_once("libs/Contents.php");
  * 注册文章解析 hook
  * 具体的解析代码需要在 Contents::parseContent() 方法中实现
  * 解析不会改变数据库中的内容，体现在文章前台输出、RSS 输出时
+ * From AlanDecode(https://imalan.cn)
  */
 Typecho_Plugin::factory('Widget_Abstract_Contents')->contentEx = array('Contents','parseContent');
 Typecho_Plugin::factory('Widget_Abstract_Contents')->excerptEx = array('Contents','parseContent');
@@ -15,9 +16,6 @@ Typecho_Plugin::factory('Widget_Abstract_Contents')->excerptEx = array('Contents
  * 主题启用时执行的方法
  */
 function themeInit() {
-    /**
-     * 重置某些设置项，采用数据库查询方式完成
-     */
     $db = Typecho_Db::get();
     
     $query = $db->update('table.options')->rows(array('value'=>'0'))->where('name=?', 'commentsAntiSpam');
@@ -43,7 +41,7 @@ function themeInit() {
  */
 function themeConfig($form) {
     //nav
-	$nav_position = new Typecho_Widget_Helper_Form_Element_Select('nav_position',array('0'=>'不固定','1'=>'固定'),'0','导航栏-是否固定','固定后，导航栏不会随滚动条滚动而移动在屏幕上的位置');
+	$nav_position = new Typecho_Widget_Helper_Form_Element_Select('nav_position',array('0'=>'不固定','1'=>'固定'),'0','导航栏-是否固定','固定后，导航栏不会随滚动条滚动而移动在屏幕上的位置<hr>');
     $form->addInput($nav_position);
 	
 	//index-banner
@@ -53,8 +51,14 @@ function themeConfig($form) {
     $form->addInput($bannerHeight);
 	$bannerTitle = new Typecho_Widget_Helper_Form_Element_Text('bannerTitle', NULL, NULL, _t('首页大图-标题'), _t('这里是首页大图显示的的标题'));
     $form->addInput($bannerTitle);
-	$bannerIntro = new Typecho_Widget_Helper_Form_Element_Text('bannerIntro', NULL, NULL, _t('首页大图-介绍'), _t('这里是首页大图标题下的简介'));
+	$bannerIntro = new Typecho_Widget_Helper_Form_Element_Text('bannerIntro', NULL, NULL, _t('首页大图-介绍'), _t('这里是首页大图标题下的简介<hr>'));
     $form->addInput($bannerIntro);
+	
+	//pjax
+	$pjax = new Typecho_Widget_Helper_Form_Element_Select('pjax',array('0'=>'关闭','1'=>'开启'),'1','Pjax-是否开启','Pjax 预加载功能的开关');
+    $form->addInput($pjax);
+	$pjax_complete = new Typecho_Widget_Helper_Form_Element_Textarea('pjax_complete', NULL, NULL, _t('Pjax-完成后执行事件'), _t('Pjax 跳转页面后执行的事件，写入 js 代码，一般将 Pjax 重载(回调)函数写在这里。<hr>'));
+    $form->addInput($pjax_complete);
 	
 	//custom
 	$headerEcho = new Typecho_Widget_Helper_Form_Element_Textarea('headerEcho', NULL, NULL, _t('自定义头部信息'), _t('填写 html 代码，将输出在 &lt;head&gt; 标签中'));

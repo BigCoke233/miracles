@@ -65,4 +65,4 @@ if (isset($_POST['action'])) {
 	<?php $this->options->cssEcho(); ?>
 	</style>
   </head>
-  <body class="font-sans-serif">
+  <body class="body-sans-serif">

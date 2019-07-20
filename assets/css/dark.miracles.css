@@ -61,7 +61,8 @@
 .body-dark .comment-by-author .bubble.comment-content,
 .body-dark .bubble.comment-content,
 .body-dark .comment-author,
-.body-dark .bubble.saying-body {
+.body-dark .bubble.saying-body,
+.body-dark .tags-item a {
 	background: #646464
 }
 /* Need #5a5a5a bg */
@@ -155,7 +156,7 @@
 }
 .body-dark .nav a:hover,
 .body-dark .nav-mobile-title:hover,
-.mobile-menu-pagelist a:hover {
+.body-dark .mobile-menu-pagelist a:hover {
 	background: #646464
 }
 .body-dark .nav-icon-button {

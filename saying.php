@@ -55,9 +55,7 @@ echo $commentClass;
 		  <?php //输出说说列表
 		  $this->comments()->to($comments); ?>
 		  <h3 class="comment-title">
-		    <span style="color:#ccc">- </span>
 		    <?php $this->commentsNum(_t('暂无动态'), _t('仅有一条动态'), _t('已有 %d 条动态')); ?>
-		    <span style="color:#ddd"> -</span>
 		  </h3>
 		  <?php if ($comments->have()): ?>
 		    <?php $comments->listComments(); ?>

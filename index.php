@@ -40,7 +40,7 @@ $this->need('includes/header.php');
 				  ?>
 				</p>
 				<p class="post-meta"><i class="iconfont icon-block"></i> <?php $this->category(','); ?>&emsp;<i class="iconfont icon-comments"></i> <?php $this->commentsNum('None', 'Only 1', '%d'); ?>&emsp;<i class="iconfont icon-clock"></i> <?php $this->date(); ?></p>
-				<p class="post-button-box"><a href="<?php $this->permalink(); ?>" class="post-button">Read More</a></p>
+				<p class="post-button-box"><a href="<?php $this->permalink(); ?>" class="button post-button">Read More</a></p>
 			  </div>
 			</div></div>
 		  </div>

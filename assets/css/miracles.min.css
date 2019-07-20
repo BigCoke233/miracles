@@ -51,6 +51,49 @@ hr {
 	background-color: var(--theme-color)
 }
 
+/* For Body tag */
+.body-dark {
+	/* For the dark theme
+	 * turn to 'dark.miracles.css' 
+	 */
+}
+.body-gray {
+	/* For the gray theme */
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+}
+.body-sans-serif {
+	font-family: 'Noto Sans SC',sans-serif
+}
+.body-serif {
+	font-family: 'Noto Serif SC',serif
+}
+
+/* 组件 */
+/* > 按钮 */
+.button {
+	border: 3px solid #ccc;
+	border-radius: 30px;
+	padding: 8px 12px;
+	transition: all .2s;
+}
+.button:hover {
+	border-color: #000;
+	background: #000;
+	color: #fff
+}
+.button-sm {
+	padding: 3px 5px;
+}
+.button-md {
+	border: none;
+	border-radius: 3px;
+}
+.button-md:hover {
+	background: rgb(235,235,235);
+	color: #fff;
+}
+
 /* 导航栏 */
 .nav {
 	background: rgba(255,255,255,0.96);
@@ -62,7 +105,7 @@ hr {
 	display: table;
 	top: 0;
 	z-index: 10;
-	transition: all .2s
+	transition: all .2s;
 }
 .nav-content {
 	margin: 0;
@@ -126,14 +169,6 @@ hr {
 .nav-icon-button:hover,.search-close {
 	background: rgb(230,230,230);
 	cursor: pointer
-}
-/* 字体 Class */
-.font-sans-serif {
-	font-family: 'Noto Sans SC',sans-serif
-}
-
-.font-serif {
-	font-family: 'Noto Serif SC',serif
 }
 /* 首页大图 */
 .index-banner {
@@ -206,16 +241,7 @@ hr {
 	margin-top: 15px
 }
 .post-button {
-	border: 3px solid #ccc;
-	border-radius: 30px;
-	padding: 8px 12px;
-	transition: all .2s;
 	float: right
-}
-.post-button:hover {
-	border-color: #000;
-	background: #000;
-	color: #fff
 }
 .post-footer {
 	color: #c8c8c8;
@@ -260,10 +286,10 @@ hr {
 	display: block;
 	margin: 20px auto;
 	border-radius: 3px;
-	box-shadow: 0 2px 10px #ccc;
-	-moz-box-shadow: 0 2px 10px #ccc;
-	-webkit-box-shadow: 0 2px 10px #ccc;
-	max-width: 100%
+	box-shadow: 0 4px 20px #ccc;
+	-moz-box-shadow: 0 4px 20px #ccc;
+	-webkit-box-shadow: 0 4px 20px #ccc;
+	max-width: 90%
 }
 .post-content blockquote p {
 	margin: 0
@@ -634,20 +660,8 @@ hr {
 	font-size: 100px;
 	text-shadow: 0 4px 12px #ccc;
 }
-.error-button {
-	padding: 5px 10px;
-	margin: 20px 10px;
-	transition: all .2s;
-	border: 4px solid #ddd;
-	border-radius: 100px;
-}
-.error-button:hover {
-	background: #000;
-	border-color: #000;
-	color: #fff
-}
-/* Buttons */
-/* > 悬浮按钮 */
+
+/* 悬浮按钮 */
 .dark-button,.gotop-button {
 	background: #fdfdfd;
 	font-size: 22px;
@@ -766,6 +780,7 @@ hr {
 .bubble.comment-content {
 	background: rgb(238,238,238);
 	padding: 3px 8px;
+	padding-right: 12px;
 	padding-top: -3px;
 	border-radius: 4px;
 	min-width: 10px!important;
@@ -788,7 +803,7 @@ hr {
 .comment-by-author > .container-fluid > .row > .comment-main > .bubble.comment-content:before {
 	border-right-color: var(--theme-color)
 }
-.comment-by-author .bubble.comment-content .comment-reply a {
+.comment-by-author > .container-fluid > .row > .comment-main > .bubble.comment-content > .comment-reply a {
 	color:#fff!important;
 }
 .comment-reply a {
