@@ -21,10 +21,10 @@ echo $commentClass;
 ?>">
   <div class="container-fluid">
     <div class="row">
-      <div class="comment-author-avatar col-1">
+      <div class="comment-author-avatar col-md-1">
         <?php $comments->gravatar('100', ''); ?>
       </div>
-	  <div class="comment-main comment-author-info col-11">
+	  <div class="comment-main comment-author-info col-md-11">
 		<div class="comment-content bubble">
 		  <span class="comment-reply"><?php $comments->reply('<i class="iconfont icon-return"></i>'); ?></span>
 	      <?php $comments->content(); ?>

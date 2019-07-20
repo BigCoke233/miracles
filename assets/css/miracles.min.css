@@ -723,16 +723,25 @@ hr {
 .comment-list {
 	margin-left: 0;
 }
+.comment-children {
+	margin-left: 20px;
+}
 .comment-children .comment-list {
 	margin: 0;
 }
 .comment-children .comment-body {
-	margin-bottom: 5px;
-	margin-left: 0;
+	margin: 15px 0;
+	padding: 0;
 }
 .comment-body {
-	margin: 30px 0;
+	margin: 28px 0;
+	padding: 0;
 	position: relative
+}
+.comment-main,
+.comment-author-avatar {
+	margin: 0;
+	padding: 0;
 }
 .comment-author-avatar img {
 	border-radius: 10000px;
@@ -880,6 +889,7 @@ hr {
 .comment-pagenav-icon {
 	margin: 0 -3px;
 }
+
 /* OwO */
 .owo-img {
 	height: 34px;
