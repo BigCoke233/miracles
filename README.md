@@ -3,7 +3,7 @@
 ![](https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg)
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
 ![](https://img.shields.io/badge/for-Typecho-blueviolet.svg)
-![](https://img.shields.io/badge/version-1.1.0-red.svg)
+![](https://img.shields.io/badge/version-1.1.1-red.svg)
 > 🙌 You're the Miracles. 你即是奇迹
 
 # 介绍 Introduction
