@@ -31,7 +31,7 @@
 > 现在可以在 [Projects](https://github.com/BigCoke233/miracles/projects) 页面查看主题开发进度了~
 
 # 漏洞 Bugs
-所有已知 bug 已在开发版被修复
+- [ ] 文章标题因为`overflow:hidden`，部分字母下半部分会显示不完整
 
 # 计划 Plan
 - [ ] 增加：导航栏增加“抽屉栏模式”，可以与顶部导航栏进行切换
