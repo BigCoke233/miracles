@@ -14,6 +14,15 @@
 	  <button onclick="Dark()" title="护眼模式" class="dark-button"><i class="iconfont icon-envira"></i></button>
 	</div>
 	<!-- JavaScript -->
+	<?php if($this->options->CDN && $this->options->CDN=1): ?>
+	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php themeVersion(); ?>/assets/js/jquery.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php themeVersion(); ?>/assets/js/pjax.jquery.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php themeVersion(); ?>/assets/js/jquery.fancybox.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php themeVersion(); ?>/assets/js/jquery.lazyload.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php themeVersion(); ?>/assets/js/nprogress.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php themeVersion(); ?>/assets/js/OwO.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php themeVersion(); ?>/assets/js/prism.js"></script>
+	<?php else: ?>
     <script src="<?php Utils::indexTheme('assets/js/jquery.js'); ?>"></script>
 	<script src="<?php Utils::indexTheme('assets/js/pjax.jquery.js'); ?>"></script>
 	<script src="<?php Utils::indexTheme('assets/js/jquery.fancybox.js'); ?>"></script>
@@ -21,6 +30,7 @@
 	<script src="<?php Utils::indexTheme('assets/js/nprogress.js'); ?>"></script>
 	<script src="<?php Utils::indexTheme('assets/js/OwO.min.js'); ?>"></script>
 	<script src="<?php Utils::indexTheme('assets/js/prism.js'); ?>"></script>
+	<?php endif; ?>
 	<script>var siteurl = '<?php $this->options->SiteUrl() ;?>';
 	var owoJson = '<?php Utils::indexTheme('assets/OwO.json'); ?>';
 	<?php if($this->options->pjax && $this->options->pjax!=0) :?>
@@ -30,5 +40,6 @@
 	<?php endif; ?></script>
 	<script src="<?php Utils::indexTheme('assets/js/miracles.min.js'); ?>"></script>
 	<script>LazyLoad();PrismLoad();owoLoad();<?php $this->options->jsEcho(); ?></script>
+	<?php $this->footer(); ?>
   </body>
 </html>

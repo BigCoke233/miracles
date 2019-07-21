@@ -26,7 +26,9 @@ echo $commentClass;
       </div>
 	  <div class="comment-main comment-author-info col-md-11">
 		<div class="comment-content bubble">
-		  <span class="comment-reply"><?php $comments->reply('<i class="iconfont icon-return"></i>'); ?></span>
+		  <span class="comment-reply">
+		    <?php $comments->reply('<i class="iconfont icon-return"></i>'); ?>
+		  </span>
 	      <?php $comments->content(); ?>
 	    </div>
 		<p class="comment-meta">
@@ -82,7 +84,7 @@ echo $commentClass;
 <!-- 如果当前用户已经登录 -->
             <?php if($this->user->hasLogin()): ?>
 <!-- 显示当前登录用户的用户名以及登出连接 -->
-            <p><?php _e('登录身份: '); ?><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?> &raquo;</a></p>
+            <p class="col-md-12"><?php _e('登录身份: '); ?><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?> &raquo;</a></p>
 <!-- 若当前用户未登录 -->
             <?php else: ?>
 <!-- 要求输入名字、邮箱、网址 -->

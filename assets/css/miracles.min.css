@@ -28,6 +28,9 @@ body,html {
 	transition: background 0.2s;
 	width: 100%;
 }
+body {
+	font-family: 'Noto Sans SC',sans-serif
+}
 hr {
 	border: none;
 	border-bottom: 1px solid #ccc;
@@ -61,9 +64,6 @@ hr {
 	/* For the gray theme */
 	filter: grayscale(100%);
 	-webkit-filter: grayscale(100%);
-}
-.body-sans-serif {
-	font-family: 'Noto Sans SC',sans-serif
 }
 .body-serif {
 	font-family: 'Noto Serif SC',serif
@@ -764,7 +764,7 @@ hr {
 }
 .comment-content p {
 	color: #000;
-	font-size: 22px;
+	font-size: 16px;
 	word-break: break-all;
 	vertical-align: center;
 	padding: 10px 16px;
@@ -1002,6 +1002,10 @@ iframe[src*="//player.bilibili.com/player.html"] {
 }
 /* > Pad and up */
 @media (min-width:768px) {
+	.comment-content p {
+		font-size: 18px;
+	}
+	
 	.nav-content a {
 		font-size: 19px;
 		padding: 27.5px 8px
@@ -1078,6 +1082,10 @@ iframe[src*="//player.bilibili.com/player.html"] {
 }
 /* Desktop and up */
 @media (min-width:992px) {
+	.comment-content p {
+		font-size: 19px;
+	}
+	
 	.nav-content a {
 		font-size: 20px;
 		padding: 28px 8px
@@ -1159,6 +1167,10 @@ iframe[src*="//player.bilibili.com/player.html"] {
 }
 /* Computer screen and up */
 @media (min-width:1200px) {
+	.comment-content p {
+		font-size: 21px;
+	}
+	
 	.nav-content a {
 		font-size: 20px;
 		padding: 28px 8px

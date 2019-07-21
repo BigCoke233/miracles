@@ -173,7 +173,8 @@
 	filter: brightness(90%);
 }
 .body-dark .post-banner,
-.body-dark iframe {
+.body-dark iframe,
+.body-dark .aplayer-pic {
 	filter: brightness(75%);
 }
 /* Need Transparent dark background */
@@ -192,4 +193,40 @@
 }
 .body-dark .pio-action span {
 	background-color: rgba(90,90,90,.9)
+}
+/* Meting Plugin in dark theme */
+.body-dark .aplayer,
+.body-dark .aplayer-list-index,
+.body-dark .aplayer-list-author,
+.body-dark .aplayer .aplayer-icon,
+.body-dark .aplayer .aplayer-lrc-contents p,
+.body-dark .aplayer .aplayer-controller,
+.body-dark .aplayer .aplayer-info,
+.body-dark .aplayer .aplayer-author {
+    color: rgb(240,240,240)!important;
+}
+.body-dark .aplayer {
+	background: rgb(100,100,100);
+}
+.body-dark .aplayer-list-light,
+.body-dark .aplayer .aplayer-list ol li:hover {
+    background: rgb(140,140,140)!important;
+}
+.body-dark .aplayer .aplayer-lrc:before,
+.body-dark .aplayer .aplayer-lrc:after {
+    background: transparent;
+    background: transparent;
+    filter: none;
+}
+.body-dark .aplayer .aplayer-list ol li {
+	border-color: rgb(120,120,120);
+}
+.body-dark .aplayer-list::-webkit-scrollbar {
+	background: rgb(110,110,110)!important;
+}
+.body-dark .aplayer-list::-webkit-scrollbar-thumb {
+	background: rgb(80,80,80);
+}
+.body-dark .aplayer-info {
+	border: none;
 }
