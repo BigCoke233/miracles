@@ -5,7 +5,7 @@
  * 
  * @package     Miracles
  * @author      Eltrac
- * @version     1.0
+ * @version     1.1.2
  * @link        https://guhub.cn
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
@@ -23,7 +23,7 @@ $this->need('includes/header.php');
 			  <div class="col-md-6 post-banner-box">
 			    <a href="<?php $this->permalink(); ?>" class="post-link">
 			      <div class="post-banner">
-				    <img src="/usr/themes/Miracles/images/loading.gif" data-original="<?php if($this->fields->banner && $this->fields->banner=!''): ?><?php echo $this->fields->banner(); ?><?php else: ?><?php Utils::indexTheme('images/postbg/'); ?><?php echo rand(1,rand(1,rand(1,10))); ?>.jpg<?php endif; ?>">
+				    <img src="/usr/themes/Miracles/images/loading.gif" data-original="<?php if($this->fields->banner && $this->fields->banner=!''): ?><?php echo $this->fields->banner(); ?><?php else: ?><?php Utils::indexTheme('images/postbg/'); ?><?php echo mt_rand(1,20); ?>.jpg<?php endif; ?>">
 				  </div>
 				</a>
 			  </div>
@@ -48,7 +48,7 @@ $this->need('includes/header.php');
 		  <div class="post-item small-screen">
 		    <div class="post-banner-box-ss">
 			  <div class="post-banner-ss">
-			    <img src="/usr/themes/Miracles/images/loading.gif" data-original="<?php if($this->fields->banner && $this->fields->banner=!''): ?><?php echo $this->fields->banner(); ?><?php else: ?><?php Utils::indexTheme('images/postbg/'); ?><?php echo rand(1,rand(1,rand(1,10))); ?>.jpg<?php endif; ?>">
+			    <img src="/usr/themes/Miracles/images/loading.gif" data-original="<?php if($this->fields->banner && $this->fields->banner=!''): ?><?php echo $this->fields->banner(); ?><?php else: ?><?php Utils::indexTheme('images/postbg/'); ?><?php echo mt_rand(1,20); ?>.jpg<?php endif; ?>">
 			  </div>
 			</div>
 			<div class="post-item-content-ss">

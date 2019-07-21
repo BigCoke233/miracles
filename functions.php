@@ -2,6 +2,10 @@
 <?php
 require_once("libs/Utils.php");
 require_once("libs/Contents.php");
+require_once("libs/Options.php");
+
+//指定时区
+date_default_timezone_set("Asia/Shanghai");
 
 /**
  * 注册文章解析 hook
@@ -37,41 +41,6 @@ function themeInit() {
 }
 
 /**
- * 主题后台设置
- */
-function themeConfig($form) {
-    //nav
-	$nav_position = new Typecho_Widget_Helper_Form_Element_Select('nav_position',array('0'=>'不固定','1'=>'固定'),'0','导航栏-是否固定','固定后，导航栏不会随滚动条滚动而移动在屏幕上的位置<hr>');
-    $form->addInput($nav_position);
-	
-	//index-banner
-	$bannerUrl = new Typecho_Widget_Helper_Form_Element_Text('bannerUrl', NULL, 'https://s2.ax1x.com/2019/07/10/ZcRGX8.png', _t('首页大图-地址'), _t('首页大图的图片地址'));
-    $form->addInput($bannerUrl);
-	$bannerHeight = new Typecho_Widget_Helper_Form_Element_Text('bannerHeight', NULL, '60', _t('首页大图-高度'), _t('首页大图所占屏幕的高度，100为最大，填入纯数字，如"35"'));
-    $form->addInput($bannerHeight);
-	$bannerTitle = new Typecho_Widget_Helper_Form_Element_Text('bannerTitle', NULL, NULL, _t('首页大图-标题'), _t('这里是首页大图显示的的标题'));
-    $form->addInput($bannerTitle);
-	$bannerIntro = new Typecho_Widget_Helper_Form_Element_Text('bannerIntro', NULL, NULL, _t('首页大图-介绍'), _t('这里是首页大图标题下的简介<hr>'));
-    $form->addInput($bannerIntro);
-	
-	//pjax
-	$pjax = new Typecho_Widget_Helper_Form_Element_Select('pjax',array('0'=>'关闭','1'=>'开启'),'1','Pjax-是否开启','Pjax 预加载功能的开关');
-    $form->addInput($pjax);
-	$pjax_complete = new Typecho_Widget_Helper_Form_Element_Textarea('pjax_complete', NULL, NULL, _t('Pjax-完成后执行事件'), _t('Pjax 跳转页面后执行的事件，写入 js 代码，一般将 Pjax 重载(回调)函数写在这里。<hr>'));
-    $form->addInput($pjax_complete);
-	
-	//custom
-	$headerEcho = new Typecho_Widget_Helper_Form_Element_Textarea('headerEcho', NULL, NULL, _t('自定义头部信息'), _t('填写 html 代码，将输出在 &lt;head&gt; 标签中'));
-    $form->addInput($headerEcho);
-	$footerEcho = new Typecho_Widget_Helper_Form_Element_Textarea('footerEcho', NULL, NULL, _t('自定义页脚部信息'), _t('填写 html 代码，将输出在页脚的版权信息后'));
-    $form->addInput($footerEcho);
-	$cssEcho = new Typecho_Widget_Helper_Form_Element_Textarea('cssEcho', NULL, NULL, _t('自定义 CSS'), _t('填写 CSS 代码，输出在 head 标签结束之前的 style 标签内'));
-    $form->addInput($cssEcho);
-	$jsEcho = new Typecho_Widget_Helper_Form_Element_Textarea('jsEcho', NULL, NULL, _t('自定义 JavaScript'), _t('填写 JavaScript代码，输出在 body 标签结束之前'));
-    $form->addInput($jsEcho);
-}
-
-/**
  * 文章与独立页自定义字段
  */
 function themeFields(Typecho_Widget_Helper_Layout $layout) {
@@ -80,4 +49,12 @@ function themeFields(Typecho_Widget_Helper_Layout $layout) {
 	
 	$excerpt = new Typecho_Widget_Helper_Form_Element_Text('excerpt', NULL, NULL,_t('文章摘要'), _t('输入一段文本来自定义摘要，如果为空则自动提取文章前 130 字。'));
     $layout->addItem($excerpt);
+}
+
+/**
+ * 获取主题版本号
+ */
+function themeVersion() {
+ $info = Typecho_Plugin::parseInfo(__DIR__ . '/index.php');
+ return $info['version'];
 }
