@@ -97,6 +97,7 @@
 		  <a href="<?php $this->options->SiteUrl(); ?>" style="float:left"><i class="iconfont icon-xuanzhongshangcheng"></i></a>
 		  <a onclick="Search()" style="float:left"><i class="iconfont icon-chaxun"></i></a>
 		  <a onclick="Login()" style="float:left"><i class="iconfont icon-user"></i></a>
+		  <a onclick="toggleOptions()" style="float:left"><i class="iconfont icon-settings"></i></a>
 		  <a onclick="toggleMobileMenu()" style="float:right">MENU <i class="iconfont icon-list"></i></a>
 		</div>
 	  </nav>
