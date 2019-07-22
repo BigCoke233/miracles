@@ -21,6 +21,7 @@
 	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php themeVersion(); ?>/assets/js/nprogress.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php themeVersion(); ?>/assets/js/OwO.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php themeVersion(); ?>/assets/js/prism.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php themeVersion(); ?>/assets/js/pangu.js"></script>
 	<?php else: ?>
     <script src="<?php Utils::indexTheme('assets/js/jquery.js'); ?>"></script>
 	<script src="<?php Utils::indexTheme('assets/js/pjax.jquery.js'); ?>"></script>
@@ -29,6 +30,7 @@
 	<script src="<?php Utils::indexTheme('assets/js/nprogress.js'); ?>"></script>
 	<script src="<?php Utils::indexTheme('assets/js/OwO.min.js'); ?>"></script>
 	<script src="<?php Utils::indexTheme('assets/js/prism.js'); ?>"></script>
+	<script src="<?php Utils::indexTheme('assets/js/pangu.js'); ?>"></script>
 	<?php endif; ?>
 	<script>var siteurl = '<?php $this->options->SiteUrl() ;?>';
 	var owoJson = '<?php Utils::indexTheme('assets/OwO.json'); ?>';
