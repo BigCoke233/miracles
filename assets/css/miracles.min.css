@@ -65,8 +65,15 @@ hr {
 	filter: grayscale(100%);
 	-webkit-filter: grayscale(100%);
 }
+.body-sepia {
+	filter: sepia(35%);
+	-webkit-filter: sepia(35%);
+}
 .body-serif {
 	font-family: 'Noto Serif SC',serif
+}
+.body-noscroll {
+	overflow: hidden;
 }
 
 /* 组件 */
@@ -166,7 +173,11 @@ hr {
 .login-button {
 	right: 65px;
 }
+.setting-button {
+	right: 110px;
+}
 .nav-icon-button:hover,.search-close {
+	display: block;
 	background: rgb(230,230,230);
 	cursor: pointer
 }
@@ -226,9 +237,6 @@ hr {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis
-}
-.post-item:hover .post-title {
-	color: var(--theme-color)
 }
 .post-excerpt {
 	overflow: hidden;
@@ -542,6 +550,7 @@ hr {
 	bottom: 0;
 	right: 0;
 	left: 0;
+	max-height: 100vh;
 	background-color: rgba(255,255,255,0.96);
 	transition: all .2s;
 	z-index: 1000;
@@ -662,28 +671,37 @@ hr {
 }
 
 /* 悬浮按钮 */
-.dark-button,.gotop-button {
+.fixed-button {
 	background: #fdfdfd;
-	font-size: 22px;
-	padding: 10px 15px;
+	font-size: 16px;
+	height: 60px;
+	width: 60px;
+	display: flex;
+	justify-content:center;
+	align-items:center;
 	border: none;
 	border-radius: 10000px;
-	box-shadow: 0 0 15px #bababa;
-	-webkit-box-shadow: 0 0 15px #bababa;
-	-moz-box-shadow: 0 0 15px #bababa;
+	box-shadow: 0 1px 5px #bababa;
+	-webkit-box-shadow: 0 1px 5px #bababa;
+	-moz-box-shadow: 0 1px 5px #bababa;
 	position: fixed;
 	cursor: pointer;
 	outline: 0;
-	right: 12px
+	right: 6px;
+	transition: all 0.3s;
+}
+.fixed-button:hover {
+	box-shadow: 0 3px 25px #bababa;
+	-webkit-box-shadow: 0 3px 25px #bababa;
+	-moz-box-shadow: 0 3px 25px #bababa;
+	background: rgb(248,248,248)!important;
 }
 .gotop-button {
-	bottom: 30px;
-	background: var(--theme-color)!important;
-	color: #fff!important
+	bottom: 8px;
+	background: #fff!important;
+	color: rgb(80,80,80)!important;
 }
-.dark-button {
-	bottom: 80px
-}
+
 /* 页脚 */
 .footer-info {
 	background: #f0f0f0;
@@ -971,6 +989,95 @@ hr {
 	transform: translateY(-6px);
 	box-shadow: 2px 8px 17px #bababa;
 }
+
+/* Options Pannel */
+.options {
+	transition: all 0.3s;
+	background: #fff;
+	border-radius: 2px;
+	box-shadow: 0 1px 8px #bababa;
+	-moz-box-shadow: 0 1px 8px #bababa;
+	-webkit-box-shadow: 0 1px 8px #bababa;
+	position: fixed;
+	top: 90px;
+	right: 10px;
+	left: 10px;
+	z-index: 20;
+	width: 100%;
+}
+.options hr {
+	border-color: rgb(245,245,245);
+	margin: 0;
+}
+.options.ready {
+	display: none;
+	top: 40px;
+}
+.options-content {
+	padding: 8px;
+	font-size: 15px;
+}
+.options-content h4 {
+	margin: 0;
+	margin-bottom: 8px;
+}
+.options-family {
+	text-align: center;
+}
+.options-family button {
+	display: block;
+	width: 100%;
+	border: none;
+	background: #fff;
+	font-size: 20px;
+	padding: 8px 0;
+	transition: all 0.3s;
+	outline: none;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.options-family button:hover {
+	background: rgb(242,242,242);
+}
+.options-family-button.options-button-active {
+	color: #fff;
+	background: var(--theme-color)!important;
+}
+.options-theme-button.options-button-active {
+	border: 2px solid var(-theme-color);
+}
+.options-themes {
+	text-align: center;
+	margin-top: 20px;
+}
+.options-theme-label {
+	color: #fff;
+	font-size: 12px;
+	transition: color 0.3s;
+}
+.options-theme-item:hover .options-theme-label {
+	color: #bababa;
+}
+.options-theme-button {
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+	border: none;
+	outline: none;
+	display: block;
+	margin: 0 auto;
+	cursor: pointer
+}
+.options-theme-normal {
+	background: rgb(240,240,240);
+}
+.options-theme-dark {
+	background: rgb(80,80,80)
+}
+.options-theme-sepia {
+	background: rgb(255,255,200)
+}
+
 /* Pio Plugin */
 .pio-container .pio-dialog {
 	margin-bottom: -60px;
@@ -996,12 +1103,16 @@ iframe[src*="//player.bilibili.com/player.html"] {
 .large-screen {
 	display: none
 }
-
 .small-screen {
 	display: block
 }
 /* > Pad and up */
 @media (min-width:768px) {
+	.options {
+	    width: 400px!important;
+		left: auto!important;
+    }
+
 	.comment-content p {
 		font-size: 18px;
 	}
@@ -1047,7 +1158,7 @@ iframe[src*="//player.bilibili.com/player.html"] {
 		letter-spacing: 2px
 	}
 
-	.dark-button,.gotop-button {
+	.fixed-button {
 		padding: 15px 20px;
 		right: 28px
 	}
@@ -1056,7 +1167,7 @@ iframe[src*="//player.bilibili.com/player.html"] {
 		bottom: 20px
 	}
 
-	.dark-button {
+	.options-button {
 		bottom: 90px
 	}
 
@@ -1131,7 +1242,7 @@ iframe[src*="//player.bilibili.com/player.html"] {
 		letter-spacing: 2px
 	}
 
-	.dark-button,.gotop-button {
+	.fixed-button {
 		padding: 18px 23px;
 		right: 38px
 	}
@@ -1140,7 +1251,7 @@ iframe[src*="//player.bilibili.com/player.html"] {
 		bottom: 40px
 	}
 
-	.dark-button {
+	.options-button {
 		bottom: 120px
 	}
 
@@ -1215,7 +1326,7 @@ iframe[src*="//player.bilibili.com/player.html"] {
 		line-height: 30px;
 		letter-spacing: 2px
 	}
-	.dark-button,.gotop-button {
+	.fixed-button {
 		padding: 18px 23px;
 		right: 38px
 	}
@@ -1224,7 +1335,7 @@ iframe[src*="//player.bilibili.com/player.html"] {
 		bottom: 40px
 	}
 
-	.dark-button {
+	.options-button {
 		bottom: 120px
 	}
 

@@ -41,9 +41,42 @@
 		  <p>&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->SiteUrl(); ?>"><?php $this->options->title(); ?></a> | Theme <a href="https://github.com/BigCoke233/miracles">Miracles</a></p>
 		</div>
 	  </div>
-	  
+	  <!-- 前台设置 -->
+	  <div class="options ready">
+	    <div class="options-content">
+	      <div class="options-family container-fluid">
+		    <div class="row">
+			  <div class="col-6 options-family-serif">
+			    <button onclick="ChangeToSerif()" class="<?php if($this->options->bodyFonts && $this->options->bodyFonts=1): ?>options-button-active <?php endif; ?>options-family-button options-serif-button body-serif">Serif</button>
+			  </div>
+			  <div class="col-6 options-family-sans">
+			    <button onclick="ChangeToSansSerif()" class="<?php if($this->options->bodyFonts && $this->options->bodyFonts=1): ?><?php else: ?>options-button-active <?php endif; ?>options-family-button options-sans-button" style="font-family: 'Noto Sans SC',sans-serif">Sans Serif</button>
+			  </div>
+		    </div>
+		  </div>
+	    </div>
+		<hr>
+		<div class="options-content">
+		  <div class="options-themes container-fluid">
+		    <div class="row">
+			  <div class="col-4 options-theme-item">
+			    <button class="options-theme-button options-theme-dark" onclick="Dark()"></button>
+				<span class="options-theme-label">黑夜模式</span>
+			  </div>
+			  <div class="col-4 options-theme-item">
+			    <button class="options-theme-button options-theme-sepia" onclick="Sepia()"></button>
+				<span class="options-theme-label">日落模式</span>
+			  </div>
+		      <div class="col-4 options-theme-item">
+			    <button class="options-theme-button options-theme-normal" onclick="Gray()"></button>
+				<span class="options-theme-label">黑白滤镜</span>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
 	  <!-- 导航 -->
-	  <!-- > 大屏幕导航 -->
+	  <!-- -大屏幕导航 -->
       <nav class="large-screen nav<?php if($this->options->nav_position && $this->options->nav_position=1): ?> nav-fixed<?php endif; ?>">
 	    <div class="container">
 		  <p class="nav-content">
@@ -55,9 +88,10 @@
 		  </p>
 		  <button class="nav-icon-button search-button" onclick="Search()"><i class="iconfont icon-chaxun"></i></button>
 		  <button class="nav-icon-button login-button" onclick="Login()"><i class="iconfont icon-user"></i></button>
+		  <button class="nav-icon-button setting-button" onclick="toggleOptions()"><i class="iconfont icon-settings"></i></button>
 		</div>
 	  </nav>
-	  <!--> 小屏幕导航 -->
+	  <!-- -小屏幕导航 -->
 	  <nav class="small-screen nav nav-mobile<?php if($this->options->nav_position && $this->options->nav_position=1): ?> nav-fixed<?php endif; ?>">
         <div class="nav-mobile-content">
 		  <a href="<?php $this->options->SiteUrl(); ?>" style="float:left"><i class="iconfont icon-xuanzhongshangcheng"></i></a>
@@ -83,9 +117,7 @@
 				<?php elseif($this->is('post') || $this->is('page')): ?>
 				<h1><?php $this->title(); ?></h1>
 		        <p class="header-meta"><?php if($this->is('post')): ?><i class="iconfont icon-block"></i> <?php $this->category(','); ?>&emsp;<?php endif; ?><i class="iconfont icon-comments"></i> <?php $this->commentsNum('None', 'Only 1', '%d'); ?>&emsp;<i class="iconfont icon-clock"></i> <?php $this->date(); ?></p>
-				<?php else: ?>
-				
-				<?php endif; ?>
+				<?php else: ?><?php endif; ?>
 			  </div>
 			</div>
 		  </div>

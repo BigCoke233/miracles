@@ -44,7 +44,8 @@
 .body-dark .bubble.saying-body:hover,
 .body-dark .OwO-body,
 .body-dark .OwO-open .OwO-logo,
-.body-dark .OwO .OwO-body .OwO-items .OwO-item:hover {
+.body-dark .OwO .OwO-body .OwO-items .OwO-item:hover,
+.body-dark .options {
 	box-shadow: 0 0 36px #323232!important;
 	-moz-box-shadow: 0 0 36px #323232!important;
 	-webkit-box-shadow: 0 0 36px #323232!important
@@ -62,7 +63,8 @@
 .body-dark .bubble.comment-content,
 .body-dark .comment-author,
 .body-dark .bubble.saying-body,
-.body-dark .tags-item a {
+.body-dark .tags-item a,
+.body-dark .options-button-active {
 	background: #646464
 }
 /* Need #5a5a5a bg */
@@ -81,8 +83,16 @@
 .body-dark .OwO-body,
 .body-dark .OwO-package-active,
 .body-dark .OwO-packages li:hover,
-.body-dark .saying-textarea {
+.body-dark .saying-textarea,
+.body-dark .dialog,
+.body-dark .options,
+.body-dark .options-theme-label,
+.body-dark .options-family-button {
 	background: #5a5a5a!important
+}
+/* Need #5a5a5a color */
+.body-dark .options-theme-label {
+	color: #5a5a5a!important;
 }
 /* OwO */
 .body-dark .OwO-item,
@@ -116,7 +126,8 @@
 .body-dark .mobile-menu,
 .body-dark .mobile-menu a,
 .body-dark .mobile-menu-close,
-.body-dark .mobile-menu-footer {
+.body-dark .mobile-menu-footer,
+.body-dark .options-family-button {
 	color: #fafafa!important
 }
 /* Need dark border-color */
@@ -131,7 +142,8 @@
 .body-dark .OwO-body,
 .body-dark .mobile-menu-title,
 .body-dark .mobile-menu-footer,
-.body-dark .saying-textarea {
+.body-dark .saying-textarea,
+.body-dark .options hr {
 	border-color: #6e6e6e!important;
 }
 .body-dark .comment-by-author .bubble.comment-content:before,

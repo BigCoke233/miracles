@@ -10,8 +10,7 @@
     </footer>
 	<!-- 悬浮按钮 -->
 	<div class="fixed-tools">
-	  <button onclick="GoTop()" title="返回顶部" class="gotop-button"  style="color:white;"><i class="iconfont icon-chevron-up"></i></button>
-	  <button onclick="Dark()" title="护眼模式" class="dark-button"><i class="iconfont icon-envira"></i></button>
+	  <button onclick="GoTop()" title="返回顶部" class="fixed-button gotop-button"  style="color:white;"><i class="iconfont icon-chevron-up"></i></button>
 	</div>
 	<!-- JavaScript -->
 	<?php if($this->options->CDN && $this->options->CDN=1): ?>
