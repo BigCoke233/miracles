@@ -52,5 +52,6 @@
 - [OwO](https://github.com/DIYgod/OwO)
 - [Pjax](https://github.com/defunkt/jquery-pjax)
 - [LazyLoad](https://github.com/tuupola/lazyload)
+- [Pangu.js](https://github.com/vinta/pangu.js)
 
 > Just enjoy it~
