@@ -7,11 +7,11 @@
 > 🙌 You're the Miracles. 你即是奇迹
 
 # 注意 Notice
-请到  [Releases](https://github.com/BigCoke233/miracles/releases) 页面下载最新发行版，不要直接下载仓库！
-请到  [Releases](https://github.com/BigCoke233/miracles/releases) 页面下载最新发行版，不要直接下载仓库！
-请到  [Releases](https://github.com/BigCoke233/miracles/releases) 页面下载最新发行版，不要直接下载仓库！
-有问题请先查看 [Wiki](https://github.com/BigCoke233/miracles/wiki) ，有不懂再问我，谢谢！
-有问题请先查看 [Wiki](https://github.com/BigCoke233/miracles/wiki) ，有不懂再问我，谢谢！
+请到  [Releases](https://github.com/BigCoke233/miracles/releases) 页面下载最新发行版，不要直接下载仓库！  
+请到  [Releases](https://github.com/BigCoke233/miracles/releases) 页面下载最新发行版，不要直接下载仓库！  
+请到  [Releases](https://github.com/BigCoke233/miracles/releases) 页面下载最新发行版，不要直接下载仓库！  
+有问题请先查看 [Wiki](https://github.com/BigCoke233/miracles/wiki) ，有不懂再问我，谢谢！  
+有问题请先查看 [Wiki](https://github.com/BigCoke233/miracles/wiki) ，有不懂再问我，谢谢！  
 有问题请先查看 [Wiki](https://github.com/BigCoke233/miracles/wiki) ，有不懂再问我，谢谢！
 
 # 介绍 Introduction
