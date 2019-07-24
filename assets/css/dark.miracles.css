@@ -37,7 +37,6 @@
 }
 /* Need Shadow */
 .body-dark .dark-button,
-.body-dark .gotop-button,
 .body-dark .post-body,
 .body-dark .post-item,
 .body-dark .post-pagenav a,
@@ -50,11 +49,13 @@
 	-moz-box-shadow: 0 0 36px #323232!important;
 	-webkit-box-shadow: 0 0 36px #323232!important
 }
-.body-dark .links-item {
-	box-shadow: 0 0 2px #323232!important
+.body-dark .links-item,
+.body-dark .gotop-button {
+	box-shadow: 0 1px 3px #323232!important
 }
-.body-dark .links-item:hover {
-	box-shadow: 0 0 22px #323232!important
+.body-dark .links-item:hover,
+.body-dark .gotop-button:hover {
+	box-shadow: 0 4px 22px #323232!important
 }
 /* Need #646464 bg */
 .body-dark .archives-list a:hover,
@@ -65,7 +66,7 @@
 .body-dark .bubble.saying-body,
 .body-dark .tags-item a,
 .body-dark .options-button-active {
-	background: #646464
+	background: #646464!important;
 }
 /* Need #5a5a5a bg */
 .body-dark .search-form input,
@@ -89,10 +90,6 @@
 .body-dark .options-theme-label,
 .body-dark .options-family-button {
 	background: #5a5a5a!important
-}
-/* Need #5a5a5a color */
-.body-dark .options-theme-label {
-	color: #5a5a5a!important;
 }
 /* OwO */
 .body-dark .OwO-item,
@@ -127,8 +124,14 @@
 .body-dark .mobile-menu a,
 .body-dark .mobile-menu-close,
 .body-dark .mobile-menu-footer,
-.body-dark .options-family-button {
+.body-dark .options-family-button,
+.body-dark .options-theme-item:hover .options-theme-label,
+.body-dark .options-contentsize-button {
 	color: #fafafa!important
+}
+/* Need #5a5a5a color */
+.body-dark .options-theme-label{
+	color: #5a5a5a!important;
 }
 /* Need dark border-color */
 .body-dark .comment-form input,
@@ -143,13 +146,18 @@
 .body-dark .mobile-menu-title,
 .body-dark .mobile-menu-footer,
 .body-dark .saying-textarea,
-.body-dark .options hr {
+.body-dark .options hr{
 	border-color: #6e6e6e!important;
+}
+.body-dark .tip {
+	border-top-color: #6e6e6e!important;
+	border-bottom-color: #6e6e6e!important;
+	border-right-color: #6e6e6e!important;
 }
 .body-dark .comment-by-author .bubble.comment-content:before,
 .body-dark .bubble.comment-content:before,
 .body-dark .bubble.saying-body:before {
-	border-right-color: #646464;
+	border-right-color: #646464!important;
 }
 /* Darker Mask */
 .body-dark .dark-cover {

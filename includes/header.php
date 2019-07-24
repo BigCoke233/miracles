@@ -43,6 +43,7 @@
 	  </div>
 	  <!-- 前台设置 -->
 	  <div class="options ready">
+	    <!-- 字体设置 -->
 	    <div class="options-content">
 	      <div class="options-family container-fluid">
 		    <div class="row">
@@ -56,6 +57,7 @@
 		  </div>
 	    </div>
 		<hr>
+		<!-- 滤镜/模式设置 -->
 		<div class="options-content">
 		  <div class="options-themes container-fluid">
 		    <div class="row">
@@ -65,11 +67,30 @@
 			  </div>
 			  <div class="col-4 options-theme-item">
 			    <button class="options-theme-button options-theme-sepia" onclick="Sepia()"></button>
-				<span class="options-theme-label">日落模式</span>
+				<span class="options-theme-label">日落滤镜</span>
 			  </div>
 		      <div class="col-4 options-theme-item">
 			    <button class="options-theme-button options-theme-normal" onclick="Gray()"></button>
 				<span class="options-theme-label">黑白滤镜</span>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<hr>
+		<div class="options-content">
+		  <div class="options-contentsize container-fluid">
+		    <div class="row">
+			  <div class="col-3 options-contentsize-small">
+			    <button class="options-sizesmall options-contentsize-button" onclick="SizeSmall()">100%</button>
+			  </div>
+			  <div class="col-3 options-contentsize-normal">
+			    <button class="options-sizenormal options-contentsize-button options-button-active" onclick="SizeNormal()">125%</button>
+			  </div>
+			  <div class="col-3 options-contentsize-big">
+			    <button class="options-sizebig options-contentsize-button" onclick="SizeBig()">140%</button>
+			  </div>
+			  <div class="col-3 options-contentsize-large">
+			    <button class="options-sizelarge options-contentsize-button" onclick="SizeLarge()">180%</button>
 			  </div>
 			</div>
 		  </div>

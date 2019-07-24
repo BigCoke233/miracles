@@ -86,6 +86,9 @@ hr {
     -webkit-box-shadow: 0 1px 1px #000;
 	border: none;
 }
+[action="?MiraclesBackup"] {
+	margin-top: -30px;
+}
 
 /* Para */
 .miracles-para-attention {
@@ -93,6 +96,15 @@ hr {
 	background: red;
 	color: #fff;
 	border-radius: 3px;
+}
+
+/* News */
+iframe.miracles-news {
+	width: 100%;
+	border: none;
+	height: 60px;
+	margin: 0 -8px;
+	margin-top: -10px;
 }
 
 /* 滚动条 */

@@ -64,10 +64,12 @@ function themeConfig($form) {
 	<h1>Miracles 主题设置面板</h1>
 	<p>欢迎使用 Miracles 主题，目前版本是：'. $ver .'</span><br>
 	作者博客：<a href="https://guhub.cn">Eltrac\'s</a> | 帮助文档：<a href="https://github.com/BigCoke233/miracles/wiki">WIKI</a> | 问题反馈：<a href="https://github.com/BigCoke233/miracles/issues">issues</a></p>
-	<form class="protected" action="?MiraclesBackup" method="post">
-    <input type="submit" name="type" class="miracles-backup-button backup" value="备份模板数据" />&nbsp;&nbsp;
-	<input type="submit" name="type" class="miracles-backup-button recover" value="还原模板数据" />&nbsp;&nbsp;
-	<input type="submit" name="type" class="miracles-backup-button delete" value="删除备份数据" /></form>
+	<iframe class="miracles-news" src="https://gu.guhub.cn/news.html"></iframe>
+   	  <form class="protected" action="?MiraclesBackup" method="post">
+        <input type="submit" name="type" class="miracles-backup-button backup" value="备份模板数据" />&nbsp;&nbsp;
+	    <input type="submit" name="type" class="miracles-backup-button recover" value="还原模板数据" />&nbsp;&nbsp;
+	    <input type="submit" name="type" class="miracles-backup-button delete" value="删除备份数据" />
+	  </form>
 	</div>';
 	
 	/**
@@ -100,8 +102,10 @@ function themeConfig($form) {
 	//custom style
 	$grayTheme = new Typecho_Widget_Helper_Form_Element_Select('grayTheme',array('0'=>'关闭','1'=>'开启'),'0','<h2>个性化</h2>哀悼模式','为京阿尼纵火时间而设计的开关，打开后网站变为黑白，Pray for 京阿尼');
     $form->addInput($grayTheme);
-	$bodyFonts = new Typecho_Widget_Helper_Form_Element_Select('bodyFonts',array('0'=>'无衬线字体','1'=>'衬线字体'),'0','网站字体','选择网站的字体，无衬线字体即“思源黑体”，衬线字体即“思源宋体”<hr>');
+	$bodyFonts = new Typecho_Widget_Helper_Form_Element_Select('bodyFonts',array('0'=>'无衬线字体','1'=>'衬线字体'),'0','网站字体','选择网站的字体，无衬线字体即“思源黑体”，衬线字体即“思源宋体”');
     $form->addInput($bodyFonts);
+	$cat = new Typecho_Widget_Helper_Form_Element_Select('cat',array('0'=>'不要','1'=>'小黑','2'=>'小白'),'0','领养猫咪','领养一只猫咪，这样你就可以在前台看到它啦！<hr>');
+    $form->addInput($cat);
 	
 	//developer
 	$headerEcho = new Typecho_Widget_Helper_Form_Element_Textarea('headerEcho', NULL, NULL, _t('<h2>开发者设置</h2>自定义头部信息'), _t('填写 html 代码，将输出在 &lt;head&gt; 标签中'));

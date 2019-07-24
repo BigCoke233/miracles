@@ -6,6 +6,9 @@ $this->need('includes/header.php');
 	  <div class="post-body">
 	    <!-- 文章内容 -->
 	    <div class="post-content">
+		  <?php $time = $this->date();
+		  
+		  ?>
 		  <?php $this->content(); ?>
 		  <br />
 		  <!-- 文章页脚 -->

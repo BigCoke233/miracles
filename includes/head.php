@@ -67,7 +67,7 @@ if (isset($_POST['action'])) {
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300|Noto+Serif+SC:300&display=swap" rel="stylesheet">
 	<style>.body-dark .pio-action .pio-home{background-image: url(<?php Utils::indexTheme('images/icons/home.png'); ?>);}.body-dark .pio-action .pio-close{background-image: url(<?php Utils::indexTheme('images/icons/remove.png'); ?>);}.body-dark .pio-action .pio-skin{background-image: url(<?php Utils::indexTheme('images/icons/skin.png'); ?>);}.body-dark .pio-action .pio-info{background-image: url(<?php Utils::indexTheme('images/icons/info.png'); ?>);}.body-dark .pio-action .pio-night{background-image: url(<?php Utils::indexTheme('images/icons/night.png'); ?>);}@media (min-width:992px) {.search{background-image:url(<?php Utils::indexTheme('images/search.png'); ?>);}.login{background-image:url(<?php Utils::indexTheme('images/login.png'); ?>)}}.search {background-position: bottom right;background-repeat: no-repeat}.login {background-position: bottom left;background-repeat:no-repeat}<?php $this->options->cssEcho(); ?></style>
   </head>
-  <body class="<?php if($this->options->bodyFonts && $this->options->bodyFonts=1): ?> body-serif<?php endif; ?><?php if($this->options->grayTheme && $this->options->grayTheme=1): ?> body-gray<?php endif; ?>">
+  <body class="<?php if($this->options->bodyFonts && $this->options->bodyFonts=1): ?> body-serif<?php endif; ?><?php if($this->options->grayTheme && $this->options->grayTheme=1): ?> body-gray<?php endif; ?> body-contentsize-normal">
   <!--[if lt IE 9]>
     <div class="message error browsehappy" role="dialog">当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.</div>
   <![endif]-->
