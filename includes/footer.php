@@ -14,15 +14,15 @@
 	</div>
 	<!-- JavaScript -->
 	<?php if($this->options->CDN && $this->options->CDN=1): ?>
-	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php themeVersion(); ?>/assets/js/jquery.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php themeVersion(); ?>/assets/js/pjax.jquery.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php themeVersion(); ?>/assets/js/jquery.fancybox.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php themeVersion(); ?>/assets/js/jquery.lazyload.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php themeVersion(); ?>/assets/js/nprogress.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php themeVersion(); ?>/assets/js/OwO.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php themeVersion(); ?>/assets/js/prism.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php themeVersion(); ?>/assets/js/pangu.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php themeVersion(); ?>/assets/js/l2dwidget.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/jquery.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/pjax.jquery.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/jquery.fancybox.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/jquery.lazyload.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/nprogress.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/OwO.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/prism.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/pangu.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/l2dwidget.min.js"></script>
 	<?php else: ?>
     <script src="<?php Utils::indexTheme('assets/js/jquery.js'); ?>"></script>
 	<script src="<?php Utils::indexTheme('assets/js/pjax.jquery.js'); ?>"></script>

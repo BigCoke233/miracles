@@ -1,5 +1,5 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-
+      <div class="mask"></div>
       <!-- 搜索 -->
       <div class="search ready">
 	    <button class="search-close ready" onclick="Search()"><i class="iconfont icon-x"></i></button>
@@ -42,7 +42,7 @@
 		</div>
 	  </div>
 	  <!-- 前台设置 -->
-	  <div class="options ready">
+	  <div class="options ready<?php if($this->options->navStyle==1): ?> options-with-drawer<?php endif; ?>"<?php if($this->options->navStyle==1): ?> onclick="toggleOptions()"<?php endif; ?>>
 	    <!-- 字体设置 -->
 	    <div class="options-content">
 	      <div class="options-family container-fluid">
@@ -96,6 +96,7 @@
 		  </div>
 		</div>
 	  </div>
+	  <?php if($this->options->navStyle==0): ?>
 	  <!-- 导航 -->
 	  <!-- -大屏幕导航 -->
       <nav class="large-screen nav<?php if($this->options->nav_position && $this->options->nav_position=1): ?> nav-fixed<?php endif; ?>">
@@ -122,7 +123,34 @@
 		  <a onclick="toggleMobileMenu()" style="float:right">MENU <i class="iconfont icon-list"></i></a>
 		</div>
 	  </nav>
-	  
+	  <?php elseif($this->options->navStyle==1): ?>
+	  <!-- 抽屉栏 -->
+	  <nav class="drawer">
+	    <div class="drawer-main">
+	      <button class="drawer-button" onclick="toggleDrawer()"><i class="iconfont icon-list"></i></button>
+	      <div class="drawer-avatar">
+		    <?php echo $this->author->gravatar(500); ?>
+		  </div>
+		  <div class="drawer-search">
+		    <form method="post" action="">
+              <div class="drawer-search-form">
+		        <input type="text" name="s" class="text" size="32" /> 
+			    <button type="submit" class="submit">搜索</button>
+		      </div>
+            </form>
+		  </div>
+		  <div class="drawer-content">
+		    <a href="<?php $this->options->SiteUrl(); ?>" onclick="toggleDrawer()">首页</a>
+		    <?php $this->widget('Widget_Contents_Page_List')
+            ->parse('<a href="{permalink}" onclick="toggleDrawer()">{title}</a>'); ?>
+		  </div>
+		</div>
+		<div class="drawer-footer">
+		  <button class="drawer-icon" onclick="Login();toggleDrawer()"><i class="iconfont icon-user"></i></button>
+          <button class="drawer-icon" onclick="toggleOptions()"><i class="iconfont icon-settings"></i></button>
+		</div>
+	  </nav>
+	  <?php endif; ?>
 	  <div id="pjax-container"><!-- 开始 pjax-container -->
 	  <header>
 	    <?php if($this->is('post') || $this->is('page')): ?>
@@ -130,7 +158,7 @@
 		<?php else: ?>
 	    <div class="index-banner" style="background:url('<?php $this->options->bannerUrl(); ?>') no-repeat;height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;">
 		<?php endif; ?>
-		  <div class="dark-cover">
+		  <div class="banner-mask">
 		    <div class="main-container container">
 			  <div class="banner-content">
 			    <?php if($this->is('index')): ?>

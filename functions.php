@@ -55,6 +55,6 @@ function themeFields(Typecho_Widget_Helper_Layout $layout) {
  * 获取主题版本号
  */
 function themeVersion() {
- $info = Typecho_Plugin::parseInfo(__DIR__ . '/index.php');
- return $info['version'];
+    $info = Typecho_Plugin::parseInfo(__DIR__ . '/index.php');
+    return $info['version'];
 }

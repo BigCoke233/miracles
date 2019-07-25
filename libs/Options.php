@@ -76,7 +76,9 @@ function themeConfig($form) {
 	 *  设置项
 	 */
     //nav
-	$nav_position = new Typecho_Widget_Helper_Form_Element_Select('nav_position',array('0'=>'不固定','1'=>'固定'),'0','<h2>导航栏 Nav</h2>是否固定','固定后，导航栏不会随滚动条滚动而移动在屏幕上的位置<hr>');
+	$navStyle = new Typecho_Widget_Helper_Form_Element_Select('navStyle',array('0'=>'顶部导航栏','1'=>'左侧抽屉蓝'),'0','<h2>导航栏 Nav</h2>类型','选择导航栏的类型（若选择左侧抽屉蓝，则下一条设置失效）');
+    $form->addInput($navStyle);
+	$nav_position = new Typecho_Widget_Helper_Form_Element_Select('nav_position',array('0'=>'不固定','1'=>'固定'),'0','是否固定','固定后，导航栏不会随滚动条滚动而移动在屏幕上的位置<hr>');
     $form->addInput($nav_position);
 	
 	//index-banner

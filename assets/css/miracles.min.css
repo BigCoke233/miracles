@@ -32,7 +32,8 @@ body,html {
 	width: 100%;
 }
 body {
-	font-family: 'Noto Sans SC',sans-serif
+	font-family: 'Noto Sans SC',sans-serif;
+	transition: all 0.3s;
 }
 hr {
 	border: none;
@@ -112,6 +113,22 @@ hr {
 .button-md:hover {
 	background: rgb(235,235,235);
 	color: #fff;
+}
+
+/* Large Mask */
+.mask {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgb(70,70,70,0);
+	z-index: -100;
+	transition: all 0.4s;
+}
+.mask-open {
+	background: rgb(70,70,70,0.7);
+	z-index: 25;
 }
 
 /* 导航栏 */
@@ -194,14 +211,143 @@ hr {
 	background: rgb(230,230,230);
 	cursor: pointer
 }
+
+/* Drawer */
+.drawer {
+	background: rgb(246,246,246);
+	border-right: 1px solid #ddd;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	z-index: 30;
+	left: -150vh;
+	transition: all 0.8s;
+	box-shadow: 0 0 30px #646464;
+	-moz-box-shadow: 0 0 30px #646464;
+	-webkit-box-shadow: 0 0 30px #646464;
+	/* Mobile */
+	width: 360px;
+}
+.drawer-avatar {
+	margin-top: 50px;
+}
+.drawer-avatar img {
+	display: block;
+	margin: 0 auto;
+	border-radius: 100%;
+	/* Mobile */
+	width: 150px;
+	height: 150px;
+}
+.drawer-button {
+	position: fixed;
+	top: 10px;
+	left: 15px;
+	background: rgba(0,0,0,0);
+	border-radius: 100%;
+	border: none;
+	height: 40px;
+	width: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	text-shadow: 0 1px 6px #bababa;
+	transform: scale(1.2);
+	transition: background 0.3s;
+	padding: 3px;
+    outline: none;	
+	transition: all 0.5s;
+}
+.drawer-button:hover {
+	cursor: pointer;
+	background: rgba(200,200,200,0.4);
+}
+.drawer-open .drawer {
+	left: 0;
+}
+.drawer-open .drawer-button {
+	left: 4px;
+	top: 4px;
+	color: rgb(80,80,80);
+	text-shadow: 0 0 0 #fff;
+}
+.drawer-open #live2dcanvas {
+	z-index: 0!important;
+}
+
+.drawer-search {
+	background: rgb(240,240,240);
+	padding: 10px 8px;
+	margin-top: 20px;
+}
+.drawer-search-form input,
+.drawer-search-form button {
+	color: gray;
+	border-radius: 2px;
+	border: 1px solid #ccc;
+	margin: 0;
+	padding: 7px 3px;
+}
+.drawer-search-form input {
+	width: 70%;
+	background: #fff;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	margin-right: -5px;
+}
+.drawer-search-form button {
+	width: 28%;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	background: #ddd;
+}
+.drawer-content {
+	margin-top: 10px;
+	overflow-y: auto;
+	height: 60vh;
+}
+.drawer-content a {
+	display: block;
+	text-align: center;
+	font-size: 21px;
+	padding: 14px 0;
+}
+.drawer-content a:hover {
+	background: rgb(240,240,240);
+}
+.drawer-main {
+	height: 87vh;
+}
+.drawer-footer {
+	background: rgb(253,253,253);
+	padding: 8px 0;
+	text-align: center;
+	height: 13vh;
+}
+.drawer-icon {
+	height: 6vh;
+	width: 6vh;
+	border-radius: 100%;
+	background: rgb(246,246,246);
+	transition: background: 0.2s;
+	margin: 0 3px;
+	border: none;
+	outline: none;
+}
+.drawer-icon:hover {
+	background: rgb(240,240,240);
+}
+
 /* 首页大图 */
 .index-banner {
 	margin-top: -21px;
 	width: 100%;
 	text-align: center
 }
-.dark-cover {
-	/* 即 Mask */
+.dark-cover,
+.banner-mask {
+	/* .dark-cover 是之前版本遮罩的类名 */
 	width: 100%;
 	height: 100%;
 	background: rgba(30,30,30,.25);
@@ -248,7 +394,7 @@ hr {
 	margin-top: 30px;
 	transition: color .2s;
 	overflow: hidden;
-	height: 36px;
+	height: 40px;
 	white-space: nowrap;
 	text-overflow: ellipsis
 }
@@ -528,6 +674,7 @@ hr {
 /* 友链 */
 .links-box {
 	margin: 10px;
+	margin-left: 0;
 	margin-top: 30px
 }
 .links-box h2 {
@@ -1038,7 +1185,7 @@ hr {
 /* Options Pannel */
 .options {
 	transition: all 0.3s;
-	background: rgb(254,254,254,0.96);
+	background: #fff;
 	border-radius: 2px;
 	box-shadow: 0 1px 8px #bababa;
 	-moz-box-shadow: 0 1px 8px #bababa;
@@ -1151,6 +1298,7 @@ iframe[src*="//player.bilibili.com/player.html"] {
 /* Live2D */
 #live2dcanvas {
 	display: none;
+	transition: all 0.3s;
 }
 /* 响应式相关 */
 .large-screen {
@@ -1159,8 +1307,23 @@ iframe[src*="//player.bilibili.com/player.html"] {
 .small-screen {
 	display: block
 }
+
+/* Mobile phone */
+@media (max-width:320) {
+	.drawer {
+		width: 100vw;
+	}
+}
 /* > Pad and up */
 @media (min-width:768px) {
+	.drawer-avatar img {
+		height: 220px;
+		width: 220px;
+	}
+	.drawer {
+		width: 360px;
+	}
+	
 	.fixed-button {
 		height: 60px;
 		width: 60px;
@@ -1434,4 +1597,17 @@ iframe[src*="//player.bilibili.com/player.html"] {
 	#live2dcanvas {
 		transform: scale(1);
 	}
+}
+/* 有 Drawer 时的设置面板 */
+.options-with-drawer {
+	background: rgb(246,246,246);
+	box-shadow: 0 0 0 #fff;
+	-moz-box-shadow: 0 0 0 #fff;
+	-webkit-box-shadow: 0 0 0 #fff;
+	width: 360px!important;
+	height: 210px!important;
+	top: auto!important;
+	right: auto!important;
+	bottom: 10vh!important;
+	z-index: 40!important;
 }

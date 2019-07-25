@@ -2,7 +2,7 @@ code[class*=language-],pre[class*=language-] {
 	color: #ccc;
 	background: rgba(0,0,0,0)!important;
 	font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
-	font-size: 15px;
+	font-size: 16px;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
@@ -24,6 +24,7 @@ pre[class*=language-] {
 	margin: .5em 0;
 	overflow: auto;
 	margin: 20px -26px;
+	max-height: 85vh;
 }
 @media (min-width:768px) {
 	pre[class*=language-] {
@@ -118,7 +119,7 @@ pre[class*=language-].line-numbers>code {
 	position: absolute;
 	pointer-events: none;
 	top: 0;
-	font-size: 100%;
+	font-size: 16px;
 	left: -3.8em;
 	width: 3em;
 	letter-spacing: -1px;

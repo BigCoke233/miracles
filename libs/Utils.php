@@ -85,12 +85,17 @@ class Utils
 
     /**
      * 判定内容是否过时
-     * $timeout：过期时间，单位为天
+     * 
+     * @return array
      */
-    public static function isOutdated($archive, $timeout)
+    public static function isOutdated($archive)
     {
         date_default_timezone_set("Asia/Shanghai");
-        return round((time()- $archive->created) / 3600 / 24) > $timeout;
+        $created = round((time()- $archive->created) / 3600 / 24);
+        $updated = round((time()- $archive->modified) / 3600 / 24);
+        return array("is" => $created > 90,
+                    "created" => $created,
+                    "updated" => $updated);
     }
 
     /**
