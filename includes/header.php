@@ -1,5 +1,6 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
       <div class="mask"></div>
+	  <div class="alert ready"><p class="alert-content">错误！未定义的 alert 信息</p><button onclick="alertClose()" class="alert-close"><i class="iconfont icon-x"></i></button></div>
       <!-- 搜索 -->
       <div class="search ready">
 	    <button class="search-close ready" onclick="Search()"><i class="iconfont icon-x"></i></button>

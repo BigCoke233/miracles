@@ -35,6 +35,12 @@
 .body-dark .comment-reply a {
 	background: transparent
 }
+/* No Shadow */
+.body-dark .options {
+	box-shadow: 0 0 0 #fff;
+	-moz-box-shadow: 0 0 0 #fff;
+	-webkit-box-shadow: 0 0 0 #fff;
+}
 /* Need Shadow */
 .body-dark .dark-button,
 .body-dark .post-body,
@@ -44,7 +50,8 @@
 .body-dark .OwO-body,
 .body-dark .OwO-open .OwO-logo,
 .body-dark .OwO .OwO-body .OwO-items .OwO-item:hover,
-.body-dark .options {
+.body-dark .options,
+.body-dark .comment-pagenav a {
 	box-shadow: 0 0 36px #323232!important;
 	-moz-box-shadow: 0 0 36px #323232!important;
 	-webkit-box-shadow: 0 0 36px #323232!important
@@ -65,7 +72,11 @@
 .body-dark .comment-author,
 .body-dark .bubble.saying-body,
 .body-dark .tags-item a,
-.body-dark .options-button-active {
+.body-dark .options-button-active,
+.body-dark .drawer-footer,
+.body-dark .drawer-search,
+.body-dark .drawer-content a:hover,
+.body-dark .comment-pagenav a {
 	background: #646464!important;
 }
 /* Need #5a5a5a bg */
@@ -88,7 +99,11 @@
 .body-dark .dialog,
 .body-dark .options,
 .body-dark .options-theme-label,
-.body-dark .options-family-button {
+.body-dark .options-family-button,
+.body-dark .drawer,
+.body-dark .drawer-icon,
+.body-dark .drawer-search-form input,
+.body-dark .drawer-search-form button {
 	background: #5a5a5a!important
 }
 /* OwO */
@@ -126,7 +141,13 @@
 .body-dark .mobile-menu-footer,
 .body-dark .options-family-button,
 .body-dark .options-theme-item:hover .options-theme-label,
-.body-dark .options-contentsize-button {
+.body-dark .options-contentsize-button,
+.body-dark .drawer,
+.body-dark .drawer a,
+.body-dark .drawer-open .drawer-button,
+.body-dark .drawer-icon,
+.body-dark .drawer-search-form button,
+.body-dark .drawer-search-form input {
 	color: #fafafa!important
 }
 /* Need #5a5a5a color */
@@ -146,7 +167,10 @@
 .body-dark .mobile-menu-title,
 .body-dark .mobile-menu-footer,
 .body-dark .saying-textarea,
-.body-dark .options hr{
+.body-dark .options hr, 
+.body-dark .drawer,
+.body-dark .drawer-search-form button,
+.body-dark .drawer-search-form input {
 	border-color: #6e6e6e!important;
 }
 .body-dark .tip {

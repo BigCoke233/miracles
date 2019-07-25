@@ -75,6 +75,10 @@ function themeConfig($form) {
 	/**
 	 *  设置项
 	 */
+	//首要设置项
+	$news = new Typecho_Widget_Helper_Form_Element_Text('news', NULL, NULL, _t('<h2>首要设置 First</h2>全站公告'), _t('输入公告内容，用户进入站点时自动弹出'));
+    $form->addInput($news);
+	
     //nav
 	$navStyle = new Typecho_Widget_Helper_Form_Element_Select('navStyle',array('0'=>'顶部导航栏','1'=>'左侧抽屉蓝'),'0','<h2>导航栏 Nav</h2>类型','选择导航栏的类型（若选择左侧抽屉蓝，则下一条设置失效）');
     $form->addInput($navStyle);

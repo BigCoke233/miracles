@@ -119,3 +119,4 @@ echo $commentClass;
     <?php endif; ?>
 		</div>
 	  </div>
+	

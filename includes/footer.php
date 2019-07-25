@@ -43,7 +43,7 @@
 	afterPjax = function() {<?php if($this->is('post') || $this->is('page')): ?>owoLoad();<?php endif; ?><?php $this->options->pjax_complete(); ?>}
 	<?php endif; ?></script>
 	<script src="<?php Utils::indexTheme('assets/js/miracles.min.js'); ?>"></script>
-	<script>LazyLoad();PrismLoad();<?php if($this->is('post') || $this->is('page')): ?>owoLoad();<?php endif; ?>panguLoad();<?php $this->options->jsEcho(); ?></script>
+	<script><?php if($this->options->news==!''): ?>alertSend('公告：<?php echo $this->options->news(); ?>');<?php endif; ?>LazyLoad();PrismLoad();<?php if($this->is('post') || $this->is('page')): ?>owoLoad();<?php endif; ?>panguLoad();<?php $this->options->jsEcho(); ?></script>
 	<?php $this->footer(); ?>
   </body>
 </html>
