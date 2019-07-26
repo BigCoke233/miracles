@@ -73,6 +73,7 @@
 > 如果没有定义语言，就会被视作为 html 语言进行解析
 
 </details>
+<br>
 
 > 在这里未提及的问题请查看 [Wiki](https://github.com/BigCoke233/miracles/wiki)
 
@@ -89,13 +90,16 @@
 - [Pangu.js](https://github.com/vinta/pangu.js)
 
 ## 大佬们
-@ohmyga233 | @AlanDecode | @gfwyuexia | @jrotty
+[@ohmyga233](https://github.com/ohmyga233) | 
+[@AlanDecode](https://github.com/AlanDecode) | 
+[@gfwyuexia](https://github.com/gfwyuexia) | 
+[@jrotty](https://github.com/jrotty)
 
 # 相关
-演示站点：[我的博客](https://guhub.cn)
-介绍文章：[Theme Miracles 开源！](https://guhub.cn/p/miracles.html)
-更新日志：[change-log.md](https://github.com/BigCoke233/miracles/blob/master/change-log.md)
-更新计划：[plan.md](https://github.com/BigCoke233/miracles/blob/master/plan.md)
+演示站点：[我的博客](https://guhub.cn)  
+介绍文章：[Theme Miracles 开源！](https://guhub.cn/p/miracles.html)  
+更新日志：[change-log.md](https://github.com/BigCoke233/miracles/blob/master/change-log.md)  
+更新计划：[plan.md](https://github.com/BigCoke233/miracles/blob/master/plan.md)  
 
 # 协议
 &copy; Typecho Theme Miracles is under MIT License.
