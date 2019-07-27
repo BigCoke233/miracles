@@ -32,7 +32,7 @@
 ## 常规配置
 
 <details>
-<summary>添加友链（友情链接）</summary>
+  <summary><strong>添加友链（友情链接）</strong></summary>
 
 在文章或独立页面中按照以下语法书写。
 ```
@@ -41,8 +41,6 @@
 ...
 [链接名字]{指向链接}(头像)
 [链接名字]{指向链接}(头像)
-<!-- 例子 -->
-[Eltrac]{https://guhub.cn}(https://avatars2.githubusercontent.com/u/45323514?s=96&v=4)
 ...
 [/links]
 !!!
@@ -51,23 +49,19 @@
 
 </details>
 <details>
-<summary>关于页面的设置</summary>
+<summary><strong>关于页面的设置</strong></summary>
 
 创建关于页面的时候选择“关于页面”模板，然后添加自定义字段，如图。
 ![](https://camo.githubusercontent.com/02f656335888aed14b815f5bf1d072e5efa2b403/68747470733a2f2f73322e617831782e636f6d2f323031392f30372f32352f6565546845342e706e67)
 
 </details>
 <details>
-<summary>代码高亮无效?</summary>
+<summary><strong>代码高亮无效?</strong></summary>
 
 你需要在书写代码块的时候定义语言，这样 Prism.js 才能够正确解析。
 ```markdown
 (```语言)
 相应语言的代码（正常书写时，请去掉括号）
-(```)
-
-(```html)
-<a href="#">An A tag.</a>（正常书写时，请去掉括号）
 (```)
 ```
 
@@ -98,7 +92,7 @@
 
 # 相关
 演示站点：[我的博客](https://guhub.cn)  
-介绍文章：[Theme Miracles 开源！](https://guhub.cn/p/miracles.html)  
+介绍文章：[Miracles —— 生为奇迹](https://guhub.cn/p/miracles.html)  
 更新日志：[change-log.md](https://github.com/BigCoke233/miracles/blob/master/change-log.md)  
 更新计划：[plan.md](https://github.com/BigCoke233/miracles/blob/master/plan.md)  
 
