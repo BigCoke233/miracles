@@ -710,6 +710,7 @@ button {
 	padding: 6px 14px;
 	font-size: 15px;
 	transition: all .2s;
+	margin: 5px 3px;
 }
 .tags-item a:hover {
 	background: rgb(230,230,230);
