@@ -4,7 +4,9 @@
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
 ![](https://img.shields.io/badge/for-Typecho-blueviolet.svg)
 ![](https://img.shields.io/badge/version-1.2.0-red.svg)
-> 🙌 You're the Miracles. 你即是奇迹
+> 🙌 Born to be the Miracles. 生为奇迹
+
+语言：简体中文 | [English](README-en.md)
 
 # 特色
 - 响应式/自适应设计
