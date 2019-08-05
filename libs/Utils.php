@@ -1,14 +1,9 @@
 <?php
-
-/* 
- * 该文件代码来自 熊猫小A(AlanDecode) 的项目，感谢~
- * https://github.com/AlanDecode/typecho-theme-dev-framework
- */
- 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 class Utils
 {
+	
     /**
      * 输出相对首页路由，本方法会自适应伪静态，用于动态文件
      */

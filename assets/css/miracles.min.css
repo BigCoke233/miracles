@@ -42,14 +42,18 @@ hr {
 }
 /* 滚动条 */
 ::-webkit-scrollbar {
-	width: 6px;
+	width: 9px;
 	height: 5px
 }
 ::-webkit-scrollbar-button {
 	display: none
 }
 ::-webkit-scrollbar-thumb {
-	background: gray;
+	background: rgb(150,150,150);
+	border-radius: 3px
+}
+::-webkit-scrollbar-thumb:hover {
+	background: gray
 }
 /* 框选文本色彩 */
 ::-moz-selection,
@@ -254,24 +258,28 @@ button {
 	top: 0;
 	bottom: 0;
 	z-index: 30;
-	left: -150vh;
 	transition: all 0.8s;
 	box-shadow: 0 0 30px #646464;
 	-moz-box-shadow: 0 0 30px #646464;
 	-webkit-box-shadow: 0 0 30px #646464;
 	/* Mobile */
-	width: 360px;
+	width: 100%;
+	left: -120%;
+}
+.drawer-relative {
+	position: relative;
+	height: 100vh;
 }
 .drawer-avatar {
-	margin-top: 50px;
+	padding: 30px 0;
 }
 .drawer-avatar img {
 	display: block;
 	margin: 0 auto;
 	border-radius: 100%;
 	/* Mobile */
-	width: 150px;
-	height: 150px;
+	width: 120px;
+	height: 120px;
 }
 .drawer-button {
 	position: fixed;
@@ -306,62 +314,37 @@ button {
 	color: rgb(80,80,80);
 	text-shadow: 0 0 0 #fff;
 }
-#live2dcanvas {
-	z-index: 0!important;
-}
-
-.drawer-search {
-	background: rgb(240,240,240);
-	padding: 10px 8px;
-	margin-top: 20px;
-}
-.drawer-search-form input,
-.drawer-search-form button {
-	color: gray;
-	border-radius: 2px;
-	border: 1px solid #ccc;
-	margin: 0;
-	padding: 7px 3px;
-}
-.drawer-search-form input {
-	width: 70%;
-	background: #fff;
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
-	margin-right: -5px;
-}
-.drawer-search-form button {
-	width: 28%;
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-	background: #ddd;
-}
-.drawer-content {
-	margin-top: 10px;
-	overflow-y: auto;
-	height: 60vh;
-}
-.drawer-content a {
-	display: block;
-	text-align: center;
-	font-size: 21px;
-	padding: 14px 0;
-}
-.drawer-content a:hover {
-	background: rgb(240,240,240);
-}
-.drawer-main {
-	height: 87vh;
+.drawer-header {
+	height: 180px;
+	background: rgb(253,253,253)
 }
 .drawer-footer {
 	background: rgb(253,253,253);
 	padding: 8px 0;
 	text-align: center;
-	height: 13vh;
+	height: 64px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.drawer-content {
+	margin-top: 10px;
+	overflow-y: auto;
+	height: 50vh;
+}
+.drawer-content a {
+	display: block;
+	text-align: center;
+	font-size: 16px;
+	padding: 14px 0;
+}
+.drawer-content a:hover {
+	background: rgb(240,240,240);
 }
 .drawer-icon {
-	height: 6vh;
-	width: 6vh;
+	height: 45px;
+	width: 45px;
 	border-radius: 100%;
 	background: rgb(246,246,246);
 	transition: background: 0.2s;
@@ -634,6 +617,7 @@ button {
 .post-title-ss {
 	margin: 12px 0;
 	margin-top: 6px;
+	height: 32px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -1365,6 +1349,7 @@ iframe[src*="//player.bilibili.com/player.html"] {
 #live2dcanvas {
 	display: none;
 	transition: all 0.3s;
+	z-index: 0!important
 }
 /* 响应式相关 */
 .large-screen {
@@ -1387,13 +1372,26 @@ iframe[src*="//player.bilibili.com/player.html"] {
 	    max-width: 700px
 	}
 	.drawer-avatar img {
-		height: 220px;
-		width: 220px;
+		height: 160px;
+		width: 160px;
 	}
 	.drawer {
 		width: 360px;
+	    left: -400px;
 	}
-	
+	.drawer-content a {
+		font-size: 19px;
+	    padding: 11px 0;
+	}
+	.drawer-main {
+		height: 87vh;
+	}
+	.drawer-footer {
+		height: 68px;
+	}
+	.drawer-header {
+		height: 220px;
+	}
 	.fixed-button {
 		height: 60px;
 		width: 60px;
@@ -1495,6 +1493,18 @@ iframe[src*="//player.bilibili.com/player.html"] {
 }
 /* Desktop and up */
 @media (min-width:992px) {
+	.drawer-content a {
+		font-size: 21px;
+	    padding: 14px 0;
+	}
+	.drawer-avatar img {
+		height: 180px;
+		width: 180px;
+	}
+	.drawer-header {
+		height: 240px;
+	}
+
 	.comment-content p {
 		font-size: 19px;
 	}
@@ -1578,12 +1588,27 @@ iframe[src*="//player.bilibili.com/player.html"] {
 	    padding: 12px;
     }
 	#live2dcanvas {
-		display: block;
-		transform: scale(0.8);
+		display: block!important;
+		transform: scale(0.8)!important;
+		z-index: 0!important
 	}
 }
 /* Computer screen and up */
 @media (min-width:1200px) {
+	.drawer-header {
+		height: 250px;
+	}
+	.drawer-footer {
+		height: 65px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	.drawer-avatar img {
+		height: 190px;
+		width: 190px;
+	}
 	.comment-content p {
 		font-size: 21px;
 	}

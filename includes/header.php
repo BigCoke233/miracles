@@ -1,5 +1,5 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-      <div class="mask"></div>
+      <div class="mask" onclick="toggleDrawer()"></div>
 	  <div class="alert ready"><p class="alert-content">错误！未定义的 alert 信息</p><button onclick="alertClose()" class="alert-close"><i class="iconfont icon-x"></i></button></div>
       <!-- 搜索 -->
       <div class="search ready">
@@ -43,7 +43,7 @@
 		</div>
 	  </div>
 	  <!-- 前台设置 -->
-	  <div class="options ready<?php if($this->options->navStyle==1): ?> options-with-drawer<?php endif; ?>"<?php if($this->options->navStyle==1): ?> onclick="toggleOptions()"<?php endif; ?>>
+	  <div class="options ready<?php if($this->options->navStyle==1): ?> options-with-drawer<?php endif; ?>">
 	    <!-- 字体设置 -->
 	    <div class="options-content">
 	      <div class="options-family container-fluid">
@@ -126,20 +126,14 @@
 	  </nav>
 	  <?php elseif($this->options->navStyle==1): ?>
 	  <!-- 抽屉栏 -->
-	  <nav class="drawer">
+	  <nav class="drawer"><div class="drawer-relative">
 	    <div class="drawer-main">
 	      <button class="drawer-button" onclick="toggleDrawer()"><i class="iconfont icon-list"></i></button>
-	      <div class="drawer-avatar">
-		    <?php echo $this->author->gravatar(500); ?>
-		  </div>
-		  <div class="drawer-search">
-		    <form method="post" action="">
-              <div class="drawer-search-form">
-		        <input type="text" name="s" class="text" size="32" /> 
-			    <button type="submit" class="submit">搜索</button>
-		      </div>
-            </form>
-		  </div>
+          <div class="drawer-header">
+	        <div class="drawer-avatar">
+		      <?php echo $this->author->gravatar(500); ?>
+		    </div>
+	      </div>
 		  <div class="drawer-content">
 		    <a href="<?php $this->options->SiteUrl(); ?>" onclick="toggleDrawer()">首页</a>
 		    <?php $this->widget('Widget_Contents_Page_List')
@@ -147,10 +141,11 @@
 		  </div>
 		</div>
 		<div class="drawer-footer">
+		  <button class="drawer-icon" onclick="Search();toggleDrawer()"><i class="iconfont icon-chaxun"></i></button>
 		  <button class="drawer-icon" onclick="Login();toggleDrawer()"><i class="iconfont icon-user"></i></button>
           <button class="drawer-icon" onclick="toggleOptions()"><i class="iconfont icon-settings"></i></button>
 		</div>
-	  </nav>
+	  </div></nav>
 	  <?php endif; ?>
 	  <div id="pjax-container"><!-- 开始 pjax-container -->
 	  <header>

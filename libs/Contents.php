@@ -50,7 +50,29 @@ class Contents
         }
         return $text;
     }
-
+    
+	/**
+     * 通过查询数据库
+     * 获取上级评论人
+     */
+    public static function getParent($comment)
+    {
+        $recipients = [];
+        $db = Typecho_Db::get();
+        $widget = new Widget_Abstract_Comments(new Typecho_Request(), new Typecho_Response());
+        // 查询
+        $select = $widget->select()->where('coid' . ' = ?', $comment->parent)->limit(1);
+        $parent = $db->fetchRow($select, [$widget, 'push']); // 获取上级评论对象
+        if ($parent && $parent['mail']) {
+            $recipients = [
+                'name' => $parent['author'],
+                'mail' => $parent['mail'],
+            ];
+        }
+        return $recipients;
+    }
+	
+	//从这里开始的代码来自 熊猫小A (https://imalan.cn)
     /**
      * 根据 id 返回对应的对象
      * 此方法在 Typecho 1.2 以上可以直接调用 Helper::widgetById();
