@@ -1,0 +1,139 @@
+@charset 'utf-8';
+/*
+ * Style of some component
+ * Author:  Eltrac
+ * License: MIT
+ */
+/* Button */
+button {
+	outline: none;
+	cursor: pointer
+}
+.button {
+	border: 3px solid #ccc;
+	border-radius: 30px;
+	padding: 8px 12px;
+	transition: all .2s;
+}
+.button:hover {
+	border-color: #000;
+	background: #000;
+	color: #fff
+}
+.button-sm {
+	padding: 3px 5px;
+}
+.button-md {
+	border: none;
+	border-radius: 3px;
+}
+.button-md:hover {
+	background: rgb(235,235,235);
+	color: #fff;
+}
+/* Alert */
+.alert {
+	background: var(--theme-color);
+	color: #fff;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	padding: 10px 18px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	margin: 0 auto;
+	box-shadow: 0 0 4px #ccc;
+	-moz-box-shadow: 0 0 4px #ccc;
+	-webkit-box-shadow: 0 0 4px #ccc;
+	z-index: 20;
+	transition: all 0.3s;
+}
+.alert.ready {
+	top: -200px;
+}
+.alert-close {
+	border: none;
+	background: rgb(0,0,0,0);
+	transform: scale(0.8);
+	color: #fff;
+	float: right;
+	margin-top: -36px;
+}
+/* Mask */
+.mask {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgb(70,70,70,0);
+	z-index: -100;
+	transition: background 0.4s;
+}
+.mask-open {
+	background: rgb(70,70,70,0.7);
+	z-index: 25;
+}
+/* Fixed Buttons */
+.fixed-button {
+	background: #fdfdfd;
+	font-size: 16px;
+	height: 40px;
+	width: 40px;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	border: none;
+	border-radius: 10000px;
+	box-shadow: 0 1px 5px #bababa;
+	-webkit-box-shadow: 0 1px 5px #bababa;
+	-moz-box-shadow: 0 1px 5px #bababa;
+	position: fixed;
+	cursor: pointer;
+	outline: 0;
+	right: 6px;
+	transition: all 0.3s;
+}
+.fixed-button:hover {
+	box-shadow: 0 3px 25px #bababa;
+	-webkit-box-shadow: 0 3px 25px #bababa;
+	-moz-box-shadow: 0 3px 25px #bababa;
+	background: rgb(248,248,248)!important;
+}
+.gotop-button {
+	bottom: 8px;
+	background: #fff!important;
+	color: rgb(80,80,80)!important;
+	opacity: 1;
+}
+.gotop-button.invisible {
+	opacity: 0;
+}
+/* Bubble */
+.bubble {
+    position: relative;
+    background: var(--theme-color);
+	border-radius: 2px;
+	padding: 0;
+	color: white;
+	display: inline-block;
+	min-width: 180px;
+	transition: all 0.3s;
+}
+.bubble:before{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    right: 100%;
+    top: 8px;
+    border-top: 8px solid transparent;
+    border-right: 16px solid var(--theme-color);
+    border-bottom: 8px solid transparent;
+}
+.bubble:hover {
+	transform: translateY(-6px);
+	box-shadow: 2px 8px 17px #bababa;
+}

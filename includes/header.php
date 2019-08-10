@@ -1,5 +1,5 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-      <div class="mask" onclick="toggleDrawer()"></div>
+      <div class="mask" onclick="toggleDrawer();$('.options').addClass('ready');"></div>
 	  <div class="alert ready"><p class="alert-content">错误！未定义的 alert 信息</p><button onclick="alertClose()" class="alert-close"><i class="iconfont icon-x"></i></button></div>
       <!-- 搜索 -->
       <div class="search ready">
@@ -128,7 +128,7 @@
 	  <!-- 抽屉栏 -->
 	  <nav class="drawer"><div class="drawer-relative">
 	    <div class="drawer-main">
-	      <button class="drawer-button" onclick="toggleDrawer()"><i class="iconfont icon-list"></i></button>
+	      <button class="drawer-button" onclick="toggleDrawer();$('.options').addClass('ready');"><i class="iconfont icon-list"></i></button>
           <div class="drawer-header">
 	        <div class="drawer-avatar">
 		      <?php echo $this->author->gravatar(500); ?>

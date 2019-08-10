@@ -1,0 +1,398 @@
+@charset 'utf-8';
+
+/*
+ * Themain CSS file for Miracles
+ * Author:  Eltrac
+ * License: MIT
+ */
+ 
+@import url("col.css");
+@import url("element.css");
+@import url("component.css");
+@import url("nav.css");
+@import url("post.css");
+@import url("page.css");
+@import url("comment.css");
+@import url("special.css");
+@import url("themes.css");
+
+/* Varriable */
+:root {
+	--theme-color: #4D90FE;
+}
+
+/* ScrollBar */
+::-webkit-scrollbar {
+	width: 9px;
+	height: 5px
+}
+::-webkit-scrollbar-button {
+	display: none
+}
+::-webkit-scrollbar-thumb {
+	background: rgb(150,150,150);
+	border-radius: 3px
+}
+::-webkit-scrollbar-thumb:hover {
+	background: gray
+}
+/* Selection */
+::-moz-selection,
+::-webkit-selection,
+::selection {
+	background-color: var(--theme-color)
+}
+/* Responsive Web design */
+.large-screen {
+	display: none
+}
+.small-screen {
+	display: block
+}
+/* Mobile phone */
+@media (max-width:320) {
+	.drawer {
+		width: 100vw;
+	}
+}
+/* > Pad and up */
+@media (min-width:768px) {
+	.alert {
+		min-width: 300px;
+	    max-width: 700px
+	}
+	.drawer-avatar img {
+		height: 160px;
+		width: 160px;
+	}
+	.drawer {
+		width: 360px;
+	    left: -400px;
+	}
+	.drawer-content a {
+		font-size: 19px;
+	    padding: 11px 0;
+	}
+	.drawer-main {
+		height: 87vh;
+	}
+	.drawer-footer {
+		height: 68px;
+	}
+	.drawer-header {
+		height: 220px;
+	}
+	.fixed-button {
+		height: 60px;
+		width: 60px;
+	}
+	
+	.options {
+	    width: 300px!important;
+		left: auto!important;
+		top: 90px;
+		right: 10px;
+    }
+
+    .options:before {
+    	border-right: 8px solid transparent;
+        border-top: 16px solid rgb(254,254,254,0.96);
+        border-left: 8px solid transparent;
+        position: absolute;
+        top: 80px;
+        right: 40px;
+    }
+
+	.comment-content p {
+		font-size: 18px;
+	}
+	
+	.nav-content a {
+		font-size: 19px;
+		padding: 27.5px 8px
+	}
+
+	.index-banner {
+		text-align: left
+	}
+
+	.banner-content h1 {
+		font-size: 40px
+	}
+
+	.index-content {
+		margin: 10px 80px
+	}
+
+	.post-title {
+		margin: 16px 0;
+		margin-bottom: 10px
+	}
+
+	.post-excerpt {
+		height: 56px
+	}
+
+	.large-screen {
+		display: block
+	}
+
+	.small-screen {
+		display: none
+	}
+
+	.post-content {
+		padding: 36px;
+		font-size: 18px;
+		line-height: 26px;
+		letter-spacing: 2px
+	}
+
+	.fixed-button {
+		padding: 15px 20px;
+		right: 28px
+	}
+
+	.gotop-button {
+		bottom: 20px
+	}
+
+	.options-button {
+		bottom: 90px
+	}
+
+	.pio-container {
+		display: block
+	}
+
+	iframe[src*="//player.bilibili.com/player.html"] {
+		height: 390px
+	}
+	.search-form input,
+    .login-form input,
+    .login-form button	{
+		width: 350px;
+	}
+	.post-list,
+    .post-body {
+	    margin-top: -130px
+    }
+	.links-container {
+	    padding: 10px;
+    }
+}
+/* Desktop and up */
+@media (min-width:992px) {
+	.drawer-content a {
+		font-size: 21px;
+	    padding: 14px 0;
+	}
+	.drawer-avatar img {
+		height: 180px;
+		width: 180px;
+	}
+	.drawer-header {
+		height: 240px;
+	}
+
+	.comment-content p {
+		font-size: 19px;
+	}
+	
+	.nav-content a {
+		font-size: 20px;
+		padding: 28px 8px
+	}
+
+	.index-banner {
+		text-align: left
+	}
+
+	.banner-content h1 {
+		font-size: 50px
+	}
+
+	.index-content {
+		margin: 10px 80px
+	}
+
+	.comment-children,.comment-children li,.comment-children li>li {
+		margin: 5px -40px
+	}
+
+	.post-title {
+		margin: 30px 0;
+		margin-bottom: 25px
+	}
+
+	.post-excerpt {
+		height: 65px
+	}
+
+	.large-screen {
+		display: block
+	}
+
+	.small-screen {
+		display: none
+	}
+
+	.post-content {
+		padding: 48px;
+		font-size: 18px;
+		line-height: 28px;
+		letter-spacing: 2px
+	}
+
+	.fixed-button {
+		padding: 18px 23px;
+		right: 38px
+	}
+
+	.gotop-button {
+		bottom: 40px
+	}
+
+	.options-button {
+		bottom: 120px
+	}
+
+	.pio-container {
+		display: block
+	}
+
+	iframe[src*="//player.bilibili.com/player.html"] {
+		height: 480px
+	}
+	
+	.search-form input,
+    .login-form input,
+    .login-form button	{
+		width: 400px;
+	}
+	.post-list,
+    .post-body {
+	    margin-top: -134px
+    }
+	.links-container {
+	    padding: 12px;
+    }
+	#live2dcanvas {
+		display: block!important;
+		transform: scale(0.8)!important;
+		z-index: 0!important
+	}
+}
+/* Computer screen and up */
+@media (min-width:1200px) {
+	.drawer-header {
+		height: 250px;
+	}
+	.drawer-footer {
+		height: 65px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	.drawer-avatar img {
+		height: 190px;
+		width: 190px;
+	}
+	.comment-content p {
+		font-size: 21px;
+	}
+	
+	.nav-content a {
+		font-size: 20px;
+		padding: 28px 8px
+	}
+
+	.index-banner {
+		text-align: left
+	}
+
+	.banner-content h1 {
+		font-size: 50px
+	}
+
+	.index-content {
+		margin: 10px 100px
+	}
+
+	.comment-children,.comment-children li,.comment-children li>li {
+		margin: 15px -35px
+	}
+
+	.post-title {
+		margin: 30px 0;
+		margin-bottom: 25px
+	}
+
+	.post-excerpt {
+		height: 72px
+	}
+
+	.large-screen {
+		display: block
+	}
+
+	.small-screen {
+		display: none
+	}
+
+	.post-content {
+		padding: 50px;
+		font-size: 20px;
+		line-height: 30px;
+		letter-spacing: 2px
+	}
+	.fixed-button {
+		padding: 18px 23px;
+		right: 38px
+	}
+
+	.gotop-button {
+		bottom: 40px
+	}
+
+	.options-button {
+		bottom: 120px
+	}
+
+	.pio-container {
+		display: block
+	}
+
+	iframe[src*="//player.bilibili.com/player.html"] {
+		height: 550px
+	}
+	.search-form input,
+    .login-form input,
+    .login-form button	{
+		width: 550px;
+	}
+	.post-list,
+    .post-body {
+	    margin-top: -140px
+    }
+	.links-container {
+	    padding: 15px;
+    }
+	#live2dcanvas {
+		transform: scale(1);
+	}
+}
+/* 有 Drawer 时的设置面板 */
+.options-with-drawer {
+	background: rgb(246,246,246);
+	box-shadow: 0 0 0 #fff;
+	-moz-box-shadow: 0 0 0 #fff;
+	-webkit-box-shadow: 0 0 0 #fff;
+	width: 360px!important;
+	height: 210px!important;
+	top: auto!important;
+	right: auto!important;
+	bottom: 10vh!important;
+	z-index: 40!important;
+}

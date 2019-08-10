@@ -1,0 +1,30 @@
+@charset 'utf-8';
+/*
+ * Fonts, Themes and filter
+ * Author:  Eltrac
+ * License: MIT
+ */
+/* Dark theme */
+@import url("dark.css");
+/* Serif */
+.body-serif {
+	font-family: 'Noto Serif SC',serif
+}
+/* Gray Filter */
+.html-filter-gray {
+	filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+}
+/* Sepia Filter */
+.html-filter-sepia {
+	filter: sepia(30%);
+    -webkit-filter: sepia(30%);
+    -moz-filter: sepia(30%);
+    -ms-filter: sepia(30%);
+    -o-filter: sepia(30%);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(sepia=0.30);
+}

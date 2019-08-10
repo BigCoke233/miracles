@@ -1,0 +1,243 @@
+@charset 'utf-8';
+/*
+ * Style of Posts
+ * Author:  Eltrac
+ * License: MIT
+ */
+/* 文章 */
+.post-list,
+.post-body {
+	margin-top: -110px
+}
+.post-body,.post-item {
+	background: #fff;
+	box-shadow: 0 0 36px #bababa;
+	-moz-box-shadow: 0 0 36px #bababa;
+	-webkit-box-shadow: 0 0 36px #bababa;
+	transition: background .1s
+}
+.post-banner-box {
+	margin-left: -15px;
+	margin-bottom: -2px;
+	max-height: 300px;
+	min-height: 270px;
+	overflow: hidden
+}
+.post-banner img {
+	width: 100%;
+	min-height: 270px;
+	margin-right: -40px
+}
+.post-title {
+	margin-top: 30px;
+	transition: color .2s;
+	overflow: hidden;
+	height: 40px;
+	white-space: nowrap;
+	text-overflow: ellipsis
+}
+.post-excerpt {
+	overflow: hidden;
+	text-overflow: ellipsis
+}
+.post-meta,.post-meta a {
+	color: gray
+}
+.post-button-box {
+	margin-top: 15px
+}
+.post-button {
+	float: right
+}
+.post-footer {
+	color: #c8c8c8;
+	font-size: 14px
+}
+.post-tags a {
+	color: #bebebe;
+	padding: 2px 4px;
+	border-radius: 2px;
+	background: #f0f0f0;
+	transition: background .2s
+}
+.post-tags a:hover {
+	background: #f5f5f5
+}
+/* >文章内容 */
+.post-content {
+	padding: 26px;
+	font-size: 18px;
+	line-height: 28px;
+	letter-spacing: 2px;
+	word-break: break-all
+}
+.post-content hr {
+	display: block;
+	margin: 80px auto;
+	width: 150px;
+	background: #f0f0f0;
+	height: 5px;
+	border: none
+}
+.post-content code {
+	font-size: 0.8em;
+	background: #f0f0f0;
+	border-radius: 3px;
+	font-family: font-family: 'Noto Sans SC',sans-serif!important;
+	padding: 5px 8px;
+	color: var(--theme-color);
+	vertical-align: middle
+}
+.post-content img {
+	display: block;
+	margin: 20px auto;
+	border-radius: 3px;
+	box-shadow: 0 4px 20px #ccc;
+	-moz-box-shadow: 0 4px 20px #ccc;
+	-webkit-box-shadow: 0 4px 20px #ccc;
+	max-width: 90%
+}
+.post-content blockquote p {
+	margin: 0
+}
+.post-content blockquote {
+	border-left: 6px solid #ddd;
+	padding-left: 10px;
+	margin-left: 0;
+	color: gray
+}
+.post-content table {
+	width: 100%;
+	border-left: 1px solid #ccc;
+	border-top: 2px solid #ccc;
+	border-spacing: 0
+}
+.post-content td,.post-content th {
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 6px 8px
+}
+.post-content th {
+	background: #fff!important
+}
+.post-content tr:nth-child(odd) {
+	background: #f5f5f5
+}
+.post-content a:not(.no-line) {
+	position: relative;
+	color: var(--theme-color)
+}
+.post-content a:not(.no-line)::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background-color: var(--theme-color);
+	transform-origin: bottom right;
+	transform: scaleX(0);
+	transition: transform .5s ease
+}
+.post-content a:not(.no-line):hover::before {
+	transform-origin: bottom left;
+	transform: scaleX(1)
+}
+.post-content p {
+	vertical-align: middle;
+}
+.post-content .owo-img {
+	box-shadow: 0 0 0 #fff;
+	-moz-box-shadow: 0 0 0 #fff;
+	-webkit-box-shadow: 0 0 0 #fff;
+	display: inline;
+	height: 34px;
+	vertical-align: middle
+}
+/* >短代码 */
+.tip {
+	border: 1px solid rgb(240,240,240);
+	border-radius: 3px;
+	padding: 15px;
+	border-left: 5px solid var(--theme-color);
+}
+.tip-icon {
+	color: var(--theme-color);
+}
+.tip.red {
+	border-left-color: #DD4B39;
+}
+.tip.red .tip-icon {
+	color: #DD4B39;
+}
+.tip.blue {
+	border-left-color: #4D90FE;
+}
+.tip.blue .tip-icon {
+	color: #4D90FE;
+}
+.tip.green {
+	border-left-color: #2FBB4F;
+}
+.tip.green .tip-icon {
+	color: #2FBB4F;
+}
+.tip.yellow {
+	border-left-color: #FFDD11;
+}
+.tip.yellow .tip-icon {
+	color: #FFDD11;
+}
+.post-bubble .saying-content p {
+	padding: 0 20px!important;
+}
+/* >文章分页 */
+.post-pagenav,
+.comment-pagenav {
+	margin-top: 40px;
+	margin-bottom: 60px
+}
+.post-pagenav a {
+	font-size: 20px;
+	background: var(--theme-color);
+	color: #fff;
+	padding: 13px 20px;
+}
+.post-pagenav a,
+.comment-pagenav a {
+	border-radius: 10000px;
+	box-shadow: 0 0 15px #ccc;
+	-moz-box-shadow: 0 0 15px #ccc;
+	-webkit-box-shadow: 0 0 15px #ccc
+}
+.post-pagenav a:hover {
+	box-shadow: 0 0 15px #ccc;
+	-moz-box-shadow: 0 0 15px #ccc;
+	-webkit-box-shadow: 0 0 15px #ccc
+}
+.post-pagenav-left {
+	float: left
+}
+.post-pagenav-right {
+	float: right
+}
+/* -ss */
+.post-banner-ss img {
+	width: 100%
+}
+.post-banner-box-ss {
+	max-height: 280px;
+	overflow: hidden
+}
+.post-item-content-ss {
+	padding: 20px
+}
+.post-title-ss {
+	margin: 12px 0;
+	margin-top: 6px;
+	height: 32px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-size: 25px
+}

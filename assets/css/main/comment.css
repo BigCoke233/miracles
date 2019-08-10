@@ -1,0 +1,240 @@
+@charset 'utf-8';
+/*
+ * Style of comments
+ * Author:  Eltrac
+ * License: MIT
+ */
+/* 评论 */
+.comment-title {
+	text-align: center;
+	margin: 50px 0;
+	font-size: 26px
+}
+.comment-list,.comment-list li {
+	list-style-type: none
+}
+.comment-list {
+	margin-left: 0;
+}
+.comment-children {
+	margin-left: 20px;
+}
+.comment-children .comment-list {
+	margin: 0;
+}
+.comment-children .comment-body {
+	margin: 15px 0;
+	padding: 0;
+}
+.comment-body {
+	margin: 28px 0;
+	padding: 0;
+	position: relative
+}
+.comment-main,
+.comment-author-avatar {
+	margin: 0;
+	padding: 0;
+}
+.comment-author-avatar img {
+	border-radius: 10000px;
+	height: 50px;
+	width: 50px
+}
+.comment-author-info h4,.comment-author-info p {
+	margin: 0
+}
+.comment-author-info h4 {
+	font-size: 18px
+}
+.comment-author-info h4 a {
+	color: var(--theme-color)
+}
+.comment-author-info p {
+	margin-top: 5px;
+	color: gray;
+	font-size: 15px
+}
+.comment-content p {
+	color: #000;
+	font-size: 16px;
+	word-break: break-all;
+	vertical-align: center;
+	padding: 10px 16px;
+}
+.comment-content img {
+	max-width: 100%
+}
+.comment-meta {
+	font-size: 17px;
+}
+.comment-author {
+	font-size: 0.8em;
+	background: rgb(240,240,240);
+	border-radius: 3px;
+	padding: 2px 3px;
+	letter-spacing: 2px;
+	transition: all 0.2s;
+}
+.comment-author:hover {
+	background: rgb(235,235,235);
+}
+.bubble.comment-content {
+	background: rgb(238,238,238);
+	padding: 3px 8px;
+	padding-right: 12px;
+	padding-top: -3px;
+	border-radius: 4px;
+	min-width: 10px!important;
+}
+.bubble.comment-content:before {
+    border-right-color: rgb(238,238,238);
+}
+.bubble.comment-content:hover {
+	transform: none;
+	box-shadow: 0 0 0 #fff;
+	-moz-box-shadow: 0 0 0 #fff;
+	-webkit-box-shadow: 0 0 0 #fff;
+}
+.comment-by-author > .container-fluid > .row > .comment-main > .bubble.comment-content {
+	background: var(--theme-color)
+}
+.comment-by-author > .container-fluid > .row > .comment-main > .bubble.comment-content p {
+	color: #fff!important;
+}
+.comment-by-author > .container-fluid > .row > .comment-main > .bubble.comment-content:before {
+	border-right-color: var(--theme-color)
+}
+.comment-by-author > .container-fluid > .row > .comment-main > .bubble.comment-content > .comment-reply a {
+	color:#fff!important;
+}
+.comment-reply a {
+	position: absolute;
+	top: 5px;
+	right: 4px;
+	display: inline-block;
+	font-size: 90%;
+	border-radius: 2px;
+	padding: 3px 4px;
+	transition: color 0.2s;
+	color: rgb(120,120,120);
+}
+.comment-reply a:hover {
+	color: rgb(150,150,150)
+}
+.comment-submit button {
+	display: block;
+	margin: 10px 0;
+	border-radius: 6px;
+	border: none;
+	background: linear-gradient(to right,#00f,var(--theme-color));
+	color: #fff;
+	padding: 16px 10px;
+	width: 100%;
+	cursor: pointer;
+	transition: opacity .2s;
+	margin-top: -14px
+}
+.comment-submit button:hover {
+	opacity: .9
+}
+.comment-input input,.comment-textarea {
+	display: block;
+	resize: none;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	width: 100%;
+	padding: 14px;
+	outline: none;
+}
+.comment-input {
+	margin-top: -10px;
+    margin-bottom: -20px;
+}
+#comment-form label {
+	display: none
+}
+.comment-closed-alert {
+	text-align: center;
+}
+.comment-pagenav {
+	margin-left: -20px;
+}
+.comment-pagenav li {
+	list-style-type: none;
+	display: inline-block;
+}
+.comment-pagenav li a {
+	background: #fff;
+	padding: 5px 13px;
+	margin-right: 5px;
+	box-shadow: 0 1px 4px #ccc;
+	-moz-box-shadow: 0 1px 4px #ccc;
+	-webkit-box-shadow: 0 1px 4px #ccc;
+	transition: all .2s;
+}
+.comment-pagenav li a:hover {
+	background: rgb(249,249,249);
+	box-shadow: 0 1px 8px #ccc;
+	-moz-box-shadow: 0 1px 8px #ccc;
+	-webkit-box-shadow: 0 1px 8px #ccc;
+}
+.comment-pagenav-icon {
+	margin: 0 -3px;
+}
+
+/* OwO */
+.owo-img {
+	height: 34px;
+	vertical-align: middle;
+	margin: 0 3px;
+}
+.OwO {
+	margin-left: 15px;
+	margin-top: 0;
+}
+.owo-para {
+	margin-top: 0;
+}
+/* 说说动态 */
+.saying-form {
+	margin-bottom: 20px;
+}
+.saying-OwO {
+	float: left;
+	margin-left: 0
+}
+.saying-submit {
+	float: right;
+	background: var(--theme-color);
+	border-radius: 5px;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	font-size: 15px;
+	cursor: pointer;
+}
+.saying-content p {
+	padding: 10px 20px;
+}
+.saying-content a {
+	color: white;
+}
+.saying-author,
+.saying-meta,
+.saying-author a {
+	position: absolute;
+	color: rgb(250,250,250)!important;
+	font-size: 12px;
+}
+.saying-meta {
+	bottom: 3px;
+	right: 10px;
+}
+.saying-author {
+	top: 3px;
+	left: 20px;
+}
+.saying-meta i {
+	font-size: 12px;
+}

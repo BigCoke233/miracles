@@ -1,0 +1,318 @@
+@charset 'utf-8';
+/*
+ * Style of the Nav.
+ * Author:  Eltrac
+ * License: MIT
+ */
+/* Top Nav */
+.nav {
+	background: rgba(255,255,255,0.96);
+	width: 100%;
+	position: absolute;
+	box-shadow: 0 0 20px #ddd;
+	-webkit-box-shadow: 0 0 20px #ddd;
+	-moz-box-shadow: 0 0 30px #ddd;
+	display: table;
+	top: 0;
+	z-index: 10;
+	transition: all .2s;
+}
+.nav-content {
+	margin: 0;
+	display: table-cell;
+	vertical-align: middle;
+	height: 80px;
+	padding: 0;
+	white-space: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+	position: relative
+}
+.nav-content a {
+	text-decoration: none;
+	color: #141414;
+	padding: 30px 8px;
+	transition: background .2s;
+	font-size: 16px
+}
+.nav-content a:hover,
+.nav-mobile-content a:hover,
+.nav-mobile-content button:hover,
+.nav-sorts-content {
+	background: #f0f0f0
+}
+.nav-title {
+	color: #000;
+	font-weight: 700
+}
+.nav-fixed {
+	position: fixed!important
+}
+.nav-icon-button {
+	border-radius: 10000px;
+	border: none;
+	padding: 10px 12px;
+	background: rgb(240,240,240);
+	transition: background .2s;
+	outline: 0;
+	position: absolute;
+	top: 20px;
+}
+.nav-mobile {
+	background: rgba(255,255,255,0.99);
+	word-break: keep-all;
+}
+.nav-mobile-content {
+	padding: 0 5px;
+}
+.nav-mobile-content a,
+.nav-mobile-content button {
+	margin: 0;
+	padding: 16px 10px;
+}
+.search-button { /* On the nav */
+	right: 20px;
+}
+.login-button { /* On the nav */
+	right: 65px;
+}
+.setting-button { /* On the nav */
+	right: 110px;
+}
+.nav-icon-button:hover,.search-close {
+	display: block;
+	background: rgb(230,230,230);
+	cursor: pointer
+}
+
+/* Drawer Nav */
+.drawer {
+	background: rgb(246,246,246);
+	border-right: 1px solid #ddd;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	z-index: 30;
+	transition: all 0.8s;
+	box-shadow: 0 0 30px #646464;
+	-moz-box-shadow: 0 0 30px #646464;
+	-webkit-box-shadow: 0 0 30px #646464;
+	/* Mobile */
+	width: 100%;
+	left: -120%;
+}
+.drawer-relative {
+	position: relative;
+	height: 100vh;
+}
+.drawer-avatar {
+	padding: 30px 0;
+}
+.drawer-avatar img {
+	display: block;
+	margin: 0 auto;
+	border-radius: 100%;
+	/* Mobile */
+	width: 120px;
+	height: 120px;
+}
+.drawer-button {
+	position: fixed;
+	top: 10px;
+	left: 15px;
+	background: rgba(0,0,0,0);
+	border-radius: 100%;
+	border: none;
+	height: 40px;
+	width: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	text-shadow: 0 1px 6px #bababa;
+	transform: scale(1.2);
+	transition: background 0.3s;
+	padding: 3px;
+    outline: none;	
+	transition: all 0.5s;
+}
+.drawer-button:hover {
+	cursor: pointer;
+	background: rgba(200,200,200,0.4);
+}
+.drawer-open .drawer {
+	left: 0;
+}
+.drawer-open .drawer-button {
+	left: 4px;
+	top: 4px;
+	color: rgb(80,80,80);
+	text-shadow: 0 0 0 #fff;
+}
+.drawer-header {
+	height: 180px;
+	background: rgb(253,253,253)
+}
+.drawer-footer {
+	background: rgb(253,253,253);
+	padding: 8px 0;
+	text-align: center;
+	height: 64px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.drawer-content {
+	margin-top: 10px;
+	overflow-y: auto;
+	height: 50vh;
+}
+.drawer-content a {
+	display: block;
+	text-align: center;
+	font-size: 16px;
+	padding: 14px 0;
+}
+.drawer-content a:hover {
+	background: rgb(240,240,240);
+}
+.drawer-icon {
+	height: 45px;
+	width: 45px;
+	border-radius: 100%;
+	background: rgb(246,246,246);
+	transition: background: 0.2s;
+	margin: 0 3px;
+	border: none;
+	outline: none;
+}
+.drawer-icon:hover {
+	background: rgb(240,240,240);
+}
+
+/* Search/Login/Menu */
+.search,.login,.mobile-menu {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	max-height: 100vh;
+	background-color: rgba(255,255,255,0.96);
+	transition: all .2s;
+	z-index: 1000;
+}
+.search,.login {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.search.ready,
+.login.ready,
+.mobile-menu.ready {
+	bottom: 120vh;
+	top: -120vh;
+	visibility: hidden;
+}
+.search-close.ready,
+.login-close.ready,
+.mobile-menu-close.ready {
+	display: none
+}
+.search-close,
+.login-close,
+.mobile-menu-close {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	border: none;
+	background: 0 0
+}
+.search-form input,
+.login-form input,
+.login-form button {
+	width: 260px;
+}
+/* Menu */
+.mobile-menu-pagelist a {
+	display: block;
+	border-radius: 4px;
+	padding: 10px 5px;
+	text-align: center;
+	transition: all 0.2s;
+}
+.mobile-menu-pagelist a:hover {
+	background: rgb(240,240,240)
+}
+.mobile-menu-title {
+	text-align: center;
+	border-bottom: 1px solid rgb(220,220,220);
+	padding-bottom: 20px;
+}
+.mobile-menu-footer {
+	position: absolute;
+	text-align: center;
+	bottom: 10px;
+	right: 0;
+	left: 0;
+	border-top: 1px solid rgb(220,220,220);
+	padding-top: 10px;
+}
+/* Search */
+.search-form input {
+	border: 1px solid #bababa;
+	padding: 10px 25px;
+	border-radius: 80px
+}
+.search-form button {
+	padding: 10px 15px;
+	padding-top: 5px;
+	background: rgba(0,0,0,0);
+	border: none;
+	margin-left: -100px
+}
+.search-close,
+.search-form button,
+.search-form input {
+	color: gray;
+	font-size: 30px;
+	outline: 0
+}
+/* Login */
+.login-form button,
+.login-form input {
+	display: block;
+	margin: 10px 0;
+	padding: 15px 20px;
+}
+.login-form input {
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+.login-form button {
+	border-radius: 5px;
+	border: none;
+	color: white;
+	background: var(--theme-color);
+}
+/* Alert if need-fresh */
+.login-form.need-refresh:before {
+	content: "因为 Pjax 的原因，登陆之前请先刷新页面，否则会导致登陆失败！";
+	background: #DD4B39;
+	padding: 18px 5px;
+	display: block;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: white;
+	text-align: center;
+	transition: all .2s;
+}
+/* 404 error page */
+.error-title {
+	text-align: center;
+	font-size: 100px;
+	text-shadow: 0 4px 12px #ccc;
+}

@@ -1,0 +1,211 @@
+@charset 'utf-8';
+/*
+ * Style of something special
+ * Author:  Eltrac
+ * License: MIT
+ */
+/* Index Banner */
+.index-banner {
+	margin-top: -21px;
+	width: 100%;
+	text-align: center;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.dark-cover,
+.banner-mask {
+	/* .dark-cover 是旧版本遮罩的类名 */
+	width: 100%;
+	height: 100%;
+	background: rgba(30,30,30,.25);
+	z-index: 1;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center
+}
+.banner-content {
+	vertical-align: middle
+}
+.banner-content h1 {
+	margin-bottom: 0
+}
+.banner-content p {
+	margin-top: 10px
+}
+
+/* Options Pannel */
+.options {
+	transition: all 0.3s;
+	background: #fff;
+	border-radius: 2px;
+	box-shadow: 0 1px 8px #bababa;
+	-moz-box-shadow: 0 1px 8px #bababa;
+	-webkit-box-shadow: 0 1px 8px #bababa;
+	position: fixed;
+	top: 50px;
+	right: 0;
+	left: 0;
+	z-index: 20;
+	width: 100%;
+}
+.options hr {
+	border-color: rgb(245,245,245);
+	margin: 0;
+}
+.options.ready {
+	display: none;
+	top: 40px;
+}
+.options-content {
+	padding: 8px;
+	font-size: 15px;
+}
+.options-content h4 {
+	margin: 0;
+	margin-bottom: 8px;
+}
+.options-family {
+	text-align: center;
+}
+.options-family button,
+.options-contentsize-button {
+	display: block;
+	width: 100%;
+	border: none;
+	background: rgb(254,254,254,0);
+	font-size: 20px;
+	padding: 8px 0;
+	transition: all 0.3s;
+	outline: none;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.options-contentsize-button {
+	font-size: 14px;
+}
+.options-family button:hover {
+	background: rgb(244,244,244,0.96);
+}
+.options-button-active {
+	color: #fff;
+	background: var(--theme-color)!important;
+}
+.options-theme-button.options-button-active {
+	border: 2px solid var(-theme-color);
+}
+.options-themes {
+	text-align: center;
+	margin-top: 20px;
+}
+.options-theme-label {
+	color: #fff;
+	font-size: 12px;
+	transition: color 0.3s;
+}
+.options-theme-item:hover .options-theme-label {
+	color: #bababa;
+}
+.options-theme-button {
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+	border: none;
+	outline: none;
+	display: block;
+	margin: 0 auto;
+	cursor: pointer
+}
+.options-theme-normal {
+	background: rgb(240,240,240);
+}
+.options-theme-dark {
+	background: rgb(80,80,80)
+}
+.options-theme-sepia {
+	background: rgb(255,255,200)
+}
+/* Font Size */
+.body-contentsize-small .post-content,
+.body-contentsize-small .comment-content p,
+.body-contentsize-small .banner-content,
+.body-contentsize-small .footer-info,
+.body-contentsize-small .nav-content {
+	font-size: 100%;
+}
+.body-contentsize-normal .post-content,
+.body-contentsize-normal .comment-content p,
+.body-contentsize-normal .banner-content,
+.body-contentsize-normal .footer-info,
+.body-contentsize-normal .nav-content {
+	font-size: 125%;
+}
+.body-contentsize-big .post-content,
+.body-contentsize-big .comment-content p,
+.body-contentsize-big .banner-content,
+.body-contentsize-big .footer-info,
+.body-contentsize-big .nav-content {
+	font-size: 140%;
+}
+.body-contentsize-large .post-content,
+.body-contentsize-large .comment-content p,
+.body-contentsize-large .banner-content,
+.body-contentsize-large .footer-info,
+.body-contentsize-large .nav-content {
+	font-size: 160%;
+}
+/* Footer */
+.footer-info {
+	background: #f0f0f0;
+	color: #000;
+	text-align: center;
+	margin: 0;
+	margin-top: 130px!important;
+	padding: 25px 10px;
+	line-height: 26px;
+	width: 100%;
+}
+.footer-dark a {
+	color: #000
+}
+.footer-info a {
+	color: #1e1e1e;
+	text-decoration: none;
+	transition: opacity .2s
+}
+.footer-info a:hover {
+	opacity: .9
+}
+/* Header Meta */
+.header-meta a {
+	color: #fff;
+	text-decoration: none
+}
+/* Pio Plugin */
+.pio-container .pio-dialog {
+	margin-bottom: -60px;
+	border-color: rgba(255,255,255,.9);
+	border-radius: 4px;
+	text-shadow: 0 0 1px #bababa;
+	border: none;
+	background: rgba(255,255,255,.9);
+	box-shadow: 1px 1px 5px #bababa;
+	-moz-box-shadow: 1px 1px 5px #bababa;
+	-webkit-box-shadow: 1px 1px 5px #bababa
+}
+.pio-container {
+	display: none
+}
+/* Bilibili iframe */
+iframe[src*="//player.bilibili.com/player.html"] {
+	width: 100%;
+	height: 150px;
+	position: relative
+}
+/* Live2D */
+#live2dcanvas {
+	display: none;
+	transition: all 0.3s;
+	z-index: 0!important
+}

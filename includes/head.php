@@ -47,22 +47,18 @@ if (isset($_POST['action'])) {
 	<?php if($this->options->CDN && $this->options->CDN=1): ?>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/css/prism.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/css/owo.min.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/css/normalize.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/css/fancybox.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/css/prism.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/css/miracles.min.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/css/dark.miracles.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/css/main/miracles.min.css" />
 	<?php else: ?>
 	<link rel="stylesheet" href="<?php Utils::indexTheme('assets/css/prism.css'); ?>" />
 	<link rel="stylesheet" href="<?php Utils::indexTheme('assets/css/owo.min.css'); ?>" />
-    <link rel="stylesheet" href="<?php Utils::indexTheme('assets/css/normalize.css'); ?>" />
 	<link rel="stylesheet" href="<?php Utils::indexTheme('assets/css/nprogress.css'); ?>" />
 	<link rel="stylesheet" href="<?php Utils::indexTheme('assets/css/fancybox.css'); ?>" />
-	<link rel="stylesheet" href="<?php Utils::indexTheme('assets/css/miracles.min.css'); ?>" />
-	<link rel="stylesheet" href="<?php Utils::indexTheme('assets/css/dark.miracles.css'); ?>" />
+	<link rel="stylesheet" href="<?php Utils::indexTheme('assets/css/main/miracles.min.css'); ?>" />
 	<?php endif; ?>
 	<!-- icon font -->
-	<link rel="stylesheet" href="//at.alicdn.com/t/font_1165190_nczm02by8we.css" />
+	<link rel="stylesheet" href="//at.alicdn.com/t/font_1165190_nsy3b6pbkb.css" />
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300|Noto+Serif+SC:300&display=swap" rel="stylesheet">
 	<style>.body-dark .pio-action .pio-home{background-image: url(<?php Utils::indexTheme('images/icons/home.png'); ?>);}.body-dark .pio-action .pio-close{background-image: url(<?php Utils::indexTheme('images/icons/remove.png'); ?>);}.body-dark .pio-action .pio-skin{background-image: url(<?php Utils::indexTheme('images/icons/skin.png'); ?>);}.body-dark .pio-action .pio-info{background-image: url(<?php Utils::indexTheme('images/icons/info.png'); ?>);}.body-dark .pio-action .pio-night{background-image: url(<?php Utils::indexTheme('images/icons/night.png'); ?>);}@media (min-width:992px) {.search{background-image:url(<?php Utils::indexTheme('images/search.png'); ?>);}.login{background-image:url(<?php Utils::indexTheme('images/login.png'); ?>)}}.search {background-position: bottom right;background-repeat: no-repeat}.login {background-position: bottom left;background-repeat:no-repeat}<?php $this->options->cssEcho(); ?></style>
