@@ -3,7 +3,7 @@
 ![](https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg?style=flat-square)
 ![](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
 ![](https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square)
-![](https://img.shields.io/badge/version-1.2.0-red.svg?style=flat-square)
+![](https://img.shields.io/badge/version-1.2.1-red.svg?style=flat-square)
 > 🙌 Born to be the Miracles. 生为奇迹
 
 语言：简体中文 | [English](README-en.md)
@@ -31,6 +31,7 @@
 4. 确认目录名是否为`Miracles`（大写 M）
 6. 后台-控制台-外观 启用本主题
 7. 阅读 [Wiki](https://github.com/BigCoke233/miracles/wiki) 和后面的常规配置后，开始使用
+
 ## 常规配置
 
 <details>
@@ -98,7 +99,5 @@
 更新日志：[change-log.md](https://github.com/BigCoke233/miracles/blob/master/change-log.md)  
 更新计划：[plan.md](https://github.com/BigCoke233/miracles/blob/master/plan.md)  
 
-# 协议
-&copy; Typecho Theme Miracles is under MIT License.
-
-> Just enjoy it~
+# 版权
+&copy; [Eltrac](https://github.com/BigCoke233) | Under MIT License
