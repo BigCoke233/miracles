@@ -7,10 +7,13 @@ $this->need('includes/header.php');
 	    <div class="post-content">
 		  <h1 class="error-title">404</h1>
 		  <p style="text-align:center">
-		    <span>糟糕，我家猫咪走丢了！</span><br /><br />
+		    <span>肥肠抱歉，你访问的页面被猫吃掉了</span><br /><br />
 		    <a href="<?php $this->options->SiteUrl(); ?>" class="button error-button no-line">返回首页</a>
 		  </p>
 		</div>
 	  </div>
 	</main>
+	<!-- 防止找不到 owo 容器而报错 -->
+	<div style="display:none" class="OwO"></div>
+	
 <?php $this->need('includes/footer.php'); ?>

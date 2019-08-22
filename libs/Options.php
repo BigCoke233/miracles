@@ -64,7 +64,6 @@ function themeConfig($form) {
 	<h1>Miracles 主题设置面板</h1>
 	<p>欢迎使用 Miracles 主题，目前版本是：'. $ver .'</span><br>
 	作者博客：<a href="https://guhub.cn">Eltrac\'s</a> | 帮助文档：<a href="https://github.com/BigCoke233/miracles/wiki">WIKI</a> | 问题反馈：<a href="https://github.com/BigCoke233/miracles/issues">issues</a></p>
-	<iframe class="miracles-news" src="https://gu.guhub.cn/news.html"></iframe>
    	  <form class="protected" action="?MiraclesBackup" method="post">
         <input type="submit" name="type" class="miracles-backup-button backup" value="备份模板数据" />&nbsp;&nbsp;
 	    <input type="submit" name="type" class="miracles-backup-button recover" value="还原模板数据" />&nbsp;&nbsp;
@@ -82,8 +81,6 @@ function themeConfig($form) {
     //nav
 	$navStyle = new Typecho_Widget_Helper_Form_Element_Select('navStyle',array('0'=>'顶部导航栏','1'=>'左侧抽屉栏'),'0','<h2>导航栏 Nav</h2>类型','选择导航栏的类型（若选择左侧抽屉蓝，则下一条设置失效）');
     $form->addInput($navStyle);
-	$nav_position = new Typecho_Widget_Helper_Form_Element_Select('nav_position',array('0'=>'不固定','1'=>'固定'),'0','是否固定','固定后，导航栏不会随滚动条滚动而移动在屏幕上的位置<hr>');
-    $form->addInput($nav_position);
 	
 	//index-banner
 	$bannerUrl = new Typecho_Widget_Helper_Form_Element_Text('bannerUrl', NULL, 'https://s2.ax1x.com/2019/07/10/ZcRGX8.png', _t('<h2>首页大图 Banner</h2>图片 Url'), _t('首页大图的图片地址'));
@@ -112,9 +109,9 @@ function themeConfig($form) {
     $form->addInput($bodyFonts);
 	$cat = new Typecho_Widget_Helper_Form_Element_Select('cat',array('0'=>'不要','1'=>'小黑','2'=>'小白'),'0','领养猫咪','领养一只猫咪，这样你就可以在前台看到它啦！');
     $form->addInput($cat);
-	$ModelHeight = new Typecho_Widget_Helper_Form_Element_Text('ModelHeight', NULL, '480', _t('自定义模型高度'), _t('设置猫咪/自定义模型的高度'));
+	$ModelHeight = new Typecho_Widget_Helper_Form_Element_Text('ModelHeight', NULL, '320', _t('自定义模型高度'), _t('设置猫咪/自定义模型的高度'));
     $form->addInput($ModelHeight);
-	$ModelWidth = new Typecho_Widget_Helper_Form_Element_Text('ModelWidth', NULL, '390', _t('自定义模型宽度'), _t('设置猫咪/自定义模型的宽度'));
+	$ModelWidth = new Typecho_Widget_Helper_Form_Element_Text('ModelWidth', NULL, '300', _t('自定义模型宽度'), _t('设置猫咪/自定义模型的宽度'));
     $form->addInput($ModelWidth);
 	$customModel = new Typecho_Widget_Helper_Form_Element_Text('customModel', NULL, NULL, _t('自定义 Live2d 模型'), _t('填入 Live2d 模型的 json 地址，会代替猫咪显示在首页，填入后上一个设置项失效。<hr>'));
     $form->addInput($customModel);

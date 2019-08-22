@@ -36,6 +36,7 @@ $this->need('includes/header.php');
 		  <?php $this->content(); ?>
 		</div>
 	  </div>
-<?php $this->need('includes/comments.php'); ?>
+      <?php $this->need('includes/comments.php'); ?>
 	</main>
+	
 <?php $this->need('includes/footer.php'); ?>

@@ -116,6 +116,8 @@ echo $commentClass;
 <!-- 若当前文章不允许进行评论 -->
     <?php else: ?>
     <h3 class="comment-closed-alert"><?php _e('<i class="iconfont icon-x"></i> 评论已关闭'); ?></h3>
+	<!-- 防止找不到 owo 容器而报错 -->
+	<div style="display:none" class="OwO"></div>
     <?php endif; ?>
 		</div>
 	  </div>

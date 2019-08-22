@@ -1,9 +1,9 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-      <div class="mask" onclick="toggleDrawer();$('.options').addClass('ready');"></div>
-	  <div class="alert ready"><p class="alert-content">错误！未定义的 alert 信息</p><button onclick="alertClose()" class="alert-close"><i class="iconfont icon-x"></i></button></div>
+      <div class="mask" id="full-mask"></div>
+	  <div class="alert ready"><p class="alert-content">错误！未定义的 alert 信息或 css 未正常载入</p><button id="alert-close" class="alert-close"><i class="iconfont icon-x"></i></button></div>
       <!-- 搜索 -->
       <div class="search ready">
-	    <button class="search-close ready" onclick="Search()"><i class="iconfont icon-x"></i></button>
+	    <button class="search-close ready" id="search-close-button"><i class="iconfont icon-x"></i></button>
 	    <form method="post" action="">
           <div class="search-form">
 		    <input type="text" name="s" class="text" size="32" /> 
@@ -13,7 +13,7 @@
 	  </div>
 	  <!-- 登录面板 -->
 	  <div class="login ready">
-	    <button class="login-close ready" onclick="Login()"><i class="iconfont icon-x"></i></button>
+	    <button class="login-close ready" id="login-close"><i class="iconfont icon-x"></i></button>
 		<?php if($this->user->hasLogin()): ?>
 		<h1>你已经登陆过了哦</h1>
 		<p class="large-screen">&emsp;不过康纳很乐意再次见到<a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>呢~</p>
@@ -32,11 +32,11 @@
 	  </div>
       <!-- 移动端导航面板 -->
 	  <div class="mobile-menu ready">
-	    <button class="mobile-menu-close ready" onclick="toggleMobileMenu()"><i class="iconfont icon-x"></i></button>
+	    <button class="mobile-menu-close ready" id="toggle-mobile-menu-close"><i class="iconfont icon-x"></i></button>
 		<h2 class="mobile-menu-title">页面导航</h2>
 		<div class="mobile-menu-pagelist"><div class="container-fluid"><div class="row">
 		  <?php $this->widget('Widget_Contents_Page_List')
-          ->parse('<div class="col-6"><a href="{permalink}" onclick="toggleMobileMenu()">{title}</a></div>'); ?>
+          ->parse('<div class="col-6"><a href="{permalink}">{title}</a></div>'); ?>
 		</div></div></div>
 		<div class="mobile-menu-footer">
 		  <p>&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->SiteUrl(); ?>"><?php $this->options->title(); ?></a> | Theme <a href="https://github.com/BigCoke233/miracles">Miracles</a></p>
@@ -97,10 +97,20 @@
 		  </div>
 		</div>
 	  </div>
+	  <!-- -小屏幕导航 -->
+	  <nav class="small-screen nav nav-mobile nav-fixed"<?php if($this->options->navStyle==1): ?> style="display:none!important"<?php endif; ?>>
+        <div class="nav-mobile-content">
+		  <a href="<?php $this->options->SiteUrl(); ?>" style="float:left"><i class="iconfont icon-xuanzhongshangcheng"></i></a>
+		  <a id="search-open-mobile" style="float:left"><i class="iconfont icon-chaxun"></i></a>
+		  <a id="login-open-mobile" style="float:left"><i class="iconfont icon-user"></i></a>
+		  <a id="toggle-options-mobile" style="float:left"><i class="iconfont icon-settings"></i></a>
+		  <a id="toggle-mobile-menu-button" style="float:right">MENU <i class="iconfont icon-list"></i></a>
+		</div>
+	  </nav>
 	  <?php if($this->options->navStyle==0): ?>
 	  <!-- 导航 -->
 	  <!-- -大屏幕导航 -->
-      <nav class="large-screen nav<?php if($this->options->nav_position && $this->options->nav_position=1): ?> nav-fixed<?php endif; ?>">
+      <nav class="large-screen nav nav-fixed">
 	    <div class="container">
 		  <p class="nav-content">
 		    <a href="<?php $this->options->SiteUrl(); ?>" class="nav-title"><?php $this->options->title(); ?></a>
@@ -109,19 +119,9 @@
             ->parse('<a href="{permalink}">{title}</a>'); ?>
 			</span>
 		  </p>
-		  <button class="nav-icon-button search-button" onclick="Search()"><i class="iconfont icon-chaxun"></i></button>
-		  <button class="nav-icon-button login-button" onclick="Login()"><i class="iconfont icon-user"></i></button>
-		  <button class="nav-icon-button setting-button" onclick="toggleOptions()"><i class="iconfont icon-settings"></i></button>
-		</div>
-	  </nav>
-	  <!-- -小屏幕导航 -->
-	  <nav class="small-screen nav nav-mobile<?php if($this->options->nav_position && $this->options->nav_position=1): ?> nav-fixed<?php endif; ?>">
-        <div class="nav-mobile-content">
-		  <a href="<?php $this->options->SiteUrl(); ?>" style="float:left"><i class="iconfont icon-xuanzhongshangcheng"></i></a>
-		  <a onclick="Search()" style="float:left"><i class="iconfont icon-chaxun"></i></a>
-		  <a onclick="Login()" style="float:left"><i class="iconfont icon-user"></i></a>
-		  <a onclick="toggleOptions()" style="float:left"><i class="iconfont icon-settings"></i></a>
-		  <a onclick="toggleMobileMenu()" style="float:right">MENU <i class="iconfont icon-list"></i></a>
+		  <button class="nav-icon-button search-button" id="search-open-button"><i class="iconfont icon-chaxun"></i></button>
+		  <button class="nav-icon-button login-button" id="login-open"><i class="iconfont icon-user"></i></button>
+		  <button class="nav-icon-button setting-button" id="toggle-options-button"><i class="iconfont icon-settings"></i></button>
 		</div>
 	  </nav>
 	  <?php elseif($this->options->navStyle==1): ?>
@@ -141,9 +141,9 @@
 		  </div>
 		</div>
 		<div class="drawer-footer">
-		  <button class="drawer-icon" onclick="Search();toggleDrawer()"><i class="iconfont icon-chaxun"></i></button>
-		  <button class="drawer-icon" onclick="Login();toggleDrawer()"><i class="iconfont icon-user"></i></button>
-          <button class="drawer-icon" onclick="toggleOptions()"><i class="iconfont icon-settings"></i></button>
+		  <button class="drawer-icon" id="search-open-button" onclick="toggleDrawer"><i class="iconfont icon-chaxun"></i></button>
+		  <button class="drawer-icon" id="login-open" onclick="toggleDrawer()"><i class="iconfont icon-user"></i></button>
+          <button class="drawer-icon" id="toggle-options-button"><i class="iconfont icon-settings"></i></button>
 		</div>
 	  </div></nav>
 	  <?php endif; ?>
