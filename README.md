@@ -1,7 +1,7 @@
 ![](banner.jpg)
 ![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square)
-![](https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg?style=flat-square?)
-![](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square?style=flat-square)
+![](https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg?style=flat-square)
+![](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
 ![](https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square)
 ![](https://img.shields.io/badge/version-1.2.0-red.svg?style=flat-square)
 > 🙌 Born to be the Miracles. 生为奇迹
