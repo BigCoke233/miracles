@@ -130,31 +130,45 @@
 .body-contentsize-small .post-content,
 .body-contentsize-small .comment-content p,
 .body-contentsize-small .banner-content,
-.body-contentsize-small .footer-info,
 .body-contentsize-small .nav-content {
 	font-size: 100%;
 }
 .body-contentsize-normal .post-content,
 .body-contentsize-normal .comment-content p,
 .body-contentsize-normal .banner-content,
-.body-contentsize-normal .footer-info,
 .body-contentsize-normal .nav-content {
 	font-size: 125%;
 }
 .body-contentsize-big .post-content,
 .body-contentsize-big .comment-content p,
 .body-contentsize-big .banner-content,
-.body-contentsize-big .footer-info,
 .body-contentsize-big .nav-content {
 	font-size: 140%;
 }
 .body-contentsize-large .post-content,
 .body-contentsize-large .comment-content p,
 .body-contentsize-large .banner-content,
-.body-contentsize-large .footer-info,
 .body-contentsize-large .nav-content {
 	font-size: 160%;
 }
+/* - For Footer */
+.body-contentsize-small .footer-info {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.body-contentsize-normal .footer-info {
+	font-size: 16px;
+}
+
+.body-contentsize-big .footer-info {
+	font-size: 18px;
+}
+
+.body-contentsize-large .footer-info {
+	font-size: 20px;
+}
+
 /* Footer */
 .footer-info {
 	background: #f0f0f0;
@@ -165,6 +179,7 @@
 	padding: 25px 10px;
 	line-height: 26px;
 	width: 100%;
+	font-size: 12px;
 }
 .footer-dark a {
 	color: #000
@@ -208,4 +223,11 @@ iframe[src*="//player.bilibili.com/player.html"] {
 	display: none;
 	transition: all 0.3s;
 	z-index: 0!important
+}
+/* Animation Helper */
+.fadeout {
+	opacity: 0;
+}
+.fadein {
+	opacity: 1;
 }
