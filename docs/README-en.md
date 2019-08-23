@@ -1,4 +1,4 @@
-![](banner.jpg)
+![](/banner.jpg)
 ![](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![](https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg)
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
@@ -6,10 +6,9 @@
 ![](https://img.shields.io/badge/version-1.2.0-red.svg)
 > 🙌 Born to be the Miracles.
 
-Language: [简体中文](README.md) | English
+Language: [简体中文](/README.md) | English
 
-> Notice: This theme is only for [Typecho](https://github.com/typecho/typecho).
-
+**Notice: This theme is only for [Typecho](https://github.com/typecho/typecho).**
 # Feature
 - Responsive Web design
 - Pjax
@@ -49,11 +48,11 @@ Language: [简体中文](README.md) | English
 [@jrotty](https://github.com/jrotty)
 
 # Links
-Demo: [My Blog](https://guhub.cn) 
+Demo: [My Blog](https://guhub.cn)  
 Introduction: [Miracles —— 生为奇迹](https://guhub.cn/p/miracles.html)  
-Change-log: [change-log.md](https://github.com/BigCoke233/miracles/blob/master/change-log.md)  
-Plan: [plan.md](https://github.com/BigCoke233/miracles/blob/master/plan.md)
+Change-log: [change-log.md](/docs/change-log.md)  
+Plan: [plan.md](/docs/plan.md)
 > All above is in Chinese.
 
 # Lincense
-&copy; under MIT License.
+&copy; [Eltrac](https://github.com/BigCoke233/) | Under MIT License.
