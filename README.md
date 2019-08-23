@@ -6,7 +6,7 @@
 ![](https://img.shields.io/badge/version-1.2.1-red.svg?style=flat-square)
 > 🙌 Born to be the Miracles. 生为奇迹
 
-语言：简体中文 | [English](README-en.md)
+语言：简体中文 | [English](docs/README-en.md)
 
 # 特色
 - 响应式/自适应设计
@@ -22,7 +22,6 @@
 - 全站公告
 - 自定义摘要
 - 20 张随机缩略图(文件大的根因)
-- ~~体积较小（压缩后 4M 左右）~~
 
 # 使用
 1. Star 本项目
@@ -96,8 +95,8 @@
 # 相关
 演示站点：[我的博客](https://guhub.cn)  
 介绍文章：[Miracles —— 生为奇迹](https://guhub.cn/p/miracles.html)  
-更新日志：[change-log.md](https://github.com/BigCoke233/miracles/blob/master/change-log.md)  
-更新计划：[plan.md](https://github.com/BigCoke233/miracles/blob/master/plan.md)  
+更新日志：[change-log.md](docs/change-log.md)  
+更新计划：[plan.md](docs/plan.md)  
 
 # 版权
 &copy; [Eltrac](https://github.com/BigCoke233) | Under MIT License
