@@ -1,78 +1,45 @@
-![](banner.jpg)
-![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square)
-![](https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg?style=flat-square)
-![](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
-![](https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square)
-![](https://img.shields.io/badge/version-1.2.1-red.svg?style=flat-square)
-> 🙌 Born to be the Miracles. 生为奇迹
-
-语言：简体中文 | [English](docs/README-en.md)
+<p align="center">
+  <img src="banner.jpg">
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square">
+  <img src="https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg?style=flat-square">
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square">
+  <img src="https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square">
+  <img src="https://img.shields.io/badge/version-1.2.1-red.svg?style=flat-square">
+</p>
 
 # 特色
 - 响应式/自适应设计
-- Pjax 预加载技术
-- LazyLoad 图片懒加载
-- Prism 代码高亮+行号
-- 前台设置面板，调整字体/字体大小
-- OwO 评论表情
-- 内置 Live2d，可以选择黑猫和白猫，也能自定义模型（开发版）
-- 舒适的夜间模式
-- 有趣的日落/黑白滤镜
-- 两种导航栏样式
-- 全站公告
-- 自定义摘要
-- 20 张随机缩略图(文件大的根因)
+- Pjax 全站无刷新
+- 夜间模式
+- 前台配置面板
+- 前台登录
+- 代码高亮/行号
+- 内置 Live2d
+- 简洁大气的设计
+- 灵活的友链功能
+- 方便排版的短代码
+- 文字可读性高
 
 # 使用
-1. Star 本项目
-2. 前往 [Releases](https://github.com/BigCoke233/miracles/releases) 下载最新发行版
-3. 解压并存放在`/usr/themes`目录下
-4. 确认目录名是否为`Miracles`（大写 M）
-6. 后台-控制台-外观 启用本主题
-7. 阅读 [Wiki](https://github.com/BigCoke233/miracles/wiki) 和后面的常规配置后，开始使用
-
-## 常规配置
+1. 下载最新的 [Release](https://github.com/BigCoke233/miracles/release)
+2. 解压后，确认目录名为`Miracles`（M 大写）
+3. 将文件夹放入`usr/themes`
+4. 到后台启用主题
+5. 配置主题
+> 有问题请先查看 [Wiki](https://github.com/BigCoke233/miracles/wiki)
 
 <details>
-  <summary><strong>添加友链（友情链接）</strong></summary>
-
-在文章或独立页面中按照以下语法书写。
+  <summary><strong>使用开发版</strong></smmary>
+  
+直接下载仓库，或者使用命令行进行克隆
+```git
+$ git clone https://github.com/BigCoke233/miracles
 ```
-!!!
-[links]
-...
-[链接名字]{指向链接}(头像)
-[链接名字]{指向链接}(头像)
-...
-[/links]
-!!!
-```
-> 如果你是 1.0 及以前版本的 Typecho ，可以在开头和结尾添加`!!!`
+> 不推荐使用开发版，因为可能有不确定的不稳定因素
 
 </details>
-<details>
-<summary><strong>关于页面的设置</strong></summary>
-
-创建关于页面的时候选择“关于页面”模板，然后添加自定义字段，如图。
-![](https://camo.githubusercontent.com/02f656335888aed14b815f5bf1d072e5efa2b403/68747470733a2f2f73322e617831782e636f6d2f323031392f30372f32352f6565546845342e706e67)
-
-</details>
-<details>
-<summary><strong>代码高亮无效?</strong></summary>
-
-你需要在书写代码块的时候定义语言，这样 Prism.js 才能够正确解析。
-```markdown
-(```语言)
-相应语言的代码（正常书写时，请去掉括号）
-(```)
-```
-
-> 如果没有定义语言，就会被视作为 html 语言进行解析
-
-</details>
-<br>
-
-> 在这里未提及的问题请查看 [Wiki](https://github.com/BigCoke233/miracles/wiki)
 
 # 鸣谢
 > 这些都是在开发过程中给予我帮助的项目和大佬！
@@ -85,7 +52,6 @@
 - [Pjax](https://github.com/defunkt/jquery-pjax)
 - [LazyLoad](https://github.com/tuupola/lazyload)
 - [Pangu.js](https://github.com/vinta/pangu.js)
-
 ## 大佬们
 [@ohmyga233](https://github.com/ohmyga233) | 
 [@AlanDecode](https://github.com/AlanDecode) | 
@@ -97,6 +63,7 @@
 介绍文章：[Miracles —— 生为奇迹](https://guhub.cn/p/miracles.html)  
 更新日志：[change-log.md](docs/change-log.md)  
 更新计划：[plan.md](docs/plan.md)  
+> 仓库开启了 Sponsor 功能，我会选取使用 Miracles 主题的高质量博客链接列入 Sponsor 内
 
 # 版权
 &copy; [Eltrac](https://github.com/BigCoke233) | Under MIT License
