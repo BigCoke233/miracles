@@ -180,6 +180,9 @@
 	.links-container {
 	    padding: 10px;
     }
+	.comment-children {
+		margin-left: 80px;
+	}
 }
 /* Desktop and up */
 @media (min-width:992px) {
@@ -216,9 +219,6 @@
 		margin: 10px 80px
 	}
 
-	.comment-children,.comment-children li,.comment-children li>li {
-		margin: 5px -40px
-	}
 
 	.post-title {
 		margin: 30px 0;
@@ -319,11 +319,7 @@
 	.index-content {
 		margin: 10px 100px
 	}
-
-	.comment-children,.comment-children li,.comment-children li>li {
-		margin: 15px -35px
-	}
-
+	
 	.post-title {
 		margin: 30px 0;
 		margin-bottom: 25px

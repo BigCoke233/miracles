@@ -29,7 +29,11 @@
 .comment-body {
 	margin: 28px 0;
 	padding: 0;
-	position: relative
+	position: relative;
+}
+.comment-body-inner {
+	display: flex;
+	flex-wrap: nowrap;
 }
 .comment-main,
 .comment-author-avatar {
@@ -67,6 +71,7 @@
 }
 .comment-meta {
 	font-size: 17px;
+	margin-left: 25px!important;
 }
 .comment-author {
 	font-size: 0.8em;
@@ -86,6 +91,7 @@
 	padding-top: -3px;
 	border-radius: 4px;
 	min-width: 10px!important;
+	margin-left: 25px;
 }
 .bubble.comment-content:before {
     border-right-color: rgb(238,238,238);
@@ -96,16 +102,16 @@
 	-moz-box-shadow: 0 0 0 #fff;
 	-webkit-box-shadow: 0 0 0 #fff;
 }
-.comment-by-author > .container-fluid > .row > .comment-main > .bubble.comment-content {
+.comment-by-author > .comment-main > .bubble.comment-content {
 	background: var(--theme-color)
 }
-.comment-by-author > .container-fluid > .row > .comment-main > .bubble.comment-content p {
+.comment-by-author > .comment-main > .bubble.comment-content p {
 	color: #fff!important;
 }
-.comment-by-author > .container-fluid > .row > .comment-main > .bubble.comment-content:before {
+.comment-by-author > .comment-main > .bubble.comment-content:before {
 	border-right-color: var(--theme-color)
 }
-.comment-by-author > .container-fluid > .row > .comment-main > .bubble.comment-content > .comment-reply a {
+.comment-by-author > .row > .comment-main > .bubble.comment-content > .comment-reply a {
 	color:#fff!important;
 }
 .comment-reply a {
@@ -181,6 +187,12 @@
 }
 .comment-pagenav-icon {
 	margin: 0 -3px;
+}
+.comment-children {
+	margin-left: 30px
+}
+.comment-children .comment-children {
+	margin-left: 0!important
 }
 
 /* OwO */
