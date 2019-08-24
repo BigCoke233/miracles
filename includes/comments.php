@@ -19,12 +19,11 @@ if ($comments->_levels > 0) {
 $comments->alt(' comment-odd', ' comment-even');
 echo $commentClass; 
 ?>">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="comment-author-avatar col-md-1">
+    <div class="comment-body-inner">
+      <div class="comment-author-avatar">
         <?php $comments->gravatar('100', ''); ?>
       </div>
-	  <div class="comment-main comment-author-info col-md-11">
+	  <div class="comment-main comment-author-info">
 		<div class="comment-content bubble">
 		  <span class="comment-reply">
 		    <?php $comments->reply('<i class="iconfont icon-return"></i>'); ?>
@@ -35,14 +34,13 @@ echo $commentClass;
 		  <span class="comment-author"><?php $comments->author(); ?></span>
 		  <span class="comment-date"><?php $comments->date('Y-m-d H:i'); ?></span>
 		</p>
-		<?php if ($comments->children) { ?>
+	  </div>
+	</div>
+	  <?php if ($comments->children) { ?>
         <div class="comment-children">
           <?php $comments->threadedComments($options); ?>
         </div>
-        <?php } ?>
-	  </div>
-	</div>
-  </div>
+      <?php } ?>
 </div>
 <?php } ?>
       <div class="comment">
@@ -66,7 +64,7 @@ echo $commentClass;
 		
 		<div class="comment-form">
 		  <!-- 判断设置是否允许对当前文章进行评论 -->
-<?php if($this->allow('comment')): ?>
+    <?php if($this->allow('comment')): ?>
     <div id="<?php $this->respondId(); ?>" class="respond">
         <div class="cancel-comment-reply">
         <?php $comments->cancelReply(); ?>
