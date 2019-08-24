@@ -31,7 +31,7 @@
 > 有问题请先查看 [Wiki](https://github.com/BigCoke233/miracles/wiki)
 
 <details>
-  <summary><strong>使用开发版</strong></smmary>
+<summary><strong>使用开发版</strong></smmary>
   
 直接下载仓库，或者使用命令行进行克隆
 ```git
