@@ -8,6 +8,7 @@
   <img src="https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square">
   <img src="https://img.shields.io/badge/version-1.2.1-red.svg?style=flat-square">
 </p>
+<br>
 
 ---
 
@@ -24,6 +25,7 @@
 - 灵活的友链功能
 - 方便排版的短代码
 - 文字可读性高
+- 一个完善的 wiki（强调）
 
 # 使用
 1. 下载最新的 [Release](https://github.com/BigCoke233/miracles/release)
@@ -64,8 +66,9 @@ $ git clone https://github.com/BigCoke233/miracles
 # 相关
 演示站点：[我的博客](https://guhub.cn)  
 介绍文章：[Miracles —— 生为奇迹](https://guhub.cn/p/miracles.html)  
+说明文档：[Wiki](https://github.com/BigCoke233/miracles/wiki)  
 更新日志：[change-log.md](docs/change-log.md)  
-更新计划：[plan.md](docs/plan.md)  
+更新计划：[plan.md](docs/plan.md)（包括已知的 Bug）  
 > 仓库开启了 Sponsor 功能，我会选取使用 Miracles 主题的高质量博客链接列入 Sponsor 内
 
 # 版权
