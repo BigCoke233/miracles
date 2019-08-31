@@ -45,7 +45,9 @@ hue-6-2: #e6c07b
 
 .hljs-ln-numbers {
 	background: rgb(65,65,65)!important;
-	padding: 0 10px!important;
+	padding: 0!important;
+	width: 30px!important;
+	text-align: center!important;
 }
 
 .hljs-ln-code {
