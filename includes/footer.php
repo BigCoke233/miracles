@@ -20,7 +20,8 @@
 	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/jquery.lazyload.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/nprogress.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/OwO.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/prism.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/highlight-line-number.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/pangu.js"></script>
 	<?php if($this->options->cat!=0 || $this->options->customModel!=''): ?><script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/l2dwidget.min.js"></script><?php endif; ?>
 	<?php else: ?>
@@ -30,7 +31,8 @@
 	<script src="<?php Utils::indexTheme('assets/js/jquery.lazyload.min.js'); ?>"></script>
 	<script src="<?php Utils::indexTheme('assets/js/nprogress.js'); ?>"></script>
 	<script src="<?php Utils::indexTheme('assets/js/OwO.min.js'); ?>"></script>
-	<script src="<?php Utils::indexTheme('assets/js/prism.js'); ?>"></script>
+	<script src="<?php Utils::indexTheme('assets/js/highlight.js'); ?>"></script>
+	<script src="<?php Utils::indexTheme('assets/js/highlight-line-number.js'); ?>"></script>
 	<script src="<?php Utils::indexTheme('assets/js/pangu.js'); ?>"></script>
 	<?php endif; ?>
 	<!-- Varribles and Functions -->

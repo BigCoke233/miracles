@@ -1,10 +1,4 @@
-<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; 
-if (isset($_POST['action'])) {
-  if ($_POST['action'] == 'getLoginAction') {
-    echo $this->options->loginAction;
-    exit;
-  }
-}?>
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <!DOCTYPE HTML>
 <html>
   <head>
@@ -45,13 +39,13 @@ if (isset($_POST['action'])) {
 	<?php $this->options->headerEcho(); ?>
 	<!-- css -->
 	<?php if($this->options->CDN && $this->options->CDN=1): ?>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/css/prism.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/css/codestyle.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/css/owo.min.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/css/fancybox.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/css/prism.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/css/main/miracles.min.css" />
 	<?php else: ?>
-	<link rel="stylesheet" href="<?php Utils::indexTheme('assets/css/prism.css'); ?>" />
+	<link rel="stylesheet" href="<?php Utils::indexTheme('assets/css/codestyle.css'); ?>" />
 	<link rel="stylesheet" href="<?php Utils::indexTheme('assets/css/owo.min.css'); ?>" />
 	<link rel="stylesheet" href="<?php Utils::indexTheme('assets/css/nprogress.css'); ?>" />
 	<link rel="stylesheet" href="<?php Utils::indexTheme('assets/css/fancybox.css'); ?>" />
