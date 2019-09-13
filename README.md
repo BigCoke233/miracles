@@ -28,7 +28,7 @@
 - 一个完善的 wiki（强调）
 
 # 使用
-1. 下载最新的 [Release](https://github.com/BigCoke233/miracles/release)
+1. 下载最新的 [Release](https://github.com/BigCoke233/miracles/releases)
 2. 解压后，确认目录名为`Miracles`（M 大写）
 3. 将文件夹放入`usr/themes`
 4. 到后台启用主题
