@@ -12,7 +12,7 @@
 
 ---
 
-> **请下载 [Releases](https://github.com/BigCoke233/miracles/release) 页面的最新发行包，不懂的先看 [Wiki](https://github.com/BigCoke233/miracles/wiki)，wiki 有的问题一律不解答**
+> **请下载 [Releases](https://github.com/BigCoke233/miracles/releases) 页面的最新发行包，不懂的先看 [Wiki](https://github.com/BigCoke233/miracles/wiki)，wiki 有的问题一律不解答**
 # 特色
 - 响应式/自适应设计
 - Pjax 全站无刷新
