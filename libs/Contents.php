@@ -1,7 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 /* 
- * 该文件大部分代码来自 熊猫小A(AlanDecode) 的项目，感谢~
+ * 该主体代码来自 熊猫小A(AlanDecode) 的项目，感谢~
  * https://github.com/AlanDecode/typecho-theme-dev-framework
  */
  
