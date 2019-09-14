@@ -1,11 +1,11 @@
 <?php
 /**
  * You're the miracles. 你即是奇迹
- * 作者：<a href="https://guhub.cn">Eltrac</a> | 帮助文档：<a href="https://github.com/BigCoke233/miracles/wiki">GitHub Wiki</a>
+ * 作者：<a href="https://guhub.cn">Eltrac</a> | 帮助文档：<a href="https://github.com/BigCoke233/miracles/wiki">GitHub Wiki</a>><br><span style="color:red">你现在是用的是 Miracles 主题开发版，强烈建议你更换为<a href="https://github.com/BigCoke233/miracles/releases">发行版</a></span>
  * 
  * @package     Miracles
  * @author      Eltrac
- * @version     1.2.2
+ * @version     development
  * @link        https://guhub.cn
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
