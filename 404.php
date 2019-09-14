@@ -7,8 +7,8 @@ $this->need('includes/header.php');
 	    <div class="post-content">
 		  <h1 class="error-title">404</h1>
 		  <p style="text-align:center">
-		    <span>肥肠抱歉，你访问的页面被猫吃掉了</span><br /><br />
-		    <a href="<?php $this->options->SiteUrl(); ?>" class="button error-button no-line">返回首页</a>
+		    <span>肥肠抱歉，你访问的页面被博主吃掉了</span><br /><br />
+		    <a href="<?php $this->options->SiteUrl(); ?>" class="button error-button no-line">回到首页</a>
 		  </p>
 		</div>
 	  </div>
