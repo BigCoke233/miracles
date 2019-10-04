@@ -1,11 +1,11 @@
 <?php
 /**
  * You're the miracles. 你即是奇迹
- * 作者：<a href="https://guhub.cn">Eltrac</a> | 帮助文档：<a href="https://github.com/BigCoke233/miracles/wiki">GitHub Wiki</a>><br><span style="color:red">你现在是用的是 Miracles 主题开发版，强烈建议你更换为<a href="https://github.com/BigCoke233/miracles/releases">发行版</a></span>
+ * 作者：<a href="https://guhub.cn">Eltrac</a> | 帮助文档：<a href="https://github.com/BigCoke233/miracles/wiki">GitHub Wiki</a><br><span style="color:red"> 你现在是用的是 Miracles 主题开发版，强烈建议你更换为 < a href="https://github.com/BigCoke233/miracles/releases"> 发行版 </a></span>
  * 
  * @package     Miracles
  * @author      Eltrac
- * @version     development
+ * @version     1.3.0
  * @link        https://guhub.cn
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
@@ -55,7 +55,13 @@ $this->need('includes/header.php');
 			  <a href="<?php $this->permalink(); ?>" class="post-link">
 				  <h1 class="post-title-ss"><?php $this->sticky(); ?><?php $this->title(); ?></h1>
 			  </a>
-			  <p class="post-excerpt"><?php $this->excerpt(); ?></p>
+			  <p class="post-excerpt">
+			      <?php if($this->fields->excerpt && $this->fields->excerpt!='') {
+				    echo $this->fields->excerpt;
+				  }else{
+					echo $this->excerpt(130);
+				  }
+				  ?></p>
 			  <p class="post-meta"><i class="iconfont icon-block"></i> <?php $this->category(','); ?>&emsp;<i class="iconfont icon-comments"></i> <?php $this->commentsNum('None', 'Only 1', '%d'); ?>&emsp;<i class="iconfont icon-clock"></i> <?php $this->date(); ?></p>
 			</div>
 		  </div>
