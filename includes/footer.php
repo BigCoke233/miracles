@@ -17,7 +17,7 @@
 	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/jquery.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/pjax.jquery.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/jquery.fancybox.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/jquery.lazyload.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/jquery.lazyload.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/nprogress.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/OwO.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/js/highlight.js"></script>
