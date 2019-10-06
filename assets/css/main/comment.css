@@ -194,6 +194,10 @@
 .comment-children .comment-children {
 	margin-left: 0!important
 }
+#response {
+	text-align: center;
+	margin-top: 60px;
+}
 
 /* OwO */
 .owo-img {

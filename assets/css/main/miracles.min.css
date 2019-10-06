@@ -19,6 +19,7 @@
 /* Varriable */
 :root {
 	--theme-color: #4D90FE;
+	--shadow-color: rgb(150,150,150);
 }
 
 /* ScrollBar */
@@ -125,12 +126,17 @@
 	}
 
 	.post-title {
-		margin: 16px 0;
+		margin: 25px 0;
 		margin-bottom: 10px
 	}
 
 	.post-excerpt {
-		height: 56px
+		height: 38px
+	}
+	
+	.post-banner-box,
+    .post-banner img {
+		height: 230px
 	}
 
 	.large-screen {
@@ -227,6 +233,11 @@
 
 	.post-excerpt {
 		height: 65px
+	}
+	
+	.post-banner-box,
+    .post-banner img {
+		height: 280px
 	}
 
 	.large-screen {

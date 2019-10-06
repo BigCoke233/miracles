@@ -169,6 +169,7 @@
 .body-dark .drawer-header,
 .body-dark .options-button-active,
 .body-dark .tags-item a,
+.body-dark .post-tags a,
 .body-dark .about-social a:hover {
 	background: #646464!important
 }

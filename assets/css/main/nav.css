@@ -270,7 +270,7 @@
 	padding-top: 5px;
 	background: rgba(0,0,0,0);
 	border: none;
-	margin-left: -100px
+    margin-left: -90px;
 }
 .search-close,
 .search-form button,
