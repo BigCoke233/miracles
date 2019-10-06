@@ -16,10 +16,10 @@ $this->need('includes/header.php');
           <?php endif; ?>
 		  <?php $this->content(); ?>
 		  <br />
-		  <!-- 文章页脚 -->
-		  <div class="post-footer">
-			<span class="post-tags"><i class="iconfont icon-tags"></i> <?php $this->tags(' ', true, '这人还没有写标签哦~'); ?></span>
-		  </div>
+		</div>
+		<!-- 文章页脚 -->
+		<div class="post-footer">
+		  <span class="post-tags"><i class="iconfont icon-tags"></i> <?php $this->tags(' ', true, '这人还没有写标签哦~'); ?></span>
 		</div>
 	  </div>
 <?php $this->need('includes/comments.php'); ?>

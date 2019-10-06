@@ -33,6 +33,8 @@ function themeFields(Typecho_Widget_Helper_Layout $layout) {
     $layout->addItem($banner);
 	$excerpt = new Typecho_Widget_Helper_Form_Element_Text('excerpt', NULL, NULL,_t('文章摘要'), _t('输入一段文本来自定义摘要，如果为空则自动提取文章前 130 字。'));
     $layout->addItem($excerpt);
+	$meta = new Typecho_Widget_Helper_Form_Element_Text('meta', NULL, NULL,_t('元信息'), _t('页面/文章内页会显示该页面的评论数和创建日期（元信息），如果你不需要，可以写一段文字来代替这些内容。'));
+    $layout->addItem($meta);
 }
 
 /**

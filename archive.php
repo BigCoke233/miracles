@@ -12,19 +12,19 @@ $this->need('includes/header.php');
             'author'    =>  _t('%s 发布的文章')
         ), '', ''); ?></h2>
 		  <?php if ($this->have()): ?>
+		  <hr>
           <?php else: ?>
           <p style="text-align:center">居然没有找到相关内容</p>
           <?php endif; ?>
 		  <?php while($this->next()): ?>
-		  <a href="<?php $this->permalink(); ?>" class="post-link">
+		  <a href="<?php $this->permalink(); ?>" class="post-link archive-item">
 		    <h3 class="archive-item-title"><?php $this->title(); ?></h3>
-			<p class="arvchive-item-excerpt"><?php $this->excerpt(); ?></p>
+			<p class="archive-item-excerpt"><?php $this->excerpt(); ?></p>
 		  </a>
-		  <hr />
+		  <br>
 		  <?php endwhile; ?>
-		  <div class="post-pagenav">
-            <span class="post-pagenav-left"><?php $this->pageLink('<i class="iconfont icon-chevron-left"></i>'); ?></span>
-		    <span class="post-pagenav-right"><?php $this->pageLink('<i class="iconfont icon-chevron-right"></i>','next'); ?></span>
+		  <div class="archive-pagenav">
+            <?php $this->pageNav('«', '»'); ?>
 		  </div>
 		</div>
 	  </div>
