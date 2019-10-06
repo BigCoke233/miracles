@@ -28,7 +28,7 @@ echo $commentClass;
 		  <span class="comment-reply">
 		    <?php $comments->reply('<i class="iconfont icon-return"></i>'); ?>
 		  </span>
-	      <?php $comments->content(); ?>
+	      <?php Contents::commentsParent($comments); $comments->content(); ?>
 	    </div>
 		<p class="comment-meta">
 		  <span class="comment-author"><?php $comments->author(); ?></span>

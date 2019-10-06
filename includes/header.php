@@ -162,7 +162,9 @@
 		        <p><?php $this->options->bannerIntro(); ?></p>
 				<?php elseif($this->is('post') || $this->is('page')): ?>
 				<h1><?php $this->title(); ?></h1>
-		        <p class="header-meta"><?php if($this->is('post')): ?><i class="iconfont icon-block"></i> <?php $this->category(','); ?>&emsp;<?php endif; ?><i class="iconfont icon-comments"></i> <?php $this->commentsNum('None', 'Only 1', '%d'); ?>&emsp;<i class="iconfont icon-clock"></i> <?php $this->date(); ?></p>
+		        <p class="header-meta">
+				  <?php if($this->fields->meta==''): ?><?php if($this->is('post')): ?><i class="iconfont icon-block"></i> <?php $this->category(','); ?>&emsp;<?php endif; ?><i class="iconfont icon-comments"></i> <?php $this->commentsNum('None', 'Only 1', '%d'); ?>&emsp;<i class="iconfont icon-clock"></i> <?php $this->date(); ?><?php else: echo $this->fields->meta; endif; ?>
+				</p>
 				<?php else: ?><?php endif; ?>
 			  </div>
 			</div>

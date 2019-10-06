@@ -1,7 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 /* 
- * 该主体代码来自 熊猫小A(AlanDecode) 的项目，感谢~
+ * 该文件大部分代码来自 熊猫小A(AlanDecode) 的项目，感谢~
  * https://github.com/AlanDecode/typecho-theme-dev-framework
  */
  
@@ -55,7 +55,7 @@ class Contents
      * 通过查询数据库
      * 获取上级评论人
      */
-    public static function getParent($comment)
+    public static function commentsParent($comment)
     {
         $recipients = [];
         $db = Typecho_Db::get();

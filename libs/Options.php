@@ -3,6 +3,7 @@
  * 主题后台设置
  */
 function themeConfig($form) {
+
 	/**
 	 *  主题设置备份 
 	 *  From https://qqdie.com/archives/typecho-templates-backup-and-restore.html
@@ -62,8 +63,9 @@ function themeConfig($form) {
 	echo '<link rel="stylesheet" href="/usr/themes/Miracles/assets/css/setting.miracles.css"><link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300|Noto+Serif+SC:300&display=swap" rel="stylesheet">';
 	echo '<div class="miracles-pannel">
 	<h1>Miracles 主题设置面板</h1>
-	<p>欢迎使用 Miracles 主题，目前版本是：'. $ver .'</span><br>
-	作者博客：<a href="https://guhub.cn">Eltrac\'s</a> | 帮助文档：<a href="https://github.com/BigCoke233/miracles/wiki">WIKI</a> | 问题反馈：<a href="https://github.com/BigCoke233/miracles/issues">issues</a></p>
+	<p>欢迎使用 Miracles 主题，目前版本是：'. $ver .'<br>
+	作者博客：<a href="https://guhub.cn">Eltrac\'s</a> | 帮助文档：<a href="https://github.com/BigCoke233/miracles/wiki">WIKI</a> | 问题反馈：<a href="https://github.com/BigCoke233/miracles/issues">issues</a>
+	</p>
    	  <form class="protected" action="?MiraclesBackup" method="post">
         <input type="submit" name="type" class="miracles-backup-button backup" value="备份模板数据" />&nbsp;&nbsp;
 	    <input type="submit" name="type" class="miracles-backup-button recover" value="还原模板数据" />&nbsp;&nbsp;
@@ -103,7 +105,7 @@ function themeConfig($form) {
     $form->addInput($CDN);
 	
 	//custom style
-	$grayTheme = new Typecho_Widget_Helper_Form_Element_Select('grayTheme',array('0'=>'关闭','1'=>'开启'),'0','<h2>个性化</h2>哀悼模式','为京阿尼纵火事件而设计的开关，打开后网站变为黑白，Pray for 京阿尼');
+	$grayTheme = new Typecho_Widget_Helper_Form_Element_Select('grayTheme',array('0'=>'关闭','1'=>'开启'),'0','<h2>个性化</h2>哀悼模式','打开后网站变为黑白');
     $form->addInput($grayTheme);
 	$bodyFonts = new Typecho_Widget_Helper_Form_Element_Select('bodyFonts',array('0'=>'无衬线字体','1'=>'衬线字体'),'0','网站字体','选择网站的字体，无衬线字体即“思源黑体”，衬线字体即“思源宋体”');
     $form->addInput($bodyFonts);
