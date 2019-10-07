@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg?style=flat-square">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square">
   <img src="https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square">
-  <img src="https://img.shields.io/badge/version-1.2.1-red.svg?style=flat-square">
+  <img src="https://img.shields.io/badge/version-1.2.3-red.svg?style=flat-square">
 </p>
 <br>
 
@@ -51,7 +51,8 @@ $ git clone https://github.com/BigCoke233/miracles
 ## 开源项目
 - [jQuery](https://github.com/jquery/jquery)
 - [FancyBox](https://github.com/fancyapps/fancybox)
-- [Prism.js](https://github.com/PrismJS/prism)
+- [Highlight.js](https://github.com/highlightjs/highlight.js)
+- [Hightlight-line-numbers](https://github.com/wcoder/highlightjs-line-numbers.js)
 - [Nprogress](https://github.com/rstacruz/nprogress)
 - [OwO](https://github.com/DIYgod/OwO)
 - [Pjax](https://github.com/defunkt/jquery-pjax)
