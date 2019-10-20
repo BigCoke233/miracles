@@ -12,7 +12,7 @@
 
 ---
 
-> **请下载 [Releases](https://github.com/BigCoke233/miracles/releases) 页面的最新发行包，不懂的先看 [Wiki](https://github.com/BigCoke233/miracles/wiki)，wiki 有的问题一律不解答**<br>同时，主题的 Telegram 频道已开启，可以获取主题最新消息，~~可能还会发福利~~，点此加入：[Miracles News](https://t.me/eltracer)
+> **请下载 [Releases](https://github.com/BigCoke233/miracles/releases) 页面的最新发行包，使用前先看 [Wiki](https://github.com/BigCoke233/miracles/wiki)，wiki 有的问题一律不解答；禁止删除主题版权信息**<br>同时，主题的 Telegram 频道已开启，可以获取主题最新消息，推送作者博客更新，点此加入：[Miracles News](https://t.me/eltracer)
 # 特色
 - 响应式/自适应设计
 - Pjax 全站无刷新
