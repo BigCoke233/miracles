@@ -150,9 +150,9 @@
 	  <div id="pjax-container"><!-- 开始 pjax-container -->
 	  <header>
 	    <?php if($this->is('post') || $this->is('page')): ?>
-		<div class="index-banner" style="background:url('<?php if($this->fields->banner && $this->fields->banner=!''): ?><?php $this->fields->banner(); ?><?php else: ?><?php $this->options->bannerUrl(); ?><?php endif; ?>') no-repeat;height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;">
+		<div class="index-banner" style="background:url('<?php if($this->fields->banner && $this->fields->banner=!''): ?><?php $this->fields->banner(); ?><?php else: ?><?php $this->options->bannerUrl(); ?><?php endif; ?>') no-repeat;height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;<?php $this->options->bannerPosition(); ?>">
 		<?php else: ?>
-	    <div class="index-banner" style="background:url('<?php $this->options->bannerUrl(); ?>') no-repeat;height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;">
+	    <div class="index-banner" style="background:url('<?php $this->options->bannerUrl(); ?>') no-repeat;height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;<?php $this->options->bannerPosition(); ?>">
 		<?php endif; ?>
 		  <div class="banner-mask">
 		    <div class="main-container container">

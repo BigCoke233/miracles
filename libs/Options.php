@@ -93,6 +93,8 @@ function themeConfig($form) {
     $form->addInput($bannerTitle);
 	$bannerIntro = new Typecho_Widget_Helper_Form_Element_Text('bannerIntro', NULL, NULL, _t('介绍'), _t('这里是首页大图标题下的简介<hr>'));
     $form->addInput($bannerIntro);
+    $bannerPosition = new Typecho_Widget_Helper_Form_Element_Select('bannerPosition', array(''=>'默认','background-position:center,center;'=>'垂直水平居中'), '0', '位置', '这里选择首页大图的显示位置，“默认”图片从左上角开始显示，“垂直水平居中”为图片垂直水品居中显示。');
+    $form->addInput($bannerPosition);
 	
 	//pjax
 	$pjax = new Typecho_Widget_Helper_Form_Element_Select('pjax',array('0'=>'关闭','1'=>'开启'),'1','<h2>Pjax 预加载</h2>是否开启','Pjax 预加载功能的开关');
