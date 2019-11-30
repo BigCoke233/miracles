@@ -154,9 +154,9 @@
 		<?php else: ?>
 	    <div class="index-banner" style="background-position:center;background:url('<?php $this->options->bannerUrl(); ?>') no-repeat;height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;background-color:<?php $this->options->bannerColor(); ?>">
 		<?php endif; ?>
-		  <div class="banner-mask"<?php if($this->options->bannerUrl && $this->options->bannerUrl=!''): ?><?php else:?> style="background:rgba(0,0,0,0)!important"<?php endif;?>>
+		  <div class="banner-mask"<?php if($this->is('post') || $this->is('page')):?><?php if($this->fields->banner==''):?> style="background:rgba(0,0,0,0)!important"<?php endif;?><?php endif; ?><?php if($this->is('index')):?><?php if($this->options->bannerUrl && $this->options->bannerUrl=!''): ?><?php else:?> style="background:rgba(0,0,0,0)!important"<?php endif;?><?php endif;?>>
 		    <div class="main-container container">
-			  <div class="banner-content<?php if($this->options->bannerFont==1): ?> banner-font-black<?php endif;?>">
+			  <div class="banner-content<?php if($this->is('index') && $this->options->bannerFont==1): ?> banner-font-black<?php endif; ?><?php if($this->is('page') || $this->is('post')): if($this->fields->banner==''): ?> banner-font-black<?php endif; endif; ?>">
 			    <?php if($this->is('index')): ?>
 			    <h1><?php $this->options->bannerTitle(); ?></h1>
 		        <p><?php $this->options->bannerIntro(); ?></p>
