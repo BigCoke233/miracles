@@ -8,11 +8,10 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('includes/head.php');
 $this->need('includes/header.php');
 ?>
-
     <main class="main-container container">
 	  <div class="post-body">
 	    <div class="post-content">
-          <h2>标签云</h2>
+          <h2>文章标签</h2>
 		  <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=mid&ignoreZeroCount=1&desc=0&limit=30')->to($tags); ?>
           <?php if($tags->have()): ?>
           <ul class="tags-list">
@@ -21,7 +20,7 @@ $this->need('includes/header.php');
           <?php endwhile; ?>
           </ul>
 		  <?php else: ?>
-            <p><?php _e('没有发现任何标签哦~'); ?></p>
+            <p><?php _e('看来这个博主没有写标签的习惯~'); ?></p>
           <?php endif; ?>
 		  <br />
 		  <h2>文章归档</h2>
@@ -48,7 +47,5 @@ $this->need('includes/header.php');
 		</div>
 	  </div>
 	</main>
-    <!-- 防止找不到 owo 容器而报错 -->
-	<div style="display:none" class="OwO"></div>
-
+    <!-- 防止找不到 owo 容器而报错 --><div style="display:none" class="OwO"></div>
 <?php $this->need('includes/footer.php'); ?>
