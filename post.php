@@ -4,8 +4,7 @@ $this->need('includes/header.php');
 ?>
     <main class="main-container container">
 	  <div class="post-body">
-	    <!-- 文章内容 -->
-	    <div class="post-content">
+	    <div class="post-content"><!-- 文章内容 -->
 		  <?php $postCheck = Utils::isOutdated($this); if($postCheck["is"] && $this->is('post')): ?>
             <div class="tip red">
 			  <div class="container-fluid"><div class="row">
@@ -17,8 +16,7 @@ $this->need('includes/header.php');
 		  <?php $this->content(); ?>
 		  <br />
 		</div>
-		<!-- 文章页脚 -->
-		<div class="post-footer">
+		<div class="post-footer"><!-- 文章页脚 -->
 		  <span class="post-tags"><i class="iconfont icon-tags"></i> <?php $this->tags(' ', true, '这人还没有写标签哦~'); ?></span>
 		</div>
 	  </div>

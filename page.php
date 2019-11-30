@@ -3,8 +3,7 @@ $this->need('includes/head.php');
 $this->need('includes/header.php');
 ?>
     <main class="main-container container">
-	  <div class="post-body">
-	    <!-- 页面内容 -->
+	  <div class="post-body"><!-- 页面内容 -->
 	    <div class="post-content page-content">
 		  <?php $postCheck = Utils::isOutdated($this); if($postCheck["is"] && $this->is('post')): ?>
             <div class="tip red">
