@@ -12,7 +12,7 @@ $this->need('includes/header.php');
             'author'    =>  _t('%s 发布的文章')
         ), '', ''); ?></h2>
 		  <?php if ($this->have()): ?>
-		  <hr>
+		  <br>
           <?php else: ?>
           <p style="text-align:center">居然没有找到相关内容</p>
           <?php endif; ?>
