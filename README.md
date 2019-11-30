@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg?style=flat-square">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square">
   <img src="https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square">
-  <img src="https://img.shields.io/badge/version-1.2.3-red.svg?style=flat-square">
+  <img src="https://img.shields.io/badge/version-1.2.4-red.svg?style=flat-square">
 </p>
 <br>
 
