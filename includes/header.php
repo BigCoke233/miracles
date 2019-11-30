@@ -82,10 +82,10 @@
 		  <div class="options-contentsize container-fluid">
 		    <div class="row">
 			  <div class="col-3 options-contentsize-small">
-			    <button class="options-sizesmall options-contentsize-button" onclick="SizeSmall()">100%</button>
+			    <button class="options-sizesmall options-contentsize-button options-button-active" onclick="SizeSmall()">100%</button>
 			  </div>
 			  <div class="col-3 options-contentsize-normal">
-			    <button class="options-sizenormal options-contentsize-button options-button-active" onclick="SizeNormal()">125%</button>
+			    <button class="options-sizenormal options-contentsize-button" onclick="SizeNormal()">125%</button>
 			  </div>
 			  <div class="col-3 options-contentsize-big">
 			    <button class="options-sizebig options-contentsize-button" onclick="SizeBig()">140%</button>
@@ -150,20 +150,21 @@
 	  <div id="pjax-container"><!-- 开始 pjax-container -->
 	  <header>
 	    <?php if($this->is('post') || $this->is('page')): ?>
-		<div class="index-banner" style="background:url('<?php if($this->fields->banner && $this->fields->banner=!''): ?><?php $this->fields->banner(); ?><?php else: ?><?php $this->options->bannerUrl(); ?><?php endif; ?>') no-repeat;height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;">
+		<div class="index-banner" style="background-position:center;<?php if($this->fields->banner && $this->fields->banner=!''): ?>background:url('<?php $this->fields->banner(); ?>') no-repeat;<?php else: ?>background-color:<?php $this->options->bannerColor(); ?>;<?php endif; ?>height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;">
 		<?php else: ?>
-	    <div class="index-banner" style="background:url('<?php $this->options->bannerUrl(); ?>') no-repeat;height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;">
+	    <div class="index-banner" style="background-position:center;background:url('<?php $this->options->bannerUrl(); ?>') no-repeat;height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;background-color:<?php $this->options->bannerColor(); ?>">
 		<?php endif; ?>
-		  <div class="banner-mask">
+		  <div class="banner-mask"<?php if($this->options->bannerUrl && $this->options->bannerUrl=!''): ?><?php else:?> style="background:rgba(0,0,0,0)!important"<?php endif;?>>
 		    <div class="main-container container">
-			  <div class="banner-content">
+			  <div class="banner-content<?php if($this->options->bannerFont==1): ?> banner-font-black<?php endif;?>">
 			    <?php if($this->is('index')): ?>
 			    <h1><?php $this->options->bannerTitle(); ?></h1>
 		        <p><?php $this->options->bannerIntro(); ?></p>
 				<?php elseif($this->is('post') || $this->is('page')): ?>
 				<h1><?php $this->title(); ?></h1>
-		        <p class="header-meta">
-				  <?php if($this->fields->meta==''): ?><?php if($this->is('post')): ?><i class="iconfont icon-block"></i> <?php $this->category(','); ?>&emsp;<?php endif; ?><i class="iconfont icon-comments"></i> <?php $this->commentsNum('None', 'Only 1', '%d'); ?>&emsp;<i class="iconfont icon-clock"></i> <?php $this->date(); ?><?php else: echo $this->fields->meta; endif; ?>
+		        <p class="header-meta"><?php if($this->fields->meta==''): ?>
+				  <?php if($this->is('post')): ?>
+					<i class="iconfont icon-block" title="文章分类"></i> <?php $this->category(','); ?>&emsp;<?php endif; ?><i class="iconfont icon-comments" title="共 <?php $this->commentsNum('None', '1', '%d'); ?> 条评论"></i> <?php $this->commentsNum('None', 'Only 1', '%d'); ?>&emsp;<i class="iconfont icon-clock" title="该文章发布于 <?php $this->date(); ?>"></i> <?php $this->date(); ?>&emsp;<i class="icon-view iconfont" title="该文章被浏览 <?php get_post_view($this) ?> 次"></i> <?php get_post_view($this) ?><?php else: echo $this->fields->meta; endif; ?>
 				</p>
 				<?php else: ?><?php endif; ?>
 			  </div>
