@@ -7,6 +7,7 @@
 /* Index Banner */
 .index-banner {
 	width: 100%;
+	min-height: 50vh;
 	text-align: center;
 	background-size: cover;
     background-repeat: no-repeat;
@@ -33,9 +34,16 @@
 .banner-content p {
 	margin-top: 10px
 }
+.banner-font-black,
+.banner-font-black a {
+	color: black!important;
+}
 
 /* Options Pannel */
 .options {
+	backdrop-filter: blur(18px);
+	-webkit-backdrop-filter: blur(18px);
+	background: rgba(255,255,255,0.86);
 	transition: all 0.3s;
 	background: #fff;
 	border-radius: 2px;
@@ -152,12 +160,12 @@
 }
 /* - For Footer */
 .body-contentsize-small .footer-info {
-	font-size: 14px;
+	font-size: 15px;
 	line-height: 18px;
 }
 
 .body-contentsize-normal .footer-info {
-	font-size: 16px;
+	font-size: 17px;
 }
 
 .body-contentsize-big .footer-info {
@@ -190,6 +198,12 @@
 }
 .footer-info a:hover {
 	opacity: .9
+}
+/* Shadow */
+.no-shadow {
+	box-shadow: 0 0 0 #000!important;
+	-webkit-box-shadow: 0 0 0 #000!important;
+	-moz-box-shadow: 0 0 0 #000!important;
 }
 /* Header Meta */
 .header-meta a {

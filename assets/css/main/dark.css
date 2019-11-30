@@ -28,7 +28,7 @@
 	background:#6e6e6e
 }
 .body-dark .post-content hr {
-	background:#787878
+	border: 3px dashed #787878!important
 }
 /* Pio Plugin */
 .body-dark .pio-container .pio-dialog {
@@ -79,7 +79,7 @@
 }
 /* Nav/Search/login */
 .body-dark .nav {
-	background:rgba(50,50,50,.9)!important;
+	background:rgba(50,50,50,.86)!important;
 	box-shadow:0 0 20px #000;
 	-webkit-box-shadow:0 0 20px #000;
 	-moz-box-shadow:0 0 30px #000
@@ -198,8 +198,9 @@
 }
 /* Need #6e6e6e bg */
 .body-dark .OwO-bar,
-.body-dark .OwO-item {
-	background:#6e6e6e!important
+.body-dark .OwO-item,
+.body-dark .index-banner {
+	background-color:#6e6e6e!important
 }
 /* Need white fonts */
 .body-dark .OwO-bar,
@@ -236,7 +237,8 @@
 .body-dark .search-close,
 .body-dark .search-form button,
 .body-darl .login a,
-.body-dark .alert {
+.body-dark .alert,
+.body-dark .banner-content.banner-font-black {
 	color:#fafafa!important
 }
 .body-dark .options-theme-label {

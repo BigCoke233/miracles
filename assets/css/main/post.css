@@ -10,6 +10,9 @@
 	margin-top: -110px;
 	transition: .8s;
 }
+.post-item {
+	margin-bottom: 10px;
+}
 .post-body,.post-item {
 	background: #fff;
 	box-shadow: 0 0 36px var(--shadow-color);
@@ -19,13 +22,12 @@
 }
 .post-banner-box {
 	margin-left: -15px;
-	margin-bottom: -2px;
-	height: 280px;
+	height: 100%;
 	overflow: hidden
 }
 .post-banner img {
 	width: 100%;
-	height: 280px;
+	height: 100%;
 	margin-right: -40px
 }
 .post-title {
@@ -68,18 +70,24 @@
 /* >文章内容 */
 .post-content {
 	padding: 26px;
-	font-size: 18px;
 	line-height: 28px;
 	letter-spacing: 2px;
 	word-break: break-all
 }
+.post-content h2 {
+	margin: 60px 0;
+	margin-bottom: 10px;
+}
+.post-content h3:before {
+	content: '# ';
+	color: var(--theme-color);
+	font-weight: bold;
+}
 .post-content hr {
 	display: block;
-	margin: 80px auto;
-	width: 150px;
-	background: #f0f0f0;
-	height: 5px;
-	border: none
+	margin: 65px auto;
+	width: 250px;
+	border: 3px dashed #f0f0f0
 }
 .post-content code {
 	font-size: 0.8em;
@@ -96,12 +104,9 @@
 }
 .post-content img {
 	display: block;
-	margin: 20px auto;
+	margin: 25px auto;
 	border-radius: 3px;
-	box-shadow: 0 4px 20px #ccc;
-	-moz-box-shadow: 0 4px 20px #ccc;
-	-webkit-box-shadow: 0 4px 20px #ccc;
-	max-width: 90%
+	max-width: 100%
 }
 .post-content blockquote p {
 	margin: 0
@@ -131,12 +136,13 @@
 }
 .post-content a:not(.no-line) {
 	position: relative;
-	color: var(--theme-color)
+	color: var(--theme-color);
+	border-bottom: 2px solid #f0f0f0;
 }
 .post-content a:not(.no-line)::before {
 	content: '';
 	position: absolute;
-	bottom: 0;
+	bottom: -2px;
 	left: 0;
 	right: 0;
 	height: 2px;
@@ -147,14 +153,16 @@
 }
 .post-content a:not(.no-line):hover::before {
 	transform-origin: bottom left;
-	transform: scaleX(1)
+	transform: scaleX(1);
 }
 .post-content p {
 	vertical-align: middle;
 }
 .post-content ul ul,
-.post-content ol ol {
-	margin-top: 0;
+.post-content ol ol,
+.post-content ol ul,
+.post-content ul ol {
+	margin-top: -15px;
 }
 .post-content .owo-img {
 	box-shadow: 0 0 0 #fff;
@@ -209,7 +217,7 @@
 
 /* >短代码 */
 .tip {
-	border: 1px solid rgb(240,240,240);
+	border: 1px solid rgb(235,235,235);
 	border-radius: 3px;
 	padding: 15px;
 	border-left: 5px solid var(--theme-color);
@@ -241,9 +249,24 @@
 .tip.yellow .tip-icon {
 	color: #FFDD11;
 }
+.tip-group {
+	margin: 15px 0;
+}
+.tip-group .tip {
+	margin: 0;
+	margin-top: -1px;
+	border-radius: 0;
+}
+.tip-group br {
+	display: none;
+}
+.tip-group .tip br {
+	display: block;
+}
 .post-bubble .saying-content p {
 	padding: 0 20px!important;
 }
+
 /* >文章分页 */
 .post-pagenav,
 .comment-pagenav {

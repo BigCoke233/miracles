@@ -6,7 +6,9 @@
  */
 /* Top Nav */
 .nav {
-	background: rgba(255,255,255,0.96);
+	background: rgba(255,255,255,0.86);
+	backdrop-filter: blur(18px);
+	-webkit-backdrop-filter: blur(10px);
 	width: 100%;
 	position: absolute;
 	box-shadow: 0 0 20px #ddd;
@@ -39,7 +41,9 @@
 .nav-mobile-content a:hover,
 .nav-mobile-content button:hover,
 .nav-sorts-content {
-	background: #f0f0f0
+	background: rgba(200,200,200,0.15);
+	backdrop-filter: blur(18px);
+	-webkit-backdrop-filter: blur(18px);
 }
 .nav-title {
 	color: #000;
@@ -93,7 +97,7 @@
 	top: 0;
 	bottom: 0;
 	z-index: 30;
-	transition: all 0.8s;
+	transition: all 0.4s!important;
 	box-shadow: 0 0 30px #646464;
 	-moz-box-shadow: 0 0 30px #646464;
 	-webkit-box-shadow: 0 0 30px #646464;

@@ -106,10 +106,6 @@ button {
 	bottom: 8px;
 	background: #fff!important;
 	color: rgb(80,80,80)!important;
-	opacity: 1;
-}
-.gotop-button.invisible {
-	opacity: 0;
 }
 /* Bubble */
 .bubble {

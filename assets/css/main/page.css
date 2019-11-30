@@ -52,7 +52,8 @@
 }
 .tags-item {
 	position: relative;
-	display: inline-block
+	display: inline-block;
+    margin-top: 10px;
 }
 /* Archives 归档 */
 .archives-list {
@@ -63,7 +64,12 @@
 	display: block;
 	border-radius: 3px;
 	transition: background .2s;
-	padding: 6px 10px
+	padding: 6px 10px;
+	white-space:nowrap;
+	width: 100%;
+	overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
 }
 .archives-list a:hover {
 	background: #e6e6e6
