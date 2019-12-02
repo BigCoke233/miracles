@@ -28,7 +28,8 @@
 	white-space: nowrap;
 	overflow-x: auto;
 	overflow-y: hidden;
-	position: relative
+	position: relative;
+	text-shadow: 0px 0px 15px #ffffff55;
 }
 .nav-content a {
 	text-decoration: none;
