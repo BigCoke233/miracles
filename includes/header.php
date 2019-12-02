@@ -98,7 +98,7 @@
 		</div>
 	  </div>
 	  <!-- -小屏幕导航 -->
-	  <nav class="small-screen nav nav-mobile nav-fixed"<?php if($this->options->navStyle==1): ?> style="display:none!important"<?php endif; ?> id="navBar">
+	  <nav class="small-screen nav nav-mobile nav-fixed"<?php if($this->options->navStyle==1): ?> style="display:none!important"<?php endif; ?> id="navBarMobile">
         <div class="nav-mobile-content">
 		  <a href="<?php $this->options->SiteUrl(); ?>" style="float:left"><i class="iconfont icon-xuanzhongshangcheng"></i></a>
 		  <a id="search-open-mobile" style="float:left"><i class="iconfont icon-chaxun"></i></a>
@@ -173,4 +173,3 @@
 		</div>
 	  </header>
 	  <br><br><br>
-	  
