@@ -4,7 +4,7 @@ $this->need('includes/header.php');
 ?>
     <main class="main-container container">
 	  <div class="post-body">
-	    <div class="post-content"><!-- 文章内容 -->
+	    <div class="post-content" id="post-content"><!-- 文章内容 -->
 		  <?php $postCheck = Utils::isOutdated($this); if($postCheck["is"] && $this->is('post')): ?>
             <div class="tip red">
 			  <div class="container-fluid"><div class="row">
