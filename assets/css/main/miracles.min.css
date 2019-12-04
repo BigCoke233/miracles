@@ -51,9 +51,15 @@
 	display: block
 }
 /* Mobile phone */
-@media (max-width:320) {
+@media (max-width:375px) {
 	.drawer {
 		width: 100vw;
+	}
+	.search-close{
+		left: 20px;
+	}
+	.search-close,.login-close{
+		left: 20px;
 	}
 }
 /* > Pad and up */
