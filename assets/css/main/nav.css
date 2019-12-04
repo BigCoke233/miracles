@@ -29,7 +29,6 @@
 	overflow-x: auto;
 	overflow-y: hidden;
 	position: relative;
-	text-shadow: 0px 0px 15px #ffffff55;
 }
 .nav-content a {
 	text-decoration: none;
@@ -42,6 +41,14 @@
     background : transparent !important;
     box-shadow : none !important;
     backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    
+}
+.nav-aero .nav-content a:hover,
+.nav-aero .nav-mobile-content a:hover,
+.nav-aero .nav-mobile-content button:hover,
+.nav-aero .nav-sorts-content{
+    background: rgba(255, 255, 255, 0.5);
 }
 .nav-content a:hover,
 .nav-mobile-content a:hover,
