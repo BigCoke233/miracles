@@ -38,6 +38,10 @@
 	transition: background .2s;
 	font-size: 16px
 }
+.nav-aero{
+    background : transparent !important;
+    box-shadow : none !important;
+}
 .nav-content a:hover,
 .nav-mobile-content a:hover,
 .nav-mobile-content button:hover,
