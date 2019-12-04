@@ -19,6 +19,12 @@
 	z-index: 10;
 	transition: all .2s;
 }
+.nav-aero{
+    background : transparent !important;
+    box-shadow : none !important;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
 .nav-content {
 	margin: 0;
 	display: table-cell;
@@ -30,19 +36,15 @@
 	overflow-y: hidden;
 	position: relative;
 }
+.nav-aero.nav-font-white .nav-content a{
+    color: #FFFFFF;
+}
 .nav-content a {
 	text-decoration: none;
 	color: #141414;
 	padding: 30px 8px;
 	transition: background .2s;
 	font-size: 16px
-}
-.nav-aero{
-    background : transparent !important;
-    box-shadow : none !important;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    
 }
 .nav-aero .nav-content a:hover,
 .nav-aero .nav-mobile-content a:hover,
