@@ -41,6 +41,7 @@
 .nav-aero{
     background : transparent !important;
     box-shadow : none !important;
+    backdrop-filter: none;
 }
 .nav-content a:hover,
 .nav-mobile-content a:hover,
