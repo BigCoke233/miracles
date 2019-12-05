@@ -46,15 +46,14 @@ $this->need('includes/header.php');
 		  </div>
 		  <!-- 移动端卡片 -->
 		  <div class="post-item small-screen">
+		  <a href="<?php $this->permalink(); ?>" class="post-link">
 		    <div class="post-banner-box-ss">
 			  <div class="post-banner-ss">
 			    <img src="/usr/themes/Miracles/images/loading.gif" data-original="<?php if($this->fields->banner && $this->fields->banner=!''): ?><?php echo $this->fields->banner(); ?><?php else: ?><?php Utils::indexTheme('images/postbg/'); ?><?php echo mt_rand(1,20); ?>.jpg<?php endif; ?>">
 			  </div>
 			</div>
 			<div class="post-item-content-ss">
-			  <a href="<?php $this->permalink(); ?>" class="post-link">
 				  <h1 class="post-title-ss"><?php $this->sticky(); ?><?php $this->title(); ?></h1>
-			  </a>
 			  <p class="post-excerpt">
 			      <?php if($this->fields->excerpt && $this->fields->excerpt!='') {
 				    echo $this->fields->excerpt;
@@ -64,6 +63,7 @@ $this->need('includes/header.php');
 				  ?></p>
 			  <p class="post-meta"><i class="iconfont icon-block"></i> <?php $this->category(','); ?>&emsp;<i class="iconfont icon-comments"></i> <?php $this->commentsNum('None', 'Only 1', '%d'); ?>&emsp;<i class="iconfont icon-clock"></i> <?php $this->date(); ?></p>
 			</div>
+			</a>
 		  </div>
         <br />
 		<?php endwhile; ?>
