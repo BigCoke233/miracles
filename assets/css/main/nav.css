@@ -36,7 +36,8 @@
 	overflow-y: hidden;
 	position: relative;
 }
-.nav-aero.nav-font-white .nav-content a{
+.nav-aero.nav-font-white .nav-content a,
+.nav-aero.nav-font-white .nav-mobile-content a{
     color: #FFFFFF;
 }
 .nav-content a {
