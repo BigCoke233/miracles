@@ -55,12 +55,6 @@
 	.drawer {
 		width: 100vw;
 	}
-	.search-close{
-		left: 20px;
-	}
-	.search-close,.login-close{
-		left: 20px;
-	}
 }
 /* > Pad and up */
 @media (min-width:768px) {
@@ -194,6 +188,12 @@
     }
 	.comment-children {
 		margin-left: 80px;
+	}
+	.search-close,
+	.login-close,
+	.mobile-menu-close{
+		right: 20px;
+        left: auto;
 	}
 }
 /* Desktop and up */
