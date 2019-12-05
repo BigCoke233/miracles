@@ -226,6 +226,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-flow: column;
 }
 .search.ready,
 .login.ready,
@@ -244,7 +245,7 @@
 .mobile-menu-close {
 	position: fixed;
 	top: 20px;
-	right: 20px;
+	left: 20px;
 	border: none;
 	background: 0 0
 }
