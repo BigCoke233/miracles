@@ -80,8 +80,8 @@ button {
 .fixed-button {
 	background: #fdfdfd;
 	font-size: 16px;
-	height: 40px;
-	width: 40px;
+	height: 3.5rem;
+	width: 3.5rem;
 	display: flex;
 	justify-content:center;
 	align-items:center;
@@ -106,6 +106,7 @@ button {
 	bottom: 8px;
 	background: #fff!important;
 	color: rgb(80,80,80)!important;
+	right: 1rem;
 }
 /* Bubble */
 .bubble {

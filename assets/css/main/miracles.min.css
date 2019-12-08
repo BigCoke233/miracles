@@ -51,7 +51,7 @@
 	display: block
 }
 /* Mobile phone */
-@media (max-width:320) {
+@media (max-width:375px) {
 	.drawer {
 		width: 100vw;
 	}
@@ -188,6 +188,12 @@
     }
 	.comment-children {
 		margin-left: 80px;
+	}
+	.search-close,
+	.login-close,
+	.mobile-menu-close{
+		right: 20px;
+        left: auto;
 	}
 }
 /* Desktop and up */

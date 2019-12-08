@@ -38,8 +38,8 @@
 	<!-- Varribles and Functions -->
 	<script>var siteurl = '<?php $this->options->SiteUrl() ;?>';var owoJson = '<?php Utils::indexTheme('assets/OwO.json'); ?>';<?php if($this->options->customModel!=''): ?>var modelJson = "<?php echo $this->options->customModel(); ?>";<?php else: ?>var modelJson = '<?php if($this->options->cat && $this->options->cat==1){Utils::indexTheme('assets/model/hijiki/assets/hijiki.model.json');}elseif($this->options->cat && $this->options->cat==2){Utils::indexTheme('assets/model/tororo/assets/tororo.model.json');}?>';<?php endif;?><?php if($this->options->ModelHeight!=NULL): ?>var modelHeight = <?php echo $this->options->ModelHeight(); ?>;<?php endif; ?><?php if($this->options->ModelWidth!=NULL): ?>var modelWidth = <?php echo $this->options->ModelWidth(); ?>;<?php endif; ?>
 	<?php if($this->options->pjax && $this->options->pjax!=0) :?>var loadPjax = true;
-    beforePjax = function() {NProgress.start();}
-	afterPjax = function() {owoLoad();<?php $this->options->pjax_complete(); ?>}<?php endif; ?></script>
+    beforePjax = function() {NProgress.start();};
+	afterPjax = function() {owoLoad();<?php $this->options->pjax_complete(); ?>};<?php endif; ?></script>
 	<!-- Script that must be after -->
     <?php if($this->options->cat!=0 || $this->options->customModel!=''): ?><script src="<?php Utils::indexTheme('assets/js/l2dwidget.min.js'); ?>"></script><?php endif; ?>
 	<script src="<?php Utils::indexTheme('assets/js/miracles.min.js'); ?>"></script>

@@ -16,7 +16,10 @@
 	    <button class="login-close ready" id="login-close"><i class="iconfont icon-x"></i></button>
 		<?php if($this->user->hasLogin()): ?>
 		<h1>你已经登陆过了哦</h1>
-		<p class="large-screen">&emsp;不过康纳很乐意再次见到<a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>呢~</p>
+		<p class="large-screen">&emsp;不过康纳很乐意再次见到 <?php $this->user->screenName(); ?> 呢~</p>
+		<a href="<?php $this->options->profileUrl(); ?>" class="comment-submit col-md-3">
+		<button>回到个人中心</button>
+		</a>
 		<?php else: ?>
 	    <form action="<?php $this->options->loginAction(); ?>" id="login-form" method="post" name="login" role="form" class="login-form">
 		  <h1>登录后台</h1>
@@ -98,7 +101,7 @@
 		</div>
 	  </div>
 	  <!-- -小屏幕导航 -->
-	  <nav class="small-screen nav nav-mobile nav-fixed"<?php if($this->options->navStyle==1): ?> style="display:none!important"<?php endif; ?>>
+	  <nav class="small-screen nav nav-mobile nav-fixed"<?php if($this->options->navStyle==1): ?> style="display:none!important"<?php endif; ?> id="navBarMobile">
         <div class="nav-mobile-content">
 		  <a href="<?php $this->options->SiteUrl(); ?>" style="float:left"><i class="iconfont icon-xuanzhongshangcheng"></i></a>
 		  <a id="search-open-mobile" style="float:left"><i class="iconfont icon-chaxun"></i></a>
@@ -110,7 +113,7 @@
 	  <?php if($this->options->navStyle==0): ?>
 	  <!-- 导航 -->
 	  <!-- -大屏幕导航 -->
-      <nav class="large-screen nav nav-fixed">
+      <nav class="large-screen nav nav-fixed" id="navBar">
 	    <div class="container">
 		  <p class="nav-content">
 		    <a href="<?php $this->options->SiteUrl(); ?>" class="nav-title"><?php $this->options->title(); ?></a>
@@ -156,7 +159,7 @@
 		<?php endif; ?>
 		  <div class="banner-mask"<?php if($this->is('post') || $this->is('page')):?><?php if($this->fields->banner==''):?> style="background:rgba(0,0,0,0)!important"<?php endif;?><?php endif; ?><?php if($this->is('index')):?><?php if($this->options->bannerUrl && $this->options->bannerUrl=!''): ?><?php else:?> style="background:rgba(0,0,0,0)!important"<?php endif;?><?php endif;?>>
 		    <div class="main-container container">
-			  <div class="banner-content<?php if($this->is('index') && $this->options->bannerFont==1): ?> banner-font-black<?php endif; ?><?php if($this->is('page') || $this->is('post')): if($this->fields->banner==''): ?> banner-font-black<?php endif; endif; ?>">
+			  <div class="banner-content<?php if($this->is('index') && $this->options->bannerFont==1): ?> banner-font-black<?php endif; ?><?php if($this->is('page') || $this->is('post')): if($this->fields->banner==''): ?> banner-font-black<?php endif; endif; ?>" id="banner-content">
 			    <?php if($this->is('index')): ?>
 			    <h1><?php $this->options->bannerTitle(); ?></h1>
 		        <p><?php $this->options->bannerIntro(); ?></p>
@@ -173,4 +176,3 @@
 		</div>
 	  </header>
 	  <br><br><br>
-	  

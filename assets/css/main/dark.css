@@ -79,7 +79,7 @@
 }
 /* Nav/Search/login */
 .body-dark .nav {
-	background:rgba(50,50,50,.86)!important;
+	background:rgba(50,50,50,.86);
 	box-shadow:0 0 20px #000;
 	-webkit-box-shadow:0 0 20px #000;
 	-moz-box-shadow:0 0 30px #000
@@ -283,4 +283,13 @@
 .body-dark .post-banner,
 .body-dark iframe {
 	filter:brightness(72%)
+}
+/* Dark shade */
+.body-dark .dark-shade {
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-color:#00000085;
+    z-index:100;
+    pointer-events:none
 }

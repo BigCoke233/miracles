@@ -4,13 +4,19 @@ $this->need('includes/header.php');
 ?>
     <main class="main-container container">
 	  <div class="post-body">
-	    <div class="post-content"><!-- 文章内容 -->
+	    <div class="post-content" id="post-content"><!-- 文章内容 -->
 		  <?php $postCheck = Utils::isOutdated($this); if($postCheck["is"] && $this->is('post')): ?>
             <div class="tip red">
 			  <div class="container-fluid"><div class="row">
 			    <div class="col-1 tip-icon"><i class="iconfont icon-info"></i></div>
 				<div class="col-11 tip-content">本文编写于 <?php echo $postCheck["created"]; ?> 天前，最后修改于 <?php echo $postCheck["updated"]; ?> 天前，其中某些信息可能已经过时。</div>
 			  </div></div>
+			</div>
+          <div class="tip blue">
+              <div class="container-fluid">
+                  <div class="row">
+                      <div class="col-1 tip-icon"><i class="iconfont icon-info"></i></div>
+                      <div class="col-11 tip-content" id="readTip"></div></div></div>
 			</div>
           <?php endif; ?>
 		  <?php $this->content(); ?>
