@@ -12,8 +12,7 @@
 
 ---
 
-> **请下载 [Releases](https://github.com/BigCoke233/miracles/releases) 页面的最新发行包，使用前先看 [Wiki](https://github.com/BigCoke233/miracles/wiki)，wiki 有的问题一律不解答；禁止删除主题版权信息**<br>同时，主题的 Telegram 频道已开启，可以获取主题最新消息，推送作者博客更新，点此加入：[Miracles News](https://t.me/eltracer)<br>开放了一个议题，用于~~民主~~决策主题的更新方向，点击[这里]
-(https://github.com/BigCoke233/miracles/issues/17)进入
+> **请下载 [Releases](https://github.com/BigCoke233/miracles/releases) 页面的最新发行包，使用前先看 [Wiki](https://github.com/BigCoke233/miracles/wiki)，wiki 有的问题一律不解答；禁止删除主题版权信息**<br>同时，主题的 Telegram 频道已开启，可以获取主题最新消息，推送作者博客更新，点此加入：[Miracles News](https://t.me/eltracer)<br>开放了一个议题，用于~~民主~~决策主题的更新方向，点击 [这里](https://github.com/BigCoke233/miracles/issues/17) 进入
 # 特色
 - 响应式/自适应设计
 - Pjax 全站无刷新
