@@ -115,14 +115,6 @@ function themeConfig($form) {
     $form->addInput($grayTheme);
 	$bodyFonts = new Typecho_Widget_Helper_Form_Element_Select('bodyFonts',array('0'=>'无衬线字体','1'=>'衬线字体'),'0','网站字体','选择网站的字体，无衬线字体即“思源黑体”，衬线字体即“思源宋体”');
     $form->addInput($bodyFonts);
-	$cat = new Typecho_Widget_Helper_Form_Element_Select('cat',array('0'=>'不要','1'=>'小黑','2'=>'小白'),'0','领养猫咪','领养一只猫咪，这样你就可以在前台看到它啦！');
-    $form->addInput($cat);
-	$ModelHeight = new Typecho_Widget_Helper_Form_Element_Text('ModelHeight', NULL, '320', _t('自定义模型高度'), _t('设置猫咪/自定义模型的高度'));
-    $form->addInput($ModelHeight);
-	$ModelWidth = new Typecho_Widget_Helper_Form_Element_Text('ModelWidth', NULL, '300', _t('自定义模型宽度'), _t('设置猫咪/自定义模型的宽度'));
-    $form->addInput($ModelWidth);
-	$customModel = new Typecho_Widget_Helper_Form_Element_Text('customModel', NULL, NULL, _t('自定义 Live2d 模型'), _t('填入 Live2d 模型的 json 地址，会代替猫咪显示在首页，填入后上一个设置项失效。<hr>'));
-    $form->addInput($customModel);
 	
 	//developer
 	$headerEcho = new Typecho_Widget_Helper_Form_Element_Textarea('headerEcho', NULL, NULL, _t('<h2>开发者设置</h2>自定义头部信息'), _t('填写 html 代码，将输出在 &lt;head&gt; 标签中'));
