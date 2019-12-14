@@ -29,6 +29,8 @@ class Contents
 		    $text = preg_replace('/\[tip\](.*?)\[\/tip\]/s','<div class="tip"><div class="container-fluid"><div class="row"><div class="col-1 tip-icon"><i class="iconfont icon-info"></i></div><div class="col-11 tip-content">${1}</div></div></div></div>',$text);
 		    //Tip
 		    $text = preg_replace('/\[tip type="(.*?)"\](.*?)\[\/tip\]/s','<div class="tip ${1}"><div class="container-fluid"><div class="row"><div class="col-1 tip-icon"><i class="iconfont icon-info"></i></div><div class="col-11 tip-content">${2}</div></div></div></div>',$text);
+            //Tip Group
+		    $text = preg_replace('/\[tip\-group\](.*?)\[\/tip\-group\]/s','<div class="tip-group">${1}</div>',$text);
 
 		    //解析友链盒子
 	        $reg = '/\[links\](.*?)\[\/links\]/s';
