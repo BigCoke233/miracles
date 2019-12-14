@@ -107,8 +107,10 @@ function themeConfig($form) {
     $form->addInput($pjax_complete);
 	
 	//improve
-	$CDN = new Typecho_Widget_Helper_Form_Element_Select('CDN',array('0'=>'关闭','1'=>'开启'),'0','<h2>优化</h2>CDN 加速加载静态资源（Beta）','开启后静态资源文件调用 JSdelivr 的 CDN 公用库，加快网页加载速度。本身有 CDN 的就不用了，不然反而可能会拖慢速度。<hr>');
+	$CDN = new Typecho_Widget_Helper_Form_Element_Select('CDN',array('0'=>'关闭','1'=>'开启'),'0','<h2>优化</h2>CDN 加速加载静态资源（Beta）','开启后静态资源文件调用 JSdelivr 的 CDN 公用库，加快网页加载速度。本身有 CDN 的就不用了，不然反而可能会拖慢速度。');
     $form->addInput($CDN);
+	$ifShowRTA = new Typecho_Widget_Helper_Form_Element_Select('ifShowRTA',array('0'=>'不显示','1'=>'显示'),'0','阅读时长提示 RTA','在文章前加入阅读时长提示，增进用户体验<hr>');
+    $form->addInput($ifShowRTA);
 	
 	//custom style
 	$grayTheme = new Typecho_Widget_Helper_Form_Element_Select('grayTheme',array('0'=>'关闭','1'=>'开启'),'0','<h2>个性化</h2>哀悼模式','打开后网站变为黑白');
