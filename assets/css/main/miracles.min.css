@@ -329,6 +329,12 @@
 }
 /* Computer screen and up */
 @media (min-width:1200px) {
+	.login-entrance {
+		width: 250px!important;
+		display: block!important;
+		margin: 20px auto!important;
+	}
+	
 	.drawer-header {
 		height: 250px;
 	}
