@@ -167,7 +167,7 @@
 				<h1><?php $this->title(); ?></h1>
 		        <p class="header-meta"><?php if($this->fields->meta==''): ?>
 				  <?php if($this->is('post')): ?>
-					<i class="iconfont icon-block" title="文章分类"></i> <?php $this->category(','); ?>&emsp;<?php endif; ?><i class="iconfont icon-comments" title="共 <?php $this->commentsNum('None', '1', '%d'); ?> 条评论"></i> <?php $this->commentsNum('None', 'Only 1', '%d'); ?>&emsp;<i class="iconfont icon-clock" title="该文章发布于 <?php $this->date(); ?>"></i> <?php $this->date(); ?>&emsp;<i class="icon-view iconfont" title="该文章被浏览 <?php get_post_view($this) ?> 次"></i> <?php get_post_view($this) ?><?php else: echo $this->fields->meta; endif; ?>
+					<i class="iconfont icon-block" title="文章分类"></i> <?php $this->category(','); ?>&emsp;<?php endif; ?><i class="iconfont icon-comments" title="共 <?php $this->commentsNum('None', '1', '%d'); ?> 条评论"></i> <?php $this->commentsNum('None', 'Only 1', '%d'); ?>&emsp;<i class="iconfont icon-clock" title="该文章发布于 <?php $this->date(); ?>"></i> <?php $this->date(); ?>&emsp;<i class="icon-view iconfont" title="该文章被浏览 <?php get_post_view($this) ?> 次"></i> <?php get_post_view($this) ?><?php else: echo $this->fields->meta;?><div style="display:none"><?php get_post_view($this) ?></div><?php endif; ?>
 				</p>
 				<?php else: ?><?php endif; ?>
 			  </div>
