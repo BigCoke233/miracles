@@ -3,7 +3,22 @@
 
 ## Ver.Development 开发版
 > 开发版的更新从 1.2.4 版本发布后开始记录
-### 以下更新由 outtimes 提供（[#16](https://github.com/BigCoke233/miracles/pull/16)）
+
+<details><summary>2019-12-14-更新</summary><br>
+  
+- 增加：文章分享功能
+- 增加：文章底部弹出式版权信息
+- 优化：可以设置顶部导航栏在顶部是否透明
+- 优化：即使页面不显示浏览次数，仍然统计
+- 移除：内置 Live2D
+- 移除：独立页面文章时效性警告，文章仍然显示
+  
+</details>
+
+
+
+<details><summary>以下更新由 outtimes 提供（<a href="https://github.com/BigCoke233/miracles/pull/16">#16</a>）</summary><br>
+  
 - 添加：增加 navbar 文字判断颜色
 - 添加：登陆后提供显眼的进入后台按钮
 - 添加：滚动时标题栏的变色效果
@@ -25,6 +40,8 @@
 - 优化：返回顶部按钮在移动设备的表现
 - 修复：navbar 颜色自动更换无效问题
 - 修复：js 规范结尾
+  
+</details>
 
 ## Ver.1.2.4 Delicate
 - 新增：Tip Group 新的短代码（[tip-group][/tip-group]把[tip]们连起来）
