@@ -11,13 +11,13 @@ $this->need('includes/header.php');
 	  <div class="post-body">
 	    <br><br><br>
 	    <div class="about">
-		  <div class="about-avatar">
+		  <div class="about-avatar"><!-- 头像（调用 gravatar）-->
 		    <?php echo $this->author->gravatar(300); ?>
 			<?php if($this->fields->name==!''): ?>
 			<h2 class="about-name"><?php echo $this->fields->name(); ?></h2>
 			<?php endif; ?>
 		  </div>
-		  <div class="about-social">
+		  <div class="about-social"><!-- 社交按钮 -->
 		    <?php if($this->fields->github==!''): ?>
 			<a href="https://github.com/<?php echo $this->fields->github(); ?>" target="_blank" title="GayHub"><i class="iconfont icon-github"></i></a>
 			<?php endif; ?>
@@ -34,9 +34,8 @@ $this->need('includes/header.php');
 		</div>
 	    <div class="post-content page-content">
 		  <?php $this->content(); ?>
-		</div>
+	    </div>
 	  </div>
       <?php $this->need('includes/comments.php'); ?>
 	</main>
-	
 <?php $this->need('includes/footer.php'); ?>
