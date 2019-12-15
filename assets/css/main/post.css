@@ -21,7 +21,6 @@
 	transition: background .1s
 }
 .post-banner-box {
-	margin-left: -15px;
 	height: 100%;
 	overflow: hidden
 }
@@ -49,6 +48,7 @@
 	margin-top: 15px
 }
 .post-button {
+	margin-right: 20px;
 	float: right
 }
 .post-footer {
@@ -333,23 +333,6 @@
 .post-pagenav-right {
 	float: right
 }
-/* -ss */
-.post-banner-ss img {
-	width: 100%
-}
-.post-banner-box-ss {
-	max-height: 280px;
-	overflow: hidden
-}
-.post-item-content-ss {
-	padding: 20px
-}
-.post-title-ss {
-	margin: 12px 0;
-	margin-top: 6px;
-	height: 32px;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	font-size: 25px
+.post-item-content{
+    padding: 0 35px 10px 35px;
 }

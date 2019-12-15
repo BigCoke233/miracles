@@ -62,9 +62,13 @@
 	display: block
 }
 /* Mobile phone */
-@media (max-width:375px) {
+@media (max-width:767px) {
 	.drawer {
 		width: 100vw;
+	}
+	.mobile-menu-close {
+	right: 20px;
+    left: auto;
 	}
 }
 /* > Pad and up */
@@ -147,6 +151,7 @@
 	.post-title {
 		margin: 25px 0;
 		margin-bottom: 10px
+		font-size: 2rem;
 	}
 
 	.post-excerpt {
