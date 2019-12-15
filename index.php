@@ -12,14 +12,13 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('includes/head.php');
 $this->need('includes/header.php');
 ?>
-
     <main class="main-container container">
-	  <div class="post-list">
+	  <div class="post-list"><!-- 文章循环开始 -->
 	    <?php while($this->next()): ?>
 		<br />
-          <!-- 电脑端卡片 -->
-          <div class="post-item large-screen">
-            <div class="container-fluid"><div class="row">
+                <!-- 电脑端卡片 -->
+                <div class="post-item large-screen">
+                    <div class="container-fluid"><div class="row">
 			  <div class="col-md-6 post-banner-box">
 			    <a href="<?php $this->permalink(); ?>" class="post-link">
 			      <div class="post-banner">
@@ -65,16 +64,15 @@ $this->need('includes/header.php');
 			</div>
 			</a>
 		  </div>
-        <br />
+                <br />
 		<?php endwhile; ?>
 		<!-- 文章分页 -->
 		<div class="post-pagenav">
-          <span class="post-pagenav-left"><?php $this->pageLink('<i class="iconfont icon-chevron-left"></i>'); ?></span>
+                  <span class="post-pagenav-left"><?php $this->pageLink('<i class="iconfont icon-chevron-left"></i>'); ?></span>
 		  <span class="post-pagenav-right"><?php $this->pageLink('<i class="iconfont icon-chevron-right"></i>','next'); ?></span>
 		</div>
-	  </div>
+	  <!-- 文章循环结束 --></div>
 	</main>
 	<!-- 防止找不到 owo 容器而报错 -->
 	<div style="display:none" class="OwO"></div>
-
 <?php $this->need('includes/footer.php'); ?>
