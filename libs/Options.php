@@ -127,11 +127,18 @@ function themeConfig($form) {
     ];
     $LoadingImage = new Typecho_Widget_Helper_Form_Element_Radio('loading_image', $LoadingOptions, 'block', _t('选择图片加载动画'),_t("<hr>"));
     $form->addInput($LoadingImage);
-    	
+
+    //SiteBuildTime
+    $buildTime = new Typecho_Widget_Helper_Form_Element_Text('build_time', NULL, NULL, _t('在页脚输出建站至今时间'), _t('填写格式如2020-01-01的时间，将输出在站点信息之前，不想开启请留空。'));
+    $form->addInput($buildTime);
+    //AnimeFace
+    $AnimeFace = new Typecho_Widget_Helper_Form_Element_Text('anime_face', NULL, NULL, _t('在其之后输出一个蹦跶的颜文字'), _t('如果开启了建站时间将会输出在其之后，反之会输出在站点信息之后。在此写上你想展示的颜文字，多个颜文字用"&&"分割，每次刷新更换。如不想开启请留空。'));
+    $form->addInput($AnimeFace);
+
 	//developer
-	$headerEcho = new Typecho_Widget_Helper_Form_Element_Textarea('headerEcho', NULL, NULL, _t('<h2>开发者设置</h2>自定义头部信息'), _t('填写 html 代码，将输出在 &lt;head&gt; 标签中'));
+	$headerEcho = new Typecho_Widget_Helper_Form_Element_Textarea('headerEcho', NULL, NULL, _t('<h2>开发者设置</h2>自定义头部信息'), _t('填写 html 代码，将输出在 &lt;head&gt; 标签中，可以在这里写上统计代码'));
     $form->addInput($headerEcho);
-	$footerEcho = new Typecho_Widget_Helper_Form_Element_Textarea('footerEcho', NULL, NULL, _t('自定义页脚部信息'), _t('填写 html 代码，将输出在页脚的版权信息后'));
+	$footerEcho = new Typecho_Widget_Helper_Form_Element_Textarea('footerEcho', NULL, NULL, _t('自定义页脚部信息'), _t('填写 html 代码，将输出在页脚的版权信息之前'));
     $form->addInput($footerEcho);
 	$cssEcho = new Typecho_Widget_Helper_Form_Element_Textarea('cssEcho', NULL, NULL, _t('自定义 CSS'), _t('填写 CSS 代码，输出在 head 标签结束之前的 style 标签内'));
     $form->addInput($cssEcho);
