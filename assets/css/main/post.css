@@ -130,9 +130,9 @@
 	font-size: 0.8em;
 	background: #f0f0f0;
 	border-radius: 3px;
-	font-family: font-family: 'Noto Sans SC',sans-serif!important;
+	font-family: 'Noto Sans SC',sans-serif!important;
 	color: var(--theme-color);
-	vertical-align: middle
+	vertical-align: middle;
 }
 .post-content pre>code {
 	background: #282c34!important;

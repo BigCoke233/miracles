@@ -123,7 +123,8 @@ function themeConfig($form) {
     $LoadingOptions = [
         'block' => "方块：<img style='width: 120px;' src='".$themeDir.'images/loading/block.gif'."'>",
         'octopus' => "旋转章鱼：<img style='width: 120px;' src='".$themeDir.'images/loading/octopus.gif'."'>",
-        'bilibili' => "哔哩哔哩小电视：<img style='width: 120px;' src='".$themeDir.'images/loading/bilibili.gif'."'>"
+        'bilibili' => "哔哩哔哩小电视：<img style='width: 120px;' src='".$themeDir.'images/loading/bilibili.gif'."'>",
+        'shojo' => "少女祈祷中：<img style='width: 120px;' src='".$themeDir.'images/loading/shojo.gif'."'>"
     ];
     $LoadingImage = new Typecho_Widget_Helper_Form_Element_Radio('loading_image', $LoadingOptions, 'block', _t('选择图片加载动画'),_t("<hr>"));
     $form->addInput($LoadingImage);
