@@ -58,9 +58,10 @@ function themeConfig($form) {
     /**
 	 *  设置样式+面板
 	 */
-	$ver = themeVersion();
+    $ver = themeVersion();
+    $themeDir = "/usr/themes/Miracles/";
 	 
-	echo '<link rel="stylesheet" href="/usr/themes/Miracles/assets/css/setting.miracles.css"><link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300|Noto+Serif+SC:300&display=swap" rel="stylesheet">';
+	echo '<link rel="stylesheet" href="'.$themeDir.'assets/css/setting.miracles.css"><link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300|Noto+Serif+SC:300&display=swap" rel="stylesheet">';
 	echo '<div class="miracles-pannel">
 	<h1>Miracles 主题设置面板</h1>
 	<p>欢迎使用 Miracles 主题，目前版本是：'. $ver .'<br>
@@ -77,7 +78,7 @@ function themeConfig($form) {
 	 *  设置项
 	 */
 	//首要设置项
-	$news = new Typecho_Widget_Helper_Form_Element_Text('news', NULL, NULL, _t('<h2>首要设置 First</h2>全站公告'), _t('输入公告内容，用户进入站点时自动弹出'));
+	$news = new Typecho_Widget_Helper_Form_Element_Text('news', NULL, NULL, _t('<h2>首要设置</h2>全站公告'), _t('输入公告内容，用户进入站点时自动弹出'));
     $form->addInput($news);
 	
     //nav
@@ -99,7 +100,7 @@ function themeConfig($form) {
     $form->addInput($bannerTitle);
 	$bannerIntro = new Typecho_Widget_Helper_Form_Element_Text('bannerIntro', NULL, NULL, _t('介绍'), _t('这里是首页大图标题下的简介<hr>'));
     $form->addInput($bannerIntro);
-	
+
 	//pjax
 	$pjax = new Typecho_Widget_Helper_Form_Element_Select('pjax',array('0'=>'关闭','1'=>'开启'),'1','<h2>Pjax 预加载</h2>是否开启','Pjax 预加载功能的开关');
     $form->addInput($pjax);
@@ -117,7 +118,16 @@ function themeConfig($form) {
     $form->addInput($grayTheme);
 	$bodyFonts = new Typecho_Widget_Helper_Form_Element_Select('bodyFonts',array('0'=>'无衬线字体','1'=>'衬线字体'),'0','网站字体','选择网站的字体，无衬线字体即“思源黑体”，衬线字体即“思源宋体”');
     $form->addInput($bodyFonts);
-	
+        
+    //LoadingImage
+    $LoadingOptions = [
+        'block' => "方块：<img style='width: 120px;' src='".$themeDir.'images/loading/block.gif'."'>",
+        'octopus' => "旋转章鱼：<img style='width: 120px;' src='".$themeDir.'images/loading/octopus.gif'."'>",
+        'bilibili' => "哔哩哔哩小电视：<img style='width: 120px;' src='".$themeDir.'images/loading/bilibili.gif'."'>"
+    ];
+    $LoadingImage = new Typecho_Widget_Helper_Form_Element_Radio('loading_image', $LoadingOptions, 'block', _t('选择图片加载动画'),_t("<hr>"));
+    $form->addInput($LoadingImage);
+    	
 	//developer
 	$headerEcho = new Typecho_Widget_Helper_Form_Element_Textarea('headerEcho', NULL, NULL, _t('<h2>开发者设置</h2>自定义头部信息'), _t('填写 html 代码，将输出在 &lt;head&gt; 标签中'));
     $form->addInput($headerEcho);
