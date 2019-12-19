@@ -10,7 +10,7 @@
 		$faces = "<span class=\"anime-face\">".$faces[rand(0,count($faces))]."</span>";
 		}
 		if($faces && $this->options->build_time)echo $faces;
-		?>;
+		?>
 	    <p class="copyright">&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->SiteUrl(); ?>"><?php $this->options->title(); ?></a>  All rights reserved.<br />
 		<?php 
 		if($faces && !$this->options->build_time)echo $faces;
@@ -35,9 +35,11 @@
 	<?php if($this->options->pjax && $this->options->pjax!=0) :?>var loadPjax = true;
     beforePjax = function() {NProgress.start();};
 	afterPjax = function() {owoLoad();<?php $this->options->pjax_complete(); ?>};<?php endif; ?></script>
-	<!-- Script that must be after and BuildTime-->
-	<script src="<?php Utils::indexTheme('assets/js/miracles.min.js'); ?>">
-	<?php if($this->options->build_time)echo "buildTime(".$this->options->build_time.");" ?>
+	<!-- Script that must be after-->
+	<script src="<?php Utils::indexTheme('assets/js/miracles.min.js'); ?>"></script>
+	<!-- BuildTime -->
+	<script>
+	<?php if($this->options->build_time)echo "startTime(\"".$this->options->build_time."\");" ?>
 	</script>
 	<!-- Send News and Loaders -->
 	<script><?php if($this->is('index')): ?><?php if($this->options->news==!''): ?>alertSend('公告：<?php echo $this->options->news(); ?>');<?php endif; ?><?php endif; ?><?php if($this->is('post') || $this->is('page')): ?>owoLoad();<?php endif; ?><?php $this->options->jsEcho(); ?></script>

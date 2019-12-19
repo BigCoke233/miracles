@@ -22,7 +22,8 @@
 }
 .post-banner-box {
 	height: 100%;
-	overflow: hidden
+	overflow: hidden;
+	padding: 0;
 }
 .post-banner img {
 	width: 100%;
