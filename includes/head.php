@@ -20,6 +20,8 @@
     }
     ?>
     <title><?php Contents::title($this); ?></title>
+    <meta itemprop="name" content="<?php Contents::title($this); ?>"/>
+    <meta itemprop="image" content="<?php Utils::indexTheme('favicon.ico'); ?>" />
     <meta name="author" content="<?php $this->author(); ?>" />
     <meta name="description" content="<?php if($description != '') echo $description; else $this->excerpt(50); ?>" />
     <meta property="og:title" content="<?php Contents::title($this); ?>" />
