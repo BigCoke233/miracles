@@ -70,6 +70,9 @@
 	right: 20px;
     left: auto;
 	}
+	.post-title{
+		font-size: 1.5rem;
+	}
 }
 /* > Pad and up */
 @media (min-width:768px) {
@@ -150,7 +153,7 @@
 
 	.post-title {
 		margin: 25px 0;
-		margin-bottom: 10px
+		margin-bottom: 10px;
 		font-size: 2rem;
 	}
 

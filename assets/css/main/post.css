@@ -206,8 +206,7 @@
 	-moz-box-shadow: 0 0 0 #fff;
 	-webkit-box-shadow: 0 0 0 #fff;
 	display: inline;
-	height: 34px;
-	vertical-align: middle
+	vertical-align: middle;
 }
 /* 加密文章 */
 .post-content .protected {
