@@ -5,7 +5,10 @@
       <div class="footer-info footer-dark">
 		<?php 
 		echo $this->options->build_time?"记录已延续了 <span id=\"build-time\"></span>":"";
-		if($faces=$this->options->anime_face)$faces = "<span class=\"anime-face\">".$faces[rand(0,count($faces))]."</span>";
+		if($faces=$this->options->anime_face){
+		$faces = explode("&&",$faces);
+		$faces = "<span class=\"anime-face\">".$faces[rand(0,count($faces))]."</span>";
+		}
 		if($faces && $this->options->build_time)echo $faces;
 		?>;
 	    <p class="copyright">&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->SiteUrl(); ?>"><?php $this->options->title(); ?></a>  All rights reserved.<br />
