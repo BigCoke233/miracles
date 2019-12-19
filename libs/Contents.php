@@ -20,7 +20,7 @@ class Contents
 		    //FancyBox
 	        $text = preg_replace('/<img(.*?)src="(.*?)"(.*?)alt="(.*?)"(.*?)>/s','<center><a data-fancybox="gallery" href="${2}" class="gallery-link"><img${1}src="${2}"${3}></a></center>',$text); 
 	        //LazyLoad
-		    $text = preg_replace('/<img (.*?)src(.*?)(\/)?>/','<img $1src="/usr/themes/Miracles/images/loading.gif" data-original$2 />',$text);
+		    $text = preg_replace('/<img (.*?)src(.*?)(\/)?>/','<img $1src="/usr/themes/Miracles/images/loading/'.$this->options->loading_image.'.gif" data-original$2 />',$text);
 		
 		    //气泡
 		    $text = preg_replace('/\[bubble\](.*?)\[\/bubble\]/s','<div class="bubble post-bubble"><div class="saying-content"><p>${1}</p></div></div>',$text);
