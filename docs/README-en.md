@@ -4,7 +4,7 @@
 ![](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
 ![](https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square)
 ![](https://img.shields.io/badge/version-1.2.1-red.svg?style=flat-square)
-> í ½í¹Œ Born to be the Miracles.
+> ðŸ™Œ Born to be the Miracles.
 
 Language: [ç®€ä½“ä¸­æ–‡](/README.md) | English
 
