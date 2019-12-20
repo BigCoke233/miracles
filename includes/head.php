@@ -20,6 +20,8 @@
     }
     ?>
     <title><?php Contents::title($this); ?></title>
+    <meta itemprop="name" content="<?php Contents::title($this); ?>"/>
+    <meta itemprop="image" content="<?php Utils::indexTheme('favicon.ico'); ?>" />
     <meta name="author" content="<?php $this->author(); ?>" />
     <meta name="description" content="<?php if($description != '') echo $description; else $this->excerpt(50); ?>" />
     <meta property="og:title" content="<?php Contents::title($this); ?>" />
@@ -38,19 +40,10 @@
     <?php $this->header('description=&'); ?>
 	<?php $this->options->headerEcho(); ?>
 	<!-- css -->
-	<?php if($this->options->CDN && $this->options->CDN=1): ?>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/css/codestyle.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/css/owo.min.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/css/fancybox.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/css/prism.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BigCoke233/miracles@<?php echo themeVersion(); ?>/assets/css/main/miracles.min.css" />
-	<?php else: ?>
-	<link rel="stylesheet" href="<?php Utils::indexTheme('assets/css/codestyle.css'); ?>" />
-	<link rel="stylesheet" href="<?php Utils::indexTheme('assets/css/owo.min.css'); ?>" />
-	<link rel="stylesheet" href="<?php Utils::indexTheme('assets/css/nprogress.css'); ?>" />
-	<link rel="stylesheet" href="<?php Utils::indexTheme('assets/css/fancybox.css'); ?>" />
-	<link rel="stylesheet" href="<?php Utils::indexTheme('assets/css/main/miracles.min.css'); ?>" />
-	<?php endif; ?>
+    <?php
+	$css_files=array("codestyle","owo.min","nprogress","fancybox","main/miracles.min");
+	generate_require($css_files,"css",$this->options->CDN?"https://cdn.jsdelivr.net/gh/BigCoke233/miracles@":"");
+	?>
 	<!-- icon font -->
 	<link rel="stylesheet" href="//at.alicdn.com/t/font_1165190_t5sh6mq8n6i.css" />
 	<!-- Google Fonts -->

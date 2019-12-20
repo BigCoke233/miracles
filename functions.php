@@ -75,3 +75,17 @@ array_push($views, $cid);
     }
     echo $row['views'];
 }
+/**
+ * 自动生成引用
+ */
+function generate_require($files,$type,$cdn = NULL) {
+    if ($cdn)
+        $path = $cdn.themeVersion()."/";
+    else $path = Helper::options()->themeUrl("","Miracles");
+    foreach ($files as $file) {
+        if ($type == "js")
+            echo "<script src=".$path."assets/".$type."/".$file.".".$type."></script>";
+        elseif ($type == "css")
+            echo "<link rel=\"stylesheet\" href=".$path."assets/".$type."/".$file.".".$type." />";
+    }
+}

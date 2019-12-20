@@ -21,9 +21,9 @@
 	transition: background .1s
 }
 .post-banner-box {
-	margin-left: -15px;
 	height: 100%;
-	overflow: hidden
+	overflow: hidden;
+	padding: 0;
 }
 .post-banner img {
 	width: 100%;
@@ -49,6 +49,7 @@
 	margin-top: 15px
 }
 .post-button {
+	margin-right: 20px;
 	float: right
 }
 .post-footer {
@@ -129,9 +130,9 @@
 	font-size: 0.8em;
 	background: #f0f0f0;
 	border-radius: 3px;
-	font-family: font-family: 'Noto Sans SC',sans-serif!important;
+	font-family: 'Noto Sans SC',sans-serif!important;
 	color: var(--theme-color);
-	vertical-align: middle
+	vertical-align: middle;
 }
 .post-content pre>code {
 	background: #282c34!important;
@@ -205,8 +206,7 @@
 	-moz-box-shadow: 0 0 0 #fff;
 	-webkit-box-shadow: 0 0 0 #fff;
 	display: inline;
-	height: 34px;
-	vertical-align: middle
+	vertical-align: middle;
 }
 /* 加密文章 */
 .post-content .protected {
@@ -333,23 +333,6 @@
 .post-pagenav-right {
 	float: right
 }
-/* -ss */
-.post-banner-ss img {
-	width: 100%
-}
-.post-banner-box-ss {
-	max-height: 280px;
-	overflow: hidden
-}
-.post-item-content-ss {
-	padding: 20px
-}
-.post-title-ss {
-	margin: 12px 0;
-	margin-top: 6px;
-	height: 32px;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	font-size: 25px
+.post-item-content{
+    padding: 0 35px 10px 35px;
 }

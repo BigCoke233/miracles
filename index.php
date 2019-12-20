@@ -16,13 +16,13 @@ $this->need('includes/header.php');
 	  <div class="post-list"><!-- 文章循环开始 -->
 	    <?php while($this->next()): ?>
 		<br />
-                <!-- 电脑端卡片 -->
-                <div class="post-item large-screen">
+                <!-- 文章卡片 -->
+                <div class="post-item ">
                     <div class="container-fluid"><div class="row">
 			  <div class="col-md-6 post-banner-box">
 			    <a href="<?php $this->permalink(); ?>" class="post-link">
 			      <div class="post-banner">
-				    <img src="/usr/themes/Miracles/images/loading.gif" data-original="<?php if($this->fields->banner && $this->fields->banner=!''): ?><?php echo $this->fields->banner(); ?><?php else: ?><?php Utils::indexTheme('images/postbg/'); ?><?php echo mt_rand(1,20); ?>.jpg<?php endif; ?>">
+				    <img src="/usr/themes/Miracles/images/loading/<?php echo $this->options->loading_image ?>.gif" data-original="<?php if($this->fields->banner && $this->fields->banner=!''): ?><?php echo $this->fields->banner(); ?><?php else: ?><?php Utils::indexTheme('images/postbg/'); ?><?php echo mt_rand(1,20); ?>.jpg<?php endif; ?>">
 				  </div>
 				</a>
 			  </div>
@@ -39,30 +39,9 @@ $this->need('includes/header.php');
 				  ?>
 				</p>
 				<p class="post-meta"><i class="iconfont icon-block"></i> <?php $this->category(','); ?>&emsp;<i class="iconfont icon-comments"></i> <?php $this->commentsNum('None', 'Only 1', '%d'); ?>&emsp;<i class="iconfont icon-clock"></i> <?php $this->date(); ?></p>
-				<p class="post-button-box"><a href="<?php $this->permalink(); ?>" class="button post-button">Read More</a></p>
+				<p class="post-button-box large-screen"><a href="<?php $this->permalink(); ?>" class="button post-button">Read More</a></p>
 			  </div>
 			</div></div>
-		  </div>
-		  <!-- 移动端卡片 -->
-		  <div class="post-item small-screen">
-		  <a href="<?php $this->permalink(); ?>" class="post-link">
-		    <div class="post-banner-box-ss">
-			  <div class="post-banner-ss">
-			    <img src="/usr/themes/Miracles/images/loading.gif" data-original="<?php if($this->fields->banner && $this->fields->banner=!''): ?><?php echo $this->fields->banner(); ?><?php else: ?><?php Utils::indexTheme('images/postbg/'); ?><?php echo mt_rand(1,20); ?>.jpg<?php endif; ?>">
-			  </div>
-			</div>
-			<div class="post-item-content-ss">
-				  <h1 class="post-title-ss"><?php $this->sticky(); ?><?php $this->title(); ?></h1>
-			  <p class="post-excerpt">
-			      <?php if($this->fields->excerpt && $this->fields->excerpt!='') {
-				    echo $this->fields->excerpt;
-				  }else{
-					echo $this->excerpt(130);
-				  }
-				  ?></p>
-			  <p class="post-meta"><i class="iconfont icon-block"></i> <?php $this->category(','); ?>&emsp;<i class="iconfont icon-comments"></i> <?php $this->commentsNum('None', 'Only 1', '%d'); ?>&emsp;<i class="iconfont icon-clock"></i> <?php $this->date(); ?></p>
-			</div>
-			</a>
 		  </div>
                 <br />
 		<?php endwhile; ?>

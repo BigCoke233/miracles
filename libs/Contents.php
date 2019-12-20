@@ -13,6 +13,10 @@ class Contents
      */
     static public function parseContent($data, $widget, $last)
     {
+        $db=Typecho_Db::get();
+        $load_image = $db->fetchAll($db->select('value')->from('table.options')->where('name = %s', "theme:Miracles")->limit(1));
+        $load_image = explode("\";",explode("\"",explode("\"loading_image\";",$load_image[0]["value"],2)[1],2)[1],2)[0];
+        //由于实在没找到TE获取主题配置的相关函数，故只能用这种方法，吐了。
         $text = empty($last) ? $data : $last;
         if ($widget instanceof Widget_Archive) {
             //Prism 高亮
@@ -20,7 +24,7 @@ class Contents
 		    //FancyBox
 	        $text = preg_replace('/<img(.*?)src="(.*?)"(.*?)alt="(.*?)"(.*?)>/s','<center><a data-fancybox="gallery" href="${2}" class="gallery-link"><img${1}src="${2}"${3}></a></center>',$text); 
 	        //LazyLoad
-		    $text = preg_replace('/<img (.*?)src(.*?)(\/)?>/','<img $1src="/usr/themes/Miracles/images/loading.gif" data-original$2 />',$text);
+		    $text = preg_replace('/<img (.*?)src(.*?)(\/)?>/','<img $1src="/usr/themes/Miracles/images/loading/'.$load_image.'.gif" data-original$2 />',$text);
 		
 		    //气泡
 		    $text = preg_replace('/\[bubble\](.*?)\[\/bubble\]/s','<div class="bubble post-bubble"><div class="saying-content"><p>${1}</p></div></div>',$text);

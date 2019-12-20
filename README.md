@@ -13,33 +13,31 @@
 ---
 
 > **请下载 [Releases](https://github.com/BigCoke233/miracles/releases) 页面的最新发行包，使用前先看 [Wiki](https://github.com/BigCoke233/miracles/wiki)，wiki 有的问题一律不解答；禁止删除主题版权信息**<br>同时，主题的 Telegram 频道已开启，可以获取主题最新消息，推送作者博客更新，点此加入：[Miracles News](https://t.me/eltracer)<br>开放了一个议题，用于~~民主~~决策主题的更新方向，点击 [这里](https://github.com/BigCoke233/miracles/issues/17) 进入
+
 # 特色
 - 响应式 / 自适应设计
 - Pjax 全站无刷新
-- 夜间模式 & 日落模式
-- 前台配置面板
+- 支持系统切换夜间模式
+- 阅读调整字号 / 思源系列字体 & 日落模式
 - 前台登录 / 快捷后台通道
 - 图片懒加载
 - 代码高亮 / 行号
-- 思源系列字体
 - 两种可供选择的导航栏（顶部导航栏 / 侧边栏）
 - 灵活的友情链接功能
 - 方便排版的短代码
 - 后台设置备份
 - 文章浏览数 / 字数统计
 - 内置 Live2d（将在 1.3.0 版本移除）
-- 简洁大气的设计
-- 文字可读性高
+- 简约大气的设计
 - 一个完善的 wiki（强调）
 - More to find
 
 # 使用
 1. 下载**最新的 [Release](https://github.com/BigCoke233/miracles/releases)**
 2. 解压后，**确认目录名为`Miracles`（M 大写）**
-3. 将文件夹放入`usr/themes`
+3. 将文件夹放入Typecho根目录下的`usr/themes/`
 4. 到后台启用主题
-5. **根据 wiki** 配置主题
-> 有问题请先查看 [Wiki](https://github.com/BigCoke233/miracles/wiki)
+5. **根据 wiki(可选)** 配置主题
 
 <details><summary>使用开发版</summary><br>
 
@@ -51,8 +49,16 @@ $ git clone https://github.com/BigCoke233/miracles
 
 </details>
 
+# 遇到问题
+如果在使用过程中遇到了任何问题，可以先阅读本主题的[Wiki](https://github.com/BigCoke233/miracles/wiki)<br>
+并进行一些简单的确认：清理浏览器缓存，更换网络环境，确保Console内没有提示访问不到文件等自身原因。<br>
+在确认你遇到的现象确实是一个Bug后，请在[Issues](https://github.com/BigCoke233/miracles/issues)提交问题<br>
+并为该问题尽可能的描述清楚，并提供一些有关信息。
+
+
 # 鸣谢
 > 这些都是在开发过程中给予我帮助的项目和大佬！
+
 ## 开源项目
 - [jQuery](https://github.com/jquery/jquery)（若干开源项目和主题内一些 js 的前置）
 - [FancyBox](https://github.com/fancyapps/fancybox)（文章图片灯箱）
@@ -63,6 +69,7 @@ $ git clone https://github.com/BigCoke233/miracles
 - [OwO](https://github.com/DIYgod/OwO)（评论 OwO 表情）
 - [LazyLoad](https://github.com/tuupola/lazyload)（图片懒加载）
 - [Pangu.js](https://github.com/vinta/pangu.js)（分割中英文字符）
+
 ## 大佬
 常提交 Pull Requests 的大佬：
 - [@outtimes](https://github.com/outtimes)（时光）

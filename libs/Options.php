@@ -16,14 +16,14 @@ function themeConfig($form) {
         if($db->fetchRow($db->select()->from ('table.options')->where ('name = ?', 'theme:MiraclesBackup'))){
           $update = $db->update('table.options')->rows(array('value'=>$ysj))->where('name = ?', 'theme:MiraclesBackup');
           $updateRows= $db->query($update);
-          echo '<div class="miracles-backup-alert">备份已更新，请等待自动刷新！如果等不到请点击';
+          echo '<div class="miracles-backup-alert">备份已更新，即将自动刷新。如过您的浏览器没有自动跳转请点击';
 ?><a href="<?php Helper::options()->adminUrl('options-theme.php'); ?>">这里</a></div><script language="JavaScript">window.setTimeout("location=\'<?php Helper::options()->adminUrl('options-theme.php'); ?>\'", 2500);</script>
 <?php }else{
     if($ysj){
       $insert = $db->insert('table.options')
       ->rows(array('name' => 'theme:MiraclesBackup','user' => '0','value' => $ysj));
       $insertId = $db->query($insert);
-      echo '<div class="miracles-backup-alert">备份完成，请等待自动刷新！如果等不到请点击';
+      echo '<div class="miracles-backup-alert">备份完成，即将自动刷新。如过您的浏览器没有自动跳转请点击';
 ?><a href="<?php Helper::options()->adminUrl('options-theme.php'); ?>">这里</a></div><script language="JavaScript">window.setTimeout("location=\'<?php Helper::options()->adminUrl('options-theme.php'); ?>\'", 2500);</script>
 <?php
     }
@@ -35,7 +35,7 @@ function themeConfig($form) {
     $bsj = $sjdub['value'];
     $update = $db->update('table.options')->rows(array('value'=>$bsj))->where('name = ?', 'theme:Miracles');
     $updateRows= $db->query($update);
-    echo '<div class="miracles-backup-alert">检测到模板备份数据，恢复完成，请等待自动刷新！如果等不到请点击';
+    echo '<div class="miracles-backup-alert">检测到模板备份数据，恢复完成，即将自动刷新。如过您的浏览器没有自动跳转请点击';
 ?><a href="<?php Helper::options()->adminUrl('options-theme.php'); ?>">这里</a></div><script language="JavaScript">window.setTimeout("location=\'<?php Helper::options()->adminUrl('options-theme.php'); ?>\'", 2000);</script>
 <?php
     }else{
@@ -58,9 +58,10 @@ function themeConfig($form) {
     /**
 	 *  设置样式+面板
 	 */
-	$ver = themeVersion();
+    $ver = themeVersion();
+    $themeDir = "/usr/themes/Miracles/";
 	 
-	echo '<link rel="stylesheet" href="/usr/themes/Miracles/assets/css/setting.miracles.css"><link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300|Noto+Serif+SC:300&display=swap" rel="stylesheet">';
+	echo '<link rel="stylesheet" href="'.$themeDir.'assets/css/setting.miracles.css"><link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300|Noto+Serif+SC:300&display=swap" rel="stylesheet">';
 	echo '<div class="miracles-pannel">
 	<h1>Miracles 主题设置面板</h1>
 	<p>欢迎使用 Miracles 主题，目前版本是：'. $ver .'<br>
@@ -77,7 +78,7 @@ function themeConfig($form) {
 	 *  设置项
 	 */
 	//首要设置项
-	$news = new Typecho_Widget_Helper_Form_Element_Text('news', NULL, NULL, _t('<h2>首要设置 First</h2>全站公告'), _t('输入公告内容，用户进入站点时自动弹出'));
+	$news = new Typecho_Widget_Helper_Form_Element_Text('news', NULL, NULL, _t('<h2>首要设置</h2>全站公告'), _t('输入公告内容，用户进入站点时自动弹出'));
     $form->addInput($news);
 	
     //nav
@@ -99,7 +100,7 @@ function themeConfig($form) {
     $form->addInput($bannerTitle);
 	$bannerIntro = new Typecho_Widget_Helper_Form_Element_Text('bannerIntro', NULL, NULL, _t('介绍'), _t('这里是首页大图标题下的简介<hr>'));
     $form->addInput($bannerIntro);
-	
+
 	//pjax
 	$pjax = new Typecho_Widget_Helper_Form_Element_Select('pjax',array('0'=>'关闭','1'=>'开启'),'1','<h2>Pjax 预加载</h2>是否开启','Pjax 预加载功能的开关');
     $form->addInput($pjax);
@@ -117,11 +118,28 @@ function themeConfig($form) {
     $form->addInput($grayTheme);
 	$bodyFonts = new Typecho_Widget_Helper_Form_Element_Select('bodyFonts',array('0'=>'无衬线字体','1'=>'衬线字体'),'0','网站字体','选择网站的字体，无衬线字体即“思源黑体”，衬线字体即“思源宋体”');
     $form->addInput($bodyFonts);
-	
+        
+    //LoadingImage
+    $LoadingOptions = [
+        'block' => "方块：<img style='width: 120px;' src='".$themeDir.'images/loading/block.gif'."'>",
+        'octopus' => "旋转章鱼：<img style='width: 120px;' src='".$themeDir.'images/loading/octopus.gif'."'>",
+        'bilibili' => "哔哩哔哩小电视：<img style='width: 120px;' src='".$themeDir.'images/loading/bilibili.gif'."'>",
+        'shojo' => "少女祈祷中：<img style='width: 120px;' src='".$themeDir.'images/loading/shojo.gif'."'>"
+    ];
+    $LoadingImage = new Typecho_Widget_Helper_Form_Element_Radio('loading_image', $LoadingOptions, 'block', _t('选择图片加载动画'),_t("<hr>"));
+    $form->addInput($LoadingImage);
+
+    //SiteBuildTime
+    $buildTime = new Typecho_Widget_Helper_Form_Element_Text('build_time', NULL, NULL, _t('在页脚输出建站至今时间'), _t('填写格式如2020-01-01的时间，将输出在站点信息之前，不想开启请留空。'));
+    $form->addInput($buildTime);
+    //AnimeFace
+    $AnimeFace = new Typecho_Widget_Helper_Form_Element_Text('anime_face', NULL, NULL, _t('在其之后输出一个蹦跶的颜文字'), _t('如果开启了建站时间将会输出在其之后，反之会输出在站点信息之后。在此写上你想展示的颜文字，多个颜文字用"&&"分割，每次刷新更换。如不想开启请留空。'));
+    $form->addInput($AnimeFace);
+
 	//developer
-	$headerEcho = new Typecho_Widget_Helper_Form_Element_Textarea('headerEcho', NULL, NULL, _t('<h2>开发者设置</h2>自定义头部信息'), _t('填写 html 代码，将输出在 &lt;head&gt; 标签中'));
+	$headerEcho = new Typecho_Widget_Helper_Form_Element_Textarea('headerEcho', NULL, NULL, _t('<h2>开发者设置</h2>自定义头部信息'), _t('填写 html 代码，将输出在 &lt;head&gt; 标签中，可以在这里写上统计代码'));
     $form->addInput($headerEcho);
-	$footerEcho = new Typecho_Widget_Helper_Form_Element_Textarea('footerEcho', NULL, NULL, _t('自定义页脚部信息'), _t('填写 html 代码，将输出在页脚的版权信息后'));
+	$footerEcho = new Typecho_Widget_Helper_Form_Element_Textarea('footerEcho', NULL, NULL, _t('自定义页脚部信息'), _t('填写 html 代码，将输出在页脚的版权信息之前'));
     $form->addInput($footerEcho);
 	$cssEcho = new Typecho_Widget_Helper_Form_Element_Textarea('cssEcho', NULL, NULL, _t('自定义 CSS'), _t('填写 CSS 代码，输出在 head 标签结束之前的 style 标签内'));
     $form->addInput($cssEcho);
