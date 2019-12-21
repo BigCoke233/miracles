@@ -121,16 +121,16 @@ function themeConfig($form) {
         
     //LoadingImage
     $LoadingOptions = [
-        'block' => "方块：<img style='width: 120px;' src='".$themeDir.'images/loading/block.gif'."'>",
-        'octopus' => "旋转章鱼：<img style='width: 120px;' src='".$themeDir.'images/loading/octopus.gif'."'>",
-        'bilibili' => "哔哩哔哩小电视：<img style='width: 120px;' src='".$themeDir.'images/loading/bilibili.gif'."'>",
-        'shojo' => "少女祈祷中：<img style='width: 120px;' src='".$themeDir.'images/loading/shojo.gif'."'>"
+        'block' => "交错方块",
+        'octopus' => "旋转章鱼",
+        'bilibili' => "哔哩哔哩",
+        'shojo' => "少女祈祷"
     ];
-    $LoadingImage = new Typecho_Widget_Helper_Form_Element_Radio('loading_image', $LoadingOptions, 'block', _t('选择图片加载动画'),_t("<hr>"));
+    $LoadingImage = new Typecho_Widget_Helper_Form_Element_Radio('loading_image', $LoadingOptions, 'block', _t('图片懒加载动画'),_t(""));
     $form->addInput($LoadingImage);
 
     //SiteBuildTime
-    $buildTime = new Typecho_Widget_Helper_Form_Element_Text('build_time', NULL, NULL, _t('在页脚输出建站至今时间'), _t('填写格式如2020-01-01的时间，将输出在站点信息之前，不想开启请留空。'));
+    $buildTime = new Typecho_Widget_Helper_Form_Element_Text('build_time', NULL, NULL, _t('在页脚输出建站至今时间'), _t('填写格式如 2020-01-01 的时间，将输出在站点信息之前，不想开启请留空。'));
     $form->addInput($buildTime);
     //AnimeFace
     $AnimeFace = new Typecho_Widget_Helper_Form_Element_Text('anime_face', NULL, NULL, _t('在其之后输出一个蹦跶的颜文字'), _t('如果开启了建站时间将会输出在其之后，反之会输出在站点信息之后。在此写上你想展示的颜文字，多个颜文字用"&&"分割，每次刷新更换。如不想开启请留空。'));
