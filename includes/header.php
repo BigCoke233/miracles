@@ -154,6 +154,8 @@
 	  <header>
 	    <?php if($this->is('post') || $this->is('page')): ?>
 		<div class="index-banner" style="background-position:center;<?php if($this->fields->banner && $this->fields->banner=!''): ?>background:url('<?php $this->fields->banner(); ?>') no-repeat;<?php else: ?>background-color:<?php $this->options->bannerColor(); ?>;<?php endif; ?>height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;">
+        <?php elseif($this->is('archive')): ?>
+		<div class="index-banner" style="height:<?php $this->options->bannerHeight(); ?>vh;background-position:center;background-color:<?php $this->options->bannerColor(); ?>;<?php if($this->options->bannerUrl!=''): echo $this->options->bannerUrl(); endif; ?>">
 		<?php else: ?>
 	    <div class="index-banner" style="background-position:center;background:url('<?php $this->options->bannerUrl(); ?>') no-repeat;height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;background-color:<?php $this->options->bannerColor(); ?>">
 		<?php endif; ?>
@@ -169,7 +171,13 @@
 				  <?php if($this->is('post')): ?>
 					<i class="iconfont icon-block" title="文章分类"></i> <?php $this->category(','); ?>&emsp;<?php endif; ?><i class="iconfont icon-comments" title="共 <?php $this->commentsNum('None', '1', '%d'); ?> 条评论"></i> <?php $this->commentsNum('None', 'Only 1', '%d'); ?>&emsp;<i class="iconfont icon-clock" title="该文章发布于 <?php $this->date(); ?>"></i> <?php $this->date(); ?>&emsp;<i class="icon-view iconfont" title="该文章被浏览 <?php get_post_view($this) ?> 次"></i> <?php get_post_view($this) ?><?php else: echo $this->fields->meta;?><div style="display:none"><?php get_post_view($this) ?></div><?php endif; ?>
 				</p>
-				<?php else: ?><?php endif; ?>
+				<?php elseif($this->is('archive')): ?>
+				<h1><?php $this->archiveTitle(array(
+                  'category'  =>  _t('分类 %s 下的文章'),
+                  'search'    =>  _t('包含关键字 %s 的文章'),
+                  'tag'       =>  _t('标签 %s 下的文章'),
+                  'author'    =>  _t('%s 发布的文章')
+                ), '', '');?></h1><?php else: endif; ?>
 			  </div>
 			</div>
 		  </div>
