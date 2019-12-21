@@ -3,19 +3,17 @@
 	<!-- Footer Information -->
     <footer>
       <div class="footer-info footer-dark">
-		<?php 
+		<?php $this->options->footerEcho(); ?>
+		<p class="copyright">Powered by <a href="http://typecho.org">Typecho</a> | Theme <a href="https://guhub.cn/p/miracles.html">Miracles</a> by <a href="https://guhub.cn">Eltrac</a><br>
+		&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->SiteUrl(); ?>"><?php $this->options->title(); ?></a>  All rights reserved.<br>
+        <?php 
 		echo $this->options->build_time?"记录已延续了 <span id=\"build-time\"></span>":"";
 		if($faces=$this->options->anime_face){
 		$faces = explode("&&",$faces);
-		$faces = "<span class=\"anime-face\">".$faces[rand(0,count($faces))]."</span>";
+		$faces = "<span class=\"anime-face\">".$faces[mt_rand(0,count($faces))]."</span>";
 		}
 		if($faces && $this->options->build_time)echo $faces;
-		?>
-	    <p class="copyright">&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->SiteUrl(); ?>"><?php $this->options->title(); ?></a>  All rights reserved.<br />
-		<?php 
-		if($faces && !$this->options->build_time)echo $faces;
-		$this->options->footerEcho(); ?>
-		Powered by <a href="http://typecho.org">Typecho</a> | Theme <a href="https://guhub.cn/p/miracles.html">Miracles</a> by <a href="https://guhub.cn">Eltrac</a></p>
+		?></p>
 	  </div>
     </footer>
 	<!-- Raised Buttons -->
