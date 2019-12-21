@@ -311,9 +311,13 @@
 }
 .post-pagenav a {
 	font-size: 20px;
-	background: var(--theme-color);
-	color: #fff;
+	background: #fff;
+	color: #000;
 	padding: 13px 20px;
+	transition: .2s;
+}
+.post-pagenav a:hover {
+	background: rgb(249,249,249);
 }
 .post-pagenav a,
 .comment-pagenav a {
