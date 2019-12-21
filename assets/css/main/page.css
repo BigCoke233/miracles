@@ -130,35 +130,3 @@
 .links-container {
 	padding: 6px;
 }
-/* Archive */
-.archive-title {
-	text-align: center;
-	margin: 30px 0!important
-}
-.archive-item-excerpt {
-	color: gray!important;
-	font-size: 17px;
-	margin-top: 0
-}
-.archive-item-title {
-	font-size: 25px;
-	margin-bottom: 5px
-}
-.archive-item {
-	margin: 0;
-}
-.archive-pagenav ol {
-	margin-left: -40px;
-	text-align: center;
-}
-.archive-pagenav li {
-	list-style-type: none;
-	display: inline-block;
-}
-.archive-pagenav li a {
-	border-radius: 3px;
-	padding: 3px 10px;
-}
-.archive-pagenav li a:hover {
-	background: rgb(240,240,240)
-}
