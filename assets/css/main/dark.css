@@ -131,6 +131,7 @@
 .body-dark .dark-button,
 .body-dark .options,
 .body-dark .post-body,
+.body-dark .saying-item,
 .body-dark .post-item,
 .body-dark .post-pagenav a {
 	box-shadow:0 0 36px #323232;
@@ -180,6 +181,7 @@
 .body-dark .OwO-packages li:hover,
 .body-dark .comment-form input,
 .body-dark .comment-form textarea,
+.body-dark .saying-item textarea,
 .body-dark .comment-reply a:hover,
 .body-dark .dark-button,.body-dark .dialog,
 .body-dark .drawer,
@@ -189,10 +191,10 @@
 .body-dark .options-family-button,
 .body-dark .options-theme-label,
 .body-dark .post-body,
+.body-dark .saying-item,
 .body-dark .post-content th,
 .body-dark .post-item,
 .body-dark .post-pagenav a,
-.body-dark .saying-textarea,
 .body-dark .search-form input {
 	background:#5a5a5a!important
 }
@@ -202,6 +204,9 @@
 .body-dark .index-banner {
 	background-color:#6e6e6e!important
 }
+.body-dark .index-banner {
+	background-color: rgb(80,80,80)!important
+}
 /* Need white fonts */
 .body-dark .OwO-bar,
 .body-dark .OwO-logo,
@@ -210,6 +215,7 @@
 .body-dark .comment-content p,
 .body-dark .comment-form input,
 .body-dark .comment-form textarea,
+.body-dark .saying-item textarea,
 .body-dark .dark-button,
 .body-dark .drawer,
 .body-dark .drawer a,
@@ -230,6 +236,8 @@
 .body-dark .options-family-button,
 .body-dark .options-theme-item:hover .options-theme-label,
 .body-dark .post-body,
+.body-dark .saying-item,
+.body-dark .saying-item a,
 .body-dark .post-body a,
 .body-dark .post-content blockquote,
 .body-dark .post-item,
@@ -238,7 +246,8 @@
 .body-dark .search-form button,
 .body-darl .login a,
 .body-dark .alert,
-.body-dark .banner-content.banner-font-black {
+.body-dark .banner-content.banner-font-black,
+.body-dark .post-pagenav a {
 	color:#fafafa!important
 }
 .body-dark .options-theme-label {
@@ -249,6 +258,7 @@
 .body-dark .OwO-logo,
 .body-dark .comment-form input,
 .body-dark .comment-form textarea,
+.body-dark .saying-item textarea,
 .body-dark .drawer,
 .body-dark .mobile-menu-footer,
 .body-dark .mobile-menu-title,
@@ -258,7 +268,7 @@
 .body-dark .post-content td,
 .body-dark .post-content th,
 .body-dark .post-content tr,
-.body-dark .saying-textarea {
+.body-dark .saying-hr {
 	border-color:#6e6e6e!important
 }
 .body-dark .tip {

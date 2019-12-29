@@ -6,14 +6,15 @@
  */
 /* 文章 */
 .post-list,
-.post-body {
+.post-body,
+.saying-body {
 	margin-top: -110px;
 	transition: .8s;
 }
 .post-item {
 	margin-bottom: 10px;
 }
-.post-body,.post-item {
+.post-body,.post-item,.saying-item {
 	background: #fff;
 	box-shadow: 0 0 36px var(--shadow-color);
 	-moz-box-shadow: 0 0 36px var(--shadow-color);
@@ -105,7 +106,8 @@
 	font-size: 25px;
 }
 /* >文章内容 */
-.post-content {
+.post-content,
+.saying-inner {
 	padding: 26px;
 	line-height: 28px;
 	letter-spacing: 2px;

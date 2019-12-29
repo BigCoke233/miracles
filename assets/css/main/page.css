@@ -130,3 +130,33 @@
 .links-container {
 	padding: 6px;
 }
+
+/* Saying 说说 */
+.saying-meta {
+	color: gray!important;
+	margin-top: -5px!important;
+	line-height: 22px;
+}
+.saying-meta img {
+	float: left;
+	height: 45px;
+	width: 45px;
+	border-radius: 100%;
+	margin-right: 15px;
+	box-shadow: 1px 1px 2px #bababa;
+	webkit-box-shadow: 1px 1px 2px #bababa;
+	-moz-box-shadow: 1px 1px 2px #bababa;
+}
+.saying-author {
+	font-size: 18px;
+}
+.saying-hr {
+	border-bottom: 1px solid #ddd;
+}
+.saying-header.saying-inner {
+	padding-bottom: 0;
+}
+.saying-middle.saying-inner {
+	padding-top: 0;
+	padding-bottom: 10px;
+}
