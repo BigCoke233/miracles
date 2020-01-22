@@ -45,10 +45,11 @@ echo $commentClass;
 <?php } ?>
       <div class="comment">
 	    <?php $this->comments()->to($comments); ?>
+    <?php if($this->fields->commentShow == 0)://如果显示评论列表 ?>
 		<h3 class="comment-title">
 		  <?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?>
 		</h3>
-        <?php if ($comments->have()): ?>
+        <?php if ($comments->have())://如果有评论 则显示 ?>
 		<div class="comment-container">
           <?php $comments->listComments(array(
             'before'        =>  '<div class="comment-list">',
@@ -60,7 +61,10 @@ echo $commentClass;
 		<div class="comment-pagenav">
           <?php $comments->pageNav('<i class="iconfont icon-chevron-left comment-pagenav-icon"></i>', '<i class="iconfont icon-chevron-right comment-pagenav-icon"></i>'); ?>
         </div>
-        <?php endif; ?>
+        <?php endif;//有无评论判断结束?>
+	<?php else: //如果不显示评论列表 ?>
+	    <div class="comment-hidden">博主已关闭本页面的评论显示<?php if($this->allow('comment')): ?>，您评论后将不会看到您的评论内容<?php endif; ?></div>
+	<?php endif;//是否显示判断结束 ?>
 		
 		<div class="comment-form">
 		  <!-- 判断设置是否允许对当前文章进行评论 -->

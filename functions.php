@@ -35,6 +35,8 @@ function themeFields(Typecho_Widget_Helper_Layout $layout) {
     $layout->addItem($excerpt);
 	$meta = new Typecho_Widget_Helper_Form_Element_Text('meta', NULL, NULL,_t('元信息'), _t('页面/文章内页会显示该页面的评论数和创建日期（元信息），如果你不需要，可以写一段文字来代替这些内容。'));
     $layout->addItem($meta);
+	$commentShow = new Typecho_Widget_Helper_Form_Element_Select('commentShow',array('0'=>'显示','1'=>'隐藏'),'0','是否显示评论列表');
+    $layout->addItem($commentShow);
 }
 
 /**
