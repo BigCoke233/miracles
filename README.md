@@ -48,10 +48,10 @@ $ git clone https://github.com/BigCoke233/miracles
 
 </details>
 
-# 遇到问题
+## 遇到问题
 如果在使用过程中遇到了任何问题，可以先阅读本主题的[Wiki](https://github.com/BigCoke233/miracles/wiki)<br>
-并进行一些简单的确认：清理浏览器缓存，更换网络环境，确保Console内没有提示访问不到文件等自身原因。<br>
-在确认你遇到的现象确实是一个Bug后，请在[Issues](https://github.com/BigCoke233/miracles/issues)提交问题<br>
+并进行一些简单的确认：清理浏览器缓存，更换网络环境，确保 Console 内没有提示访问不到文件等自身原因。<br>
+在确认你遇到的现象确实是一个 Bug 后，请在 [Issues](https://github.com/BigCoke233/miracles/issues) 提交问题<br>
 并为该问题尽可能的描述清楚，并提供一些有关信息。
 
 
