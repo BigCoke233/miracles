@@ -63,7 +63,7 @@ echo $commentClass;
         </div>
         <?php endif;//有无评论判断结束?>
 	<?php else: //如果不显示评论列表 ?>
-	    <div class="comment-hidden">博主已关闭本页面的评论显示<?php if($this->allow('comment')): ?>，您评论后将不会看到您的评论内容<?php endif; ?></div>
+	    <?php if($this->allow('comment')): ?><div class="comment-hidden">博主已关闭本页面的评论显示<?php if($this->allow('comment')): ?>，您评论后将不会看到您的评论内容<?php endif; ?></div><?php endif; ?>
 	<?php endif;//是否显示判断结束 ?>
 		
 		<div class="comment-form">
@@ -117,7 +117,7 @@ echo $commentClass;
     </div>
 <!-- 若当前文章不允许进行评论 -->
     <?php else: ?>
-    <h3 class="comment-closed-alert"><?php _e('<i class="iconfont icon-x"></i> 评论已关闭'); ?></h3>
+    <div class="comment-hidden"><?php _e('博主已关闭本页面的评论功能'); ?></div>
 	<!-- 防止找不到 owo 容器而报错 -->
 	<div style="display:none" class="OwO"></div>
     <?php endif; ?>
