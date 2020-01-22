@@ -133,7 +133,8 @@
 .body-dark .post-body,
 .body-dark .saying-item,
 .body-dark .post-item,
-.body-dark .post-pagenav a {
+.body-dark .post-pagenav a,
+.body-dark #comment-form {
 	box-shadow:0 0 36px #323232;
 	-moz-box-shadow:0 0 36px #323232;
 	-webkit-box-shadow:0 0 36px #323232
@@ -195,13 +196,15 @@
 .body-dark .post-content th,
 .body-dark .post-item,
 .body-dark .post-pagenav a,
-.body-dark .search-form input {
+.body-dark .search-form input,
+.body-dark #comment-form {
 	background:#5a5a5a!important
 }
 /* Need #6e6e6e bg */
 .body-dark .OwO-bar,
 .body-dark .OwO-item,
-.body-dark .index-banner {
+.body-dark .index-banner,
+.body-dark .comment-submit {
 	background-color:#6e6e6e!important
 }
 .body-dark .index-banner {
@@ -247,7 +250,9 @@
 .body-darl .login a,
 .body-dark .alert,
 .body-dark .banner-content.banner-font-black,
-.body-dark .post-pagenav a {
+.body-dark .post-pagenav a,
+.body-dark .comment-submit,
+.body-dark .header-meta a  {
 	color:#fafafa!important
 }
 .body-dark .options-theme-label {

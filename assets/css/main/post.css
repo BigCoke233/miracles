@@ -14,7 +14,7 @@
 .post-item {
 	margin-bottom: 10px;
 }
-.post-body,.post-item,.saying-item {
+.post-body,.post-item,.saying-item,#comment-form {
 	background: #fff;
 	box-shadow: 0 0 36px var(--shadow-color);
 	-moz-box-shadow: 0 0 36px var(--shadow-color);
@@ -57,8 +57,7 @@
 	color: #c8c8c8;
 	font-size: 14px;
 	padding: 26px;
-	padding-top: 0;
-	margin-top: -20px
+	padding-top: 0!important;
 }
 .post-tags a {
 	color: #bebebe;
@@ -109,6 +108,7 @@
 .post-content,
 .saying-inner {
 	padding: 26px;
+	padding-bottom: 5px!important;
 	line-height: 28px;
 	letter-spacing: 2px;
 	word-break: break-all
