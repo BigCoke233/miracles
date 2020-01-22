@@ -29,6 +29,14 @@ class Contents
 		    //气泡
 		    $text = preg_replace('/\[bubble\](.*?)\[\/bubble\]/s','<div class="bubble post-bubble"><div class="saying-content"><p>${1}</p></div></div>',$text);
 		
+		    //阴影
+			$text = preg_replace('/\&\{\"(.*?)\"\|(.*?)\|(.*?)\}/s','<span style="color:${2};background:${3}">${1}</span>',$text);
+		    
+		    //ruby
+			$reg = '/\{\{(.*?):(.*?)\}\}/s';
+            $rp = '<ruby>${1}<rp>(</rp><rt>${2}</rt><rp>)</rp></ruby>';
+            $text = preg_replace($reg,$rp,$text);
+		
 		    //Tip without var
 		    $text = preg_replace('/\[tip\](.*?)\[\/tip\]/s','<div class="tip"><div class="container-fluid"><div class="row"><div class="col-1 tip-icon"><i class="iconfont icon-info"></i></div><div class="col-11 tip-content">${1}</div></div></div></div>',$text);
 		    //Tip
