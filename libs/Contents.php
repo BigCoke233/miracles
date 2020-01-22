@@ -40,6 +40,19 @@ class Contents
 	        $reg = '/\[links\](.*?)\[\/links\]/s';
             $rp = '<div class="links-box container-fluid"><div class="row">${1}</div></div>';
             $text = preg_replace($reg,$rp,$text);
+			//解析带有简介的友链项目
+	        $reg = '/\[(.*?)\]\{(.*?)\}\((.*?)\)\+\((.*?)\)/s';
+            $rp = '<div class="col-lg-2 col-6 col-md-3 links-container">
+		    <a href="${2}" title="${4}" target="_blank" class="links-link">
+			  <div class="links-item">
+			    <div class="links-img" style="background:url(\'${3}\');width: 100%;padding-top: 100%;background-repeat: no-repeat;background-size: cover;"></div>
+				<div class="links-title">
+				  <h4>${1}</h4>
+				</div>
+		      </div>
+			  </a>
+			</div>';
+            $text = preg_replace($reg,$rp,$text);
 		    //解析友链项目
 	        $reg = '/\[(.*?)\]\{(.*?)\}\((.*?)\)/s';
             $rp = '<div class="col-lg-2 col-6 col-md-3 links-container">
@@ -53,29 +66,9 @@ class Contents
 			  </a>
 			</div>';
             $text = preg_replace($reg,$rp,$text);
+
         }
         return $text;
-    }
-    
-	/**
-     * 通过查询数据库
-     * 获取上级评论人
-     */
-    public static function commentsParent($comment)
-    {
-        $recipients = [];
-        $db = Typecho_Db::get();
-        $widget = new Widget_Abstract_Comments(new Typecho_Request(), new Typecho_Response());
-        // 查询
-        $select = $widget->select()->where('coid' . ' = ?', $comment->parent)->limit(1);
-        $parent = $db->fetchRow($select, [$widget, 'push']); // 获取上级评论对象
-        if ($parent && $parent['mail']) {
-            $recipients = [
-                'name' => $parent['author'],
-                'mail' => $parent['mail'],
-            ];
-        }
-        return $recipients;
     }
 	
 	//从这里开始的代码来自 熊猫小A (https://imalan.cn)
