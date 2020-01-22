@@ -19,11 +19,6 @@
 .body-dark .post-content code {
 	background:#505050
 }
-.body-dark .post-content img:not(.OwO-img) {
-	box-shadow:0 2px 10px #323232;
-	-moz-box-shadow:0 2px 10px #323232;
-	-webkit-box-shadow:0 2px 10px #323232
-}
 .body-dark .post-content tr:nth-child(odd) {
 	background:#6e6e6e
 }
@@ -197,7 +192,10 @@
 .body-dark .post-item,
 .body-dark .post-pagenav a,
 .body-dark .search-form input,
-.body-dark #comment-form {
+.body-dark .login-form button,
+.body-dark .login-enter-admin,
+.body-dark #comment-form,
+.body-dark .comment-by-author > .comment-body-inner > .comment-main > .comment-meta > .comment-date:before {
 	background:#5a5a5a!important
 }
 /* Need #6e6e6e bg */
@@ -211,6 +209,8 @@
 	background-color: rgb(80,80,80)!important
 }
 /* Need white fonts */
+.body-dark .login-enter-admin,
+.body-darl .login-form button,
 .body-dark .OwO-bar,
 .body-dark .OwO-logo,
 .body-dark .comment,
@@ -273,7 +273,8 @@
 .body-dark .post-content td,
 .body-dark .post-content th,
 .body-dark .post-content tr,
-.body-dark .saying-hr {
+.body-dark .saying-hr,
+.body-dark .post-share {
 	border-color:#6e6e6e!important
 }
 .body-dark .tip {
@@ -291,8 +292,9 @@
 	background:rgba(10,10,10,.4)
 }
 /* Need filter */
-.body-dark img {
-	filter:brightness(88%)
+.body-dark img,
+.body-dark .links-img {
+	filter:brightness(80%)
 }
 .body-dark .aplayer-pic,
 .body-dark .post-banner,

@@ -33,6 +33,10 @@
   url('//at.alicdn.com/t/font_1165190_t5sh6mq8n6i.svg#iconfont') format('svg');
 }
 
+::selection{
+    background: rgb(230,230,230);
+    color:black;
+}
 /* ScrollBar */
 ::-webkit-scrollbar {
 	width: 9px;
@@ -187,9 +191,14 @@
 
 	.post-content {
 		padding: 36px;
+		padding-top: 25px;
 		font-size: 18px;
 		line-height: 26px;
 		letter-spacing: 2px
+	}
+	
+	.page-content {
+		padding-bottom: 25px!important;
 	}
 	
 	.post-footer {
@@ -303,9 +312,14 @@
 
 	.post-content {
 		padding: 48px;
+		padding-top: 30px;
 		font-size: 18px;
 		line-height: 28px;
 		letter-spacing: 2px
+	}
+	
+	.page-content {
+		padding-bottom: 30px!important;
 	}
 	
 	.post-footer {
@@ -418,7 +432,11 @@
 		padding: 50px;
 		font-size: 20px;
 		line-height: 30px;
-		letter-spacing: 2px
+		letter-spacing: 2px;
+		padding-top: 35px;
+	}
+	.page-content {
+		padding-bottom: 38px!important;
 	}
 	
 	.post-footer {

@@ -113,6 +113,12 @@
 	letter-spacing: 2px;
 	word-break: break-all
 }
+.page-content {
+	padding-bottom: 30px;
+}
+.page-content {
+	padding-bottom: 26px!important;
+}
 .post-content h2 {
 	margin: 45px 0;
 	margin-bottom: 10px;
@@ -209,6 +215,16 @@
 	-webkit-box-shadow: 0 0 0 #fff;
 	display: inline;
 	vertical-align: middle;
+}
+.post-content ul li p,
+.post-content ol li p {
+    margin: 0!important
+}
+.post-content ul ul,
+.post-content ul ol,
+.post-content ol ol,
+.post-content ol ul {
+    margin-top: 0;
 }
 /* 加密文章 */
 .post-content .protected {
