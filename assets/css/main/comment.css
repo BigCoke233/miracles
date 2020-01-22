@@ -194,6 +194,12 @@
 .comment-children .comment-children {
 	margin-left: 0!important
 }
+.comment-hidden {
+	margin: 60px 0;
+	background: #f1f1f1;
+	padding: 20px;
+	text-align: center;
+}
 #response {
 	text-align: center;
 	margin-top: 60px;
