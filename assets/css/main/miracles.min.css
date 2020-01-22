@@ -134,6 +134,17 @@
 		font-size: 18px;
 	}
 	
+	.comment-input input {
+	    display: inline-block;
+	    width: 33.23%;
+        padding: 10px 5px;
+        max-width: 100%;
+    }
+	
+	.comment-input #url {
+	    width: 32.39%;
+    }
+	
 	.nav-content a {
 		font-size: 19px;
 		padding: 27.5px 8px
@@ -246,6 +257,10 @@
 		font-size: 19px;
 	}
 	
+	.comment-input #url {
+	    width: 32.47%;
+    }
+	
 	.nav-content a {
 		font-size: 20px;
 		padding: 28px 8px
@@ -270,7 +285,7 @@
 	}
 
 	.post-excerpt {
-		height: 65px
+		height: 75px
 	}
 	
 	.post-banner-box,
@@ -362,7 +377,9 @@
 	.comment-content p {
 		font-size: 21px;
 	}
-	
+	.comment-input #url {
+	    width: 32.56%;
+    }
 	.nav-content a {
 		font-size: 20px;
 		padding: 28px 8px
