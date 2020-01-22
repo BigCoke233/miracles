@@ -1,6 +1,6 @@
 <?php
 /**
- * You're the miracles. 你即是奇迹
+ * Born to be the Miracles. 生为奇迹
  * 作者：<a href="https://guhub.cn">Eltrac</a> | 帮助文档：<a href="https://github.com/BigCoke233/miracles/wiki">GitHub Wiki</a>
  * 
  * @package     Miracles
@@ -47,7 +47,7 @@ $this->need('includes/header.php');
 		<?php endwhile; ?>
 		<!-- 文章分页 -->
 		<div class="post-pagenav">
-                  <span class="post-pagenav-left"><?php $this->pageLink('<i class="iconfont icon-chevron-left"></i>'); ?></span>
+          <span class="post-pagenav-left"><?php $this->pageLink('<i class="iconfont icon-chevron-left"></i>'); ?></span>
 		  <span class="post-pagenav-right"><?php $this->pageLink('<i class="iconfont icon-chevron-right"></i>','next'); ?></span>
 		</div>
 	  <!-- 文章循环结束 --></div>
