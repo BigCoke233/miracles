@@ -10,7 +10,7 @@ $this->need('includes/header.php');
 ?>
     <main class="main-container container">
 	  <div class="post-body">
-	    <div class="post-content">
+	    <div class="post-content page-content">
           <h2>文章标签</h2>
 		  <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=mid&ignoreZeroCount=1&desc=0&limit=30')->to($tags); ?>
           <?php if($tags->have()): ?>
