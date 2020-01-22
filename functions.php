@@ -91,3 +91,31 @@ function generate_require($files,$type,$cdn = NULL) {
             echo "<link rel=\"stylesheet\" href=".$path."assets/".$type."/".$file.".".$type." />";
     }
 }
+
+/**
+ *  获取上级评论人
+ */
+    function getCommentHF($coid){
+        $db   = Typecho_Db::get();
+        $prow = $db->fetchRow($db->select('parent')
+            ->from('table.comments')
+            ->where('coid = ? AND status = ?', $coid, 'approved'));
+        $parent = $prow['parent'];
+        if ($parent != "0") {
+            $arow = $db->fetchRow($db->select('text','author','status')
+                ->from('table.comments')
+                ->where('coid = ?', $parent));
+            $author = $arow['author'];
+            $status = $arow['status'];
+            if($author){
+                if($status=='approved'){
+                    $href   = '<a class="at" uid="'.$parent.'" href="#li-comment-'.$parent.'">@'.$author.'</a>';;
+                }else if($status=='waiting'){
+                    $href   = '<a>评论审核中···</a>';
+                }
+            }
+            echo $href;
+        } else {
+            echo "";
+        }
+    }
