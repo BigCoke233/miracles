@@ -48,7 +48,7 @@ class Contents
 	        $reg = '/\[links\](.*?)\[\/links\]/s';
             $rp = '<div class="links-box container-fluid"><div class="row">${1}</div></div>';
             $text = preg_replace($reg,$rp,$text);
-			//解析带有简介的友链项目
+			//解析友链项目
 	        $reg = '/\[(.*?)\]\{(.*?)\}\((.*?)\)\+\((.*?)\)/s';
             $rp = '<div class="col-lg-2 col-6 col-md-3 links-container">
 		    <a href="${2}" title="${4}" target="_blank" class="links-link">
@@ -61,20 +61,6 @@ class Contents
 			  </a>
 			</div>';
             $text = preg_replace($reg,$rp,$text);
-		    //解析友链项目
-	        $reg = '/\[(.*?)\]\{(.*?)\}\((.*?)\)/s';
-            $rp = '<div class="col-lg-2 col-6 col-md-3 links-container">
-		    <a href="${2}" target="_blank" class="links-link">
-			  <div class="links-item">
-			    <div class="links-img" style="background:url(\'${3}\');width: 100%;padding-top: 100%;background-repeat: no-repeat;background-size: cover;"></div>
-				<div class="links-title">
-				  <h4>${1}</h4>
-				</div>
-		      </div>
-			  </a>
-			</div>';
-            $text = preg_replace($reg,$rp,$text);
-
         }
         return $text;
     }
