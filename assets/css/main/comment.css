@@ -191,9 +191,10 @@
 /* 评论表单 */
 #comment-form {
     position: relative;
-    padding: 30px;
+    padding: 26px;
 	background: #fff;
 	box-sizing: border-box;
+	margin-bottom: 30px;
 }
 .comment-textarea {
 	width: 100%;

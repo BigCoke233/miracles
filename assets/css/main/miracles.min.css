@@ -201,6 +201,10 @@
 		padding-bottom: 25px!important;
 	}
 	
+	#comment-form {
+		padding: 36px;
+	}
+	
 	.post-footer {
 		padding: 36px;
 	}
@@ -322,6 +326,10 @@
 		padding-bottom: 30px!important;
 	}
 	
+	#comment-form {
+		padding: 48px;
+	}
+	
 	.post-footer {
 		padding: 48px;
 	}
@@ -437,6 +445,10 @@
 	}
 	.page-content {
 		padding-bottom: 38px!important;
+	}
+	
+	#comment-form {
+		padding: 50px;
 	}
 	
 	.post-footer {
