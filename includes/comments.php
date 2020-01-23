@@ -49,7 +49,7 @@ echo $commentClass;
     <?php if($this->fields->commentShow == 0)://如果显示评论列表 ?>
         <?php if ($comments->have())://如果有评论 则显示 ?>
 		<div class="comment-container">
-		  <h3 class="comment-title"><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></h3>
+		  <h3 class="comment-title" id="response"><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></h3>
           <?php $comments->listComments(array(
             'before'        =>  '<div class="comment-list">',
             'after'         =>  '</div>',
@@ -63,7 +63,7 @@ echo $commentClass;
 		
         <?php endif;//有无评论判断结束?>
 	<?php else: //如果不显示评论列表 ?>
-	    <?php if($this->allow('comment')): ?><div class="comment-hidden">博主已关闭本页面的评论显示<?php if($this->allow('comment')): ?>，您评论后将不会看到您的评论内容<?php endif; ?></div><?php endif; ?>
+	    <?php if($this->allow('comment')): ?><div class="comment-hidden">博主已关闭本页面的评论显示，您评论后将不会看到您的评论内容</div><?php endif; ?>
 	<?php endif;//是否显示判断结束 ?>
 		
 		<div class="comment-form">
