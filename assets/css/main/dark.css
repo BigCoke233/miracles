@@ -167,7 +167,8 @@
 .body-dark .options-button-active,
 .body-dark .tags-item a,
 .body-dark .post-tags a,
-.body-dark .about-social a:hover {
+.body-dark .about-social a:hover,
+.body-dark .comment-hidden {
 	background: #646464!important
 }
 /* Need #5a5a5a bg */

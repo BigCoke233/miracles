@@ -99,9 +99,9 @@
 }
 .links-item {
 	background: #fff;
-	box-shadow: 0 3px 1px #ccc;
+	box-shadow: 0 1px 3px #ccc;
 	-webkit-box-shadow: 0 1px 3px #ccc;
-	-moz-box-shadow: 0 3px 1px #ccc;
+	-moz-box-shadow: 0 1px 3px #ccc;
 	overflow: hidden;
 	transition: all .2s!important;
 	margin-bottom: 5px;
