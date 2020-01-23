@@ -1,6 +1,5 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
       <div class="mask" id="full-mask"></div>
-	  <div class="alert ready"><p class="alert-content">错误！未定义的 alert 信息或 css 未正常载入</p><button id="alert-close" class="alert-close"><i class="iconfont icon-x"></i></button></div>
       <!-- 搜索 -->
       <div class="search ready">
 	    <button class="search-close ready" id="search-close-button"><i class="iconfont icon-x"></i></button>
@@ -15,11 +14,9 @@
 	  <div class="login ready">
 	    <button class="login-close ready" id="login-close"><i class="iconfont icon-x"></i></button>
 		<?php if($this->user->hasLogin()): ?>
-		<h1>你已经登陆过了哦</h1>
-		<p class="large-screen">&emsp;不过康纳很乐意再次见到 <?php $this->user->screenName(); ?> 呢~</p>
-		<a href="<?php $this->options->profileUrl(); ?>" class="comment-submit col-md-3">
-		<button>回到个人中心</button>
-		</a>
+		<h1>你已经登陆了</h1>
+		<p class="large-screen" style="margin-top:0">&emsp;不过康纳很乐意再次见到 <?php $this->user->screenName(); ?> 呢~</p>
+		<p class="login-enter-admin"><a href="/admin" class="col-md-3">进入后台</a></p>
 		<?php else: ?>
 	    <form action="<?php $this->options->loginAction(); ?>" id="login-form" method="post" name="login" role="form" class="login-form">
 		  <h1>登录后台</h1>
@@ -169,7 +166,7 @@
 				<h1><?php $this->title(); ?></h1>
 		        <p class="header-meta"><?php if($this->fields->meta==''): ?>
 				  <?php if($this->is('post')): ?>
-					<i class="iconfont icon-block" title="文章分类"></i> <?php $this->category(','); ?>&emsp;<?php endif; ?><i class="iconfont icon-comments" title="共 <?php $this->commentsNum('None', '1', '%d'); ?> 条评论"></i> <?php $this->commentsNum('None', 'Only 1', '%d'); ?>&emsp;<i class="iconfont icon-clock" title="该文章发布于 <?php $this->date(); ?>"></i> <?php $this->date(); ?>&emsp;<i class="icon-view iconfont" title="该文章被浏览 <?php get_post_view($this) ?> 次"></i> <?php get_post_view($this) ?><?php else: echo $this->fields->meta;?><div style="display:none"><?php get_post_view($this) ?></div><?php endif; ?>
+					<i class="iconfont icon-block" title="文章分类"></i> <?php $this->category(','); ?>&emsp;<?php endif; ?><i class="iconfont icon-comments" title="共 <?php $this->commentsNum('0', '1', '%d'); ?> 条评论"></i> <?php $this->commentsNum('None', 'Only 1', '%d'); ?>&emsp;<i class="iconfont icon-clock" title="该文章发布于 <?php $this->date(); ?>"></i> <?php $this->date(); ?>&emsp;<i class="icon-view iconfont" title="该文章被浏览 <?php get_post_view($this) ?> 次"></i> <?php get_post_view($this) ?><?php else: echo $this->fields->meta;?><div style="display:none"><?php get_post_view($this) ?></div><?php endif; ?>
 				</p>
 				<?php elseif($this->is('archive')): ?>
 				<h1><?php $this->archiveTitle(array(
