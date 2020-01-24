@@ -25,11 +25,15 @@ class Contents
 	        $text = preg_replace('/<img(.*?)src="(.*?)"(.*?)alt="(.*?)"(.*?)>/s','<center><a data-fancybox="gallery" href="${2}" class="gallery-link"><img${1}src="${2}"${3}></a></center>',$text); 
 	        //LazyLoad
 		    $text = preg_replace('/<img (.*?)src(.*?)(\/)?>/','<img $1src="/usr/themes/Miracles/images/loading/'.$load_image.'.gif" data-original$2 />',$text);
-		
+		    
+			//章节链接
+			$reg='/\<h([2-3])(.*?)\>(.*?)\<\/h.*?\>/s';
+            $text = preg_replace_callback($reg, array('Contents', 'parseHeaderCallback'), $text);
+			
 		    //气泡
 		    $text = preg_replace('/\[bubble\](.*?)\[\/bubble\]/s','<div class="bubble post-bubble"><div class="saying-content"><p>${1}</p></div></div>',$text);
 		
-		    //阴影
+		    //Text Color
 			$text = preg_replace('/\&\{\"(.*?)\"\|(.*?)\|(.*?)\}/s','<span style="color:${2};background:${3}">${1}</span>',$text);
 		    
 		    //ruby
@@ -43,7 +47,7 @@ class Contents
 		    $text = preg_replace('/\[tip type="(.*?)"\](.*?)\[\/tip\]/s','<div class="tip ${1}"><div class="container-fluid"><div class="row"><div class="col-1 tip-icon"><i class="iconfont icon-info"></i></div><div class="col-11 tip-content">${2}</div></div></div></div>',$text);
             //Tip Group
 		    $text = preg_replace('/\[tip\-group\](.*?)\[\/tip\-group\]/s','<div class="tip-group">${1}</div>',$text);
-
+            
 		    //解析友链盒子
 	        $reg = '/\[links\](.*?)\[\/links\]/s';
             $rp = '<div class="links-box container-fluid"><div class="row">${1}</div></div>';
@@ -74,6 +78,18 @@ class Contents
      * @param string $table 表名, 支持 contents, comments, metas, users
      * @return Widget_Abstract
      */
+	 
+	/**
+     * 为内容中的标题编号
+     */
+    static private $CurrentTocID = 0;
+    static public function parseHeaderCallback($matchs)
+    {
+        // 增加单独标记，否则冲突
+        $id = 'toc_'.(self::$CurrentTocID++);
+        return '<h'.$matchs[1].$matchs[2].' id="'.$id.'">'.$matchs[3].'<a href="#'.$id.'" title="章节链接" class="post-toc-link no-line"><i class="iconfont icon-paragraph"></i></a></h'.$matchs[1].'>';
+    }
+	
     public static function widgetById($table, $pkId)
     {
         $table = ucfirst($table);
