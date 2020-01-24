@@ -4,15 +4,14 @@ require_once("libs/Utils.php");
 require_once("libs/Contents.php");
 require_once("libs/Options.php");
 
-//指定时区
-date_default_timezone_set("Asia/Shanghai");
-
 /**
  * 注册文章解析 hook
  * From AlanDecode(https://imalan.cn)
  */
 Typecho_Plugin::factory('Widget_Abstract_Contents')->contentEx = array('Contents','parseContent');
 Typecho_Plugin::factory('Widget_Abstract_Contents')->excerptEx = array('Contents','parseContent');
+Typecho_Plugin::factory('admin/write-post.php')->bottom = array('Utils', 'addButton');
+Typecho_Plugin::factory('admin/write-page.php')->bottom = array('Utils', 'addButton');
 
 /**
  * 主题启用时执行的方法
