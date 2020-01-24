@@ -29,14 +29,6 @@ class Utils
     }
 
     /**
-     * 根据邮箱返回 Gravatar 头像链接
-     */
-    public static function gravatar($mail, $size = 64, $d = '')
-    {
-        return Typecho_Common::gravatarUrl($mail, $size, '', urlencode($d), true);
-    }
-
-    /**
      * 判断插件是否可用（存在且已激活）
      */
     public static function hasPlugin($name) 
@@ -71,14 +63,6 @@ class Utils
     }
 
     /**
-     * 判定电脑端微信内置浏览器
-     */
-    public static function isWeixin() 
-    {
-        return  !self::isMobile() && strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false; 
-    }
-
-    /**
      * 判定内容是否过时
      * 
      * @return array
@@ -92,72 +76,12 @@ class Utils
                     "created" => $created,
                     "updated" => $updated);
     }
-
-    /**
-     * 输出建站时间（最早一篇文章的写作时间）
+	
+	/**
+     * 编辑界面添加Button
      */
-    public static function getBuildTime()
-    {
-        date_default_timezone_set("Asia/Shanghai");
-        $db = Typecho_Db::get();
-        $content = $db->fetchRow($db->select()->from('table.contents')
-            ->where('table.contents.status = ?', 'publish')
-            ->where('table.contents.password IS NULL')
-            ->order('table.contents.created', Typecho_Db::SORT_ASC)
-            ->limit(1));
-        return $content['created'];
+    public static function addButton(){
+		echo '<link rel="stylesheet" href="/usr/themes/Miracles/assets/css/setting.miracles.css" />';
     }
 
-    /**
-     * 已发布文章数量
-     */
-    public static function getPostNum()
-    {
-        $db = Typecho_Db::get();
-        return $db->fetchObject($db->select(array('COUNT(cid)' => 'num'))
-            ->from('table.contents')
-            ->where('table.contents.type = ?', 'post')
-            ->where('table.contents.status = ?', 'publish'))->num;
-    }
-
-    /**
-     * 分类数量
-     */
-    public static function getCatNum()
-    {
-        $db = Typecho_Db::get();
-        return $db->fetchObject($db->select(array('COUNT(mid)' => 'num'))
-            ->from('table.metas')
-            ->where('table.metas.type = ?', 'category'))->num;
-    }
-
-    /**
-     * 标签数量
-     */
-    public static function getTagNum()
-    {
-        $db = Typecho_Db::get();
-        return $db->fetchObject($db->select(array('COUNT(mid)' => 'num'))
-            ->from('table.metas')
-            ->where('table.metas.type = ?', 'tag'))->num;
-    }
-
-    /**
-     * 总字数
-     * 
-     * @return int
-     */
-    public static function getWordCount()
-    {
-        $db = Typecho_Db::get();
-        $posts = $db->fetchAll($db->select('table.contents.text')
-                    ->from('table.contents')
-                    ->where('table.contents.type = ?', 'post')
-                    ->where('table.contents.status = ?', 'publish'));
-        $total = 0;
-        foreach ($posts as $post) {
-            $total = $total + mb_strlen(preg_replace("/[^\x{4e00}-\x{9fa5}]/u", "", $post['text']), 'UTF-8');
-        }
-        return $total;
-    }
 }
