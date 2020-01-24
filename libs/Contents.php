@@ -19,6 +19,8 @@ class Contents
         //由于实在没找到TE获取主题配置的相关函数，故只能用这种方法，吐了。
         $text = empty($last) ? $data : $last;
         if ($widget instanceof Widget_Archive) {
+			//a 标签新窗口打开
+			$text = preg_replace('/<a(.*?)>/s','<a${1} target="_blank">',$text);
             //Prism 高亮
             $text = preg_replace('/<pre><code>/s','<pre><code class="language-html">',$text);
 		    //FancyBox
