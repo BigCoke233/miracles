@@ -54,16 +54,8 @@
 	height: 50px;
 	width: 50px
 }
-.comment-author-info h4,.comment-author-info p {
-	margin: 0
-}
-.comment-author-info h4 {
-	font-size: 18px
-}
-.comment-author-info h4 a {
-	color: var(--theme-color)
-}
 .comment-author-info p {
+	margin: 0;
 	margin-top: 5px;
 	color: gray;
 	font-size: 15px

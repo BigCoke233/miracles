@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 /*
- * Themain CSS file for Miracles
+ * The main CSS file for Miracles
  * Author:  Eltrac
  * License: MIT
  */
@@ -18,7 +18,6 @@
 
 /* Varriable */
 :root {
-	--theme-color: #4D90FE;
 	--shadow-color: rgb(180,180,180);
 }
 
@@ -56,7 +55,7 @@
 ::-moz-selection,
 ::-webkit-selection,
 ::selection {
-	background-color: var(--theme-color)
+	background-color: #f1f1f1
 }
 /* Responsive Web design */
 .large-screen {

@@ -13,9 +13,7 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
-.dark-cover,
 .banner-mask {
-	/* .dark-cover 是旧版本遮罩的类名 */
 	width: 100%;
 	height: 100%;
 	background: rgba(30,30,30,.25);
@@ -91,13 +89,13 @@
 }
 .options-contentsize-button {
 	font-size: 14px;
+	padding: 10xp 15px;
 }
 .options-family button:hover {
 	background: rgb(244,244,244,0.96);
 }
 .options-button-active {
-	color: #fff;
-	background: var(--theme-color)!important;
+	background: #f1f1f1!important;
 }
 .options-theme-button.options-button-active {
 	border: 2px solid var(-theme-color);
