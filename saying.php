@@ -44,19 +44,15 @@ echo $commentClass;
     <main class="main-container container">
 	  <div class="saying-body">
 	    <?php if($this->user->hasLogin()): ?>
-	    <div class="saying-item">
-	      <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" role="form">
-            <div class="container-fluid"><div class="row">
-              <p class="col-md-12">
-                <textarea rows="8" cols="50" name="text" id="textarea" class="OwO-textarea comment-textarea textarea" required ><?php $this->remember('text'); ?></textarea>
-              </p>
-		    </div></div>
-			<p class="comment-submit col-md-12">
-              <button type="submit" class="submit"><?php _e('发表新鲜事'); ?></button>
-            </p>
-		  </form>
-		  <br>
-		</div>
+	    <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" class="saying-form" role="form">
+          <p>
+            <textarea rows="8" cols="50" name="text" id="textarea" placeholder="Anything interesting happening?" class="OwO-textarea comment-textarea textarea" required ><?php $this->remember('text'); ?></textarea>
+          </p>
+	      <p>
+            <button type="submit" class="comment-submit submit"><?php _e('发表新鲜事'); ?></button>
+          </p>
+		</form>
+		<br>
 		<?php endif; ?>
 	    <?php $this->comments()->to($comments); ?>
 	    <?php $comments->listComments(array(
