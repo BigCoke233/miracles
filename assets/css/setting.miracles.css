@@ -172,6 +172,10 @@ iframe.miracles-news {
 	border-radius: 0;
 }
 
+.wmd-button-row {
+	height: auto!important
+}
+
 @media (min-width:768px) {
 	.typecho-option-tabs {
 		margin-left: 122px;
