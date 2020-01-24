@@ -104,6 +104,17 @@
 	color: rgb(200,200,200);
 	font-size: 25px;
 }
+.post-toc-link {
+	color: gray;
+	opacity: 0;
+	transition: .3s;
+	margin-left: 10px;
+}
+.post-content h2:hover .post-toc-link,
+.post-content h3:hover .post-toc-link {
+	opacity: 1
+}
+
 /* >文章内容 */
 .post-content,
 .saying-inner {

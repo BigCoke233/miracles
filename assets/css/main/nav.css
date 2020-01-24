@@ -108,6 +108,16 @@
 	background: rgb(230,230,230);
 	cursor: pointer
 }
+.nav-slideUp {
+  -webkit-transform: translateY(-100px);
+  transform: translateY(-100px);
+  transition: transform .2s ease-out;
+}
+.nav-slideDown {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  transition: transform .2s ease-out;
+}    
 
 /* Drawer Nav */
 .drawer {
