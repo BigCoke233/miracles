@@ -5,7 +5,7 @@
  * 
  * @package     Miracles
  * @author      Eltrac
- * @version     1.3.0
+ * @version     1.3.2
  * @link        https://guhub.cn
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
