@@ -50,7 +50,7 @@ function themeConfig($form) {
 ?><a href="<?php Helper::options()->adminUrl('options-theme.php'); ?>">这里</a></div><script language="JavaScript">window.setTimeout("location=\'<?php Helper::options()->adminUrl('options-theme.php'); ?>\'", 2500);</script>
 <?php
     }else{
-      echo '<div class="miracles-backup-alert">不用删了！备份不存在！！！</div>';
+      echo '<div class="miracles-backup-alert">备份不存在！</div>';
     }
   }
 }
@@ -77,6 +77,14 @@ function themeConfig($form) {
 	/**
 	 *  设置项
 	 */
+	//Info
+	$bannerTitle = new Typecho_Widget_Helper_Form_Element_Text('bannerTitle', NULL, NULL, _t('<h2>站点信息 Information</h2>站点名称'), _t('输入你站点的名称，会显示在首页大图上'));
+    $form->addInput($bannerTitle);
+	$bannerIntro = new Typecho_Widget_Helper_Form_Element_Text('bannerIntro', NULL, NULL, _t('站点介绍'), _t('用一句话介绍你的站点，会显示在首页大图上'));
+    $form->addInput($bannerIntro);
+	$avatar = new Typecho_Widget_Helper_Form_Element_Text('avatar', NULL, NULL, _t('站长头像'), _t('输入一个图片 url 作为头像，若为空则调用 gravatar<hr>'));
+    $form->addInput($avatar);
+	 
     //nav
 	$navStyle = new Typecho_Widget_Helper_Form_Element_Select('navStyle',array('0'=>'顶部导航栏','1'=>'左侧抽屉栏'),'0','<h2>导航栏 Nav</h2>类型','选择导航栏的类型（若选择左侧抽屉蓝，则下一条设置失效）');
     $form->addInput($navStyle);
@@ -92,10 +100,6 @@ function themeConfig($form) {
     $form->addInput($bannerFont);
 	$bannerHeight = new Typecho_Widget_Helper_Form_Element_Text('bannerHeight', NULL, '60', _t('高度'), _t('首页大图所占屏幕的高度，100为最大，填入纯数字，如"35"'));
     $form->addInput($bannerHeight);
-	$bannerTitle = new Typecho_Widget_Helper_Form_Element_Text('bannerTitle', NULL, NULL, _t('标题'), _t('这里是首页大图显示的的标题'));
-    $form->addInput($bannerTitle);
-	$bannerIntro = new Typecho_Widget_Helper_Form_Element_Text('bannerIntro', NULL, NULL, _t('介绍'), _t('这里是首页大图标题下的简介<hr>'));
-    $form->addInput($bannerIntro);
 
 	//pjax
 	$pjax = new Typecho_Widget_Helper_Form_Element_Select('pjax',array('0'=>'关闭','1'=>'开启'),'1','<h2>Pjax 预加载</h2>是否开启','Pjax 预加载功能的开关');

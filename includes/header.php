@@ -131,7 +131,8 @@
 	      <button class="drawer-button" onclick="toggleDrawer();$('.options').addClass('ready');"><i class="iconfont icon-list"></i></button>
           <div class="drawer-header">
 	        <div class="drawer-avatar">
-		      <?php echo $this->author->gravatar(500); ?>
+		      <?php if($this->options->avatar==''): echo $this->author->gravatar(500);
+         	  else: ?><img src="<?php $this->options->avatar(); ?>"><?php endif; ?>
 		    </div>
 	      </div>
 		  <div class="drawer-content">

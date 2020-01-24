@@ -11,8 +11,9 @@ $this->need('includes/header.php');
 	  <div class="post-body">
 	    <br><br><br>
 	    <div class="about">
-		  <div class="about-avatar"><!-- 头像（调用 gravatar）-->
-		    <?php echo $this->author->gravatar(300); ?>
+		  <div class="about-avatar"><!-- 头像 -->
+		    <?php if($this->options->avatar==''): echo $this->author->gravatar(500);
+         	  else: ?><img src="<?php $this->options->avatar(); ?>"><?php endif; ?>
 			<?php if($this->fields->name==!''): ?>
 			<h2 class="about-name"><?php echo $this->fields->name(); ?></h2>
 			<?php endif; ?>
