@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg?style=flat-square">
   <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square">
   <img src="https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square">
-  <img src="https://img.shields.io/badge/version-1.2.4-red.svg?style=flat-square">
+  <img src="https://img.shields.io/badge/version-1.3.2-red.svg?style=flat-square">
 </p>
 <br>
 
@@ -85,6 +85,7 @@ $ git clone https://github.com/BigCoke233/miracles
 说明文档：[Wiki](https://github.com/BigCoke233/miracles/wiki)  
 更新日志：[change-log.md](docs/change-log.md)  
 更新计划：[plan.md](docs/plan.md)（包括已知的 Bug）  
+侵权网站：[black-list.md](docs/black-list.md)
 
 # 版权
 &copy; [Eltrac](https://github.com/BigCoke233) | Under MIT License
