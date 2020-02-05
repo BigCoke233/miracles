@@ -8,8 +8,8 @@
 
 ## 站点列表
 
-- https://blog.52-love.cn（修改主题页脚版权信息，目前无法访问）
-- http://liuqingwushui.top（删除主题页脚版权信息）
+- https://blog.52-love.cn （修改主题页脚版权信息，目前无法访问）
+- http://liuqingwushui.top （删除主题页脚版权信息）
 
 ## API
 我准备了一个储存违规站点信息的 json 文件，可以通过以下的链接调用，为以后的惩罚功能做准备（微笑
