@@ -1,7 +1,4 @@
 <p align="center">
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
   <img src="banner.jpg">
 </p>
 <p align="center">
@@ -10,6 +7,9 @@
   <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square">
   <img src="https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square">
   <img src="https://img.shields.io/badge/version-1.3.2-red.svg?style=flat-square">
+  <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+  <img src="https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square">
+  <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </p>
 <br>
 
@@ -105,6 +105,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://www.guhub.cn"><img src="https://avatars1.githubusercontent.com/u/45323514?v=4" width="100px;" alt=""/><br /><sub><b>Eltrac</b></sub></a><br /><a href="https://github.com/BigCoke233/miracles/commits?author=BigCoke233" title="Code">💻</a> <a href="#design-BigCoke233" title="Design">🎨</a> <a href="#ideas-BigCoke233" title="Ideas, Planning, & Feedback">🤔</a> <a href="#projectManagement-BigCoke233" title="Project Management">📆</a> <a href="https://github.com/BigCoke233/miracles/commits?author=BigCoke233" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://timewk.cn"><img src="https://avatars0.githubusercontent.com/u/8336596?v=4" width="100px;" alt=""/><br /><sub><b>时光</b></sub></a><br /><a href="https://github.com/BigCoke233/miracles/commits?author=outtimes" title="Code">💻</a> <a href="#ideas-outtimes" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
