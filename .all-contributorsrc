@@ -1,0 +1,27 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "BigCoke233",
+      "name": "Eltrac",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/45323514?v=4",
+      "profile": "https://www.guhub.cn",
+      "contributions": [
+        "code",
+        "design",
+        "ideas",
+        "projectManagement"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "miracles",
+  "projectOwner": "BigCoke233",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
