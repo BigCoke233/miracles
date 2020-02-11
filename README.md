@@ -15,7 +15,7 @@
 
 ---
 
-> **请下载 [Releases](https://github.com/BigCoke233/miracles/releases) 页面的最新发行包，使用前先看 [Wiki](https://github.com/BigCoke233/miracles/wiki)，wiki 有的问题一律不解答；禁止删除主题版权信息**<br>同时，主题的 Telegram 频道已开启，可以获取主题最新消息，推送作者博客更新，点此加入：[Miracles News](https://t.me/eltracer)<br>开放了一个议题，用于~~民主~~决策主题的更新方向，点击 [这里](https://github.com/BigCoke233/miracles/issues/17) 进入
+> **请下载 [Releases](https://github.com/BigCoke233/miracles/releases) 页面的最新发行包，使用前先看 [Wiki](http://mira.guhub.cn/)，wiki 有的问题一律不解答；禁止删除主题版权信息**<br>同时，主题的 Telegram 频道已开启，可以获取主题最新消息，推送作者博客更新，点此加入：[Miracles News](https://t.me/eltracer)<br>开放了一个议题，用于~~民主~~决策主题的更新方向，点击 [这里](https://github.com/BigCoke233/miracles/issues/17) 进入
 
 # 特色
 - 响应式 / 自适应设计
@@ -37,9 +37,9 @@
 # 使用
 1. 下载**最新的 [Release](https://github.com/BigCoke233/miracles/releases)**
 2. 解压后，**确认目录名为`Miracles`（M 大写）**
-3. 将文件夹放入Typecho根目录下的`usr/themes/`
+3. 将文件夹放入 Typecho 根目录下的`usr/themes/`
 4. 到后台启用主题
-5. **根据 wiki(可选)** 配置主题
+5. **根据 [wiki](http://mira.guhub.cn/)** 配置主题
 
 <details><summary>使用开发版</summary><br>
 
@@ -53,7 +53,7 @@ $ git clone https://github.com/BigCoke233/miracles
 
 <details><summary>遇到问题</summary><br>
 
-如果在使用过程中遇到了任何问题，可以先阅读本主题的[Wiki](https://github.com/BigCoke233/miracles/wiki)<br>
+如果在使用过程中遇到了任何问题，可以先阅读本主题的[Wiki](http://mira.guhub.cn/)<br>
 并进行一些简单的确认：清理浏览器缓存，更换网络环境，确保 Console 内没有提示访问不到文件等自身原因。<br>
 在确认你遇到的现象确实是一个 Bug 后，请在 [Issues](https://github.com/BigCoke233/miracles/issues) 提交问题<br>
 并为该问题尽可能的描述清楚，并提供一些有关信息。
@@ -87,7 +87,7 @@ $ git clone https://github.com/BigCoke233/miracles
 # 相关
 演示站点：[我的博客](https://guhub.cn) | 以及 Sponsor 中的站点链接  
 介绍文章：[Miracles —— 生为奇迹](https://guhub.cn/p/miracles.html)  
-说明文档：[Wiki](https://github.com/BigCoke233/miracles/wiki)  
+说明文档：[Wiki](http://mira.guhub.cn/)  
 更新日志：[change-log.md](docs/change-log.md)  
 更新计划：[plan.md](docs/plan.md)（包括已知的 Bug）  
 侵权网站：[black-list.md](docs/black-list.md)
