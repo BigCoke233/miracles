@@ -249,12 +249,14 @@
 .body-dark .search-close,
 .body-dark .search-form button,
 .body-darl .login a,
-.body-dark .alert,
 .body-dark .banner-content.banner-font-black,
 .body-dark .post-pagenav a,
 .body-dark .comment-submit,
 .body-dark .header-meta a  {
 	color:#fafafa!important
+}
+.body-dark .comment .cancel-comment-reply a {
+    color: #000000!important
 }
 .body-dark .options-theme-label {
 	color:#5a5a5a!important
