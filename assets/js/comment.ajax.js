@@ -1,109 +1,224 @@
 /**
  *  Ajax Comment
- *  半成品，还有报错，所以没有引用
+ *  Last Update: 2020/02/26
  */
-var replyTo = '';
-var bindButton = function() {
-    //绑定“评论回复”和“取消回复”的事件
-    $(".comment-reply a").click(
-        function () {
-            replyTo = $(this).parent().parent().parent().parent().parent().parent().attr("id");
-        }
-    );
-    $(".cancel-comment-reply a").click(function () { replyTo = ''; });
-}
-function commentCounts() {
-    //显示在评论区的评论数加一
-    var counts = parseInt($(".comment-title").text());
-    $(".comment-title").html($(".comment-title").html().replace(/\d+/, counts + 1));
+
+/**
+ * Tmp
+ */
+var dataTmp = {
+ comments: {}
 };
-function beforeSendComment() {
-    //发送前的一些处理
-    $(".comment-submit button").text("提交中");
-}
-function afterSendComment(ok) {
-    //发送后的处理
-    //清空replyTo变量，以及结束过渡动画、重新绑定回复按钮等等
-    //ok作为一个评论或失败的标志
- 
-    if (ok) {
-        $(".comment-textarea").val('');
-        replyTo = '';
+
+/**
+ * 评论部分
+ */
+var MiraclesComment = {
+ //评论核心函数
+ core: function() {
+  var commentID = $('.comment-box-id').attr('id');
+  window.TypechoComment = {
+   dom : function (id) {
+    return document.getElementById(id);
+   },
+    
+   create : function (tag, attr) {
+    var el = document.createElement(tag);
+        
+    for (var key in attr) {
+     el.setAttribute(key, attr[key]);
     }
-    bindButton();
-}
-//主体部分
-beforeSendComment();
-$("#comment-form").submit(function() {
-    //监听评论表单submit事件
-    var commentData = $(this).serializeArray(); //获取表单POST的数据
-    beforeSendComment();
-    $.ajax({
-        type: $(this).attr('method'),
-        url: $(this).attr('action'),
-        data: commentData,
-        error: function(e) {
-            //失败的处理
-            //这里比较随意，比如可以直接刷新页面
-            console.log('Ajax Comment Error');
-            window.location.realod();
-        },
-        success: function(data) {
-          if (!$('.comments', data).length) {
-            var msg = $('title').eq(0).text().trim().toLowerCase() === 'error' ? $('.container', data).eq(0).text() : '评论提交失败！';
-            alertSend(msg);
-            afterSendComment(false);
-            return false;
-          }
-        }
-    })
+
+    return el;
+   },
+
+   reply : function (cid, coid) {
+    var comment = this.dom(cid), parent = comment.parentNode,
+    response = this.dom(commentID), input = this.dom('comment-parent'),
+    form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+    textarea = response.getElementsByTagName('textarea')[0];
+
+    if (null == input) {
+     input = this.create('input', {
+      'type' : 'hidden',
+      'name' : 'parent',
+      'id'   : 'comment-parent'
+     });
+
+     form.appendChild(input);
+    }
+
+    input.setAttribute('value', coid);
+
+    if (null == this.dom('comment-form-place-holder')) {
+     var holder = this.create('div', {
+      'id' : 'comment-form-place-holder'
+     });
+
+     response.parentNode.insertBefore(holder, response);
+    }
+
+    comment.appendChild(response);
+    this.dom('cancel-comment-reply-link').style.display = '';
+
+    if (null != textarea && 'text' == textarea.name) {
+     textarea.focus();
+    }
+
     return false;
-});
-var newComment;
-/** 获取新评论的id */
-newCommentId = $(".comment-list", data).html().match(/id=\"?comment-\d+/g).join().match(/\d+/g).sort(function (a, b) { return a - b }).pop();
-if(replyTo === '') {
-        if(!$('.comment-list').length) {
-            //检查是否已有评论
-            newComment  = $("#li-comment-" + newCommentId, data);
-            //没有的话需要先嵌入评论列表的结构
-            //具体结构需要参照评论的模板而定，参照下图
-            $('.comment-title').after('<div class="comment-container"><ol class="comment-list"></ol></div>');
-            //插入评论
-            $('.comment-list').first().prepend((newComment).addClass('animated fadeInUp'));
-        }
-        else if($('.prev').length) {
-            //这里是当前评论不在第一页的情况
-            //所以这里可以进行比如跳转到第一页的操作，当然也可以进行别的操作
-            $('.comment-pagenav ul li a').eq(1).click();
-        }
-        else {
-            //当前页面直接在最前面插入评论
-            newComment  = $("#li-comment-" + newCommentId, data);
-            $('.comment-list').first().prepend((newComment).addClass('animated fadeInUp'));
-        }
-        //页面滑动到评论列表头部
-        $('html,body').animate({scrollTop:$('.comment-title').offset().top - 100},1000);
+   },
+
+   cancelReply : function () {
+    var response = this.dom(commentID),
+    holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+    if (null != input) {
+     input.parentNode.removeChild(input);
     }
-else {
-    //取数据
-    newComment = $("#li-comment-" + newCommentId, data);
-    //处理子级评论
-    if ($('#' + replyTo).find('.comment-children').length) {
-        //当前父评论已经有嵌套的结构
-        //直接插入新的评论
-        $('#' + replyTo + ' .comment-children .comment-list').first().prepend((newComment).addClass('animated fadeInUp'));
-        TypechoComment.cancelReply();
+
+    if (null == holder) {
+     return true;
     }
-    else {
-        //当前父评论没有嵌套的结构
-        //先构建嵌套的结构再进插入子评论
-        //插入的结构视模板具体情况而定
-        $('#' + replyTo).append('<div class="comment-children"><ol class="comment-list"></ol></div>');
-        $('#' + replyTo + ' .comment-children .comment-list').first().prepend((newComment).addClass('animated fadeInUp'));
-        TypechoComment.cancelReply();
+
+    this.dom('cancel-comment-reply-link').style.display = 'none';
+    holder.parentNode.insertBefore(response, holder);
+    return false;
+   }
+  };
+ },
+
+ //提交评论
+ submitComment: function() {
+  //如果获取不到评论提交 URL 则终止
+  if(!$('.comment-box-id').attr('data-commentUrl')) { return false; }
+
+  /* ===== 检查是否完整 =====*/
+  if (!$('#comment-form #textarea').val()) {
+   alertSend('请填写评论内容！');
+   return false;
+  }
+
+  if ($('#comment-form .comment-input #author').length && !$('#comment-form .comment-input #author').val()) {
+   alertSend('请填写您的昵称！');
+   return false;
+  }
+
+  //评论前需要做的事情
+  function beforeComment() {
+   //禁用按钮
+   $('#comment-form .comment-submit').attr('disabled', true);
+  };
+  beforeComment();
+
+  //评论后需要做的事情
+  function afterComment(status) {
+   //取消禁用评论按钮
+   $('#comment-form .comment-submit').removeAttr('disabled');
+
+   //判断是否评论成功
+   if(status) {
+    //如果成功
+    alertSend('<span style="color:#00897B">评论提交成功！</span>');
+    //清空被回复 ID
+    dataTmp.comments.replyTo = '';
+   }else{
+    //如果失败
+    alertSend('<span style="color:#FF5252">评论提交失败！</span>');
+   }
+
+   //无论是否成功都要重新绑定回复按钮 ID
+   MiraclesComment.bindReplyBtn();
+  }
+
+  //AJAX 提交
+  $.ajax({
+   type: 'POST',
+   url: $('.comment-box-id').attr('data-commentUrl'),
+   data: $('#comment-form').serialize(),
+   success: function(data) {
+    var data = $("<body></body>").append($(data));
+    var $html = $("title", data); //返回的内容
+    
+    //评论成功
+    if ($html.html() != 'Error') {
+     $('#comment-form #textarea').val(''); //清空评论框
+     
+     //获取新评论 ID
+     if (data.html()) {
+      dataTmp.comments.NewID = $(".comment-list", data).html().match(/id=\"?comment-\d+/g).join().match(/\d+/g).sort(function (a, b) { return a - b }).pop();
+     }else{
+      alertSend('<span style="color:#FF5252">评论失败！<br>原因：[提交失败，请刷新页面]</span>');
+      return false;
+     }
+
+     console.log(dataTmp.comments.replyTo);
+
+     //如果是父评论
+     if('' === dataTmp.comments.replyTo) {
+      if(!$('.comment-list').length) {
+       //检查是否已有评论
+       //如果没有先插入评论列表基本结构
+       dataTmp.comments.NewComment = $("#comment-" + dataTmp.comments.NewID, data);
+       $('.comment').prepend('<div class="comment-container"><h3 class="comment-title" id="response">已有 0 条评论</h3><div class="comment-list"></div></div>');
+       $('.comment .comment-list').first().prepend((dataTmp.comments.NewComment).addClass('comment-animation-fadein'));
+      } else if($('.prev').length) {
+       //如果不在第一页
+       $('.comment-pagenav li a').eq(1).click();
+      } else {
+       //当前在第一页
+       dataTmp.comments.NewComment = $("#comment-" + dataTmp.comments.NewID, data);
+       $('.comment .comment-list').first().prepend((dataTmp.comments.NewComment).addClass('comment-animation-fadein'));
+      }
+
+     } else {
+      //如果是子评论
+      dataTmp.comments.NewComment = $("#comment-" + dataTmp.comments.NewID, data);
+
+      if ($('#'+dataTmp.comments.replyTo).find('.comment-children').length) {
+       //当前父评论已经有嵌套的结构
+       //直接插入新的评论
+       $('#'+ dataTmp.comments.replyTo +' .comment-children .comment-list').first().prepend((dataTmp.comments.NewComment).addClass('comment-animation-fadein'));
+       TypechoComment.cancelReply();
+      } else {
+       //当前父评论没有嵌套的结构
+       //先构建嵌套的结构再进插入子评论
+       $('#'+ dataTmp.comments.replyTo).append('<div class="comment-children"><div class="comment-list"></div></div>');
+       $('#'+ dataTmp.comments.replyTo +' .comment-children .comment-list').first().prepend((dataTmp.comments.NewComment).addClass('comment-animation-fadein'));
+       TypechoComment.cancelReply();
+      }
+     }
+
+     //评论数量增加
+     if (/\d+/.test($('.comment .comment-container .comment-title').text())) {
+      var counts = parseInt($('.comment .comment-container .comment-title').text().replace(/[^0-9]/ig,""));
+      $('.comment .comment-container .comment-title').html($('.comment .comment-container .comment-title').html().replace(/\d+/, counts + 1));
+     }
+
+     //评论后需要处理的事情
+     afterComment(true);
+    }else{
+     //评论失败
+     afterComment(false);
     }
-}
-commentCounts();
-afterSendComment(true);
-alertSend("评论提交成功！");
+   }
+  });
+ },
+
+ //为回复/取消回复按钮绑定事件
+ bindReplyBtn: function() {
+  //如果评论列表不存在
+  if(!$('.comment').length) { return false; }
+  //初始化被回复评论变量
+  dataTmp.comments.replyTo = '';
+
+  for(let i=0; i<$(".comment-reply a").length; ++i) {
+   $(".comment-reply a")[i].addEventListener('click', function() {
+    dataTmp.comments.replyTo = $(this).parent().parent().parent().parent().parent().attr("id");
+   });
+  }
+ }
+};
+
+//执行
+MiraclesComment.core();
+MiraclesComment.bindReplyBtn();

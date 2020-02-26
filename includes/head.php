@@ -37,7 +37,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content<?php echo $banner; ?>" />
 	<link rel="icon" type="image/png" href="<?php Utils::indexTheme('favicon.ico'); ?>" />
-    <?php $this->header('description=&'); ?>
+    <?php $this->header('description=&commentReply='); ?>
 	<?php $this->options->headerEcho(); ?>
 	<!-- css -->
     <?php

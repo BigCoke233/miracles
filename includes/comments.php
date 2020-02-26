@@ -9,7 +9,7 @@
     } 
     $commentLevelClass = $comments->_levels > 0 ? ' comment-child' : ' comment-parent';  //评论层数大于0为子级，否则是父级
 ?>
-<div id="li-<?php $comments->theId(); ?>" class="comment-body<?php 
+<div id="<?php $comments->theId(); ?>" class="comment-body<?php 
 if ($comments->_levels > 0) {
     echo ' comment-child';
     $comments->levelsAlt(' comment-level-odd', ' comment-level-even');
@@ -49,7 +49,7 @@ echo $commentClass;
     <?php if($this->fields->commentShow == 0)://如果显示评论列表 ?>
         <?php if ($comments->have())://如果有评论 则显示 ?>
 		<div class="comment-container">
-		  <h3 class="comment-title" id="response"><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></h3>
+		  <h3 class="comment-title" id="response"><?php $this->commentsNum(_t('暂无评论'), _t('已有 1 条评论'), _t('已有 %d 条评论')); ?></h3>
           <?php $comments->listComments(array(
             'before'        =>  '<div class="comment-list">',
             'after'         =>  '</div>',
@@ -69,7 +69,7 @@ echo $commentClass;
 		<div class="comment-form">
 		  <!-- 判断设置是否允许对当前文章进行评论 -->
     <?php if($this->allow('comment')): ?>
-          <div id="<?php $this->respondId(); ?>" class="respond">
+          <div id="<?php $this->respondId(); ?>" class="respond comment-box-id" data-commentUrl="<?php $this->commentUrl() ?>">
             <div class="cancel-comment-reply">
               <?php $comments->cancelReply(); ?>
             </div>
@@ -95,7 +95,7 @@ echo $commentClass;
              </p>
 			  <p class="comment-submit-box">
 			    <div title="OwO" class="OwO"></div>
-                <button type="submit" class="comment-submit submit"><?php _e('评论'); ?></button>
+                <button type="submit" onclick="return MiraclesComment.submitComment();" class="comment-submit submit"><?php _e('评论'); ?></button>
               </p>
              </form>
             </div>

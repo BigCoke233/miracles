@@ -33,6 +33,7 @@
     beforePjax = function() {NProgress.start();};
 	afterPjax = function() {owoLoad();<?php $this->options->pjax_complete(); ?>};<?php endif; ?></script>
 	<!-- Script that must be after-->
+	<script src="<?php Utils::indexTheme('assets/js/comment.ajax.js'); ?>"></script>
 	<script src="<?php Utils::indexTheme('assets/js/miracles.min.js'); ?>"></script>
 	<!-- BuildTime -->
 	<script>

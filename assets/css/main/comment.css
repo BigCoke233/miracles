@@ -258,3 +258,34 @@
 	text-align: center;
 	margin-top: 60px;
 }
+
+/* ===== 从左到右淡入 ===== */
+@keyframes fadein {
+  0% {
+   opacity: 0;
+   transform: translateX(5vh);
+  }
+
+  100% {
+   opacity: 1;
+   transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+   opacity: 0;
+   transform: translateX(5vh);
+  }
+
+  100% {
+   opacity: 1;
+   transform: translateX(0);
+  }
+}
+
+.comment-animation-fadein {
+	animation: fadein;
+	animation-duration: 0.3s;
+	-webkit-animation: fadein 0.3s;
+}
