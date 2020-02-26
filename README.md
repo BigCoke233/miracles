@@ -1,34 +1,24 @@
-# Theme Miracles
+# Theme Miracles ![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square) ![](https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg?style=flat-square) ![](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square) ![](https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square) ![](https://img.shields.io/badge/version-1.3.2-red.svg?style=flat-square)
+
 > :dizzy: Born to see the Miracles!
 
-![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square) 
-![](https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg?style=flat-square) 
-![](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square) 
-![](https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square) 
-![](https://img.shields.io/badge/version-1.3.2-red.svg?style=flat-square)
-
-记录你心中的奇迹，书写你自己的篇章。
-
----
-
-> **请下载 [Releases](https://github.com/BigCoke233/miracles/releases) 页面的最新发行包，使用前先看 [Wiki](http://mira.guhub.cn/)，wiki 有的问题一律不解答；禁止删除主题版权信息**
+记录你心中的奇迹，书写你自己的篇章；人生的路漫长而曲折，但路途中总会有奇迹。
 
 ## 特色
 - 响应式 / 自适应设计
 - Pjax 全站无刷新
 - 支持系统切换夜间模式
-- 阅读调整字号 / 思源系列字体
+- 良好的阅读体验
 - 前台登录 / 快捷后台通道
 - 图片懒加载（多种加载动画供选择）
 - 代码高亮 / 行号
-- 两种可供选择的导航栏（顶部导航栏 / 侧边栏）
+- 两种可供选择的导航栏
 - 灵活的友情链接功能
 - 方便排版的短代码
 - 后台设置备份
 - 文章浏览数 / 字数统计
 - 简约大气的设计
 - 一个完善的 wiki（强调）
-- More to find
 
 ## 使用
 1. 下载**最新的 [Release](https://github.com/BigCoke233/miracles/releases)**
@@ -39,7 +29,7 @@
 
 <details><summary>使用开发版</summary><br>
 
-直接下载仓库，或者使用 git 命令行进行克隆
+直接下载仓库，或者使用 git 命令行进行克隆。
 ```git
 $ git clone https://github.com/BigCoke233/miracles
 ```
@@ -49,10 +39,8 @@ $ git clone https://github.com/BigCoke233/miracles
 
 <details><summary>遇到问题</summary><br>
 
-如果在使用过程中遇到了任何问题，可以先阅读本主题的[Wiki](http://mira.guhub.cn/)<br>
-并进行一些简单的确认：清理浏览器缓存，更换网络环境，确保 Console 内没有提示访问不到文件等自身原因。<br>
-在确认你遇到的现象确实是一个 Bug 后，请在 [Issues](https://github.com/BigCoke233/miracles/issues) 提交问题<br>
-并为该问题尽可能的描述清楚，并提供一些有关信息。
+如果在使用过程中遇到了任何问题，可以先阅读本主题的[Wiki](http://mira.guhub.cn/)，并进行一些简单的确认：清理浏览器缓存，更换网络环境，确保 Console 内没有提示访问不到文件等自身原因。  
+在确认你遇到的现象确实是一个 Bug 后，请在 [Issues](https://github.com/BigCoke233/miracles/issues) 提交问题，并为该问题尽可能的描述清楚，按照提供的 issue 模板进行填写，谢谢配合。
 
 </details>
 
