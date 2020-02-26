@@ -1,23 +1,20 @@
+# Theme Miracles
+![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square) 
+![](https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg?style=flat-square) 
+![](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square) 
+![](https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square) 
+![](https://img.shields.io/badge/version-1.3.2-red.svg?style=flat-square)
+
+
 <p align="center">
-  <img src="banner.jpg">
+  <img src="https://cdn.jsdelivr.net/gh/BigCoke233/image-hosting/blog-post-banners/miracles.jpg">
 </p>
-<p align="center">
-  <img src="https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square">
-  <img src="https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg?style=flat-square">
-  <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square">
-  <img src="https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square">
-  <img src="https://img.shields.io/badge/version-1.3.2-red.svg?style=flat-square">
-  <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-  <img src="https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square">
-  <!-- ALL-CONTRIBUTORS-BADGE:END -->
-</p>
-<br>
 
 ---
 
-> **请下载 [Releases](https://github.com/BigCoke233/miracles/releases) 页面的最新发行包，使用前先看 [Wiki](http://mira.guhub.cn/)，wiki 有的问题一律不解答；禁止删除主题版权信息**<br>同时，主题的 Telegram 频道已开启，可以获取主题最新消息，推送作者博客更新，点此加入：[Miracles News](https://t.me/eltracer)<br>开放了一个议题，用于~~民主~~决策主题的更新方向，点击 [这里](https://github.com/BigCoke233/miracles/issues/17) 进入
+> **请下载 [Releases](https://github.com/BigCoke233/miracles/releases) 页面的最新发行包，使用前先看 [Wiki](http://mira.guhub.cn/)，wiki 有的问题一律不解答；禁止删除主题版权信息**
 
-# 特色
+## 特色
 - 响应式 / 自适应设计
 - Pjax 全站无刷新
 - 支持系统切换夜间模式
@@ -34,7 +31,7 @@
 - 一个完善的 wiki（强调）
 - More to find
 
-# 使用
+## 使用
 1. 下载**最新的 [Release](https://github.com/BigCoke233/miracles/releases)**
 2. 解压后，**确认目录名为`Miracles`（M 大写）**
 3. 将文件夹放入 Typecho 根目录下的`usr/themes/`
@@ -60,10 +57,10 @@ $ git clone https://github.com/BigCoke233/miracles
 
 </details>
 
-# 鸣谢
+## 鸣谢
 > 这些都是在开发过程中给予我帮助的项目和大佬！
 
-## 开源项目
+### 开源项目
 - [jQuery](https://github.com/jquery/jquery)（若干开源项目和主题内一些 js 的前置）
 - [FancyBox](https://github.com/fancyapps/fancybox)（文章图片灯箱）
 - [Highlight.js](https://github.com/highlightjs/highlight.js)（代码高亮）
@@ -74,8 +71,8 @@ $ git clone https://github.com/BigCoke233/miracles
 - [LazyLoad](https://github.com/tuupola/lazyload)（图片懒加载）
 - [Pangu.js](https://github.com/vinta/pangu.js)（分割中英文字符）
 
-## 大佬
-常提交 Pull Requests 的大佬：
+### 大佬
+提交有价值 Pull Requests 协助开发的大佬：
 - [@outtimes](https://github.com/outtimes)（时光）
 
 在我需要帮助时给予回应的大佬：
@@ -84,7 +81,7 @@ $ git clone https://github.com/BigCoke233/miracles
 - [@gfwyuexia](https://github.com/gfwyuexia)（枂下）
 - [@jrotty](https://github.com/jrotty)（泽泽）
 
-# 相关
+## 相关
 演示站点：[我的博客](https://guhub.cn) | 以及 Sponsor 中的站点链接  
 介绍文章：[Miracles —— 生为奇迹](https://guhub.cn/p/miracles.html)  
 说明文档：[Wiki](http://mira.guhub.cn/)  
@@ -92,5 +89,6 @@ $ git clone https://github.com/BigCoke233/miracles
 更新计划：[plan.md](docs/plan.md)（包括已知的 Bug）  
 侵权网站：[black-list.md](docs/black-list.md)
 
-# 版权
+---
+
 Copyright &copy; 2019-2020 [Eltrac](https://github.com/BigCoke233), under MIT License
