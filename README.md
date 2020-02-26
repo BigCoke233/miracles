@@ -1,14 +1,13 @@
 # Theme Miracles
+> :dizzy: Born to see the Miracles!
+
 ![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square) 
 ![](https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg?style=flat-square) 
 ![](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square) 
 ![](https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square) 
 ![](https://img.shields.io/badge/version-1.3.2-red.svg?style=flat-square)
 
-
-<p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/BigCoke233/image-hosting/blog-post-banners/miracles.jpg">
-</p>
+记录你心中的奇迹，书写你自己的篇章。
 
 ---
 
