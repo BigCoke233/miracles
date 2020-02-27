@@ -6,7 +6,9 @@
 > 这里记录已在制作却未发布的更新内容
 
 - 增加：Ajax 评论无刷新（Done by [ohmyga](https://github.com/ohmyga233)）
-- 优化：取消回复按钮样式（Done by [ohmyga](https://github.com/ohmyga233)）
+- 优化：重写 alert 提示框样式
+- 优化：取消首页大图背景色设置项
+- 优化：卡片阴影减淡
 - 修复：回复时评论框不跟随（Done by [ohmyga](https://github.com/ohmyga233)）
 - 修复：夜间模式下 alert 提示框配色错误（Done by [ohmyga](https://github.com/ohmyga233)）
 
