@@ -118,12 +118,12 @@ var MiraclesComment = {
    //判断是否评论成功
    if(status) {
     //如果成功
-    alertSend('<span style="color:#00897B">评论提交成功！</span>');
+    alertSend('评论提交成功！', 'success');
     //清空被回复 ID
     dataTmp.comments.replyTo = '';
    }else{
     //如果失败
-    alertSend('<span style="color:#FF5252">评论提交失败！</span>');
+    alertSend('评论提交失败！', 'failed');
    }
 
    //无论是否成功都要重新绑定回复按钮 ID
