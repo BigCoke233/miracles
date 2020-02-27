@@ -18,7 +18,7 @@
 
 /* Varriable */
 :root {
-	--shadow-color: rgb(180,180,180);
+	--shadow-color: rgb(190,190,190);
 }
 
 /* Icon Font */
@@ -38,18 +38,19 @@
 }
 /* ScrollBar */
 ::-webkit-scrollbar {
-	width: 9px;
+	width: 6px;
 	height: 5px
 }
 ::-webkit-scrollbar-button {
 	display: none
 }
 ::-webkit-scrollbar-thumb {
-	background: rgb(150,150,150);
-	border-radius: 3px
+	background: rgb(120,120,120);
+	border-radius: 2px;
+	transition: .2s
 }
 ::-webkit-scrollbar-thumb:hover {
-	background: gray
+	background: rgb(100,100,100)
 }
 /* Selection */
 ::-moz-selection,
@@ -362,7 +363,7 @@
 	.post-list,
     .post-body,
     .saying-body {
-	    margin-top: -134px
+	    margin-top: -110px
     }
 	.links-container {
 	    padding: 12px;
@@ -482,7 +483,7 @@
 	.post-list,
     .post-body,
 	.saying-body {
-	    margin-top: -140px
+	    margin-top: -125px
     }
 	.links-container {
 	    padding: 15px;

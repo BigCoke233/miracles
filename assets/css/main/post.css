@@ -12,13 +12,13 @@
 	transition: .8s;
 }
 .post-item {
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 .post-body,.post-item,.saying-item,#comment-form {
 	background: #fff;
-	box-shadow: 0 0 36px var(--shadow-color);
-	-moz-box-shadow: 0 0 36px var(--shadow-color);
-	-webkit-box-shadow: 0 0 36px var(--shadow-color);
+	box-shadow: 0 2px 10px var(--shadow-color);
+	-moz-box-shadow: 0 2px 10px var(--shadow-color);
+	-webkit-box-shadow: 0 2px 10px var(--shadow-color);
 	transition: background .1s
 }
 .post-banner-box {
