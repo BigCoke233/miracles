@@ -94,8 +94,6 @@ function themeConfig($form) {
 	//index-banner
 	$bannerUrl = new Typecho_Widget_Helper_Form_Element_Text('bannerUrl', NULL, 'https://s2.ax1x.com/2019/07/10/ZcRGX8.png', _t('<h2>首页大图 Banner</h2>图片 Url'), _t('首页大图的图片地址'));
     $form->addInput($bannerUrl);
-	$bannerColor = new Typecho_Widget_Helper_Form_Element_Text('bannerColor', NULL, NULL, _t('背景色'), _t('填写 16 进制颜色代码或 rgb 值，方便某些懒得找图的懒人（比如我就是！）'));
-    $form->addInput($bannerColor);
     $bannerFont = new Typecho_Widget_Helper_Form_Element_Select('bannerFont',array('0'=>'白色','1'=>'黑色'),'0','字体颜色','为了兼容不同的底色和背景色');
     $form->addInput($bannerFont);
 	$bannerHeight = new Typecho_Widget_Helper_Form_Element_Text('bannerHeight', NULL, '60', _t('高度'), _t('首页大图所占屏幕的高度，100为最大，填入纯数字，如"35"'));
