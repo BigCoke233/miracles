@@ -144,7 +144,8 @@
 	color: rgb(150,150,150)
 }
 /* 评论按钮 */
-.comment-submit {
+.comment-submit,
+.cancel-comment-reply a {
 	display: inline-block;
 	margin: 0;
 	border-radius: 4px;
@@ -162,12 +163,9 @@
 	background: rgb(227,227,227)
 }
 .cancel-comment-reply a {
-	margin: 5px 1px;
-	background: #fff;
-	color: #000;
-	border-radius: 4px;
-	border: 1px solid #ddd;
-	padding: 2px 3px;
+    margin-left: 5px;
+	background: #DD4B39;
+	color: #fff!important
 }
 /* OwO */
 .owo-img {
@@ -257,6 +255,9 @@
 #response {
 	text-align: center;
 	margin-top: 60px;
+}
+.respond {
+	margin: 10px 0;
 }
 
 /* ===== 从左到右淡入 ===== */

@@ -130,9 +130,9 @@
 .body-dark .post-item,
 .body-dark .post-pagenav a,
 .body-dark #comment-form {
-	box-shadow:0 0 36px #323232;
-	-moz-box-shadow:0 0 36px #323232;
-	-webkit-box-shadow:0 0 36px #323232
+	box-shadow:0 1px 10px #323232;
+	-moz-box-shadow:0 1px 10px #323232;
+	-webkit-box-shadow:0 1px 10px #323232
 }
 .body-dark .gotop-button,
 .body-dark .links-item,
@@ -252,11 +252,11 @@
 .body-dark .banner-content.banner-font-black,
 .body-dark .post-pagenav a,
 .body-dark .comment-submit,
-.body-dark .header-meta a  {
+.body-dark .header-meta a,
+.body-dark .alert,
+.body-dark .respond input,
+.body-dark .respond textarea  {
 	color:#fafafa!important
-}
-.body-dark .comment .cancel-comment-reply a {
-    color: #000000!important
 }
 .body-dark .options-theme-label {
 	color:#5a5a5a!important
