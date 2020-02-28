@@ -32,7 +32,13 @@ echo $commentClass;
 	    </div>
 		<p class="comment-meta">
 		  <span class="comment-author"><?php $comments->author(); ?></span>
-		  <span class="comment-date"><?php $comments->date('Y-m-d H:i'); ?></span>
+		  <span class="comment-date">
+		    <?php if ('waiting' == $comments->status) { ?>
+            <em class="comment-waiting">您的评论正在等待审核！</em>
+            <?php } else { ?>
+		    <?php $comments->date('Y-m-d H:i'); ?>
+			<?php } ?>
+		  </span>
 		</p>
 	  </div>
 	</div>
@@ -70,10 +76,6 @@ echo $commentClass;
 		  <!-- 判断设置是否允许对当前文章进行评论 -->
     <?php if($this->allow('comment')): ?>
           <div id="<?php $this->respondId(); ?>" class="respond comment-box-id" data-commentUrl="<?php $this->commentUrl() ?>">
-            <div class="cancel-comment-reply">
-              <?php $comments->cancelReply(); ?>
-            </div>
-
 <!-- 输入表单开始 -->
            <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" role="form">
 <!-- 如果当前用户已经登录 -->
@@ -95,6 +97,7 @@ echo $commentClass;
              </p>
 			  <p class="comment-submit-box">
 			    <div title="OwO" class="OwO"></div>
+				<div class="cancel-comment-reply"><?php $comments->cancelReply(); ?></div>
                 <button type="submit" onclick="return MiraclesComment.submitComment();" class="comment-submit submit"><?php _e('评论'); ?></button>
               </p>
              </form>
