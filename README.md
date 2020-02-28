@@ -1,4 +1,6 @@
-# Theme Miracles ![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square) ![](https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg?style=flat-square) ![](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square) ![](https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square) ![](https://img.shields.io/badge/version-1.3.2-red.svg?style=flat-square)
+![](https://cdn.jsdelivr.net/gh/BigCoke233/miracles/banner.jpg)
+
+# ![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square) ![](https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg?style=flat-square) ![](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square) ![](https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square) ![](https://img.shields.io/badge/version-1.3.2-red.svg?style=flat-square)
 
 > :dizzy: Born to see the Miracles!
 
@@ -41,6 +43,12 @@ $ git clone https://github.com/BigCoke233/miracles
 
 如果在使用过程中遇到了任何问题，可以先阅读本主题的[Wiki](http://mira.guhub.cn/)，并进行一些简单的确认：清理浏览器缓存，更换网络环境，确保 Console 内没有提示访问不到文件等自身原因。  
 在确认你遇到的现象确实是一个 Bug 后，请在 [Issues](https://github.com/BigCoke233/miracles/issues) 提交问题，并为该问题尽可能的描述清楚，按照提供的 issue 模板进行填写，谢谢配合。
+
+</details>
+
+<details><summary>关于版权</summary><br>
+
+主题基于 MIT 协议开源，使用或转发时**请保留版权信息**，禁止倒卖。若需二次开发后发布，请邮件通知我`hi#guhub.cn`，并保留原作者版权信息及仓库链接。同时，如果发现有侵权行为，请告知我，屡教不改者将被列入[黑名单](docs/black-list.md)，在后期可能会加入删除版权网站设置项失效的惩罚。
 
 </details>
 
