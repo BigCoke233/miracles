@@ -73,16 +73,16 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 ### 大佬
 提交有价值 Pull Requests 协助开发的大佬：
-- [@outtimes](https://github.com/outtimes)（时光）
+- [@outtimes](https://github.com/outtimes)
+- [@ohmyga233](https://github.com/ohmyga233)
 
 在我需要帮助时给予回应的大佬：
-- [@ohmyga233](https://github.com/ohmyga233)（ohmyga）
-- [@AlanDecode](https://github.com/AlanDecode)（熊猫小 A）
-- [@gfwyuexia](https://github.com/gfwyuexia)（枂下）
-- [@jrotty](https://github.com/jrotty)（泽泽）
+- [@AlanDecode](https://github.com/AlanDecode)
+- [@gfwyuexia](https://github.com/gfwyuexia)
+- [@jrotty](https://github.com/jrotty)
 
 ## 相关
-演示站点：[我的博客](https://guhub.cn) | 以及 Sponsor 中的站点链接  
+演示站点：[我的博客](https://guhub.cn)  |  以及 Sponsor 中的站点链接  
 介绍文章：[Miracles —— 生为奇迹](https://guhub.cn/p/miracles.html)  
 说明文档：[Wiki](http://mira.guhub.cn/)  
 更新日志：[change-log.md](docs/change-log.md)  
@@ -91,4 +91,4 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 ---
 
-Copyright &copy; 2019-2020 [Eltrac](https://github.com/BigCoke233), under MIT License
+Copyright &copy; 2019-2020 [Eltrac](https://github.com/BigCoke233), released under MIT License
