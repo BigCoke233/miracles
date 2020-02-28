@@ -38,7 +38,7 @@
 
 直接下载仓库，或者使用 git 命令行进行克隆。
 ```git
-$ git clone https://github.com/BigCoke233/miracles
+$ git clone https://github.com/BigCoke233/miracles.git
 ```
 > 不推荐使用开发版，因为可能有不确定的不稳定因素，并且不一定有有利改动<br>如果你使用开发版出现任何问题，欢迎通过 issue 反馈，在等待回复期间请使用发行版
 
