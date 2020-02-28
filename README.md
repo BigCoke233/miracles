@@ -7,11 +7,9 @@
 <a href="https://typecho.org"><img src="https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square"></a> 
 <a href="https://github.com/BigCoke233/miracles/releases"<img src="https://img.shields.io/badge/version-1.3.2-red.svg?style=flat-square"></a> 
 <a href="https://github.com/BigCoke233/miracles/graphs/contributors"><img src="https://img.shields.io/github/contributors/BigCoke233/miracles?color=orange&style=flat-square"></a>
-</p>
+<p align="center"><strong>记录你心中的奇迹，书写你自己的篇章</strong></p>
 
-> :dizzy: Born to see the Miracles!
-
-记录你心中的奇迹，书写你自己的篇章。
+---
 
 ## 特色
 - 响应式 / 自适应设计
