@@ -1,6 +1,13 @@
 ![](banner.jpg)
 
-# ![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square) ![](https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg?style=flat-square) ![](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square) ![](https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square) ![](https://img.shields.io/badge/version-1.3.2-red.svg?style=flat-square)
+<p align="center">
+<img src="https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square"> 
+<img src="https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg?style=flat-square"> 
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square"></a> 
+<a href="https://typecho.org"><img src="https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square"></a> 
+<a href="https://github.com/BigCoke233/miracles/releases"<img src="https://img.shields.io/badge/version-1.3.2-red.svg?style=flat-square"></a> 
+<a href="https://github.com/BigCoke233/miracles/graphs/contributors"><img src="https://img.shields.io/github/contributors/BigCoke233/miracles?color=orange&style=flat-square"></a>
+</p>
 
 > :dizzy: Born to see the Miracles!
 
