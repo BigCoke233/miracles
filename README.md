@@ -1,10 +1,10 @@
-![](https://cdn.jsdelivr.net/gh/BigCoke233/miracles/banner.jpg)
+![](banner.jpg)
 
 # ![](https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square) ![](https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg?style=flat-square) ![](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square) ![](https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square) ![](https://img.shields.io/badge/version-1.3.2-red.svg?style=flat-square)
 
 > :dizzy: Born to see the Miracles!
 
-记录你心中的奇迹，书写你自己的篇章；人生的路漫长而曲折，但路途中总会有奇迹。
+记录你心中的奇迹，书写你自己的篇章。
 
 ## 特色
 - 响应式 / 自适应设计
