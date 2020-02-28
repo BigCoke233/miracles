@@ -3,12 +3,14 @@
  *  Last Update: 2020/02/26
  */
 
+
 /**
  * Tmp
  */
 var dataTmp = {
  comments: {}
 };
+
 
 /**
  * 评论部分
@@ -21,10 +23,10 @@ var MiraclesComment = {
    dom : function (id) {
     return document.getElementById(id);
    },
-    
+
    create : function (tag, attr) {
     var el = document.createElement(tag);
-        
+
     for (var key in attr) {
      el.setAttribute(key, attr[key]);
     }
@@ -47,7 +49,6 @@ var MiraclesComment = {
 
      form.appendChild(input);
     }
-
     input.setAttribute('value', coid);
 
     if (null == this.dom('comment-form-place-holder')) {
@@ -75,11 +76,11 @@ var MiraclesComment = {
     if (null != input) {
      input.parentNode.removeChild(input);
     }
-
+	
     if (null == holder) {
      return true;
     }
-
+	
     this.dom('cancel-comment-reply-link').style.display = 'none';
     holder.parentNode.insertBefore(response, holder);
     return false;
@@ -94,12 +95,12 @@ var MiraclesComment = {
 
   /* ===== 检查是否完整 =====*/
   if (!$('#comment-form #textarea').val()) {
-   alertSend('请填写评论内容！', failed);
+   alertSend('请填写评论内容！', 'failed');
    return false;
   }
 
   if ($('#comment-form .comment-input #author').length && !$('#comment-form .comment-input #author').val()) {
-   alertSend('请填写您的昵称！', failed);
+   alertSend('请填写您的昵称！', 'failed');
    return false;
   }
 
@@ -119,13 +120,13 @@ var MiraclesComment = {
    if(status) {
     //如果成功
     if ($('.comment-waiting').length) {
-      alertSend('评论提交成功，正在等待审核！');
+      alertSend('评论提交成功，正在等待审核！', 'success');
     }else{
-      alertSend('评论提交成功！');
-    }
+      alertSend('评论提交成功！', 'success');
+    } 
     //清空被回复 ID
     dataTmp.comments.replyTo = '';
-   }else {
+   }else{
     //如果失败
     alertSend('评论提交失败！', 'failed');
    }
@@ -142,16 +143,16 @@ var MiraclesComment = {
    success: function(data) {
     var data = $("<body></body>").append($(data));
     var $html = $("title", data); //返回的内容
-    
+
     //评论成功
     if ($html.html() != 'Error') {
      $('#comment-form #textarea').val(''); //清空评论框
-     
+
      //获取新评论 ID
      if (data.html()) {
       dataTmp.comments.NewID = $(".comment-list", data).html().match(/id=\"?comment-\d+/g).join().match(/\d+/g).sort(function (a, b) { return a - b }).pop();
      }else{
-      alertSend('评论失败！请刷新页面]', 'failed');
+      alertSend('评论失败！请刷新页面', 'failed');
       return false;
      }
 
@@ -176,7 +177,7 @@ var MiraclesComment = {
 
      } else {
       //如果是子评论
-      dataTmp.comments.NewComment = $("#comment-" + dataTmp.comments.NewID);
+      dataTmp.comments.NewComment = $("#comment-" + dataTmp.comments.NewID, data);
 
       if ($('#'+dataTmp.comments.replyTo).find('.comment-children').length) {
        //当前父评论已经有嵌套的结构
@@ -225,4 +226,4 @@ var MiraclesComment = {
 
 //执行
 MiraclesComment.core();
-MiraclesComment.bindReplyBtn();
+MiraclesComment.bindReplyBtn(); 
