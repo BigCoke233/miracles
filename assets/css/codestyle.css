@@ -3,18 +3,7 @@
 Atom One Dark by Daniel Gamage
 Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
 
-base:    #282c34
-mono-1:  #abb2bf
-mono-2:  #818896
-mono-3:  #5c6370
-hue-1:   #56b6c2
-hue-2:   #61aeee
-hue-3:   #c678dd
-hue-4:   #98c379
-hue-5:   #e06c75
-hue-5-2: #be5046
-hue-6:   #d19a66
-hue-6-2: #e6c07b
+edited by Eltrac
 
 */
 
@@ -25,7 +14,13 @@ hue-6-2: #e6c07b
   background: rgb(45,45,45)!important;
   font-family: 'Noto Sans SC',sans-serif!important;
   font-size: 0.8em!important;
-  max-height: 800px;
+  padding: 0!important;
+  margin: 0!important;
+  max-height: 90vh;
+}
+
+.hljs::-webkit-scrollbar-corner {
+	background: transparent
 }
 
 .hljs table,
@@ -33,6 +28,7 @@ hue-6-2: #e6c07b
 .hljs td {
 	border: none!important;
 	background: rgb(45,45,45);
+	line-height: 1.45
 }
 
 .hljs tr:first-child hljs-line {
@@ -48,6 +44,8 @@ hue-6-2: #e6c07b
 	padding: 0!important;
 	width: 30px!important;
 	text-align: center!important;
+	margin-left: 0!important;
+	color: rgb(200,200,200)
 }
 
 .hljs-ln-code {
