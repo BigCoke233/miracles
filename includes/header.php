@@ -42,68 +42,13 @@
 		  <p>&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->SiteUrl(); ?>"><?php $this->options->title(); ?></a> | Theme <a href="https://github.com/BigCoke233/miracles">Miracles</a></p>
 		</div>
 	  </div>
-	  <!-- 前台设置 -->
-	  <div class="options ready<?php if($this->options->navStyle==1): ?> options-with-drawer<?php endif; ?>">
-	    <!-- 字体设置 -->
-	    <div class="options-content">
-	      <div class="options-family container-fluid">
-		    <div class="row">
-			  <div class="col-6 options-family-serif">
-			    <button onclick="ChangeToSerif()" class="<?php if($this->options->bodyFonts && $this->options->bodyFonts=1): ?>options-button-active <?php endif; ?>options-family-button options-serif-button body-serif">Serif</button>
-			  </div>
-			  <div class="col-6 options-family-sans">
-			    <button onclick="ChangeToSansSerif()" class="<?php if($this->options->bodyFonts && $this->options->bodyFonts=1): ?><?php else: ?>options-button-active <?php endif; ?>options-family-button options-sans-button" style="font-family: 'Noto Sans SC',sans-serif">Sans Serif</button>
-			  </div>
-		    </div>
-		  </div>
-	    </div>
-		<hr>
-		<!-- 滤镜/模式设置 -->
-		<div class="options-content">
-		  <div class="options-themes container-fluid">
-		    <div class="row">
-			  <div class="col-4 options-theme-item">
-			    <button class="options-theme-button options-theme-dark" onclick="Dark()"></button>
-				<span class="options-theme-label">黑夜模式</span>
-			  </div>
-			  <div class="col-4 options-theme-item">
-			    <button class="options-theme-button options-theme-sepia" onclick="Sepia()"></button>
-				<span class="options-theme-label">日落滤镜</span>
-			  </div>
-		      <div class="col-4 options-theme-item">
-			    <button class="options-theme-button options-theme-normal" onclick="Gray()"></button>
-				<span class="options-theme-label">黑白滤镜</span>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<hr>
-		<div class="options-content">
-		  <div class="options-contentsize container-fluid">
-		    <div class="row">
-			  <div class="col-3 options-contentsize-small">
-			    <button class="options-sizesmall options-contentsize-button options-button-active" onclick="SizeSmall()">100%</button>
-			  </div>
-			  <div class="col-3 options-contentsize-normal">
-			    <button class="options-sizenormal options-contentsize-button" onclick="SizeNormal()">125%</button>
-			  </div>
-			  <div class="col-3 options-contentsize-big">
-			    <button class="options-sizebig options-contentsize-button" onclick="SizeBig()">140%</button>
-			  </div>
-			  <div class="col-3 options-contentsize-large">
-			    <button class="options-sizelarge options-contentsize-button" onclick="SizeLarge()">180%</button>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </div>
 	  <!-- -小屏幕导航 -->
 	  <nav class="small-screen nav nav-mobile nav-fixed"<?php if($this->options->navStyle==1): ?> style="display:none!important"<?php endif; ?> id="navBarMobile">
         <div class="nav-mobile-content">
 		  <a href="<?php $this->options->SiteUrl(); ?>" style="float:left"><i class="iconfont icon-xuanzhongshangcheng"></i></a>
 		  <a id="search-open-mobile" style="float:left"><i class="iconfont icon-chaxun"></i></a>
 		  <a id="login-open-mobile" style="float:left"><i class="iconfont icon-user"></i></a>
-		  <a id="toggle-options-mobile" style="float:left"><i class="iconfont icon-settings"></i></a>
+		  <a id="toggle-dark-mobile" style="float:left"><i class="iconfont icon-moon"></i></a>
 		  <a id="toggle-mobile-menu-button" style="float:right">MENU <i class="iconfont icon-list"></i></a>
 		</div>
 	  </nav>
@@ -121,7 +66,7 @@
 		  </p>
 		  <button class="nav-icon-button search-button" id="search-open-button"><i class="iconfont icon-chaxun"></i></button>
 		  <button class="nav-icon-button login-button" id="login-open"><i class="iconfont icon-user"></i></button>
-		  <button class="nav-icon-button setting-button" id="toggle-options-button"><i class="iconfont icon-settings"></i></button>
+		  <button class="nav-icon-button setting-button" id="toggle-dark-button"><i class="iconfont icon-moon"></i></button>
 		</div>
 	  </nav>
 	  <?php elseif($this->options->navStyle==1): ?>
@@ -144,7 +89,7 @@
 		<div class="drawer-footer">
 		  <button class="drawer-icon" id="search-open-button" onclick="toggleDrawer"><i class="iconfont icon-chaxun"></i></button>
 		  <button class="drawer-icon" id="login-open" onclick="toggleDrawer()"><i class="iconfont icon-user"></i></button>
-          <button class="drawer-icon" id="toggle-options-button"><i class="iconfont icon-settings"></i></button>
+          <button class="drawer-icon" id="toggle-dark-button"><i class="iconfont icon-moon"></i></button>
 		</div>
 	  </div></nav>
 	  <?php endif; ?>
