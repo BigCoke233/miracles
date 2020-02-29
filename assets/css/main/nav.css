@@ -28,6 +28,9 @@
 .nav-aero .nav-icon-button {
 	background: rgba(255,255,255,0.1);
 }
+.nav-aero .nav-icon-button:hover {
+	background: rgba(255,255,255,0.3);
+}
 
 .nav-content {
 	margin: 0;
@@ -40,6 +43,15 @@
 	overflow-y: hidden;
 	position: relative;
 }
+
+.nav-font-white {
+	color: #fff;
+}
+
+.nav-font-black {
+	color: #000!important
+}
+
 .nav-aero.nav-font-white .nav-content a,
 .nav-aero.nav-font-white .nav-mobile-content a{
     color: #FFFFFF;

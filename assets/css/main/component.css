@@ -141,24 +141,29 @@ button {
 /* Bubble */
 .bubble {
     position: relative;
-    background: var(--theme-color);
+    background: #f1f1f1;
 	border-radius: 2px;
 	padding: 0;
-	color: white;
+	color: #000;
 	display: inline-block;
 	min-width: 180px;
 	transition: all 0.3s;
 }
-.bubble:before{
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 0;
-    right: 100%;
-    top: 8px;
-    border-top: 8px solid transparent;
-    border-right: 16px solid var(--theme-color);
-    border-bottom: 8px solid transparent;
+.bubble::before{
+    content: '';
+	position: absolute;
+	right: 100%;
+	top: 18px;
+	width: 0;
+	height: 0;
+	border-radius: 2px;
+	border-width: 9px;
+	border-style: solid;
+	border-color: transparent;
+	margin-bottom: -14px;
+	border-right-width: 18px;
+	border-right-color: currentColor;
+	color: #f1f1f1;
 }
 .bubble:hover {
 	transform: translateY(-6px);

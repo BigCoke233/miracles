@@ -38,6 +38,14 @@
 	color: black!important;
 }
 
+/* Font Size */
+.post-content,
+.comment-content p,
+.banner-content,
+.nav-content {
+	font-size: 100%!important;
+}
+
 /* Footer */
 .footer-info {
 	background: #f0f0f0;
@@ -49,6 +57,8 @@
 	line-height: 26px;
 	width: 100%;
 	font-size: 12px;
+	font-size: 15px;
+	line-height: 18px;
 }
 .footer-dark a {
 	color: #000
