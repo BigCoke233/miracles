@@ -1,7 +1,7 @@
 <?php
 /**
  * Born to be the Miracles. 生为奇迹
- * 作者：<a href="https://guhub.cn">Eltrac</a> | 帮助文档：<a href="https://github.com/BigCoke233/miracles/wiki">GitHub Wiki</a>
+ * 作者：<a href="https://guhub.cn">Eltrac</a> | 帮助文档：<a href="https://mira.guhub.cn">GitHub Wiki</a>
  * 
  * @package     Miracles
  * @author      Eltrac
