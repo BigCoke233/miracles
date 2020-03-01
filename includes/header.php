@@ -20,8 +20,8 @@
 		<?php else: ?>
 	    <form action="<?php $this->options->loginAction(); ?>" id="login-form" method="post" name="login" role="form" class="login-form">
 		  <h1>登录后台</h1>
-          <input type="text" name="name" autocomplete="username" placeholder="请输入用户名" required/>
-          <input type="password" name="password" autocomplete="current-password" placeholder="请输入密码" required/>
+          <input type="text" name="name" autocomplete="username" placeholder="请输入用户名" required />
+          <input type="password" name="password" autocomplete="current-password" placeholder="请输入密码" required />
           <input type="hidden" name="referer" value="<?php 
             if($this->is('index')) $this->options->siteUrl();
             else $this->permalink();
@@ -42,6 +42,7 @@
 		  <p>&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->SiteUrl(); ?>"><?php $this->options->title(); ?></a> | Theme <a href="https://github.com/BigCoke233/miracles">Miracles</a></p>
 		</div>
 	  </div>
+
 	  <!-- -小屏幕导航 -->
 	  <nav class="small-screen nav nav-mobile nav-fixed"<?php if($this->options->navStyle==1): ?> style="display:none!important"<?php endif; ?> id="navBarMobile">
         <div class="nav-mobile-content">
@@ -97,11 +98,11 @@
 	  <header>
 	    <!-- Banner -->
 	    <?php if($this->is('post') || $this->is('page')): ?>
-		<div class="index-banner" style="background-position:center!important;<?php if($this->fields->banner && $this->fields->banner=!''): ?>background-image:url('<?php $this->fields->banner(); ?>') no-repeat;<?php endif; ?>height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;">
+		<div class="index-banner" style="background-position:center;<?php if($this->fields->banner && $this->fields->banner=!''): ?>background:url('<?php $this->fields->banner(); ?>') no-repeat;<?php else: ?>background-color:<?php $this->options->bannerColor(); ?>;<?php endif; ?>height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;">
         <?php elseif($this->is('archive')): ?>
-		<div class="index-banner" style="height:<?php $this->options->bannerHeight(); ?>vh;background-position:center!important;background-image:url<?php if($this->options->bannerUrl!=''): echo $this->options->bannerUrl(); endif; ?>">
+		<div class="index-banner" style="height:<?php $this->options->bannerHeight(); ?>vh;background-position:center;background-color:<?php $this->options->bannerColor(); ?>;<?php if($this->options->bannerUrl!=''): echo $this->options->bannerUrl(); endif; ?>">
 		<?php else: ?>
-	    <div class="index-banner" style="background-position:center;background-image:url('<?php $this->options->bannerUrl(); ?>') no-repeat;height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;">
+	    <div class="index-banner" style="background-position:center;background:url('<?php $this->options->bannerUrl(); ?>') no-repeat;height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;background-color:<?php $this->options->bannerColor(); ?>">
 		<?php endif; ?>
 		  <!-- 遮罩 -->
 		  <div class="banner-mask"<?php if($this->is('post') || $this->is('page')):?><?php if($this->fields->banner==''):?> style="background:rgba(0,0,0,0)!important"<?php endif;?><?php endif; ?><?php if($this->is('index')):?><?php if($this->options->bannerUrl && $this->options->bannerUrl=!''): ?><?php else:?> style="background:rgba(0,0,0,0)!important"<?php endif;?><?php endif;?>>
