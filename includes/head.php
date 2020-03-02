@@ -35,7 +35,7 @@
     <meta name="twitter:title" content="<?php Contents::title($this); ?>" />
     <meta name="twitter:description" content="<?php if($description != '') echo $description; else $this->excerpt(50); ?>" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:image" content<?php echo $banner; ?>" />
+    <meta name="twitter:image" content="<?php echo $banner; ?>" />
 	<link rel="icon" type="image/png" href="<?php Utils::indexTheme('favicon.ico'); ?>" />
     <?php $this->header('description=&commentReply='); ?>
 	<?php $this->options->headerEcho(); ?>
