@@ -7,8 +7,8 @@
 /* Top Nav */
 .nav {
 	background: rgba(255,255,255,0.86);
-	backdrop-filter: blur(18px);
-	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
 	width: 100%;
 	position: absolute;
 	box-shadow: 0 0 20px #ddd;
