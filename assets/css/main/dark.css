@@ -96,9 +96,18 @@
 }
 .body-dark .login,
 .body-dark .mobile-menu,
-.body-dark .search {
+.body-dark .search,
+.body-dark .bangumi-des {
 	background:rgba(90,90,90,.95)
 }
+/* Bangumi */
+.body-dark .bangumi-progress {
+	background: gray
+}
+.body-dark .bangumi-progress-bar {
+    background: rgb(180,180,180)
+}
+
 /* Others */
 .body-dark .post-meta a {
 	color: gray!important

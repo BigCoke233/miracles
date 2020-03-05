@@ -163,3 +163,58 @@
 .saying-form {
 	margin-bottom: -10px!important;
 }
+
+/* bangumi 追番 */
+.bangumi-item {
+	padding-top: 0;
+	padding-bottom: 0;
+	border: none;
+}
+.bangumi-link {
+	padding: 12px;
+	border: none
+}
+.bangumi-banner {
+    position: relative;
+	overflow: hidden
+}
+.bangumi-banner img {
+	width: 100%
+}
+.bangumi-des {
+    position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(255,255,255,0.8);
+	padding: 6px;
+	opacity: 0;
+	transition: .3s;
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	overflow: auto
+}
+.bangumi-des p {
+	margin: 0
+}
+.bangumi-banner:hover .bangumi-des {
+	opacity: 1
+}
+.bangumi-title {
+	border: none!important;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.bangumi-progress, .bangumi-progress-bar {
+	border-radius: 4px;
+	height: 8px
+}
+.bangumi-progress {
+	background: #ddd
+}
+.bangumi-progress-bar {
+    background: gray
+}
