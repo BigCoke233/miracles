@@ -31,7 +31,7 @@ echo $commentClass;
 		  <?php getCommentHF($comments->coid); $comments->content(); ?>
 	    </div>
 		<p class="comment-meta">
-		  <span class="comment-author"><?php $comments->author(); ?></span>
+		  <span class="comment-author"><a href="<?php echo $comments->url; ?>" target="_blank"><?php echo $comments->author; ?></a></span>
 		  <span class="comment-date">
 		    <?php if ('waiting' == $comments->status) { ?>
             <em class="comment-waiting">您的评论正在等待审核！</em>
