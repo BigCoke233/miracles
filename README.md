@@ -83,11 +83,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 提交有价值 Pull Requests 协助开发的大佬：
 - [@outtimes](https://github.com/outtimes)
 - [@ohmyga233](https://github.com/ohmyga233)
-
-在我需要帮助时给予回应的大佬：
-- [@AlanDecode](https://github.com/AlanDecode)
-- [@gfwyuexia](https://github.com/gfwyuexia)
-- [@jrotty](https://github.com/jrotty)
+- [@kengwang](https://github.com/kengwang)
 
 ## 相关
 演示站点：[我的博客](https://guhub.cn)  |  以及 Sponsor 中的站点链接  
