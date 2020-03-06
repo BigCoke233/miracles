@@ -6,7 +6,8 @@
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square"></a> 
 <a href="https://typecho.org"><img src="https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square"></a> 
 <a href="https://github.com/BigCoke233/miracles/releases"<img src="https://img.shields.io/badge/version-1.3.2-red.svg?style=flat-square"></a> 
-<a href="https://github.com/BigCoke233/miracles/graphs/contributors"><img src="https://img.shields.io/github/contributors/BigCoke233/miracles?color=orange&style=flat-square"></a>
+<a href="https://github.com/BigCoke233/miracles/graphs/contributors"><img src="https://img.shields.io/github/contributors/BigCoke233/miracles?color=orange&style=flat-square"></a> 
+<a href="https://github.com/BigCoke233/miracles/releases"><img src="https://img.shields.io/badge/version-1.4.0-red?style=flat-square"></a>
 <p align="center"><strong>记录你心中的奇迹，书写你自己的篇章</strong></p>
 
 ---
@@ -14,24 +15,34 @@
 ## 特色
 - 响应式 / 自适应设计
 - Pjax 全站无刷新
+- Ajax 评论无刷新
 - 支持系统切换夜间模式
-- 良好的阅读体验
-- 前台登录 / 快捷后台通道
-- 图片懒加载（多种加载动画供选择）
+- 调用 bilibili API 显示追番页面
+- 前台登录
+- 图片懒加载
 - 代码高亮 / 行号
-- 两种可供选择的导航栏
+- 不错的兼容性
+    - 夜间模式下的 Pio 插件按钮样式
+    - 夜间模式下的 Aplayer 播放器
+    - Bilibili 外链长宽比例
+- 较高的自定义性能
+- 良好的阅读体验
+    - 阅读时长估计
+    - 字数统计
+    - 两种可供选择的字体（思源宋体/黑体）
+- 不错的自定义性能
+    - 两种可供选择的导航栏
+    - 多种图片懒加载动画供选择
+    - 黑白滤镜（哀悼模式）
 - 灵活的友情链接功能
 - 方便排版的短代码
 - 后台设置备份
-- 文章浏览数 / 字数统计
-- 简约大气的设计
-- 一个完善的 wiki（强调）
 
 ## 使用
 1. 下载**最新的 [Release](https://github.com/BigCoke233/miracles/releases)**
 2. 解压后，**确认目录名为`Miracles`（M 大写）**
 3. 将文件夹放入 Typecho 根目录下的`usr/themes/`
-4. 到后台启用主题
+4. 到后台-外观-可用的主题中，启用主题
 5. **根据 [wiki](http://mira.guhub.cn/)** 配置主题
 
 <details><summary>使用开发版</summary><br>
@@ -43,14 +54,12 @@ $ git clone https://github.com/BigCoke233/miracles.git
 > 不推荐使用开发版，因为可能有不确定的不稳定因素，并且不一定有有利改动<br>如果你使用开发版出现任何问题，欢迎通过 issue 反馈，在等待回复期间请使用发行版
 
 </details>
-
 <details><summary>遇到问题</summary><br>
 
 如果在使用过程中遇到了任何问题，可以先阅读本主题的[Wiki](http://mira.guhub.cn/)，并进行一些简单的确认：清理浏览器缓存，更换网络环境，确保 Console 内没有提示访问不到文件等自身原因。  
 在确认你遇到的现象确实是一个 Bug 后，请在 [Issues](https://github.com/BigCoke233/miracles/issues) 提交问题，并为该问题尽可能的描述清楚，按照提供的 issue 模板进行填写，谢谢配合。
 
 </details>
-
 <details><summary>关于版权</summary><br>
 
 主题基于 MIT 协议开源，使用或转发时**请保留版权信息**，禁止倒卖。若需二次开发后发布，请邮件通知我`hi#guhub.cn`，并保留原作者版权信息及仓库链接。同时，如果发现有侵权行为，请告知我，屡教不改者将被列入[黑名单](docs/black-list.md)，在后期可能会加入删除版权网站设置项失效的惩罚。
