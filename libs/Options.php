@@ -88,15 +88,15 @@ function themeConfig($form) {
     //nav
 	$navStyle = new Typecho_Widget_Helper_Form_Element_Select('navStyle',array('0'=>'顶部导航栏','1'=>'左侧抽屉栏'),'0','<h2>导航栏 Nav</h2>类型','选择导航栏的类型（若选择左侧抽屉蓝，则下一条设置失效）');
     $form->addInput($navStyle);
-	$navAero = new Typecho_Widget_Helper_Form_Element_Select('navAero',array('0'=>'是','1'=>'否'),'0','顶部透明','视口处于最顶部时，顶部导航栏是否变为透明');
+	$navAero = new Typecho_Widget_Helper_Form_Element_Select('navAero',array('0'=>'是','1'=>'否'),'0','顶部透明','视口处于最顶部时，顶部导航栏是否变为透明<hr>');
     $form->addInput($navAero);
 	
 	//index-banner
-	$bannerUrl = new Typecho_Widget_Helper_Form_Element_Text('bannerUrl', NULL, 'https://s2.ax1x.com/2019/07/10/ZcRGX8.png', _t('<h2>首页大图 Banner</h2>图片 Url'), _t('首页大图的图片地址'));
+	$bannerUrl = new Typecho_Widget_Helper_Form_Element_Text('bannerUrl', NULL, NULL, _t('<h2>首页大图 Banner</h2>图片 Url'), _t('首页大图的图片地址'));
     $form->addInput($bannerUrl);
     $bannerFont = new Typecho_Widget_Helper_Form_Element_Select('bannerFont',array('0'=>'白色','1'=>'黑色'),'0','字体颜色','为了兼容不同的底色和背景色');
     $form->addInput($bannerFont);
-	$bannerHeight = new Typecho_Widget_Helper_Form_Element_Text('bannerHeight', NULL, '60', _t('高度'), _t('首页大图所占屏幕的高度，100为最大，填入纯数字，如"35"'));
+	$bannerHeight = new Typecho_Widget_Helper_Form_Element_Text('bannerHeight', NULL, '60', _t('高度'), _t('首页大图所占屏幕的高度，100为最大，填入纯数字，如"35"<hr>'));
     $form->addInput($bannerHeight);
 
 	//pjax
@@ -131,7 +131,7 @@ function themeConfig($form) {
     $buildTime = new Typecho_Widget_Helper_Form_Element_Text('build_time', NULL, NULL, _t('在页脚输出建站至今时间'), _t('填写格式如 2020-01-01 的时间，将输出在站点信息之前，不想开启请留空。'));
     $form->addInput($buildTime);
     //AnimeFace
-    $AnimeFace = new Typecho_Widget_Helper_Form_Element_Text('anime_face', NULL, NULL, _t('在其之后输出一个蹦跶的颜文字'), _t('如果开启了建站时间将会输出在其之后，反之会输出在站点信息之后。在此写上你想展示的颜文字，多个颜文字用"&&"分割，每次刷新更换。如不想开启请留空。'));
+    $AnimeFace = new Typecho_Widget_Helper_Form_Element_Text('anime_face', NULL, NULL, _t('在其之后输出一个蹦跶的颜文字'), _t('如果开启了建站时间将会输出在其之后，反之会输出在站点信息之后。在此写上你想展示的颜文字，多个颜文字用"&&"分割，每次刷新更换。如不想开启请留空。<hr>'));
     $form->addInput($AnimeFace);
 
 	//developer
