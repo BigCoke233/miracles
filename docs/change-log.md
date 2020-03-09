@@ -1,16 +1,25 @@
 # 更新日志
 这里是 Miracles 主题的更新日志，每个发行版以及开发版的更新内容都会在这里记录，历史版本以及最新版本的下载请到 [Releases](https://github.com/BigCoke233/miracles/releases) 页面，若在使用中有任何问题，请在 issues 中提出或 Pull requests，感谢！
 
-## Ver.Pre-log
+## Ver.1.4.0 Smooth
 
-> 这里记录已在制作却未发布的更新内容
-
-- 增加：Ajax 评论无刷新（Done by [ohmyga](https://github.com/ohmyga233)）
-- 优化：重写 alert 提示框样式
-- 优化：取消首页大图背景色设置项
+- 增加：Ajax 评论无刷新（Done by ohmyga）
+- 增加：增加：追番页面（Done by kengwang, styled by Eltrac）
+- 优化：alertSend() 样式更改
+- 优化：取消首页大图背景色设置
 - 优化：卡片阴影减淡
-- 修复：回复时评论框不跟随（Done by [ohmyga](https://github.com/ohmyga233)）
-- 修复：夜间模式下 alert 提示框配色错误（Done by [ohmyga](https://github.com/ohmyga233)）
+- 优化：取消回复按钮样式
+- 优化：移除前台设置面板
+- 优化：移除夜间模式在 PHP 层的判断
+- 优化：细化顶部导航毛玻璃效果
+- 优化：评论人链接新窗口打开
+- 优化：全站外部链接新窗口打开
+- 修复：后台哀悼模式失效
+- 修复：评论框不跟随（Done by ohmyga）
+- 修复：夜间模式下评论框文字黑色
+- 修复：评论区气泡尖角缺失
+- 修复：代码块左侧多余边距
+- 修复：Twitter 分享图片未定义
 
 ## Ver.1.3.2 Jesus!
 - 增加：章节链接
