@@ -16,11 +16,8 @@ class Contents
         $db=Typecho_Db::get();
         $load_image = $db->fetchAll($db->select('value')->from('table.options')->where('name = %s', "theme:Miracles")->limit(1));
         $load_image = explode("\";",explode("\"",explode("\"loading_image\";",$load_image[0]["value"],2)[1],2)[1],2)[0];
-        //由于实在没找到TE获取主题配置的相关函数，故只能用这种方法，吐了。
         $text = empty($last) ? $data : $last;
         if ($widget instanceof Widget_Archive) {
-			//a 标签新窗口打开
-			$text = preg_replace('/<a(.*?)>/s','<a${1} target="_blank">',$text);
             //Prism 高亮
             $text = preg_replace('/<pre><code>/s','<pre><code class="language-html">',$text);
 		    //FancyBox
@@ -36,7 +33,7 @@ class Contents
 		    $text = preg_replace('/\[bubble\](.*?)\[\/bubble\]/s','<div class="bubble post-bubble"><div class="saying-content"><p>${1}</p></div></div>',$text);
 		
 		    //Text Color
-			$text = preg_replace('/\&\{\"(.*?)\"\|(.*?)\|(.*?)\}/s','<span style="color:${2};background:${3}">${1}</span>',$text);
+			$text = preg_replace('/\&\{(.*?)\|(.*?)\|(.*?)\}/s','<span style="color:${2};background:${3}">${1}</span>',$text);
 		    
 		    //ruby
 			$reg = '/\{\{(.*?):(.*?)\}\}/s';
