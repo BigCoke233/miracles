@@ -16,12 +16,13 @@ Typecho_Plugin::factory('admin/write-page.php')->bottom = array('Utils', 'addBut
 /**
  * 主题启用时执行的方法
  */
-function themeInit() {
+function themeInit($archive) {
     Helper::options()->commentsAntiSpam = false;//关闭反垃圾
 	Helper::options()->commentsHTMLTagAllowed = '<a href=""> <img src=""> <img src="" class=""> <code> <del>';
     Helper::options()->commentsMaxNestingLevels = '9999';//最大嵌套层数
     Helper::options()->commentsPageDisplay = 'first';//强制评论第一页
     Helper::options()->commentsOrder = 'DESC';//将最新的评论展示在前
+	Helper::options()->commentsCheckReferer = false;//关闭检查评论来源URL与文章链接是否一致判断(否则会无法评论)
 }
 
 /**
