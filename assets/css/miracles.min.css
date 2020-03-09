@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 /*
- * Themain CSS file for Miracles
+ * The main CSS file for Miracles
  * Author:  Eltrac
  * License: MIT
  */
@@ -18,8 +18,7 @@
 
 /* Varriable */
 :root {
-	--theme-color: #4D90FE;
-	--shadow-color: rgb(180,180,180);
+	--shadow-color: rgb(190,190,190);
 }
 
 /* Icon Font */
@@ -39,24 +38,25 @@
 }
 /* ScrollBar */
 ::-webkit-scrollbar {
-	width: 9px;
+	width: 6px;
 	height: 5px
 }
 ::-webkit-scrollbar-button {
 	display: none
 }
 ::-webkit-scrollbar-thumb {
-	background: rgb(150,150,150);
-	border-radius: 3px
+	background: rgb(120,120,120);
+	border-radius: 2px;
+	transition: .2s
 }
 ::-webkit-scrollbar-thumb:hover {
-	background: gray
+	background: rgb(100,100,100)
 }
 /* Selection */
 ::-moz-selection,
 ::-webkit-selection,
 ::selection {
-	background-color: var(--theme-color)
+	background-color: #f1f1f1
 }
 /* Responsive Web design */
 .large-screen {
@@ -80,6 +80,11 @@
 }
 /* > Pad and up */
 @media (min-width:768px) {
+	.header-meta-line-one,
+    .header-meta-line-two {
+	    display: inline-block!important
+	}
+	
 	.post-share .iconfont {
 		font-size: 30px;
 	}
@@ -201,6 +206,10 @@
 		padding-bottom: 25px!important;
 	}
 	
+	#comment-form {
+		padding: 36px;
+	}
+	
 	.post-footer {
 		padding: 36px;
 	}
@@ -247,6 +256,9 @@
 		right: 20px;
         left: auto;
 	}
+	.tip-icon {
+	    display: block
+    }
 }
 /* Desktop and up */
 @media (min-width:992px) {
@@ -322,6 +334,10 @@
 		padding-bottom: 30px!important;
 	}
 	
+	#comment-form {
+		padding: 48px;
+	}
+	
 	.post-footer {
 		padding: 48px;
 	}
@@ -355,7 +371,7 @@
 	.post-list,
     .post-body,
     .saying-body {
-	    margin-top: -134px
+	    margin-top: -110px
     }
 	.links-container {
 	    padding: 12px;
@@ -439,6 +455,10 @@
 		padding-bottom: 38px!important;
 	}
 	
+	#comment-form {
+		padding: 50px;
+	}
+	
 	.post-footer {
 		padding: 50px;
 	}
@@ -471,7 +491,7 @@
 	.post-list,
     .post-body,
 	.saying-body {
-	    margin-top: -140px
+	    margin-top: -125px
     }
 	.links-container {
 	    padding: 15px;
