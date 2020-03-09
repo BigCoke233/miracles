@@ -53,10 +53,10 @@
 		  <a id="toggle-mobile-menu-button" style="float:right">MENU <i class="iconfont icon-list"></i></a>
 		</div>
 	  </nav>
-	  <?php if($this->options->navStyle==0): ?>
+	  
 	  <!-- 导航 -->
 	  <!-- -大屏幕导航 -->
-      <nav class="large-screen nav nav-fixed" id="navBar">
+      <nav class="large-screen nav nav-fixed" id="navBar"<?php if($this->options->navStyle==1): ?> style="display:none"<?php endif; ?>>
 	    <div class="container">
 		  <p class="nav-content">
 		    <a href="<?php $this->options->SiteUrl(); ?>" class="nav-title"><?php $this->options->title(); ?></a>
@@ -70,9 +70,8 @@
 		  <button class="nav-icon-button setting-button" id="toggle-dark-button"><i class="iconfont icon-moon"></i></button>
 		</div>
 	  </nav>
-	  <?php elseif($this->options->navStyle==1): ?>
 	  <!-- 抽屉栏 -->
-	  <nav class="drawer"><div class="drawer-relative">
+	  <nav class="drawer"<?php if($this->options->navStyle==0): ?> style="display:none"<?php endif; ?>><div class="drawer-relative">
 	    <div class="drawer-main">
 	      <button class="drawer-button" onclick="toggleDrawer();$('.options').addClass('ready');"><i class="iconfont icon-list"></i></button>
           <div class="drawer-header">
@@ -93,16 +92,15 @@
           <button class="drawer-icon" id="toggle-dark-button"><i class="iconfont icon-moon"></i></button>
 		</div>
 	  </div></nav>
-	  <?php endif; ?>
 	  <div id="pjax-container"><!-- 开始 pjax-container -->
 	  <header>
 	    <!-- Banner -->
 	    <?php if($this->is('post') || $this->is('page')): ?>
-		<div class="index-banner" style="background-position:center;<?php if($this->fields->banner && $this->fields->banner=!''): ?>background:url('<?php $this->fields->banner(); ?>') no-repeat;<?php else: ?>background-color:<?php $this->options->bannerColor(); ?>;<?php endif; ?>height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;">
+		<div class="index-banner" style="background-position:center;<?php if($this->fields->banner && $this->fields->banner=!''): ?>background:url('<?php $this->fields->banner(); ?>') no-repeat;<?php else: ?>background-color:#f1f1f1;<?php endif; ?>height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;">
         <?php elseif($this->is('archive')): ?>
-		<div class="index-banner" style="height:<?php $this->options->bannerHeight(); ?>vh;background-position:center;background-color:<?php $this->options->bannerColor(); ?>;<?php if($this->options->bannerUrl!=''): echo $this->options->bannerUrl(); endif; ?>">
+		<div class="index-banner" style="height:<?php $this->options->bannerHeight(); ?>vh;background-position:center;<?php if($this->options->bannerUrl!=''): echo $this->options->bannerUrl(); endif; ?>">
 		<?php else: ?>
-	    <div class="index-banner" style="background-position:center;background:url('<?php $this->options->bannerUrl(); ?>') no-repeat;height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;background-color:<?php $this->options->bannerColor(); ?>">
+	    <div class="index-banner" style="background-position:center;background:url('<?php $this->options->bannerUrl(); ?>') no-repeat;height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;">
 		<?php endif; ?>
 		  <!-- 遮罩 -->
 		  <div class="banner-mask"<?php if($this->is('post') || $this->is('page')):?><?php if($this->fields->banner==''):?> style="background:rgba(0,0,0,0)!important"<?php endif;?><?php endif; ?><?php if($this->is('index')):?><?php if($this->options->bannerUrl && $this->options->bannerUrl=!''): ?><?php else:?> style="background:rgba(0,0,0,0)!important"<?php endif;?><?php endif;?>>
@@ -114,8 +112,14 @@
 				<?php elseif($this->is('post') || $this->is('page')): ?>
 				<h1><?php $this->title(); ?></h1>
 		        <p class="header-meta"><?php if($this->fields->meta==''): ?>
-				  <?php if($this->is('post')): ?>
-					<i class="iconfont icon-block" title="文章分类"></i> <?php $this->category(','); ?>&emsp;<?php endif; ?><i class="iconfont icon-comments" title="共 <?php $this->commentsNum('0', '1', '%d'); ?> 条评论"></i> <?php $this->commentsNum('None', 'Only 1', '%d'); ?>&emsp;<i class="iconfont icon-clock" title="该文章发布于 <?php $this->date(); ?>"></i> <?php $this->date(); ?>&emsp;<i class="icon-view iconfont" title="该文章被浏览 <?php get_post_view($this) ?> 次"></i> <?php get_post_view($this) ?><?php else: echo $this->fields->meta;?><div style="display:none"><?php get_post_view($this) ?></div><?php endif; ?>
+				  <div class="header-meta-line-one">
+				    <?php if($this->is('post')): ?><i class="iconfont icon-block" title="文章分类"></i> <?php $this->category(','); ?>&emsp;<?php endif; ?>
+				    <i class="iconfont icon-comments" title="共 <?php $this->commentsNum('0', '1', '%d'); ?> 条评论"></i> <?php $this->commentsNum('None', 'Only 1', '%d'); ?>&emsp;
+                  </div>
+				  <div class="header-meta-line-two">
+				    <i class="iconfont icon-clock" title="该文章发布于 <?php $this->date(); ?>"></i> <?php $this->date(); ?>&emsp;
+				    <i class="icon-view iconfont" title="该文章被浏览 <?php get_post_view($this) ?> 次"></i> <?php get_post_view($this) ?><?php else: echo $this->fields->meta;?><div style="display:none"><?php get_post_view($this) ?></div><?php endif; ?>
+                  </div>
 				</p>
 				<?php elseif($this->is('archive')): ?>
 				<h1><?php $this->archiveTitle(array(

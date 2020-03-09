@@ -80,6 +80,11 @@
 }
 /* > Pad and up */
 @media (min-width:768px) {
+	.header-meta-line-one,
+    .header-meta-line-two {
+	    display: inline-block!important
+	}
+	
 	.post-share .iconfont {
 		font-size: 30px;
 	}
