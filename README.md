@@ -81,9 +81,9 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 ### 大佬
 提交有价值 Pull Requests 协助开发的大佬：
-- [@outtimes](https://github.com/outtimes)
-- [@ohmyga233](https://github.com/ohmyga233)
-- [@kengwang](https://github.com/kengwang)
+- [@outtimes](https://github.com/outtimes) 提供各种有用的功能
+- [@ohmyga233](https://github.com/ohmyga233) 实现 Ajax 评论无刷新
+- [@kengwang](https://github.com/kengwang) 提供追番页面
 
 ## 相关
 演示站点：[我的博客](https://guhub.cn)  |  以及 Sponsor 中的站点链接  
