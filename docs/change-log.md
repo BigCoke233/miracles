@@ -1,6 +1,16 @@
 # 更新日志
 这里是 Miracles 主题的更新日志，每个发行版以及开发版的更新内容都会在这里记录，历史版本以及最新版本的下载请到 [Releases](https://github.com/BigCoke233/miracles/releases) 页面，若在使用中有任何问题，请在 issues 中提出或 Pull requests，感谢！
 
+## Ver.1.4.1 Fine
+
+优化：移动端下，大图中文章元信息分两行显示
+优化：Text-Color 短代码不再需要用引号框柱文本
+优化：小屏幕下 Tip 不显示图标
+修复：使用抽屉栏控制台报错
+修复：移除未实现的自定义字段
+修复：首页大图背景色在某些情况下失效
+修复：后台设置项分割线混乱
+
 ## Ver.1.4.0 Smooth
 
 - 增加：Ajax 评论无刷新（Done by ohmyga）
