@@ -95,4 +95,4 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 ---
 
-Copyright &copy; 2019-2020 [Eltrac](https://github.com/BigCoke233), released under MIT License
+Copyright &copy; 2019-2020 [Eltrac](https://github.com/BigCoke233), released under [SATA License](https://github.com/zTrix/sata-license).
