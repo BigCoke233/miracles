@@ -86,7 +86,7 @@ function themeConfig($form) {
     $form->addInput($avatar);
 	 
     //nav
-	$navStyle = new Typecho_Widget_Helper_Form_Element_Select('navStyle',array('0'=>'顶部导航栏','1'=>'左侧抽屉栏'),'0','<h2>导航栏 Nav</h2>类型','选择导航栏的类型（若选择左侧抽屉蓝，则下一条设置失效）');
+	$navStyle = new Typecho_Widget_Helper_Form_Element_Select('navStyle',array('0'=>'顶部导航栏','1'=>'左侧抽屉栏'),'0','<h2>导航栏 Nav</h2>类型','选择导航栏的类型（若选择左侧抽屉栏，则下一条设置失效）');
     $form->addInput($navStyle);
 	$navAero = new Typecho_Widget_Helper_Form_Element_Select('navAero',array('0'=>'是','1'=>'否'),'0','顶部透明','视口处于最顶部时，顶部导航栏是否变为透明<hr>');
     $form->addInput($navAero);
