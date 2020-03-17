@@ -65,7 +65,7 @@ function themeConfig($form) {
 	echo '<div class="miracles-pannel">
 	<h1>Miracles 主题设置面板</h1>
 	<p>欢迎使用 Miracles 主题，目前版本是：'. $ver .'<br>
-	作者博客：<a href="https://guhub.cn">Eltrac\'s</a> | 帮助文档：<a href="https://github.com/BigCoke233/miracles/wiki">WIKI</a> | 问题反馈：<a href="https://github.com/BigCoke233/miracles/issues">issues</a>
+	作者博客：<a href="https://guhub.cn">Eltrac\'s</a> | 帮助文档：<a href="https://mira.guhub.cn">WIKI</a> | 问题反馈：<a href="https://github.com/BigCoke233/miracles/issues">issues</a>
 	</p>
    	  <form class="protected" action="?MiraclesBackup" method="post">
         <input type="submit" name="type" class="miracles-backup-button backup" value="备份模板数据" />&nbsp;&nbsp;
@@ -86,7 +86,7 @@ function themeConfig($form) {
     $form->addInput($avatar);
 	 
     //nav
-	$navStyle = new Typecho_Widget_Helper_Form_Element_Select('navStyle',array('0'=>'顶部导航栏','1'=>'左侧抽屉栏'),'0','<h2>导航栏 Nav</h2>类型','选择导航栏的类型（若选择左侧抽屉栏，则下一条设置失效）');
+	$navStyle = new Typecho_Widget_Helper_Form_Element_Select('navStyle',array('0'=>'顶部导航栏','1'=>'左侧抽屉栏'),'0','<h2>导航栏 Nav</h2>类型','选择导航栏的类型（若选择左侧抽屉蓝，则下一条设置失效）');
     $form->addInput($navStyle);
 	$navAero = new Typecho_Widget_Helper_Form_Element_Select('navAero',array('0'=>'是','1'=>'否'),'0','顶部透明','视口处于最顶部时，顶部导航栏是否变为透明<hr>');
     $form->addInput($navAero);
