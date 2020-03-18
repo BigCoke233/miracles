@@ -160,9 +160,11 @@
 }
 .post-content img {
 	display: block;
-	margin: 25px auto;
 	border-radius: 3px;
 	max-width: 100%
+}
+.post-content img:not(.owo-img) {
+	margin: 25px auto;
 }
 .post-content blockquote p {
 	margin: 0
@@ -288,6 +290,7 @@
 }
 .tip-icon {
 	color: gray;
+	display: none/*移动端不显示*/
 }
 .tip.red {
 	border-left-color: #DD4B39;
