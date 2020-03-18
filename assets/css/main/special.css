@@ -33,6 +33,10 @@
 .banner-content p {
 	margin-top: 10px
 }
+.banner-content:not(.banner-font-black) a,
+.banner-mask:not(.banner-font-black) a {
+	color: white
+}
 .banner-font-black,
 .banner-font-black a {
 	color: black!important;
