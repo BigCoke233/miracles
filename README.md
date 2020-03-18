@@ -80,11 +80,13 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - [LazyLoad](https://github.com/tuupola/lazyload) - 图片懒加载
 - [Pangu.js](https://github.com/vinta/pangu.js) -分割中英文字符
 
-### 大佬
-提交有价值 Pull Requests 协助开发的大佬：
-- [@outtimes](https://github.com/outtimes) 提供各种有用的功能
-- [@ohmyga233](https://github.com/ohmyga233) 实现 Ajax 评论无刷新
-- [@kengwang](https://github.com/kengwang) 提供追番页面
+### 贡献者
+| 贡献者 | 贡献内容 |
+| ------ | ------- |
+| [@BigCoke233 (Eltrac)](https://github.com/BigCoke233) | 原作者 |
+| [@outtimes](https://github.com/outtimes) | 提供各种有用的功能 |
+| [@ohmyga233](https://github.com/ohmyga233) | 实现 Ajax 评论无刷新 |
+| [@kengwang](https://github.com/kengwang) | 提供追番页面 |
 
 ## 相关
 演示站点：[我的博客](https://guhub.cn)  |  以及 Sponsor 中的站点链接  
