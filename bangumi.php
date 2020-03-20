@@ -7,6 +7,18 @@
  *
  * @package custom
  */
+//判断是否为HTPS
+function is_https() {
+    if ( !empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) !== 'off') {
+        return true;
+    } elseif ( isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https' ) {
+        return true;
+    } elseif ( !empty($_SERVER['HTTP_FRONT_END_HTTPS']) && strtolower($_SERVER['HTTP_FRONT_END_HTTPS']) !== 'off') {
+        return true;
+    }
+    return false;
+}
+define('IS_HTTPS',is_https());
 $this->need('includes/head.php');
 $this->need('includes/header.php');
 $this->need('libs/Bangumi.php');
@@ -69,7 +81,7 @@ if ($bgmdataraw['data']['total'] != 0):
 					    <?php $db=Typecho_Db::get();
                         $load_image = $db->fetchAll($db->select('value')->from('table.options')->where('name = %s', "theme:Miracles")->limit(1));
                         $load_image = explode("\";",explode("\"",explode("\"loading_image\";",$load_image[0]["value"],2)[1],2)[1],2)[0]; ?>
-					    <img src="/usr/themes/Miracles/images/loading/<?php echo $load_image;?>.gif" data-original="<?php echo $bgm['img'];?>">
+					    <img src="<?php if(IS_HTTPS):?>/usr/themes/Miracles/images/loading/<?php echo $load_image;?>.gif" data-original="<?php echo $bgm['img']; else: echo $bgm['img']; endif;?>" referrerpolicy="no-referrer">
 						<div class="bangumi-des">
 						  <p><?php echo $bgm['des']; ?></p>
 						</div>
