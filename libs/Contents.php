@@ -128,7 +128,7 @@ class Contents
      */
     private static function parsePaopaoBiaoqingCallback($match)
     {
-        return '<img class="biaoqing" src="/usr/themes/Miracles/images/biaoqing/paopao/'. str_replace('%', '', urlencode($match[1])) . '_2x.png">';
+        return '<img class="owo-img" src="/usr/themes/Miracles/images/biaoqing/paopao/'. str_replace('%', '', urlencode($match[1])) . '_2x.png">';
     }
 
     /**
@@ -138,7 +138,7 @@ class Contents
      */
     private static function parseAruBiaoqingCallback($match)
     {
-        return '<img class="biaoqing" src="/usr/themes/Miracles/images/biaoqing/aru/'. str_replace('%', '', urlencode($match[1])) . '_2x.png">';
+        return '<img class="owo-img" src="/usr/themes/Miracles/images/biaoqing/aru/'. str_replace('%', '', urlencode($match[1])) . '_2x.png">';
     }
 
     /**
@@ -148,7 +148,7 @@ class Contents
      */
     private static function parseTweBiaoqingCallback($match)
     {
-        return '<img class="biaoqing" src="/usr/themes/Miracles/images/biaoqing/twemoji/'. str_replace('%', '', $match[1]) . '.png">';
+        return '<img class="owo-img" src="/usr/themes/Miracles/images/biaoqing/twemoji/'. str_replace('%', '', $match[1]) . '.png">';
     }
 	
 	//从这里开始的代码来自 熊猫小A (https://imalan.cn)
