@@ -78,10 +78,35 @@ class Utils
     }
 	
 	/**
-     * 编辑界面添加Button
+     * 编辑界面添加内容
      */
     public static function addButton(){
 		echo '<link rel="stylesheet" href="/usr/themes/Miracles/assets/css/setting.miracles.css" />';
+		echo '<link rel="stylesheet" href="/usr/themes/Miracles/assets/css/owo.min.css" />';
+		echo '<script src="/usr/themes/Miracles/assets/js/OwO.min.js"></script>';
+		echo '<script src="/usr/themes/Miracles/assets/js/editor.js"></script>';
+		echo '<style>#custom-field textarea{width:100%}
+        .OwO span{background:none!important;width:unset!important;height:unset!important}
+        .OwO .OwO-logo{
+            z-index: unset!important;
+        }
+        .OwO .OwO-body .OwO-items{
+            -webkit-overflow-scrolling: touch;
+            overflow-x: hidden;
+        }
+        .OwO .OwO-body .OwO-items-image .OwO-item{
+            max-width:-moz-calc(20% - 10px);
+            max-width:-webkit-calc(20% - 10px);
+            max-width:calc(20% - 10px)
+        }
+		#wmd-owo-button:hover{
+		background:transparent!important}
+        @media screen and (max-width:760px){
+            .OwO .OwO-body .OwO-items-image .OwO-item{
+                max-width:-moz-calc(25% - 10px);
+                max-width:-webkit-calc(25% - 10px);
+                max-width:calc(25% - 10px)
+            }
+        }</style>';
     }
-
 }
