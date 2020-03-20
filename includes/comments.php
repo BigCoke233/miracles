@@ -28,7 +28,7 @@ echo $commentClass;
 		  <span class="comment-reply">
 		    <?php $comments->reply('<i class="iconfont icon-return"></i>'); ?>
 		  </span>
-		  <?php getCommentHF($comments->coid); $comments->content(); ?>
+		  <?php getCommentHF($comments->coid); echo Contents::parseEmo($comments->content); ?>
 	    </div>
 		<p class="comment-meta">
 		  <span class="comment-author"><a href="<?php echo $comments->url; ?>" target="_blank"><?php echo $comments->author; ?></a></span>
