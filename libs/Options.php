@@ -116,6 +116,8 @@ function themeConfig($form) {
     $form->addInput($grayTheme);
 	$bodyFonts = new Typecho_Widget_Helper_Form_Element_Select('bodyFonts',array('0'=>'无衬线字体','1'=>'衬线字体'),'0','网站字体','选择网站的字体，无衬线字体即“思源黑体”，衬线字体即“思源宋体”');
     $form->addInput($bodyFonts);
+	$randomBanner = new Typecho_Widget_Helper_Form_Element_Textarea('randomBanner', NULL, NULL, _t('随机文章缩略图'), _t('文章没有独立设置头图时调用，写入图片链接，用半角逗号分割'));
+    $form->addInput($randomBanner);
         
     //LoadingImage
     $LoadingOptions = [

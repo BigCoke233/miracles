@@ -5,7 +5,7 @@
  * 
  * @package     Miracles
  * @author      Eltrac
- * @version     1.4.1
+ * @version     1.4.2
  * @link        https://guhub.cn
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
@@ -22,7 +22,17 @@ $this->need('includes/header.php');
 			  <div class="col-md-6 post-banner-box">
 			    <a href="<?php $this->permalink(); ?>" class="post-link">
 			      <div class="post-banner">
-				    <img src="/usr/themes/Miracles/images/loading/<?php echo $this->options->loading_image ?>.gif" data-original="<?php if($this->fields->banner && $this->fields->banner=!''): ?><?php echo $this->fields->banner(); ?><?php else: ?><?php Utils::indexTheme('images/postbg/'); ?><?php echo mt_rand(1,20); ?>.jpg<?php endif; ?>">
+				    <img src="/usr/themes/Miracles/images/loading/<?php echo $this->options->loading_image ?>.gif" data-original="<?php 
+					if($this->fields->banner && $this->fields->banner=!''): 
+					  echo $this->fields->banner(); 
+					else: 
+					  if($this->options->randomBanner==''){
+						echo Utils::indexTheme('images/postbg/'); echo mt_rand(1,mt_rand(1,20)); echo '.jpg';
+					  }
+					  else{
+						$banner_url = explode(',',$this->options->randomBanner);
+						echo $banner_url[mt_rand(0,count($banner_url)-1)];}
+					endif; ?>">
 				  </div>
 				</a>
 			  </div>
