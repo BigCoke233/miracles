@@ -1,5 +1,5 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-      <div class="mask" id="full-mask"></div>
+      <?php if($this->options->navStyle==1): ?><div class="mask" id="full-mask"></div><?php endif; ?>
       <!-- 搜索 -->
       <div class="search ready">
 	    <button class="search-close ready" id="search-close-button"><i class="iconfont icon-x"></i></button>
@@ -30,6 +30,9 @@
         </form>
 		<?php endif; ?>
 	  </div>
+	  
+	  <!-- Nav Starts -->
+	  <?php if($this->options->navStyle==0): ?>
       <!-- 移动端导航面板 -->
 	  <div class="mobile-menu ready">
 	    <button class="mobile-menu-close ready" id="toggle-mobile-menu-close"><i class="iconfont icon-x"></i></button>
@@ -53,8 +56,10 @@
 		  <a id="toggle-mobile-menu-button" style="float:right">MENU <i class="iconfont icon-list"></i></a>
 		</div>
 	  </nav>
+	  <?php endif; ?>
 	  
 	  <!-- 导航 -->
+	  <?php if($this->options->navStyle==0): ?>
 	  <!-- -大屏幕导航 -->
       <nav class="large-screen nav nav-fixed" id="navBar"<?php if($this->options->navStyle==1): ?> style="display:none"<?php endif; ?>>
 	    <div class="container">
@@ -70,10 +75,11 @@
 		  <button class="nav-icon-button setting-button" id="toggle-dark-button"><i class="iconfont icon-moon"></i></button>
 		</div>
 	  </nav>
+	  <?php elseif($this->options->navStyle==1): ?>
 	  <!-- 抽屉栏 -->
-	  <nav class="drawer"<?php if($this->options->navStyle==0): ?> style="display:none"<?php endif; ?>><div class="drawer-relative">
+	  <nav class="drawer"><div class="drawer-relative">
 	    <div class="drawer-main">
-	      <button class="drawer-button" onclick="toggleDrawer();$('.options').addClass('ready');"><i class="iconfont icon-list"></i></button>
+	      <button class="drawer-button" id="drawer-button"><i class="iconfont icon-list"></i></button>
           <div class="drawer-header">
 	        <div class="drawer-avatar">
 		      <?php if($this->options->avatar==''): echo $this->author->gravatar(500);
@@ -87,12 +93,16 @@
 		  </div>
 		</div>
 		<div class="drawer-footer">
-		  <button class="drawer-icon" id="search-open-button" onclick="toggleDrawer"><i class="iconfont icon-chaxun"></i></button>
-		  <button class="drawer-icon" id="login-open" onclick="toggleDrawer()"><i class="iconfont icon-user"></i></button>
+		  <button class="drawer-icon" id="search-open-button"><i class="iconfont icon-chaxun"></i></button>
+		  <button class="drawer-icon" id="login-open"><i class="iconfont icon-user"></i></button>
           <button class="drawer-icon" id="toggle-dark-button"><i class="iconfont icon-moon"></i></button>
 		</div>
 	  </div></nav>
-	  <div id="pjax-container"><!-- 开始 pjax-container -->
+	  <?php endif;?>
+	  <!-- /Nac Ends -->
+	  
+	  <!-- pjax-container Starts -->
+	  <div id="pjax-container">
 	  <header>
 	    <!-- Banner -->
 	    <?php if($this->is('post') || $this->is('page')): ?>
