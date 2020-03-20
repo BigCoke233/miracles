@@ -123,6 +123,7 @@ iframe.miracles-news {
 	-moz-box-shadow: 0 0 30px #ddd;
 	box-shadow: 0 0 30px #ddd;
 	font-size: 15px;
+	z-index: 10
 }
 
 .typecho-page-title {
@@ -176,6 +177,10 @@ iframe.miracles-news {
 	height: auto!important
 }
 
+input#slug {
+	z-index: 1
+}
+
 @media (min-width:768px) {
 	.typecho-option-tabs {
 		margin-left: 122px;
@@ -192,4 +197,7 @@ iframe.miracles-news {
 	.typecho-option-tabs {
 		margin-left: 194px;
 	}
+}
+#edit-secondary .typecho-option-tabs {
+	margin-left: 0!important
 }
