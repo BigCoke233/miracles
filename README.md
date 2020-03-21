@@ -12,6 +12,8 @@
 
 ---
 
+> 我用 Notion 给 Miracles 做了一个主页，欢迎访问：[Miracles 主题](https://www.notion.so/thememiracles/Miracles-11ff2db10acc43bba64ba422b309138d)
+
 ## 特色
 - 响应式 / 自适应设计
 - Pjax 全站无刷新
