@@ -93,9 +93,9 @@ $ git clone https://github.com/BigCoke233/miracles.git
 ## 相关
 演示站点：[我的博客](https://guhub.cn)  |  以及 Sponsor 中的站点链接  
 介绍文章：[Miracles —— 生为奇迹](https://guhub.cn/p/miracles.html)  
-说明文档：[Wiki](http://mira.guhub.cn/)  
+说明文档：[Wiki](https://www.notion.so/thememiracles/c7c631e21b3345caa2a09bd2fb5dd4b2) | [旧的 Wiki](https://mira.guhub.cn)   
 更新日志：[change-log.md](docs/change-log.md)  
-更新计划：[plan.md](docs/plan.md)（包括已知的 Bug）  
+更新计划：[Notion](https://www.notion.so/thememiracles/55dc1c36dc204c60966defa2a7bb9690) | [plan.md（旧）](docs/plan.md)  
 侵权网站：[black-list.md](docs/black-list.md)
 
 ---
