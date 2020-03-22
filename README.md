@@ -98,6 +98,9 @@ $ git clone https://github.com/BigCoke233/miracles.git
 更新计划：[Notion](https://www.notion.so/thememiracles/55dc1c36dc204c60966defa2a7bb9690) | [plan.md（旧）](docs/plan.md)  
 侵权网站：[black-list.md](docs/black-list.md)
 
+## 捐助
+你可以通过[爱发电](https://afdian.net/@Eltrac)向我投食，~~用金钱催更~~。
+
 ---
 
 Copyright &copy; 2019-2020 [Eltrac](https://github.com/BigCoke233), released under [SATA License](https://github.com/zTrix/sata-license).
