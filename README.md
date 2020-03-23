@@ -12,7 +12,7 @@
 
 ---
 
-> 我用 Notion 给 Miracles 做了一个主页，欢迎访问：[Miracles 主题](https://www.notion.so/thememiracles/Miracles-11ff2db10acc43bba64ba422b309138d)
+> 我用 Notion 给 Miracles 做了一个主页，欢迎访问：[Miracles 主题](https://www.notion.so/thememiracles/Miracles-11ff2db10acc43bba64ba422b309138d)  
 > 同时，欢迎加入 QQ 交流群：924171480，或者 [Telegram](https://dev.guhub.cn/tg)
 
 ## 特色
