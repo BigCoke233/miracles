@@ -11,8 +11,6 @@
     $banner = '';
     $description = '';
     if($this->is('post') || $this->is('page')){
-        if(isset($this->fields->banner))
-            $banner=$this->fields->banner;
         if(isset($this->fields->excerpt))
             $description = $this->fields->excerpt;
     }else{
@@ -34,7 +32,13 @@
     <meta name="twitter:title" content="<?php Contents::title($this); ?>" />
     <meta name="twitter:description" content="<?php if($description != '') echo $description; else $this->excerpt(50); ?>" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:image" content="<?php echo $banner; ?>" />
+    <meta name="twitter:image" content="<?php if($this->is('post') || $this->is('page')){$this->fields->banner();}
+	else{
+		if(empty($this->options->bannerUrl)):
+			echo Utils::indexTheme('favicon.ico');
+		else:
+			$this->options->bannerUrl();
+	endif;}?>" />
 	<link rel="icon" type="image/png" href="<?php Utils::indexTheme('favicon.ico'); ?>" />
     <?php $this->header('description=&commentReply='); ?>
 	<?php $this->options->headerEcho(); ?>
