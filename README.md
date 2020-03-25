@@ -82,6 +82,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - [OwO](https://github.com/DIYgod/OwO) - 评论 OwO 表情
 - [LazyLoad](https://github.com/tuupola/lazyload) - 图片懒加载
 - [Pangu.js](https://github.com/vinta/pangu.js) -分割中英文字符
+- [Normalize.css](http://necolas.github.io/normalize.css/) - 保证不同浏览器上各元素 css 默认效果相同
 
 ### 贡献者
 | 贡献者 | 贡献内容 |
