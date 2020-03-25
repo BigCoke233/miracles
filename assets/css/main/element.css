@@ -170,8 +170,7 @@ body,html {
 	background: #fafafa;
 	overflow: auto;
 	transition: background 0.2s;
-	width: 100%;
-	scroll-behavior: smooth;
+	width: 100%
 }
 body {
 	font-family: 'Noto Sans SC',sans-serif;
