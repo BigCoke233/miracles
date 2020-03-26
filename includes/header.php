@@ -38,8 +38,14 @@
 	    <button class="mobile-menu-close ready" id="toggle-mobile-menu-close"><i class="iconfont icon-x"></i></button>
 		<h2 class="mobile-menu-title">页面导航</h2>
 		<div class="mobile-menu-pagelist"><div class="container-fluid"><div class="row">
-		  <?php $this->widget('Widget_Contents_Page_List')
-          ->parse('<div class="col-6"><a href="{permalink}">{title}</a></div>'); ?>
+		  <?php 
+		  if($this->options->customNav=='') {
+			  $this->widget('Widget_Contents_Page_List')
+              ->parse('<div class="col-6"><a href="{permalink}">{title}</a></div>');
+          }
+          else {
+			  echo Contents::paresNav($this->options->customNav,"mobile");
+		  }?>
 		</div></div></div>
 		<div class="mobile-menu-footer">
 		  <p>&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->SiteUrl(); ?>"><?php $this->options->title(); ?></a> | Theme <a href="https://github.com/BigCoke233/miracles">Miracles</a></p>
@@ -94,8 +100,14 @@
 	      </div>
 		  <div class="drawer-content">
 		    <a href="<?php $this->options->SiteUrl(); ?>" onclick="toggleDrawer()">首页</a>
-		    <?php $this->widget('Widget_Contents_Page_List')
-            ->parse('<a href="{permalink}" onclick="toggleDrawer()">{title}</a>'); ?>
+			<?php 
+			if($this->options->customNav=='') {
+			  $this->widget('Widget_Contents_Page_List')
+              ->parse('<a href="{permalink}" onclick="toggleDrawer()">{title}</a>');
+            }
+            else {
+              echo Contents::paresNav($this->options->customNav,"drawer");
+			}?>
 		  </div>
 		</div>
 		<div class="drawer-footer">
