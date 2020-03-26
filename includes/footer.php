@@ -3,14 +3,14 @@
 	<!-- Footer Information -->
     <footer>
       <div class="footer-info footer-dark">
-		<?php $this->options->footerEcho(); ?>
-		<p class="copyright">Powered by <a href="http://typecho.org">Typecho</a> | Theme <a href="https://github.com/BigCoke233/miracles">Miracles</a> by <a href="https://guhub.cn">Eltrac</a><br>
+		<p id="custom-footer"><?php $this->options->footerEcho(); ?></p>
+		<p class="copyright"><span id="copyright">Powered by <a href="http://typecho.org">Typecho</a> | Theme <a href="https://github.com/BigCoke233/miracles" id="copyright-name">Mirales</a> by <a href="https://guhub.cn" id="copyright-author">Eltrac</a></span><br>
 		Copyright &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->SiteUrl(); ?>"><?php $this->options->title(); ?></a>, All rights reserved.<br>
         <?php 
 		echo $this->options->build_time?"记录已延续了 <span id=\"build-time\"></span>":"";
 		if($faces=$this->options->anime_face){
-		$faces = explode("&&",$faces);
-		$faces = "<span class=\"anime-face\">".$faces[mt_rand(0,count($faces))]."</span>";
+		  $faces = explode("&&",$faces);
+		  $faces = "<span class=\"anime-face\">".$faces[mt_rand(0,count($faces))]."</span>";
 		}
 		if($faces && $this->options->build_time)echo $faces;
 		?></p>
