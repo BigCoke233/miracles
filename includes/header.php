@@ -67,7 +67,7 @@
 	  <!-- 导航 -->
 	  <?php if($this->options->navStyle==0): ?>
 	  <!-- -大屏幕导航 -->
-      <nav class="large-screen nav nav-fixed" id="navBar"<?php if($this->options->navStyle==1): ?> style="display:none"<?php endif; ?>>
+      <nav class="large-screen nav nav-fixed" id="navBar">
 	    <div class="container">
 		  <p class="nav-content">
 		    <a href="<?php $this->options->SiteUrl(); ?>" class="nav-title"><?php $this->options->title(); ?></a>

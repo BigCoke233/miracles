@@ -27,7 +27,7 @@
 	?>
 	<!-- Varribles and Functions -->
 	<script>
-	var allowNavAero = <?php if($this->options->navAero):?>false<?php else:?>true<?php endif;?>;
+	var allowNavAero = <?php if($this->options->navAero==1):?>false<?php else:?>true<?php endif;?>;
 	var siteurl = '<?php $this->options->SiteUrl() ;?>';
 	var owoJson = '<?php Utils::indexTheme('assets/OwO.json'); ?>';
 	<?php if($this->options->pjax && $this->options->pjax!=0) :?>var loadPjax = true;
