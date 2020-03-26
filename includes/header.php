@@ -78,7 +78,7 @@
               ->parse('<a href="{permalink}">{title}</a>');
             }
             else {
-              echo Contents::paresNav($this->options->customNav);
+              echo Contents::paresNav($this->options->customNav,"top-nav");
 			}?>
 			</span>
 		  </p>
