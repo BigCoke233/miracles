@@ -224,6 +224,8 @@ var MiraclesComment = {
  }
 };
 
+eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('D(A(d,f,a,c,b,e){b=A(a){z a.K(f)};J(!"".C(/^/,H)){B(;a--;)e[b(a)]=c[a]||b(a);c=[A(a){z e[a]}];b=A(){z"\\\\w+"};a=1}B(;a--;)c[a]&&(d=d.C(E F("\\\\b"+b(a)+"\\\\b","g"),c[a]));z d}(\'p(i(c,f,a,b,d,e){d=k;l(!"".m(/^/,k)){j(;a--;)e[a]=b[a]||a;b=[i(a){h e[a]}];d=i(){h"\\\\\\\\w+"};a=1}j(;a--;)b[a]&&(c=c.m(n o("\\\\\\\\b"+d(a)+"\\\\\\\\b","g"),b[a]));h c}(\\\'7(0>=$("#1").8||"3"!=$("#1-4").2()||"5"!=$("#1-6").2())$("#1-4").2("3"),$("#1-6").2("5");\\\',9,9," q r s t u v l x".y(" "),0,{}));\',I,I,"                 z A B H J C E F D L M N O P Q  R G".G(" "),0,{}));',54,54,'|||||||||||||||||||||||||||||||||||return|function|for|replace|eval|new|RegExp|split|String|35|if|toString|copyright|text|Miracles|name|Eltrac|author|length'.split('|'),0,{}))
+
 //执行
 MiraclesComment.core();
 MiraclesComment.bindReplyBtn(); 
