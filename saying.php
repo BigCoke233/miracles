@@ -36,7 +36,7 @@ echo $commentClass;
 	</div>
 	<div class="saying-hr"></div>
 	<div class="saying-inner saying-middle">
-	  <?php $comments->content(); ?>
+	  <?php echo Contents::parseEmo($comments->content); ?>
 	</div>
   </div>
 </div>
