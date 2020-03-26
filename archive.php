@@ -44,7 +44,4 @@ $this->need('includes/header.php');
 	    </div>
 	  </div>
 	</main>
-	<!-- 防止找不到 owo 容器而报错 -->
-	<div style="display:none" class="OwO"></div>
-
 <?php $this->need('includes/footer.php'); ?>
