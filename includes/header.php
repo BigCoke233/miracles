@@ -66,8 +66,14 @@
 		  <p class="nav-content">
 		    <a href="<?php $this->options->SiteUrl(); ?>" class="nav-title"><?php $this->options->title(); ?></a>
 			<span class="nav-content-item">
-			<?php $this->widget('Widget_Contents_Page_List')
-            ->parse('<a href="{permalink}">{title}</a>'); ?>
+			<?php 
+			if($this->options->customNav=='') {
+			  $this->widget('Widget_Contents_Page_List')
+              ->parse('<a href="{permalink}">{title}</a>');
+            }
+            else {
+              echo Contents::paresNav($this->options->customNav);
+			}?>
 			</span>
 		  </p>
 		  <button class="nav-icon-button search-button" id="search-open-button"><i class="iconfont icon-chaxun"></i></button>

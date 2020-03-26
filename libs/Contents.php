@@ -151,15 +151,22 @@ class Contents
         return '<img class="owo-img" src="/usr/themes/Miracles/images/biaoqing/twemoji/'. str_replace('%', '', $match[1]) . '.png">';
     }
 	
+	/**
+	 * 解析自定义导航栏
+	 */
+	static public function paresNav($data) {
+		$de_json = json_decode($data, true);
+		$count_json = count($de_json);
+        for ($i = 0; $i < $count_json; $i++) {
+            $title = $de_json[$i]['title'];
+            $link = $de_json[$i]['link'];
+			//输出导航
+			echo '<a href="'. $link .'">'. $title .'</a>';
+        }
+	}
+	
+	
 	//从这里开始的代码来自 熊猫小A (https://imalan.cn)
-    /**
-     * 根据 id 返回对应的对象
-     * 此方法在 Typecho 1.2 以上可以直接调用 Helper::widgetById();
-     * 但是 1.1 版本尚有 bug，因此单独提出放在这里
-     * 
-     * @param string $table 表名, 支持 contents, comments, metas, users
-     * @return Widget_Abstract
-     */
 	 
 	/**
      * 为内容中的标题编号
@@ -172,6 +179,14 @@ class Contents
         return '<h'.$matchs[1].$matchs[2].' id="'.$id.'">'.$matchs[3].'<a href="#'.$id.'" title="章节链接" class="post-toc-link no-line"><i class="iconfont icon-paragraph"></i></a></h'.$matchs[1].'>';
     }
 	
+	/**
+     * 根据 id 返回对应的对象
+     * 此方法在 Typecho 1.2 以上可以直接调用 Helper::widgetById();
+     * 但是 1.1 版本尚有 bug，因此单独提出放在这里
+     * 
+     * @param string $table 表名, 支持 contents, comments, metas, users
+     * @return Widget_Abstract
+     */
     public static function widgetById($table, $pkId)
     {
         $table = ucfirst($table);
