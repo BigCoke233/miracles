@@ -4,7 +4,7 @@
     <footer>
       <div class="footer-info footer-dark">
 		<?php $this->options->footerEcho(); ?>
-		<p class="copyright">Powered by <a href="http://typecho.org">Typecho</a> | Theme <a href="https://guhub.cn/p/miracles.html">Miracles</a> by <a href="https://guhub.cn">Eltrac</a><br>
+		<p class="copyright">Powered by <a href="http://typecho.org">Typecho</a> | Theme <a href="https://github.com/BigCoke233/miracles">Miracles</a> by <a href="https://guhub.cn">Eltrac</a><br>
 		Copyright &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->SiteUrl(); ?>"><?php $this->options->title(); ?></a>, All rights reserved.<br>
         <?php 
 		echo $this->options->build_time?"记录已延续了 <span id=\"build-time\"></span>":"";
