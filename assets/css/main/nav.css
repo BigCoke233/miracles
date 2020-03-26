@@ -24,6 +24,7 @@
     box-shadow : none !important;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
+	color: #fff
 }
 .nav-aero .nav-icon-button {
 	background: rgba(255,255,255,0.1);
@@ -44,17 +45,21 @@
 	position: relative;
 }
 
-.nav-font-white {
+.nav-aero .nav-content a,
+.nav-aero .nav-mobile-content a{
+    color: #FFFFFF;
+}
+
+.nav-font-white,
+.nav-font-white .nav-content a,
+.nav-font-white .nav-mobile-content a {
 	color: #fff;
 }
 
-.nav-font-black {
+.nav-font-black,
+.nav-font-black .nav-content a,
+.nav-font-black .nav-mobile-content a {
 	color: #000!important
-}
-
-.nav-aero.nav-font-white .nav-content a,
-.nav-aero.nav-font-white .nav-mobile-content a{
-    color: #FFFFFF;
 }
 
 .nav-content a {
