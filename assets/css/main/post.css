@@ -8,7 +8,7 @@
 .post-list,
 .post-body,
 .saying-body {
-	margin-top: -110px;
+	margin-top: -70px!important;
 	transition: .8s;
 }
 .post-item {
@@ -195,8 +195,12 @@
 }
 .post-content a:not(.no-line) {
 	position: relative;
-	color: #000;
+	color: rgb(40,40,40);
 	border-bottom: 2px solid #f0f0f0;
+	transition: .2s
+}
+.post-content a:not(.no-line):hover {
+	opacity: 0.85
 }
 .post-content a:not(.no-line)::before {
 	content: '';
@@ -354,14 +358,14 @@
 .post-pagenav a,
 .comment-pagenav a {
 	border-radius: 10000px;
-	box-shadow: 0 0 15px #ccc;
-	-moz-box-shadow: 0 0 15px #ccc;
-	-webkit-box-shadow: 0 0 15px #ccc
+	box-shadow: 0 0 10px #ccc;
+	-moz-box-shadow: 0 0 10px #ccc;
+	-webkit-box-shadow: 0 0 10px #ccc
 }
 .post-pagenav a:hover {
-	box-shadow: 0 0 15px #ccc;
-	-moz-box-shadow: 0 0 15px #ccc;
-	-webkit-box-shadow: 0 0 15px #ccc
+	box-shadow: 0 0 25px #ccc;
+	-moz-box-shadow: 0 0 25px #ccc;
+	-webkit-box-shadow: 0 0 25px #ccc
 }
 .post-pagenav-left {
 	float: left

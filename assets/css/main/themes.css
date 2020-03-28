@@ -341,3 +341,61 @@
 .body-sepia {
 	background: rgb(248,241,228)
 }
+.body-sepia .nav {
+	background: rgba(250,241,228,0.86);
+}
+.body-sepia .post-body,
+.body-sepia .post-item,
+.body-sepia #comment-form {
+	background: rgb(245,238,218)
+}
+.body-sepia .banner-mask {
+	background: rgba(164,120,114,0.3)
+}
+.body-sepia img {
+	filter: sepia(20%);
+}
+.body-sepia .nav-icon-button {
+	background: rgba(248,241,228,0.9);
+}
+.body-sepia .nav-icon-button:hover {
+	background: rgba(248,241,228,0.7);
+}
+.body-sepia .search,
+.body-sepia .login,
+.body-sepia .mobile-menu {
+	background-color: rgba(248,241,228,0.98);
+}
+.body-sepia .search-form input {
+	background-color: rgba(245,241,228)
+}
+.body-sepia .footer-info,
+.body-sepia .index-banner,
+.body-sepia .links-item,
+.body-sepia .comment-meta span {
+	background-color: rgb(246,240,220)!important
+}
+.body-sepia .post-content h3 {
+    border-color: #DD4B39
+}
+.body-sepia .archives-list li a:hover,
+.body-sepia .tags-item a {
+	background: rgb(250,246,224)
+}
+.body-sepia .OwO-logo {
+	background: transparent
+}
+.body-sepia .OwO-logo:hover {
+	opacity: 0.9;
+	background: transparent
+}
+.body-sepia .fixed-button,
+.body-sepia .post-pagenav a  {
+	background: rgb(250,246,224)!important
+}
+.body-sepia .comment-content {
+	background-color: rgb(250,230,220)
+}
+.body-sepia .comment-content.bubble::before {
+	border-right-color: rgb(250,230,220)
+}	

@@ -84,7 +84,7 @@
 		  </p>
 		  <button class="nav-icon-button search-button" id="search-open-button"><i class="iconfont icon-chaxun"></i></button>
 		  <button class="nav-icon-button login-button" id="login-open"><i class="iconfont icon-user"></i></button>
-		  <button class="nav-icon-button setting-button" id="toggle-dark-button"><i class="iconfont icon-moon"></i></button>
+		  <button class="nav-icon-button setting-button" id="toggle-dark-button"><i class="iconfont icon-sun"></i></button>
 		</div>
 	  </nav>
 	  <?php elseif($this->options->navStyle==1): ?>
@@ -113,7 +113,7 @@
 		<div class="drawer-footer">
 		  <button class="drawer-icon" id="search-open-button"><i class="iconfont icon-chaxun"></i></button>
 		  <button class="drawer-icon" id="login-open"><i class="iconfont icon-user"></i></button>
-          <button class="drawer-icon" id="toggle-dark-button"><i class="iconfont icon-moon"></i></button>
+          <button class="drawer-icon" id="toggle-dark-button"><i class="iconfont icon-sun"></i></button>
 		</div>
 	  </div></nav>
 	  <?php endif;?>
@@ -165,4 +165,3 @@
 		  </div>
 		</div>
 	  </header>
-	  <br><br><br>
