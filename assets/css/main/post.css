@@ -157,6 +157,7 @@
 	background: #282c34!important;
 	color: #fff!important;
 	text-indent: 0!important;
+	border-radius: 4px
 }
 .post-content img {
 	display: block;

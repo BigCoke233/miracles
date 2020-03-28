@@ -1,122 +1,99 @@
-/*
-
-Atom One Dark by Daniel Gamage
-Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
-
-edited by Eltrac
-
-*/
-
+/* from https://github.com/atom/one-dark-syntax
+edited by Eltrac */
 .hljs {
-  display: block;
-  overflow-x: auto;
-  color: #abb2bf;
-  background: rgb(45,45,45)!important;
-  font-family: 'Noto Sans SC',sans-serif!important;
-  font-size: 0.8em!important;
-  padding: 0!important;
-  margin: 0!important;
-  max-height: 90vh;
+	display: block;
+	overflow-x: auto;
+	color: #abb2bf;
+	background: #2d2d2d!important;
+	font-family: 'Noto Sans SC',sans-serif!important;
+	font-size: .8em!important;
+	padding: 0!important;
+	margin: 0!important;
+	max-height: 90vh
+}
+
+.hljs::before {
+	content: '';
+	display: block;
+	height: 27px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background: url('./main/mac_button.png') no-repeat;
+	background-color: rgb(63,63,63);
 }
 
 .hljs::-webkit-scrollbar-corner {
-	background: transparent
+	background: 0 0
 }
 
-.hljs table,
-.hljs th,
-.hljs td {
+.hljs table,.hljs td,.hljs th {
 	border: none!important;
-	background: rgb(45,45,45);
-	line-height: 1.45
+	background: #2d2d2d;
+	line-height: 1.5
 }
 
 .hljs tr:first-child hljs-line {
-	padding-top: 10px;
+	padding-top: 10px
 }
 
 .hljs tr:last-child hljs-line {
-	padding-bottom: 10px;
+	padding-bottom: 10px
 }
 
 .hljs-ln-numbers {
-	background: rgb(65,65,65)!important;
+	background: #414141!important;
 	padding: 0!important;
 	width: 30px!important;
 	text-align: center!important;
 	margin-left: 0!important;
-	color: rgb(200,200,200)
+	color: #c8c8c8
 }
 
 .hljs-ln-code {
-	padding: 0 10px!important;
+	padding: 0 10px!important
 }
 
-.hljs-comment,
-.hljs-quote {
-  color: #5c6370;
-  font-style: italic;
+.hljs-comment,.hljs-quote {
+	color: #5c6370;
+	font-style: italic
 }
 
-.hljs-doctag,
-.hljs-keyword,
-.hljs-formula {
-  color: #c678dd;
+.hljs-doctag,.hljs-formula,.hljs-keyword {
+	color: #c678dd
 }
 
-.hljs-section,
-.hljs-name,
-.hljs-selector-tag,
-.hljs-deletion,
-.hljs-subst {
-  color: #e06c75;
+.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst {
+	color: #e06c75
 }
 
 .hljs-literal {
-  color: #56b6c2;
+	color: #56b6c2
 }
 
-.hljs-string,
-.hljs-regexp,
-.hljs-addition,
-.hljs-attribute,
-.hljs-meta-string {
-  color: #98c379;
+.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string {
+	color: #98c379
 }
 
-.hljs-built_in,
-.hljs-class .hljs-title {
-  color: #e6c07b;
+.hljs-built_in,.hljs-class .hljs-title {
+	color: #e6c07b
 }
 
-.hljs-attr,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-type,
-.hljs-selector-class,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-number {
-  color: #d19a66;
+.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable {
+	color: #d19a66
 }
 
-.hljs-symbol,
-.hljs-bullet,
-.hljs-link,
-.hljs-meta,
-.hljs-selector-id,
-.hljs-title {
-  color: #61aeee;
+.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title {
+	color: #61aeee
 }
 
 .hljs-emphasis {
-  font-style: italic;
+	font-style: italic
 }
 
 .hljs-strong {
-  font-weight: bold;
+	font-weight: 700
 }
 
 .hljs-link {
-  text-decoration: underline;
+	text-decoration: underline
 }
