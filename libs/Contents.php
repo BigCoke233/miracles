@@ -13,21 +13,12 @@ class Contents
         $text = empty($last) ? $data : $last;
         if ($widget instanceof Widget_Archive) {
 			//ParseOther
-			$text = Contents::parseEmo(Contents::parsePrism(Contents::parseImages(Contents::parseHeadings(Contents::parseTextColor(Contents::parseRuby(Contents::parseTip(Contents::parseLink($text))))))));
+			$text = Contents::parseEmo(Contents::parseCode(Contents::parseImages(Contents::parseHeadings(Contents::parseTextColor(Contents::parseRuby(Contents::parseTip(Contents::parseLink($text))))))));
 			//LazyLoad
 	        $text = preg_replace('/<img (.*?)src(.*?)(\/)?>/','<img $1src="/usr/themes/Miracles/images/loading/'.$load_image.'.gif" data-original$2 />',$text);
         }
         return $text;
     }
-	
-	/**
-	 *  解析 Prism
-	 */
-	static public function parsePrism($text){
-		//未定义的代码语言视为 html
-		$text = preg_replace('/<pre><code>/s','<pre><code class="language-html">',$text);
-		return $text;
-	}
 	
 	/**
 	 *  解析图片
@@ -38,16 +29,6 @@ class Contents
 	    
 		return $text;
     }
-	
-	/**
-	 *  解析章节链接
-	 */ 
-	static public function parseHeadings($text){
-		$reg='/\<h([2-3])(.*?)\>(.*?)\<\/h.*?\>/s';
-        $text = preg_replace_callback($reg, array('Contents', 'parseHeaderCallback'), $text);
-		
-		return $text;
-	}
 	
 	/**
 	 *  解析 Text-Color
@@ -165,8 +146,25 @@ class Contents
         }
 	}
 	
+	/**
+	 * 解析代码块
+	 */
+    static public function parseCode($text) {
+		$text = preg_replace('/<pre><code>/s','<pre><code class="language-html">',$text);
+		return $text;
+	}
 	
 	//从这里开始的代码来自 熊猫小A (https://imalan.cn)
+	 
+	/**
+	 *  解析章节链接
+	 */ 
+	static public function parseHeadings($text){
+		$reg='/\<h([2-3])(.*?)\>(.*?)\<\/h.*?\>/s';
+        $text = preg_replace_callback($reg, array('Contents', 'parseHeaderCallback'), $text);
+		
+		return $text;
+	}
 	 
 	/**
      * 为内容中的标题编号
