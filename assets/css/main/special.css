@@ -30,8 +30,8 @@
 .banner-content h1 {
 	margin-bottom: 0
 }
-.banner-content p {
-	margin-top: 10px
+.banner-content .header-meta {
+	margin-top: 11px
 }
 .banner-content:not(.banner-font-black) a,
 .banner-mask:not(.banner-font-black) a {

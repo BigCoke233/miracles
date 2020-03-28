@@ -139,16 +139,20 @@
 		        <p><?php $this->options->bannerIntro(); ?></p>
 				<?php elseif($this->is('post') || $this->is('page')): ?>
 				<h1><?php $this->title(); ?></h1>
-		        <p class="header-meta"><?php if($this->fields->meta==''): ?>
+		        <div class="header-meta">
+				  <?php if($this->fields->meta==''): ?>
 				  <div class="header-meta-line-one">
 				    <?php if($this->is('post')): ?><i class="iconfont icon-block" title="文章分类"></i> <?php $this->category(','); ?>&emsp;<?php endif; ?>
 				    <i class="iconfont icon-comments" title="共 <?php $this->commentsNum('0', '1', '%d'); ?> 条评论"></i> <?php $this->commentsNum('None', 'Only 1', '%d'); ?>&emsp;
                   </div>
 				  <div class="header-meta-line-two">
 				    <i class="iconfont icon-clock" title="该文章发布于 <?php $this->date(); ?>"></i> <?php $this->date(); ?>&emsp;
-				    <i class="icon-view iconfont" title="该文章被浏览 <?php get_post_view($this) ?> 次"></i> <?php get_post_view($this) ?><?php else: echo $this->fields->meta;?><div style="display:none"><?php get_post_view($this) ?></div><?php endif; ?>
+				    <i class="icon-view iconfont" title="该文章被浏览 <?php get_post_view($this) ?> 次"></i> <?php get_post_view($this) ?>
                   </div>
-				</p>
+				  <?php else: ?>
+				    <?php $this->fields->meta(); ?><div style="display:none"><?php get_post_view($this) ?></div>
+				  <?php endif; ?>
+				</div>
 				<?php elseif($this->is('archive')): ?>
 				<h1><?php $this->archiveTitle(array(
                   'category'  =>  _t('分类 %s 下的文章'),
