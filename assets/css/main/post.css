@@ -154,7 +154,7 @@
 	margin: 0 1px;
 }
 .post-content pre>code {
-	background: #282c34!important;
+	background: rgb(63,63,63)!important;
 	color: #fff!important;
 	text-indent: 0!important;
 	border-radius: 4px

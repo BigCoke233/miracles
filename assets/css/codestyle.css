@@ -9,7 +9,9 @@ edited by Eltrac */
 	font-size: .8em!important;
 	padding: 0!important;
 	margin: 0!important;
-	max-height: 90vh
+	max-height: 90vh;
+	position: relative;
+	background: rgb(63,63,63)!important
 }
 
 .hljs::before {
@@ -20,6 +22,11 @@ edited by Eltrac */
 	border-top-right-radius: 5px;
 	background: url('./main/mac_button.png') no-repeat;
 	background-color: rgb(63,63,63);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%
 }
 
 .hljs::-webkit-scrollbar-corner {
@@ -29,7 +36,7 @@ edited by Eltrac */
 .hljs table,.hljs td,.hljs th {
 	border: none!important;
 	background: #2d2d2d;
-	line-height: 1.5
+	line-height: 1.5;
 }
 
 .hljs tr:first-child hljs-line {
@@ -38,6 +45,10 @@ edited by Eltrac */
 
 .hljs tr:last-child hljs-line {
 	padding-bottom: 10px
+}
+
+.hljs-ln {
+	margin-top: 27px
 }
 
 .hljs-ln-numbers {
