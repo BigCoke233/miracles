@@ -58,7 +58,7 @@
 		  <a href="<?php $this->options->SiteUrl(); ?>" style="float:left"><i class="iconfont icon-xuanzhongshangcheng"></i></a>
 		  <a id="search-open-mobile" style="float:left"><i class="iconfont icon-chaxun"></i></a>
 		  <a id="login-open-mobile" style="float:left"><i class="iconfont icon-user"></i></a>
-		  <a id="toggle-dark-mobile" style="float:left"><i class="iconfont icon-moon"></i></a>
+		  <a id="toggle-dark-mobile" style="float:left"><i class="iconfont icon-sun"></i></a>
 		  <a id="toggle-mobile-menu-button" style="float:right">MENU <i class="iconfont icon-list"></i></a>
 		</div>
 	  </nav>
