@@ -188,7 +188,7 @@
 }
 .comment-textarea {
 	width: 100%;
-	border: 1px dashed #ddd;
+	border: none;
 	max-width: 100%;
 }
 .comment-input input {
@@ -198,19 +198,16 @@
     resize: none;
     outline: none;
     padding: 10px 5px;
-	border-bottom: 1px dashed #ddd;
 	transition: .2s;
-}
-.comment-input input:hover {
-	border-bottom: 1px dashed #000;
-}
-.comment-textarea:hover{
-	border: 1px dashed #000;
+	margin-top: 10px;
 }
 .comment-input input,
 .comment-textarea {
 	background: none;
 	outline: none;
+	background-color: rgb(248,248,248);
+	border-radius: 3px;
+	padding: 8px 10px
 }
 
 #comment-form label {
