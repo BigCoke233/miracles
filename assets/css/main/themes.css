@@ -15,9 +15,18 @@
 /**
  *  Dark
  */
-.body-dark {
+.body-dark,
+.body-dark .post-qr,
+.body-dark .login-form .btn {
 	background:#4b4b4b;
 	color:#fafafa
+}
+.body-dark .login-form .btn {
+	background: rgb(70,70,70)!important;
+	transition: .3s
+}
+.body-dark .login-form .btn:hover {
+	opacity: 0.8
 }
 /* Post Content */
 .body-dark .post-content code {
@@ -341,7 +350,8 @@
 .body-sepia,
 .body-sepia .drawer-content,
 .body-sepia .drawer-relative,
-.body-sepia .drawer-icon {
+.body-sepia .drawer-icon,
+.body-sepia .post-qr {
 	background: rgb(248,241,228)
 }
 .body-sepia .nav {
@@ -400,7 +410,8 @@
 .body-sepia .post-pagenav a  {
 	background: rgb(250,246,224)!important
 }
-.body-sepia .comment-content {
+.body-sepia .comment-content,
+.body-sepia .login-form .btn {
 	background-color: rgb(250,230,220)
 }
 .body-sepia .comment-content.bubble::before {
