@@ -144,7 +144,10 @@ if ($_GET['dbg'] == 'rawlist') {
 
                             <?php endforeach;
                         else: ?>
-                            <h1 class="about-name"><?php echo '啥也没有呐 !!!∑(ﾟДﾟノ)ノ'; ?></h1>
+						  <div style="margin-top:-30px;text-align:center;width:100%">
+                            <h2><?php echo '追番数据获取失败'; ?></h2>
+							<p><?php echo '请检查追番页面配置，若您不知道如何配置，请查阅'; ?><a href="https://www.notion.so/eltrac/c7c631e21b3345caa2a09bd2fb5dd4b2#f736ad8b1eb44cbfaca424efca3c76f0"><?php echo '说明文档'; ?></a></p>
+						  </div>
                         <?php endif; ?>
                     </div>
                 </div>
