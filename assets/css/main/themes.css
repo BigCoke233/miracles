@@ -18,8 +18,8 @@
 .body-dark,
 .body-dark .post-qr,
 .body-dark .login-form .btn {
-	background:#4b4b4b;
-	color:#fafafa
+	background: #4b4b4b;
+	color: #fafafa
 }
 .body-dark .login-form .btn {
 	background: rgb(70,70,70)!important;
@@ -351,8 +351,10 @@
 .body-sepia .drawer-content,
 .body-sepia .drawer-relative,
 .body-sepia .drawer-icon,
-.body-sepia .post-qr {
-	background: rgb(248,241,228)
+.body-sepia .post-qr,
+.body-sepia .comment-input input,
+.body-sepia .comment-textarea {
+	background: rgb(248,241,228)!important
 }
 .body-sepia .nav {
 	background: rgba(250,241,228,0.86);

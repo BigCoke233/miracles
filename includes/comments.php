@@ -88,7 +88,7 @@ echo $commentClass;
             <div class="comment-input">
                 <input type="text" name="author" id="author" class="text" placeholder="称呼*" value="<?php $this->remember('author'); ?>" required />
                 <input type="email" name="mail" id="mail" class="text" placeholder="邮箱*" value="<?php $this->remember('mail'); ?>"<?php if ($this->options->commentsRequireMail): ?> required<?php endif; ?> />
-                <input type="url" name="url" id="url" class="text" placeholder="<?php _e('http://'); ?>" value="<?php $this->remember('url'); ?>"<?php if ($this->options->commentsRequireURL): ?> required<?php endif; ?> />
+                <input type="url" name="url" id="url" class="text" placeholder="<?php _e('http(s)://'); ?>" value="<?php $this->remember('url'); ?>"<?php if ($this->options->commentsRequireURL): ?> required<?php endif; ?> />
 			</div>
             <?php endif; ?>
 <!-- 输入要回复的内容 -->
