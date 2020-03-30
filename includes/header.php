@@ -143,7 +143,7 @@
 				  <?php if($this->fields->meta==''): ?>
 				  <div class="header-meta-line-one">
 				    <?php if($this->is('post')): ?><i class="iconfont icon-block" title="文章分类"></i> <?php $this->category(','); ?>&emsp;<?php endif; ?>
-				    <i class="iconfont icon-comments" title="共 <?php $this->commentsNum('0', '1', '%d'); ?> 条评论"></i> <?php $this->commentsNum('None', 'Only 1', '%d'); ?>&emsp;
+				    <i class="iconfont icon-comments" title="共 <?php $this->commentsNum('0', '1', '%d'); ?> 条评论"></i> <?php $this->commentsNum('还没有评论', '仅一条评论', '%d'); ?>&emsp;
                   </div>
 				  <div class="header-meta-line-two">
 				    <i class="iconfont icon-clock" title="该文章发布于 <?php $this->date(); ?>"></i> <?php $this->date(); ?>&emsp;

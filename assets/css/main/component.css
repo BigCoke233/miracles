@@ -34,7 +34,8 @@ button {
 /* Alert */
 .alert {
 	bottom: 0;
-    left: 15px;
+	left: 50%;
+    transform: translate(-50%, 0px);
     z-index: 10;
     padding: 1em;
     position: fixed;
