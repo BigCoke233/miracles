@@ -39,12 +39,6 @@
 	<!-- JavaScript -->
 	<script>
 	<?php if($this->options->build_time)echo "startTime(\"".$this->options->build_time."\");" ?>
-	var post_qr = new QRCode(document.getElementById("post-qr"), {
-                width: 230,
-				height: 230,
-				colorLight : "#f1f1f1",
-				correctLevel : QRCode.CorrectLevel.L
-    });
 	</script>
 	<!-- Send News and Loaders -->
 	<script><?php if($this->is('post') || $this->is('page')): ?>owoLoad();<?php endif; ?><?php $this->options->jsEcho(); ?></script>

@@ -1,4 +1,4 @@
-![](banner.jpg)
+![](banner.png)
 
 <p align="center">
 <img src="https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square"> 

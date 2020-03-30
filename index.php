@@ -27,7 +27,7 @@ $this->need('includes/header.php');
 					  echo $this->fields->banner(); 
 					else: 
 					  if($this->options->randomBanner==''){
-						echo Utils::indexTheme('images/postbg/'); echo mt_rand(1,mt_rand(1,20)); echo '.jpg';
+						echo Utils::indexTheme('images/postbg/'); srand(mb_strlen($this->title));echo rand(1,15).'.jpg';
 					  }
 					  else{
 						$banner_url = explode(',',$this->options->randomBanner);

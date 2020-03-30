@@ -188,7 +188,7 @@
 }
 .comment-textarea {
 	width: 100%;
-	border: none;
+	border: 1px dashed #ddd;
 	max-width: 100%;
 }
 .comment-input input {
@@ -204,9 +204,12 @@
 .comment-input input:hover {
 	border-bottom: 1px dashed #000;
 }
+.comment-textarea:hover{
+	border: 1px dashed #000;
+}
 .comment-input input,
 .comment-textarea {
-	background: #00000003;
+	background: none;
 	outline: none;
 }
 

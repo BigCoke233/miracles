@@ -39,7 +39,7 @@
 		else:
 			$this->options->bannerUrl();
 	endif;}?>" />
-	<link rel="icon" type="image/png" href="<?php Utils::indexTheme('favicon.ico'); ?>" />
+	<link rel="icon" id="icon" type="image/png" href="<?php Utils::indexTheme('favicon.ico'); ?>" />
     <?php $this->header('description=&commentReply='); ?>
 	<?php $this->options->headerEcho(); ?>
 	<!-- css -->
