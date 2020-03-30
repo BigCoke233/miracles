@@ -111,8 +111,10 @@ function themeConfig($form) {
 	//improve
 	$CDN = new Typecho_Widget_Helper_Form_Element_Select('CDN',array('0'=>'关闭','1'=>'开启'),'0','<h2>优化</h2>CDN 加速加载静态资源（Beta）','开启后静态资源文件调用 JSdelivr 的 CDN 公用库，加快网页加载速度。本身有 CDN 的就不用了，不然反而可能会拖慢速度。');
     $form->addInput($CDN);
-	$ifShowRTA = new Typecho_Widget_Helper_Form_Element_Select('ifShowRTA',array('0'=>'不显示','1'=>'显示'),'0','阅读时长提示 RTA','在文章前加入阅读时长提示，增进用户体验<hr>');
+	$ifShowRTA = new Typecho_Widget_Helper_Form_Element_Select('ifShowRTA',array('0'=>'不显示','1'=>'显示'),'0','阅读时长提示 RTA','在文章前加入阅读时长提示，增进用户体验');
     $form->addInput($ifShowRTA);
+	$postQR = new Typecho_Widget_Helper_Form_Element_Text('postQR', NULL, NULL, _t('自定义文章二维码 API'), _t('默认调用 topscan.com 的 API，你可以在这里输入其他的 API 地址，例如：https://api.qrserver.com/v1/create-qr-code/?size=230x230&data=<hr>'));
+    $form->addInput($postQR);
 	
 	//custom style
 	$grayTheme = new Typecho_Widget_Helper_Form_Element_Select('grayTheme',array('0'=>'关闭','1'=>'开启'),'0','<h2>个性化</h2>哀悼模式','打开后网站变为黑白');

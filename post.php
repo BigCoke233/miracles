@@ -23,7 +23,15 @@ $this->need('includes/header.php');
 		  <?php $this->content(); ?>
 		</div>
 		<div class="post-qr">
-		  <img src="http://qr.topscan.com/api.php?text=<?php echo $this->permalink; ?>">
+		  <img src="<?php
+       		if($this->options->postQR==''){
+				echo 'https://api.qrserver.com/v1/create-qr-code/?size=230x230&data=';
+				echo $this->permalink; 
+			}else{
+				echo $this->options->postQR;
+				echo $this->permalink;
+			}
+        ?>">
 		</div>
 		<div class="post-footer"><!-- 文章页脚 -->
 		  <div class="post-share">分享至：
