@@ -363,7 +363,8 @@
 }
 .body-sepia .search,
 .body-sepia .login,
-.body-sepia .mobile-menu {
+.body-sepia .mobile-menu,
+.body-sepia .bangumi-des {
 	background-color: rgba(248,241,228,0.98);
 }
 .body-sepia .search-form input {
@@ -399,3 +400,4 @@
 .body-sepia .comment-content.bubble::before {
 	border-right-color: rgb(250,230,220)
 }	
+.body-sepia

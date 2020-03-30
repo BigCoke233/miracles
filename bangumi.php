@@ -146,7 +146,7 @@ if ($_GET['dbg'] == 'rawlist') {
                         else: ?>
 						  <div style="margin-top:-30px;text-align:center;width:100%">
                             <h2><?php echo '追番数据获取失败'; ?></h2>
-							<p><?php echo '请检查追番页面配置，若您不知道如何配置，请查阅'; ?><a href="https://www.notion.so/eltrac/c7c631e21b3345caa2a09bd2fb5dd4b2#f736ad8b1eb44cbfaca424efca3c76f0"><?php echo '说明文档'; ?></a></p>
+							<p><?php echo '请检查追番页面配置，以及是否安装 CURL 拓展，若您不知道如何配置，请查阅'; ?><a href="https://www.notion.so/eltrac/c7c631e21b3345caa2a09bd2fb5dd4b2#f736ad8b1eb44cbfaca424efca3c76f0"><?php echo '说明文档'; ?></a></p>
 						  </div>
                         <?php endif; ?>
                     </div>
@@ -154,6 +154,7 @@ if ($_GET['dbg'] == 'rawlist') {
                 <br>
             </div>
         </div>
+		<?php if(!$error && $bgmdataraw['data']['total']>16): ?>
         <div class="post-pagenav">
             <?php if ($page != 1): ?><a class="post-pagenav-left" href="?page=<?php echo $page - 1; ?>"><i
                         class="iconfont icon-chevron-left"></i></a> <?php endif; ?>
@@ -162,7 +163,7 @@ if ($_GET['dbg'] == 'rawlist') {
                             class="iconfont icon-chevron-right"></i></a>
             <?php endif; ?>
         </div>
-        <br>
+		<?php endif;?>
         <?php $this->need('includes/comments.php');
         ?>
     </main>
