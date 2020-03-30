@@ -206,7 +206,7 @@
 }
 .comment-input input,
 .comment-textarea {
-	background: transparent;
+	background: #00000003;
 	outline: none;
 }
 

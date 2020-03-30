@@ -20,9 +20,9 @@
 	<div class="fixed-tools">
 	  <button title="返回顶部" class="fixed-button gotop-button" id="gotop"><i class="iconfont icon-chevron-up"></i></button>
 	</div>
-	<!-- JavaScript -->
+	<!-- JavaScript Require-->
 	<?php
-	$js_files=array("jquery","pjax.jquery","jquery.fancybox","jquery.lazyload.min","nprogress","OwO.min","highlight","highlight-line-number","pangu");
+	$js_files=array("jquery","pjax.jquery","jquery.fancybox","jquery.lazyload.min","nprogress","OwO.min","highlight","highlight-line-number","pangu","qrcode.min");
 	generate_require($js_files,"js",$this->options->CDN?"https://cdn.jsdelivr.net/gh/BigCoke233/miracles@":"");
 	?>
 	<!-- Varribles and Functions -->
@@ -36,9 +36,15 @@
 	<!-- Script that must be after-->
 	<script src="<?php Utils::indexTheme('assets/js/cmt.miracles.js'); ?>"></script>
 	<script src="<?php Utils::indexTheme('assets/js/miracles.min.js'); ?>"></script>
-	<!-- BuildTime -->
+	<!-- JavaScript -->
 	<script>
 	<?php if($this->options->build_time)echo "startTime(\"".$this->options->build_time."\");" ?>
+	var post_qr = new QRCode(document.getElementById("post-qr"), {
+                width: 230,
+				height: 230,
+				colorLight : "#f1f1f1",
+				correctLevel : QRCode.CorrectLevel.L
+    });
 	</script>
 	<!-- Send News and Loaders -->
 	<script><?php if($this->is('post') || $this->is('page')): ?>owoLoad();<?php endif; ?><?php $this->options->jsEcho(); ?></script>
