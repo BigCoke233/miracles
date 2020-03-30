@@ -50,7 +50,6 @@
 	margin-top: 15px
 }
 .post-button {
-	margin-right: 20px;
 	float: right
 }
 .post-footer {
@@ -79,6 +78,8 @@
 .post-share .social-share {
 	margin-right: 10px;
 	vertical-align:middle;
+	background: transparent;
+	border: none
 }
 .post-share .social-share i {
     transition: color .2s
@@ -92,6 +93,9 @@
 .post-share .social-share.twitter:hover i {
 	color: rgb(29,161,242);
 }
+.post-share .social-share.qrcode:hover i {
+	color: #000
+}
 .post-share .social-share.copyright i {
 	float: right;
 	font-size: 20px;
@@ -100,6 +104,10 @@
 	cursor: pointer;
 	display: none/*移动端不显示*/
 }
+.post-share .social-share.qrcode {
+	margin-right: 3px
+}
+
 .post-share .iconfont {
 	color: rgb(200,200,200);
 	font-size: 25px;
@@ -113,6 +121,21 @@
 .post-content h2:hover .post-toc-link,
 .post-content h3:hover .post-toc-link {
 	opacity: 1
+}
+.post-qr {
+	background: #f1f1f1;
+	height: 0;
+	overflow: hidden;
+	transition: .3s
+}
+.post-qr-open {
+	height: auto;
+	transition: .3s
+}
+.post-qr img {
+	display: block;
+	margin: 10px auto;
+	max-width: 200px
 }
 
 /* >文章内容 */

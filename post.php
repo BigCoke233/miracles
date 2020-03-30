@@ -22,8 +22,12 @@ $this->need('includes/header.php');
 	      </div>
 		  <?php $this->content(); ?>
 		</div>
+		<div class="post-qr">
+		  <img src="http://qr.topscan.com/api.php?text=<?php echo $this->permalink; ?>">
+		</div>
 		<div class="post-footer"><!-- 文章页脚 -->
 		  <div class="post-share">分享至：
+            <button class="social-share qrcode" id="post-qrcode-btn"><i class="iconfont icon-qr_code"></i></button>
 		    <a class="social-share qq"  target="_blank" href="https://connect.qq.com/widget/shareqq/index.html?url=<?php $this->permalink() ?>&title=<?php $this->title() ?>&summary=<?php $this->excerpt(100); ?>" title="分享至 QQ 好友"><i class="iconfont icon-qq1-copy"></i></a>
 		    <a class="social-share weibo"  target="_blank" href="http://service.weibo.com/share/share.php?url=<?php $this->permalink() ?>/&appkey=<?php $this->options->title(); ?>/&title=<?php $this->title() ?>" title="分享至新浪微博"><i class="iconfont icon-weibo-copy"></i></a>
 		    <a class="social-share twitter"  target="_blank" href="https://twitter.com/intent/tweet?text=<?php $this->excerpt(100); ?>&amp;url=<?php $this->permalink() ?>"><i class="iconfont icon-twitter-copy" title="分享至 Twitter"></i></a>
