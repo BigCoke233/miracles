@@ -22,16 +22,7 @@ $this->need('includes/header.php');
 	      </div>
 		  <?php $this->content(); ?>
 		</div>
-		<div class="post-qr">
-		  <img src="<?php
-       		if($this->options->postQR==''){
-				echo 'https://api.qrserver.com/v1/create-qr-code/?size=230x230&data=';
-				echo $this->permalink; 
-			}else{
-				echo $this->options->postQR;
-				echo $this->permalink;
-			}
-        ?>">
+		<div class="post-qr" id="post-qr">
 		</div>
 		<div class="post-footer"><!-- 文章页脚 -->
 		  <div class="post-share">分享至：
