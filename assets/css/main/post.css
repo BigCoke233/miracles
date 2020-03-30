@@ -124,13 +124,13 @@
 }
 .post-qr {
 	background: #f1f1f1;
-	height: 0;
+	max-height: 0;
 	overflow: hidden;
-	transition: .3s
+	transition: .6s
 }
 .post-qr-open {
-	height: auto;
-	transition: .3s
+	max-height: 250px;
+	transition: .6s
 }
 .post-qr img {
 	display: block;
