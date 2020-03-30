@@ -338,7 +338,10 @@
 /**
  * Sepia
  */
-.body-sepia {
+.body-sepia,
+.body-sepia .drawer-content,
+.body-sepia .drawer-relative,
+.body-sepia .drawer-icon {
 	background: rgb(248,241,228)
 }
 .body-sepia .nav {
@@ -346,7 +349,10 @@
 }
 .body-sepia .post-body,
 .body-sepia .post-item,
-.body-sepia #comment-form {
+.body-sepia #comment-form,
+.body-sepia .drawer-header,
+.body-sepia .drawer-footer,
+.body-sepia .drawer-content a:hover {
 	background: rgb(245,238,218)
 }
 .body-sepia .banner-mask {
