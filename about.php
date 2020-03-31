@@ -29,7 +29,7 @@ $this->need('includes/header.php');
 			<a href="https://space.bilibili.com/<?php echo $this->fields->bilibili(); ?>" target="_blank" title="Bilibili"><i class="iconfont icon-bilibili-"></i></a>
 			<?php endif; ?>
 			<?php if($this->fields->email==!''): ?>
-			<a href="mail:<?php echo $this->fields->email(); ?>"><i class="iconfont icon-mail_fill" target="_blank" title="email"></i></a>
+			<a href="mailto:<?php echo $this->fields->email(); ?>"><i class="iconfont icon-mail_fill" target="_blank" title="email"></i></a>
 			<?php endif; ?>
 		  </div>
 		</div>
