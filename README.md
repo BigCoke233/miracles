@@ -7,7 +7,6 @@
 <a href="https://typecho.org"><img src="https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square"></a> 
 <a href="https://github.com/BigCoke233/miracles/releases"><img src="https://img.shields.io/github/v/release/BigCoke233/miracles?color=red&style=flat-square"></a> 
 <a href="https://github.com/BigCoke233/miracles/graphs/contributors"><img src="https://img.shields.io/github/contributors/BigCoke233/miracles?color=orange&style=flat-square"></a> 
-<a href="https://github.com/BigCoke233/textretty.css/releases"><img src="https://img.shields.io/github/downloads/BigCoke233/textretty.css/total?style=flat-square"></a> 
     
 <p align="center"><strong>记录你心中的奇迹，书写你自己的篇章</strong></p>
 
