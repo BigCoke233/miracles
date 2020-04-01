@@ -13,7 +13,7 @@ $this->need('includes/header.php');
 			  </div></div>
 			</div>
           <?php endif; ?>
-		  <?php if($this->options->ifShowRTA==0): ?>
+		  <?php if($this->options->ifShowRTA!=0): ?>
 		  <div class="tip blue" id="reading-time-alert">
             <div class="container-fluid">
               <div class="row">

@@ -1,6 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 class Contents
 {
+	
     /**
      * 内容解析器入口
      * 传入的是经过 Markdown 解析后的文本
@@ -85,6 +86,31 @@ class Contents
 			</div>';
         $text = preg_replace($reg,$rp,$text);
 		
+		//解析外部友链
+		$reg = '/\[links data="(.*?)"\]/s';
+		$dataLink = preg_replace($reg,'${1}',$text);
+		$data = file_get_contents($dataLink);
+		$data = json_decode($data, true);
+		$linkItemNum = count($data);
+        for ($i = 0; $i < $linkItemNum; $i++) {
+            $name = $data[$i]['name'];
+            $link = $data[$i]['link'];
+			$avatar = $data[$i]['avatar'];
+			$des = $data[$i]['des'];
+			//嵌入列表
+			$linksList .= '<div class="col-lg-2 col-6 col-md-3 links-container">
+		    <a href="'. $link .'" title="'. $des .'" target="_blank" class="links-link">
+			  <div class="links-item">
+			    <div class="links-img" style="background:url(\''. $avatar .'\');width: 100%;padding-top: 100%;background-repeat: no-repeat;background-size: cover;"></div>
+				<div class="links-title">
+				  <h4>'. $name .'</h4>
+				</div>
+		      </div>
+			  </a>
+			</div>';
+		}
+		$text=preg_replace($reg,'<div class="links-box container-fluid"><div class="row">'. $linksList .'</div></div>',$text);
+		
 		return $text;
 	}
 	
@@ -133,37 +159,13 @@ class Contents
     }
 	
 	/**
-	 * 解析自定义导航栏
-	 */
-	static public function paresNav($data, $type) {
-		$de_json = json_decode($data, true);
-		$count_json = count($de_json);
-        for ($i = 0; $i < $count_json; $i++) {
-            $title = $de_json[$i]['title'];
-            $link = $de_json[$i]['link'];
-			//输出导航
-			if($type="top-nav") {
-			    echo '<a href="'. $link .'">'. $title .'</a>';
-			}
-			elseif($type="mobile") {
-				echo '<div class="col-6"><a href="'. $link .'">'. $title .'</a></div>';
-			}
-			elseif($type="drawer") {
-				echo '<a href="'. $link .'" onclick="toggleDrawer()">'. $title .'</a>';
-			}
-        }
-	}
-	
-	/**
 	 * 解析代码块
 	 */
     static public function parseCode($text) {
 		$text = preg_replace('/<pre><code>/s','<pre><code class="language-html">',$text);
 		return $text;
 	}
-	
-	//从这里开始的代码来自 熊猫小A (https://imalan.cn)
-	 
+
 	/**
 	 *  解析章节链接
 	 */ 
@@ -184,6 +186,29 @@ class Contents
         $id = 'toc_'.(self::$CurrentTocID++);
         return '<h'.$matchs[1].$matchs[2].' id="'.$id.'">'.$matchs[3].'<a href="#'.$id.'" title="章节链接" class="post-toc-link no-line"><i class="iconfont icon-paragraph"></i></a></h'.$matchs[1].'>';
     }
+	
+
+	/**
+	 * 解析自定义导航栏
+	 */
+	static public function paresNav($data, $type) {
+		$de_json = json_decode($data, true);
+		$count_json = count($de_json);
+        for ($i = 0; $i < $count_json; $i++) {
+            $title = $de_json[$i]['title'];
+            $link = $de_json[$i]['link'];
+			//输出导航
+			if($type="top-nav") {
+			    echo '<a href="'. $link .'">'. $title .'</a>';
+			}
+			elseif($type="mobile") {
+				echo '<div class="col-6"><a href="'. $link .'">'. $title .'</a></div>';
+			}
+			elseif($type="drawer") {
+				echo '<a href="'. $link .'" onclick="toggleDrawer()">'. $title .'</a>';
+			}
+        }
+	}
 	
 	/**
      * 根据 id 返回对应的对象
