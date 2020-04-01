@@ -135,14 +135,22 @@ class Contents
 	/**
 	 * 解析自定义导航栏
 	 */
-	static public function paresNav($data) {
+	static public function paresNav($data, $type) {
 		$de_json = json_decode($data, true);
 		$count_json = count($de_json);
         for ($i = 0; $i < $count_json; $i++) {
             $title = $de_json[$i]['title'];
             $link = $de_json[$i]['link'];
 			//输出导航
-			echo '<a href="'. $link .'">'. $title .'</a>';
+			if($type="top-nav") {
+			    echo '<a href="'. $link .'">'. $title .'</a>';
+			}
+			elseif($type="mobile") {
+				echo '<div class="col-6"><a href="'. $link .'">'. $title .'</a></div>';
+			}
+			elseif($type="drawer") {
+				echo '<a href="'. $link .'" onclick="toggleDrawer()">'. $title .'</a>';
+			}
         }
 	}
 	
