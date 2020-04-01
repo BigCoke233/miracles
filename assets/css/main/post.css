@@ -361,6 +361,11 @@
 .post-bubble .saying-content p {
 	padding: 0 20px!important;
 }
+@media (min-width:768px) {
+    .tip-icon {
+		display: block
+	}
+}
 
 /* >文章分页 */
 .post-pagenav,
