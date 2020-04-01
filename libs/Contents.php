@@ -63,17 +63,18 @@ class Contents
 		
 		return $text;
 	}
-	
-	/**
-	 *  解析友链
-	 */
-	static public function parseLink($text){
-		//解析友链盒子
-	    $reg = '/\[links\](.*?)\[\/links\]/s';
+
+    /**
+     *  解析友链
+     */
+    static public function parseLink($text)
+    {
+        //解析友链盒子
+        $reg = '/\[links\](.*?)\[\/links\]/s';
         $rp = '<div class="links-box container-fluid"><div class="row">${1}</div></div>';
-        $text = preg_replace($reg,$rp,$text);
+        $text = preg_replace($reg, $rp, $text);
         //解析友链项目
-	    $reg = '/\[(.*?)\]\{(.*?)\}\((.*?)\)\+\((.*?)\)/s';
+        $reg = '/\[(.*?)\]\{(.*?)\}\((.*?)\)\+\((.*?)\)/s';
         $rp = '<div class="col-lg-2 col-6 col-md-3 links-container">
 		    <a href="${2}" title="${4}" target="_blank" class="links-link">
 			  <div class="links-item">
@@ -84,50 +85,52 @@ class Contents
 		      </div>
 			  </a>
 			</div>';
-        $text = preg_replace($reg,$rp,$text);
-		//解析外部友链
-		$reg = '/\[links data="(.*?)"\]/';
-		$dataLink = preg_match($reg,$text,$matches);
-		if (!$dataLink) return $text; //普通文章别匹配!
-		$http=Typecho_Http_Client::get();
+        $text = preg_replace($reg, $rp, $text);
+        //解析外部友链
+        $reg = '/\[links data="(.*?)"\]/';
+        $dataLink = preg_match_all($reg, $text, $matches);
+        if (!$dataLink) return $text; //普通文章别匹配!
+        $http = Typecho_Http_Client::get();
         if (false == $http) {
-            $text=preg_replace($reg,'<br>对不起, 您的主机不支持 php-curl 扩展而且没有打开 allow_url_fopen 功能, 无法正常使json友链功能',$text);
+            $text = str_replace($matches[0][0],  '<br>对不起, 您的主机不支持 php-curl 扩展而且没有打开 allow_url_fopen 功能, 无法正常使json友链功能', $text);
             return $text;
         }
-        try {
-            $result = $http->send($matches[1]);
-        }catch (Typecho_Http_Client_Exception $ex){
-            $text=preg_replace($reg, '对不起,json外链请求失败! 错误信息:'.$ex->getMessage(),$text);
-            return $text;
-        }
-		$data = json_decode($result, true);
-		if ($data==false) {//没获取到数据就别走了!赶紧返回免得搞出事情
-            $text=preg_replace($reg, '对不起,json外链解析失败!',$text);
-            return $text;
-        }
-		$linkItemNum = count($data);
-		$linksList='';//先Define一下,IDE在报错QAQ
-        for ($i = 0; $i < $linkItemNum; $i++) {
-            $name = $data[$i]['name'];
-            $link = $data[$i]['link'];
-			$avatar = $data[$i]['avatar'];
-			$des = $data[$i]['des'];
-			//嵌入列表
-			$linksList .= '<div class="col-lg-2 col-6 col-md-3 links-container">
-		    <a href="'. $link .'" title="'. $des .'" target="_blank" class="links-link">
+        for ($j = 0; $j <= $dataLink; $j++) {
+            $match = $matches[1][$j];
+            try {
+                $result = $http->send($match);
+            } catch (Typecho_Http_Client_Exception $ex) {
+                $text = str_replace($matches[0][$j],  '对不起,json外链请求失败! 错误信息:' . $ex->getMessage(), $text);
+                continue;
+            }
+            $data = json_decode($result, true);
+            if ($data == false) {//没获取到数据就别走了!赶紧返回免得搞出事情
+                $text = str_replace($matches[0][$j],  '对不起,json外链解析失败!', $text);
+                continue;
+            }
+            $linkItemNum = count($data);
+            $linksList = '';//先Define一下,IDE在报错QAQ
+            for ($i = 0; $i < $linkItemNum; $i++) {
+                $name = $data[$i]['name'];
+                $link = $data[$i]['link'];
+                $avatar = $data[$i]['avatar'];
+                $des = $data[$i]['des'];
+                //嵌入列表
+                $linksList .= '<div class="col-lg-2 col-6 col-md-3 links-container">
+		    <a href="' . $link . '" title="' . $des . '" target="_blank" class="links-link">
 			  <div class="links-item">
-			    <div class="links-img" style="background:url(\''. $avatar .'\');width: 100%;padding-top: 100%;background-repeat: no-repeat;background-size: cover;"></div>
+			    <div class="links-img" style="background:url(\'' . $avatar . '\');width: 100%;padding-top: 100%;background-repeat: no-repeat;background-size: cover;"></div>
 				<div class="links-title">
-				  <h4>'. $name .'</h4>
+				  <h4>' . $name . '</h4>
 				</div>
 		      </div>
 			  </a>
 			</div>';
-		}
-		$text=preg_replace($reg,'<div class="links-box container-fluid"><div class="row">'. $linksList .'</div></div>',$text);
-		
-		return $text;
-	}
+            }
+            $text = str_replace($matches[0][$j], '<div class="links-box container-fluid"><div class="row">' . $linksList . '</div></div>', $text);
+        }
+        return $text;
+    }
 	
 	/**
 	 *  解析 owo 表情
