@@ -92,6 +92,11 @@ $ git clone https://github.com/BigCoke233/miracles.git
 | [@ohmyga233](https://github.com/ohmyga233) | 实现 Ajax 评论无刷新 |
 | [@kengwang](https://github.com/kengwang) | 提供追番页面 |
 
+### 参考
+
+[VOID](https://github.com/AlanDecode/Typecho-Theme-VOID) | [Castle](https://github.com/ohmyga233/castle-Typecho-Theme) |
+[Holakit](https://github.com/wenxuanjun/Holakit) | [Material](https://github.com/idawnlight/typecho-theme-material)
+
 ## 相关
 演示站点：[我的博客](https://guhub.cn)  |  以及 Sponsor 中的站点链接  
 介绍文章：[Miracles —— 生为奇迹](https://guhub.cn/p/miracles.html)  
