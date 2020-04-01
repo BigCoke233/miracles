@@ -13,13 +13,15 @@ $this->need('includes/header.php');
 			  </div></div>
 			</div>
           <?php endif; ?>
-		  <div class="tip blue" id="reading-time-alert"<?php if($this->options->ifShowRTA==0): ?> style="display:none!important"<?php endif;?>>
+		  <?php if($this->options->ifShowRTA==0): ?>
+		  <div class="tip blue" id="reading-time-alert">
             <div class="container-fluid">
               <div class="row">
                 <div class="col-1 tip-icon"><i class="iconfont icon-info"></i></div>
                 <div class="col-11 tip-content" id="readTip"></div>
 			  </div></div>
 	      </div>
+		  <?php endif;?>
 		  <?php $this->content(); ?>
 		</div>
 		<div class="post-qr" id="post-qr">
