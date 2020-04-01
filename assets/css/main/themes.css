@@ -214,7 +214,6 @@
 .body-dark .post-pagenav a,
 .body-dark .search-form input,
 .body-dark .login-form button,
-.body-dark .login-enter-admin,
 .body-dark #comment-form,
 .body-dark .comment-by-author > .comment-body-inner > .comment-main > .comment-meta > .comment-date:before {
 	background:#5a5a5a!important
@@ -223,6 +222,7 @@
 .body-dark .OwO-bar,
 .body-dark .OwO-item,
 .body-dark .index-banner,
+.body-dark .login-enter-admin a,
 .body-dark .comment-submit {
 	background-color:#6e6e6e!important
 }
@@ -275,7 +275,8 @@
 .body-dark .header-meta a,
 .body-dark .alert,
 .body-dark .respond input,
-.body-dark .respond textarea  {
+.body-dark .respond textarea,
+.body-dark .login-enter-admin a  {
 	color:#fafafa!important
 }
 .body-dark .options-theme-label {
@@ -366,7 +367,8 @@
 .body-sepia #comment-form,
 .body-sepia .drawer-header,
 .body-sepia .drawer-footer,
-.body-sepia .drawer-content a:hover {
+.body-sepia .drawer-content a:hover,
+.body-sepia .login-enter-admin a {
 	background: rgb(245,238,218)
 }
 .body-sepia .banner-mask {
@@ -415,7 +417,8 @@
 	background: rgb(250,246,224)!important
 }
 .body-sepia .comment-content,
-.body-sepia .login-form .btn {
+.body-sepia .login-form .btn,
+.body-sepia .post-tags a {
 	background-color: rgb(250,230,220)
 }
 .body-sepia .comment-content.bubble::before {
