@@ -12,7 +12,7 @@ function themeConfig($form) {
     $sjdq=$db->fetchRow($db->select()->from ('table.options')->where ('name = ?', 'theme:Miracles'));
     $ysj = $sjdq['value'];
     if(isset($_POST['type'])){ 
-      if($_POST["type"]=="备份模板数据"){
+      if($_POST["type"]=="备份设置"){
         if($db->fetchRow($db->select()->from ('table.options')->where ('name = ?', 'theme:MiraclesBackup'))){
           $update = $db->update('table.options')->rows(array('value'=>$ysj))->where('name = ?', 'theme:MiraclesBackup');
           $updateRows= $db->query($update);
@@ -28,7 +28,7 @@ function themeConfig($form) {
     }
     }
         }
-    if($_POST["type"]=="还原模板数据"){
+    if($_POST["type"]=="还原设置"){
     if($db->fetchRow($db->select()->from ('table.options')->where ('name = ?', 'theme:MiraclesBackup'))){
     $sjdub=$db->fetchRow($db->select()->from ('table.options')->where ('name = ?', 'theme:MiraclesBackup'));
     $bsj = $sjdub['value'];
@@ -41,7 +41,7 @@ function themeConfig($form) {
     echo '<div class="miracles-backup-alert">没有模板备份数据，恢复不了哦！</div>';
     }
     }
-    if($_POST["type"]=="删除备份数据"){
+    if($_POST["type"]=="删除设置备份"){
       if($db->fetchRow($db->select()->from ('table.options')->where ('name = ?', 'theme:MiraclesBackup'))){
         $delete = $db->delete('table.options')->where ('name = ?', 'theme:MiraclesBackup');
         $deletedRows = $db->query($delete);
