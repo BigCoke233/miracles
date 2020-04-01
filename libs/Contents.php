@@ -85,13 +85,28 @@ class Contents
 			  </a>
 			</div>';
         $text = preg_replace($reg,$rp,$text);
-		
 		//解析外部友链
-		$reg = '/\[links data="(.*?)"\]/s';
-		$dataLink = preg_replace($reg,'${1}',$text);
-		$data = file_get_contents($dataLink);
-		$data = json_decode($data, true);
+		$reg = '/\[links data="(.*?)"\]/';
+		$dataLink = preg_match($reg,$text,$matches);
+		if (!$dataLink) return $text; //普通文章别匹配!
+		$http=Typecho_Http_Client::get();
+        if (false == $http) {
+            $text=preg_replace($reg,'<br>对不起, 您的主机不支持 php-curl 扩展而且没有打开 allow_url_fopen 功能, 无法正常使json友链功能',$text);
+            return $text;
+        }
+        try {
+            $result = $http->send($matches[1]);
+        }catch (Typecho_Http_Client_Exception $ex){
+            $text=preg_replace($reg, '对不起,json外链请求失败! 错误信息:'.$ex->getMessage(),$text);
+            return $text;
+        }
+		$data = json_decode($result, true);
+		if ($data==false) {//没获取到数据就别走了!赶紧返回免得搞出事情
+            $text=preg_replace($reg, '对不起,json外链解析失败!',$text);
+            return $text;
+        }
 		$linkItemNum = count($data);
+		$linksList='';//先Define一下,IDE在报错QAQ
         for ($i = 0; $i < $linkItemNum; $i++) {
             $name = $data[$i]['name'];
             $link = $data[$i]['link'];
