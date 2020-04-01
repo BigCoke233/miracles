@@ -186,7 +186,9 @@
 .body-dark .tags-item a,
 .body-dark .post-tags a,
 .body-dark .about-social a:hover,
-.body-dark .comment-hidden {
+.body-dark .comment-hidden,
+.body-dark .comment-input input,
+.body-dark .comment-textarea {
 	background: #646464!important
 }
 /* Need #5a5a5a bg */
