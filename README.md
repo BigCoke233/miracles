@@ -12,6 +12,7 @@
 
 ---
 
+> **使用主题时，如果需要任何基础功能上的帮助，请先查看[说明文档](https://www.notion.so/eltrac/c7c631e21b3345caa2a09bd2fb5dd4b2)！**
 > 我用 Notion 给 Miracles 做了一个主页，欢迎访问：[Miracles 主题](https://www.notion.so/eltrac/Miracles-11ff2db10acc43bba64ba422b309138d)  
 > 同时，欢迎加入 QQ 交流群：924171480，或者 [Telegram](https://dev.guhub.cn/tg)
 
