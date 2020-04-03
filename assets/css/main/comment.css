@@ -189,7 +189,7 @@
 .comment-textarea {
 	width: 100%;
 	border: none;
-	max-width: 100%;
+	max-width: 100%
 }
 .comment-input input {
 	display: block;
@@ -289,4 +289,17 @@
 	animation: fadein;
 	animation-duration: 0.3s;
 	-webkit-animation: fadein 0.3s;
+}
+
+/* 发送评论时评论框样式 */
+.comment-form {
+	transition: opacity .2s;
+}
+.comment-sending {
+	opacity: 0.6;
+}
+.comment-sending textarea {
+	background: url('/usr/themes/Miracles/images/loading/bilibili.gif') no-repeat;
+	background-position: center center;
+	background-size: cover
 }

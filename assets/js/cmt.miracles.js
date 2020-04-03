@@ -108,6 +108,8 @@ var MiraclesComment = {
   function beforeComment() {
    //禁用按钮
    $('#comment-form .comment-submit').attr('disabled', true);
+   $('.comment-form').addClass('comment-sending');
+   $('#comment-form .comment-submit').text('提交中...');
   };
   beforeComment();
 
@@ -115,11 +117,13 @@ var MiraclesComment = {
   function afterComment(status) {
    //取消禁用评论按钮
    $('#comment-form .comment-submit').removeAttr('disabled');
+   $('.comment-form').removeClass('comment-sending');
+   $('#comment-form .comment-submit').text('评论');
 
    //判断是否评论成功
    if(status) {
     //如果成功
-    if ($('.comment-waiting').length) {
+    if ($('.comment-waiting').length>0) {
       alertSend('评论提交成功，正在等待审核！', 'success');
     }else{
       alertSend('评论提交成功！', 'success');
