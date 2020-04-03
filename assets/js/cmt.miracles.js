@@ -108,7 +108,7 @@ var MiraclesComment = {
   function beforeComment() {
    //禁用按钮
    $('#comment-form .comment-submit').attr('disabled', true);
-   $('.comment-form').addClass('comment-sending');
+   $('#comment-form').addClass('comment-sending');
    $('#comment-form .comment-submit').text('提交中...');
   };
   beforeComment();
@@ -117,7 +117,7 @@ var MiraclesComment = {
   function afterComment(status) {
    //取消禁用评论按钮
    $('#comment-form .comment-submit').removeAttr('disabled');
-   $('.comment-form').removeClass('comment-sending');
+   $('#comment-form').removeClass('comment-sending');
    $('#comment-form .comment-submit').text('评论');
 
    //判断是否评论成功
