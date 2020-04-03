@@ -37,7 +37,7 @@
 	  <div class="mobile-menu ready">
 	    <button class="mobile-menu-close ready" id="toggle-mobile-menu-close"><i class="iconfont icon-x"></i></button>
 		<h2 class="mobile-menu-title">页面导航</h2>
-		<div class="mobile-menu-pagelist"><div class="container-fluid"><div class="row">
+		<div class="mobile-menu-pagelist" role="navigation"><div class="container-fluid"><div class="row">
 		  <?php 
 		  if($this->options->customNav=='') {
 			  $this->widget('Widget_Contents_Page_List')
@@ -54,7 +54,7 @@
 
 	  <!-- -小屏幕导航 -->
 	  <nav class="small-screen nav nav-mobile nav-fixed"<?php if($this->options->navStyle==1): ?> style="display:none!important"<?php endif; ?> id="navBarMobile">
-        <div class="nav-mobile-content">
+        <div class="nav-mobile-content" role="navigation">
 		  <a href="<?php $this->options->SiteUrl(); ?>" style="float:left"><i class="iconfont icon-xuanzhongshangcheng"></i></a>
 		  <a id="search-open-mobile" style="float:left"><i class="iconfont icon-chaxun"></i></a>
 		  <a id="login-open-mobile" style="float:left"><i class="iconfont icon-user"></i></a>
@@ -69,7 +69,7 @@
 	  <!-- -大屏幕导航 -->
       <nav class="large-screen nav nav-fixed" id="navBar">
 	    <div class="container">
-		  <p class="nav-content">
+		  <p class="nav-content" role="navigation">
 		    <a href="<?php $this->options->SiteUrl(); ?>" class="nav-title"><?php $this->options->title(); ?></a>
 			<span class="nav-content-item">
 			<?php 
@@ -124,11 +124,11 @@
 	  <header>
 	    <!-- Banner -->
 	    <?php if($this->is('post') || $this->is('page')): ?>
-		<div class="index-banner" style="background-position:center;<?php if($this->fields->banner && $this->fields->banner=!''): ?>background:url('<?php $this->fields->banner(); ?>') no-repeat;<?php else: ?>background-color:#f1f1f1;<?php endif; ?>height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;">
+		<div role="banner" class="index-banner" style="background-position:center;<?php if($this->fields->banner && $this->fields->banner=!''): ?>background:url('<?php $this->fields->banner(); ?>') no-repeat;<?php else: ?>background-color:#f1f1f1;<?php endif; ?>height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;">
         <?php elseif($this->is('archive')): ?>
-		<div class="index-banner" style="height:<?php $this->options->bannerHeight(); ?>vh;background-position:center;<?php if($this->options->bannerUrl!=''): echo $this->options->bannerUrl(); endif; ?>">
+		<div role="banner" class="index-banner" style="height:<?php $this->options->bannerHeight(); ?>vh;background-position:center;<?php if($this->options->bannerUrl!=''): echo $this->options->bannerUrl(); endif; ?>">
 		<?php else: ?>
-	    <div class="index-banner" style="background-position:center;background:url('<?php $this->options->bannerUrl(); ?>') no-repeat;height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;">
+	    <div role="banner" class="index-banner" style="background-position:center;background:url('<?php $this->options->bannerUrl(); ?>') no-repeat;height:<?php $this->options->bannerHeight(); ?>vh;background-size:cover;">
 		<?php endif; ?>
 		  <!-- 遮罩 -->
 		  <div class="banner-mask"<?php if($this->is('post') || $this->is('page')):?><?php if($this->fields->banner==''):?> style="background:rgba(0,0,0,0)!important"<?php endif;?><?php endif; ?><?php if($this->is('index')):?><?php if($this->options->bannerUrl && $this->options->bannerUrl=!''): ?><?php else:?> style="background:rgba(0,0,0,0)!important"<?php endif;?><?php endif;?>>

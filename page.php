@@ -2,7 +2,7 @@
 $this->need('includes/head.php');
 $this->need('includes/header.php');
 ?>
-    <main class="main-container container">
+    <main class="main-container container" role="main">
 	  <div class="post-body"><!-- 页面内容 -->
 	    <div class="post-content page-content">
 		  <?php $this->content(); ?>

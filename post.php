@@ -2,9 +2,9 @@
 $this->need('includes/head.php');
 $this->need('includes/header.php');
 ?>
-    <main class="main-container container">
+    <main class="main-container container" role="main">
 	  <div class="post-body">
-	    <div class="post-content" id="post-content"><!-- 文章内容 -->
+	    <div class="post-content" role="article" id="post-content"><!-- 文章内容 -->
 		  <?php $postCheck = Utils::isOutdated($this); if($postCheck["is"] && $this->is('post')): ?>
             <div class="tip red" id="out-date-alert">
 			  <div class="container-fluid"><div class="row">

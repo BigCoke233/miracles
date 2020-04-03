@@ -12,12 +12,12 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('includes/head.php');
 $this->need('includes/header.php');
 ?>
-    <main class="main-container container">
+    <main class="main-container container" role="main">
 	  <div class="post-list"><!-- 文章循环开始 -->
 	    <?php while($this->next()): ?>
 		<br />
                 <!-- 文章卡片 -->
-                <div class="post-item ">
+                <div class="post-item" role="article">
                     <div class="container-fluid"><div class="row">
 			  <div class="col-md-6 post-banner-box">
 			    <a href="<?php $this->permalink(); ?>" class="post-link">

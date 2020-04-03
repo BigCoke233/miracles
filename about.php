@@ -7,7 +7,7 @@
 $this->need('includes/head.php');
 $this->need('includes/header.php');
 ?>
-    <main class="main-container container">
+    <main class="main-container container" role="main">
 	  <div class="post-body">
 	    <br><br><br>
 	    <div class="about">

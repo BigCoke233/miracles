@@ -9,7 +9,7 @@
     } 
     $commentLevelClass = $comments->_levels > 0 ? ' comment-child' : ' comment-parent';  //评论层数大于0为子级，否则是父级
 ?>
-<div id="<?php $comments->theId(); ?>" class="comment-body<?php 
+<div role="comment" id="<?php $comments->theId(); ?>" class="comment-body<?php 
 if ($comments->_levels > 0) {
     echo ' comment-child';
     $comments->levelsAlt(' comment-level-odd', ' comment-level-even');
@@ -57,7 +57,7 @@ echo $commentClass;
 		<div class="comment-container">
 		  <h3 class="comment-title" id="response"><?php $this->commentsNum(_t('暂无评论'), _t('已有 1 条评论'), _t('已有 %d 条评论')); ?></h3>
           <?php $comments->listComments(array(
-            'before'        =>  '<div class="comment-list">',
+            'before'        =>  '<div class="comment-list" role="list">',
             'after'         =>  '</div>',
             'avatarSize'    =>  200,
             'dateFormat'    =>  'Y-m-d H:i'
