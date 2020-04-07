@@ -163,6 +163,7 @@ if ($_GET['dbg'] == 'rawlist') {
                             class="iconfont icon-chevron-right"></i></a>
             <?php endif; ?>
         </div>
+		<br>
 		<?php endif;?>
         <?php $this->need('includes/comments.php');
         ?>
