@@ -223,7 +223,8 @@
 .body-dark .OwO-item,
 .body-dark .index-banner,
 .body-dark .login-enter-admin a,
-.body-dark .comment-submit {
+.body-dark .comment-submit,
+.body-dark .post-content kbd {
 	background-color:#6e6e6e!important
 }
 .body-dark .index-banner {
@@ -276,7 +277,8 @@
 .body-dark .alert,
 .body-dark .respond input,
 .body-dark .respond textarea,
-.body-dark .login-enter-admin a  {
+.body-dark .login-enter-admin a,
+.body-dark .post-content kbd {
 	color:#fafafa!important
 }
 .body-dark .options-theme-label {
@@ -298,8 +300,12 @@
 .body-dark .post-content th,
 .body-dark .post-content tr,
 .body-dark .saying-hr,
-.body-dark .post-share {
+.body-dark .post-share,
+.body-dark .post-content kbd {
 	border-color:#6e6e6e!important
+}
+.body-dark .post-content kbd  {
+	border-bottom-color: #6e6e6e!important
 }
 .body-dark .tip {
 	border-top-color:#6e6e6e!important;
@@ -413,7 +419,8 @@
 	background: transparent
 }
 .body-sepia .fixed-button,
-.body-sepia .post-pagenav a  {
+.body-sepia .post-pagenav a,
+.body-sepia .post-content kbd {
 	background: rgb(250,246,224)!important
 }
 .body-sepia .comment-content,

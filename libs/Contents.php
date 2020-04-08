@@ -14,7 +14,7 @@ class Contents
         $text = empty($last) ? $data : $last;
         if ($widget instanceof Widget_Archive) {
 			//ParseOther
-			$text = Contents::parseEmo(Contents::parseCode(Contents::parseImages(Contents::parseHeadings(Contents::parseTextColor(Contents::parseRuby(Contents::parseTip(Contents::parseLink($text))))))));
+			$text = Contents::parseEmo(Contents::parseKbd(Contents::parseCode(Contents::parseImages(Contents::parseHeadings(Contents::parseTextColor(Contents::parseRuby(Contents::parseTip(Contents::parseLink($text)))))))));
 			//LazyLoad
 	        $text = preg_replace('/<img (.*?)src(.*?)(\/)?>/','<img $1src="/usr/themes/Miracles/images/loading/'.$load_image.'.gif" data-original$2 />',$text);
         }
@@ -181,6 +181,14 @@ class Contents
 	 */
     static public function parseCode($text) {
 		$text = preg_replace('/<pre><code>/s','<pre><code class="language-html">',$text);
+		return $text;
+	}
+	
+	/**
+	 * 解析键盘按键
+	 */
+    static public function parseKbd($text) {
+		$text = preg_replace('/\~(.*?)\~/s','<kbd>${1}</kbd>',$text);
 		return $text;
 	}
 
