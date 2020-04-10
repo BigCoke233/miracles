@@ -95,7 +95,7 @@ if ($_GET['dbg'] == 'rawlist') {
                                             <?php $db = Typecho_Db::get();
                                             $load_image = $db->fetchAll($db->select('value')->from('table.options')->where('name = %s', "theme:Miracles")->limit(1));
                                             $load_image = explode("\";", explode("\"", explode("\"loading_image\";", $load_image[0]["value"], 2)[1], 2)[1], 2)[0]; ?>
-                                            <img src="<?php $pichttps=str_replace('http://','https://',$bangumi['cover']); if (IS_HTTPS): ?>/usr/themes/Miracles/images/loading/<?php echo $load_image; ?>.gif"
+                                            <img src="<?php $pichttps = str_replace('http://','https://',$bangumi['cover']); if (IS_HTTPS): ?>/usr/themes/Miracles/images/loading/<?php echo $load_image; ?>.gif"
                                                  data-original="<?php echo $pichttps; else: echo $pichttps;
                                                  endif; ?>" referrerpolicy="no-referrer">
                                             <div class="bangumi-des">
