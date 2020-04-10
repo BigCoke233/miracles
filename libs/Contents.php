@@ -224,13 +224,13 @@ class Contents
             $title = $de_json[$i]['title'];
             $link = $de_json[$i]['link'];
 			//输出导航
-			if($type="top-nav") {
+			if($type=="top-nav") {
 			    echo '<a href="'. $link .'">'. $title .'</a>';
 			}
-			elseif($type="mobile") {
+			elseif($type=="mobile") {
 				echo '<div class="col-6"><a href="'. $link .'">'. $title .'</a></div>';
 			}
-			elseif($type="drawer") {
+			elseif($type=="drawer") {
 				echo '<a href="'. $link .'" onclick="toggleDrawer()">'. $title .'</a>';
 			}
         }

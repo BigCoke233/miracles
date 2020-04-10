@@ -44,7 +44,7 @@
               ->parse('<div class="col-6"><a href="{permalink}">{title}</a></div>');
           }
           else {
-			  echo Contents::paresNav($this->options->customNav,"mobile");
+			  echo Contents::paresNav($this->options->customNav, "mobile");
 		  }?>
 		</div></div></div>
 		<div class="mobile-menu-footer">
@@ -78,7 +78,7 @@
               ->parse('<a href="{permalink}">{title}</a>');
             }
             else {
-              echo Contents::paresNav($this->options->customNav,"top-nav");
+              echo Contents::paresNav($this->options->customNav, "top-nav");
 			}?>
 			</span>
 		  </p>
@@ -106,7 +106,7 @@
               ->parse('<a href="{permalink}" onclick="toggleDrawer()">{title}</a>');
             }
             else {
-              echo Contents::paresNav($this->options->customNav,"drawer");
+              echo Contents::paresNav($this->options->customNav, "drawer");
 			}?>
 		  </div>
 		</div>
