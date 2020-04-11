@@ -53,7 +53,7 @@ $this->need('includes/header.php');
 			  </div>
 			</div></div>
 		  </div>
-                <br />
+          <br />
 		<?php endwhile; ?>
 		<!-- 文章分页 -->
 		<div class="post-pagenav">

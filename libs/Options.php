@@ -8,51 +8,41 @@ function themeConfig($form) {
 	 *  主题设置备份 
 	 *  From https://qqdie.com/archives/typecho-templates-backup-and-restore.html
 	 */
+	$str1 = explode('/themes/', Helper::options()->themeUrl);
+	$str2 = explode('/', $str1[1]);
+	$name=$str2[0];
 	$db = Typecho_Db::get();
-    $sjdq=$db->fetchRow($db->select()->from ('table.options')->where ('name = ?', 'theme:Miracles'));
-    $ysj = $sjdq['value'];
-    if(isset($_POST['type'])){ 
-      if($_POST["type"]=="备份设置"){
-        if($db->fetchRow($db->select()->from ('table.options')->where ('name = ?', 'theme:MiraclesBackup'))){
-          $update = $db->update('table.options')->rows(array('value'=>$ysj))->where('name = ?', 'theme:MiraclesBackup');
-          $updateRows= $db->query($update);
-          echo '<div class="miracles-backup-alert">备份已更新，即将自动刷新。如过您的浏览器没有自动跳转请点击';?><a href="<?php Helper::options()->adminUrl('options-theme.php'); ?>">这里</a></div><script language="JavaScript">window.setTimeout("location=\'<?php Helper::options()->adminUrl('options-theme.php'); ?>\'", 2500);</script>
-<?php }else{
-    if($ysj){
-      $insert = $db->insert('table.options')
-      ->rows(array('name' => 'theme:MiraclesBackup','user' => '0','value' => $ysj));
-      $insertId = $db->query($insert);
-      echo '<div class="miracles-backup-alert">备份完成，即将自动刷新。如过您的浏览器没有自动跳转请点击';
-?><a href="<?php Helper::options()->adminUrl('options-theme.php'); ?>">这里</a></div><script language="JavaScript">window.setTimeout("location=\'<?php Helper::options()->adminUrl('options-theme.php'); ?>\'", 2500);</script>
-<?php
+	$sjdq=$db->fetchRow($db->select()->from ('table.options')->where ('name = ?', 'theme:'.$name));
+	$ysj = $sjdq['value'];
+	if(isset($_POST['type'])){ 
+	if($_POST["type"]=="备份模板设置数据"){
+	  if($db->fetchRow($db->select()->from ('table.options')->where ('name = ?', 'theme:'.$name.'bf'))){
+	    $update = $db->update('table.options')->rows(array('value'=>$ysj))->where('name = ?', 'theme:'.$name.'bf');
+	    $updateRows= $db->query($update);
+	  }else{
+	    if($ysj){
+  	      $insert = $db->insert('table.options')
+  	      ->rows(array('name' => 'theme:'.$name.'bf','user' => '0','value' => $ysj));
+   	      $insertId = $db->query($insert);
+	    }
+	  }
     }
+	if($_POST["type"]=="还原模板设置数据"){
+	  if($db->fetchRow($db->select()->from ('table.options')->where ('name = ?', 'theme:'.$name.'bf'))){
+	    $sjdub=$db->fetchRow($db->select()->from ('table.options')->where ('name = ?', 'theme:'.$name.'bf'));
+	    $bsj = $sjdub['value'];
+	    $update = $db->update('table.options')->rows(array('value'=>$bsj))->where('name = ?', 'theme:'.$name);
+	    $updateRows= $db->query($update);
+	  }
     }
-        }
-    if($_POST["type"]=="还原设置"){
-    if($db->fetchRow($db->select()->from ('table.options')->where ('name = ?', 'theme:MiraclesBackup'))){
-    $sjdub=$db->fetchRow($db->select()->from ('table.options')->where ('name = ?', 'theme:MiraclesBackup'));
-    $bsj = $sjdub['value'];
-    $update = $db->update('table.options')->rows(array('value'=>$bsj))->where('name = ?', 'theme:Miracles');
-    $updateRows= $db->query($update);
-    echo '<div class="miracles-backup-alert">检测到模板备份数据，恢复完成，即将自动刷新。如过您的浏览器没有自动跳转请点击';
-?><a href="<?php Helper::options()->adminUrl('options-theme.php'); ?>">这里</a></div><script language="JavaScript">window.setTimeout("location=\'<?php Helper::options()->adminUrl('options-theme.php'); ?>\'", 2000);</script>
-<?php
-    }else{
-    echo '<div class="miracles-backup-alert">没有模板备份数据，恢复不了哦！</div>';
+	if($_POST["type"]=="删除备份数据"){
+	  if($db->fetchRow($db->select()->from ('table.options')->where ('name = ?', 'theme:'.$name.'bf'))){
+	    $delete = $db->delete('table.options')->where ('name = ?', 'theme:'.$name.'bf');
+	    $deletedRows = $db->query($delete);
+	  }
     }
-    }
-    if($_POST["type"]=="删除设置备份"){
-      if($db->fetchRow($db->select()->from ('table.options')->where ('name = ?', 'theme:MiraclesBackup'))){
-        $delete = $db->delete('table.options')->where ('name = ?', 'theme:MiraclesBackup');
-        $deletedRows = $db->query($delete);
-        echo '<div class="miracles-backup-alert">删除成功，请等待自动刷新，如果等不到请点击';
-?><a href="<?php Helper::options()->adminUrl('options-theme.php'); ?>">这里</a></div><script language="JavaScript">window.setTimeout("location=\'<?php Helper::options()->adminUrl('options-theme.php'); ?>\'", 2500);</script>
-<?php
-    }else{
-      echo '<div class="miracles-backup-alert">备份不存在！</div>';
-    }
-  }
-}
+	}
+    
 
     /**
 	 *  设置样式+面板
@@ -66,14 +56,51 @@ function themeConfig($form) {
 	<p>欢迎使用 Miracles 主题，目前版本是：'. $ver .'<br>
 	作者博客：<a href="https://guhub.cn">Eltrac\'s</a> | 
 	帮助文档：<a href="https://www.notion.so/thememiracles/c7c631e21b3345caa2a09bd2fb5dd4b2">WIKI</a> | 
-	问题反馈：<a href="https://github.com/BigCoke233/miracles/issues">issues</a>
-	</p>
-   	  <form class="protected" action="?MiraclesBackup" method="post">
-        <input type="submit" name="type" class="miracles-backup-button backup" value="备份设置" />&nbsp;&nbsp;
-	    <input type="submit" name="type" class="miracles-backup-button recover" value="还原设置" />&nbsp;&nbsp;
-	    <input type="submit" name="type" class="miracles-backup-button delete" value="删除设置备份" />
-	  </form>
-	</div>';
+	问题反馈：<a href="https://github.com/BigCoke233/miracles/issues">issues</a></p>
+	<form class="protected miracles-backup-div" action="?'.$name.'bf" method="post">
+      <input type="submit" name="type" class="miracles-backup-button" value="备份模板设置数据" />&nbsp;&nbsp;
+	  <input type="submit" name="type" class="miracles-backup-button" value="还原模板设置数据" />&nbsp;&nbsp;
+	  <input type="submit" name="type" class="miracles-backup-button" value="删除备份数据" />
+	</form>';
+	//备份数据提示
+	if($_POST["type"]=="备份模板设置数据"){
+	  if($db->fetchRow($db->select()->from ('table.options')->where ('name = ?', 'theme:'.$name.'bf'))){
+		echo '<div class="tongzhi col-mb-12 home">备份已更新，请等待自动刷新！如果等不到请点击';
+		?><a href="<?php Helper::options()->adminUrl('options-theme.php'); ?>">这里</a></div>
+<script language="JavaScript">window.setTimeout("location=\'<?php Helper::options()->adminUrl('options-theme.php'); ?>\'", 1500);</script><?php
+	  }else{
+		echo '<div class="tongzhi col-mb-12 home">备份完成，请等待自动刷新！如果等不到请点击';
+?>    <a href="<?php Helper::options()->adminUrl('options-theme.php'); ?>">这里</a></div>
+<script language="JavaScript">window.setTimeout("location=\'<?php Helper::options()->adminUrl('options-theme.php'); ?>\'", 1500);</script><?php
+	  }
+	}
+	//还原数据提示
+	if($_POST["type"]=="还原模板设置数据"){
+	  if($db->fetchRow($db->select()->from ('table.options')->where ('name = ?', 'theme:'.$name.'bf'))){
+	    echo '<div class="tongzhi col-mb-12 home">检测到模板备份数据，恢复完成，请等待自动刷新！如果等不到请点击';
+		?>    <a href="<?php Helper::options()->adminUrl('options-theme.php'); ?>">这里</a></div>
+<script language="JavaScript">window.setTimeout("location=\'<?php Helper::options()->adminUrl('options-theme.php'); ?>\'", 1500);</script>
+<?php
+	  }else{
+		echo '<div class="tongzhi col-mb-12 home">没有模板备份数据，恢复不了哦！</div>';
+	  }
+	}
+	//删除数据提示
+	if($_POST["type"]=="删除备份数据"){
+	  if($db->fetchRow($db->select()->from ('table.options')->where ('name = ?', 'theme:'.$name.'bf'))){
+	    echo '<div class="tongzhi col-mb-12 home">删除成功，请等待自动刷新，如果等不到请点击';
+?>    
+<a href="<?php Helper::options()->adminUrl('options-theme.php'); ?>">这里</a></div>
+<script language="JavaScript">window.setTimeout("location=\'<?php Helper::options()->adminUrl('options-theme.php'); ?>\'", 1500);</script>
+<?php
+	  }else{
+	    echo '<div class="tongzhi col-mb-12 home">备份已经被删除了</div>';
+		?><script language="JavaScript">window.setTimeout("location=\'<?php Helper::options()->adminUrl('options-theme.php'); ?>\'", 1500);</script><?php
+	  }
+	}
+	
+	echo '<br></div>';
+	
 	
 	/**
 	 *  设置项

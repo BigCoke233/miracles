@@ -9,7 +9,7 @@ $this->need('includes/header.php');
         <p style="text-align:center">居然没有找到相关内容</p>
         <?php endif; ?>
 		<?php while($this->next()): ?>
-             <div class="post-item ">
+             <div class="post-item">
                     <div class="container-fluid"><div class="row">
 			  <div class="col-md-6 post-banner-box">
 			    <a href="<?php $this->permalink(); ?>" class="post-link">
@@ -35,7 +35,7 @@ $this->need('includes/header.php');
 			  </div>
 			</div></div>
 		  </div>
-                <br />
+          <br />
 		<?php endwhile; ?>
 		  <div class="post-pagenav">
             <span class="post-pagenav-left"><?php $this->pageLink('<i class="iconfont icon-chevron-left"></i>'); ?></span>

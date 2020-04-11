@@ -48,7 +48,7 @@
 	generate_require($css_files,"css",$this->options->CDN?"https://cdn.jsdelivr.net/gh/BigCoke233/miracles@":"");
 	?>
 	<!-- icon font -->
-	<link rel="stylesheet" href="//at.alicdn.com/t/font_1165190_ky62cv8oj6i.css" />
+	<link rel="stylesheet" href="//at.alicdn.com/t/font_1165190_1djdjjwge4m.css" />
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300|Noto+Serif+SC&display=swap" rel="stylesheet">
 	<style>.body-dark .pio-action .pio-home{background-image: url(<?php Utils::indexTheme('images/icons/home.png'); ?>);}.body-dark .pio-action .pio-close{background-image: url(<?php Utils::indexTheme('images/icons/remove.png'); ?>);}.body-dark .pio-action .pio-skin{background-image: url(<?php Utils::indexTheme('images/icons/skin.png'); ?>);}.body-dark .pio-action .pio-info{background-image: url(<?php Utils::indexTheme('images/icons/info.png'); ?>);}.body-dark .pio-action .pio-night{background-image: url(<?php Utils::indexTheme('images/icons/night.png'); ?>);}@media (min-width:992px) {.search{background-image:url(<?php Utils::indexTheme('images/search.png'); ?>);}.login{background-image:url(<?php Utils::indexTheme('images/login.png'); ?>)}}.search {background-position: bottom right;background-repeat: no-repeat}.login {background-position: bottom left;background-repeat:no-repeat}<?php $this->options->cssEcho(); ?></style>
