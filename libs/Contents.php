@@ -92,7 +92,7 @@ class Contents
         if (!$dataLink) return $text; //普通文章别匹配!
         $http = Typecho_Http_Client::get();
         if (false == $http) {
-            $text = str_replace($matches[0][0],  '<br>对不起, 您的主机不支持 php-curl 扩展而且没有打开 allow_url_fopen 功能, 无法正常使json友链功能', $text);
+            $text = str_replace($matches[0][0],  '<br>对不起, 您的主机不支持 php-curl 扩展而且没有打开 allow_url_fopen 功能, 无法正常使 json 友链功能', $text);
             return $text;
         }
         for ($j = 0; $j <= $dataLink; $j++) {
