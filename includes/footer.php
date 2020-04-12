@@ -28,6 +28,7 @@
 	?>
 	<!-- Varribles and Functions -->
 	<script>
+	var panguLoadAllow = <?php if($this->options->pangu==1):?>false<?php else:?>true<?php endif;?>;
 	var allowNavAero = <?php if($this->options->navAero==1):?>false<?php else:?>true<?php endif;?>;
 	var siteurl = '<?php $this->options->SiteUrl() ;?>';
 	var owoJson = '<?php Utils::indexTheme('assets/OwO.json'); ?>';

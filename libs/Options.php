@@ -138,8 +138,10 @@ function themeConfig($form) {
     $form->addInput($CDN);
 	$customCDN = new Typecho_Widget_Helper_Form_Element_Text('customCDN', NULL, '', _t('自定义 CDN'), _t('输入 CDN 的链接，要保证写入的路径下，目录结构和主题的 assets 目录下一致'));
     $form->addInput($customCDN);
-	$ifShowRTA = new Typecho_Widget_Helper_Form_Element_Select('ifShowRTA',array('0'=>'不显示','1'=>'显示'),'0','阅读时长提示 RTA','在文章前加入阅读时长提示，增进用户体验<hr>');
+	$ifShowRTA = new Typecho_Widget_Helper_Form_Element_Select('ifShowRTA',array('0'=>'不显示','1'=>'显示'),'0','阅读时长提示 RTA','在文章前加入阅读时长提示，增进用户体验');
     $form->addInput($ifShowRTA);
+	$pangu = new Typecho_Widget_Helper_Form_Element_Select('pangu',array('0'=>'启用','1'=>'关闭'),'0','自动分割中英文（pangu.js）','自动分割网页中的中英文，在全角字符和半角字符之间加上空格，也会修复一些标点符号的错误（.=>。），可能会有误判或是有人不喜欢，所以在这里加个按钮<hr>');
+    $form->addInput($pangu);
 	
 	//custom style
 	$grayTheme = new Typecho_Widget_Helper_Form_Element_Select('grayTheme',array('0'=>'关闭','1'=>'开启'),'0','<h2>个性化</h2>哀悼模式','打开后网站变为黑白');

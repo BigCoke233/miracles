@@ -78,7 +78,7 @@ class Contents
         $rp = '<div class="col-lg-2 col-6 col-md-3 links-container">
 		    <a href="${2}" title="${4}" target="_blank" class="links-link">
 			  <div class="links-item">
-			    <div class="links-img" style="background:url(\'${3}\');width: 100%;padding-top: 100%;background-repeat: no-repeat;background-size: cover;"></div>
+			    <div class="links-img"><img src=\'${3}\'></div>
 				<div class="links-title">
 				  <h4>${1}</h4>
 				</div>
@@ -119,7 +119,7 @@ class Contents
                 $linksList .= '<div class="col-lg-2 col-6 col-md-3 links-container">
 		    <a href="' . $link . '" title="' . $des . '" target="_blank" class="links-link">
 			  <div class="links-item">
-			    <div class="links-img" style="background:url(\'' . $avatar . '\');width: 100%;padding-top: 100%;background-repeat: no-repeat;background-size: cover;"></div>
+			    <div class="links-img"><img src=\''.$avatar.'\'></div>
 				<div class="links-title">
 				  <h4>' . $name . '</h4>
 				</div>
