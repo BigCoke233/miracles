@@ -23,7 +23,8 @@
 	<!-- JavaScript Require-->
 	<?php
 	$js_files=array("jquery","pjax.jquery","jquery.fancybox","jquery.lazyload.min","nprogress","OwO.min","highlight","highlight-line-number","pangu","qrcode.min");
-	generate_require($js_files,"js",$this->options->CDN?"https://cdn.jsdelivr.net/gh/BigCoke233/miracles@":"");
+	if($this->options->customCDN): $custom=$this->options->customCDN; else: $custom=Helper::options()->themeUrl("","Miracles"); endif;
+	generate_require($js_files,"js",$this->options->CDN,$custom);
 	?>
 	<!-- Varribles and Functions -->
 	<script>

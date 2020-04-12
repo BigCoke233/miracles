@@ -45,7 +45,8 @@
 	<!-- css -->
     <?php
 	$css_files=array("codestyle","owo.min","nprogress","fancybox","main/miracles.min");
-	generate_require($css_files,"css",$this->options->CDN?"https://cdn.jsdelivr.net/gh/BigCoke233/miracles@":"");
+	if($this->options->customCDN): $custom=$this->options->customCDN; else: $custom=Helper::options()->themeUrl("","Miracles"); endif;
+	generate_require($css_files,"css",$this->options->CDN,$custom);
 	?>
 	<!-- icon font -->
 	<link rel="stylesheet" href="//at.alicdn.com/t/font_1165190_1djdjjwge4m.css" />

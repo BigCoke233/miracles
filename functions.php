@@ -80,10 +80,18 @@ array_push($views, $cid);
 /**
  * 自动生成引用
  */
-function generate_require($files,$type,$cdn = NULL) {
-    if ($cdn)
-        $path = $cdn.themeVersion()."/";
-    else $path = Helper::options()->themeUrl("","Miracles");
+function generate_require($files,$type,$cdn,$custom) {
+    if ($cdn=='1'){
+        $path = 'https://cdn.jsdelivr.net/gh/BigCoke233/miracles@'.themeVersion()."/";
+	}
+	elseif ($cdn=='2'){
+	    $path = 'http://raw.githack.com/BigCoke233/miracles/master/';
+	}
+	elseif ($cdn=='3'){
+		$path = $custom;
+	}else{
+		$path = Helper::options()->themeUrl("","Miracles");
+	}
     foreach ($files as $file) {
         if ($type == "js")
             echo "<script src=".$path."assets/".$type."/".$file.".".$type."></script>";

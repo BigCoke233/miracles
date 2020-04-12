@@ -134,9 +134,11 @@ function themeConfig($form) {
     $form->addInput($pjax_complete);
 	
 	//improve
-	$CDN = new Typecho_Widget_Helper_Form_Element_Select('CDN',array('0'=>'关闭','1'=>'开启'),'0','<h2>优化</h2>CDN 加速加载静态资源（Beta）','开启后静态资源文件调用 JSdelivr 的 CDN 公用库，加快网页加载速度。本身有 CDN 的就不用了，不然反而可能会拖慢速度。');
+	$CDN = new Typecho_Widget_Helper_Form_Element_Select('CDN',array('0'=>'关闭','1'=>'jsDelivr','2'=>'GitHack(国内较慢)','3'=>'自定义'),'0','<h2>优化</h2>CDN 加速加载静态资源（Beta）','开启后静态资源文件通过选择的 CDN 进行调用，加快网页加载速度。如果选择自定义则需要填写下一个设置项。<br>*如果你使用开发版，请不要选择 jsDelivr 作为 CDN');
     $form->addInput($CDN);
-	$ifShowRTA = new Typecho_Widget_Helper_Form_Element_Select('ifShowRTA',array('0'=>'不显示','1'=>'显示'),'0','阅读时长提示 RTA','在文章前加入阅读时长提示，增进用户体验');
+	$customCDN = new Typecho_Widget_Helper_Form_Element_Text('customCDN', NULL, '', _t('自定义 CDN'), _t('输入 CDN 的链接，要保证写入的路径下，目录结构和主题的 assets 目录下一致'));
+    $form->addInput($customCDN);
+	$ifShowRTA = new Typecho_Widget_Helper_Form_Element_Select('ifShowRTA',array('0'=>'不显示','1'=>'显示'),'0','阅读时长提示 RTA','在文章前加入阅读时长提示，增进用户体验<hr>');
     $form->addInput($ifShowRTA);
 	
 	//custom style
