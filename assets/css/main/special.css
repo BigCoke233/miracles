@@ -70,7 +70,8 @@
 .footer-info a {
 	color: #1e1e1e;
 	text-decoration: none;
-	transition: opacity .2s
+	transition: opacity .2s;
+	display: inline!important
 }
 .footer-info a:hover {
 	opacity: .9
