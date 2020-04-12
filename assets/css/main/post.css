@@ -201,7 +201,7 @@
 	border-radius: 3px;
 	max-width: 100%
 }
-.post-content img:not(.owo-img,.links-img img) {
+.post-content img:not(.owo-img, .links-img img) {
 	margin: 25px auto;
 }
 .post-content blockquote p {
