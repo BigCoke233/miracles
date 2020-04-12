@@ -1,6 +1,15 @@
 # 更新日志
 这里是 Miracles 主题的更新日志，每个发行版以及开发版的更新内容都会在这里记录，历史版本以及最新版本的下载请到 [Releases](https://github.com/BigCoke233/miracles/releases) 页面，若在使用中有任何问题，请在 issues 中提出或 Pull requests，感谢！
 
+## Ver.1.5.1 Oops
+
+- 增加：支持自定义懒加载动画
+- 增加：能够自定义 CDN，并增加 GitHack 作为~~凑数~~备用 CDN
+- 优化：移除无用的二维码 API 设置项
+- 优化：能够设置是否开启  Pangu.js 分割中英文
+- 优化：友情链接头像由 div 背景图改为 img 标签
+- 修复：建站时间无法正常输出
+
 ## Ver.1.5.0 To The Dream
 
 - 增加：Mac 风格代码块
