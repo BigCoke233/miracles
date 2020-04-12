@@ -42,14 +42,12 @@ function themeConfig($form) {
 	  }
     }
 	}
-    
 
     /**
 	 *  设置样式+面板
 	 */
     $ver = themeVersion();
     $themeDir = "/usr/themes/Miracles/";
-	 
 	echo '<link rel="stylesheet" href="'.$themeDir.'assets/css/setting.miracles.css"><link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300|Noto+Serif+SC:300&display=swap" rel="stylesheet">';
 	echo '<div class="miracles-pannel">
 	<h1>Miracles 主题设置面板</h1>
@@ -154,9 +152,10 @@ function themeConfig($form) {
         'block' => "交错方块",
         'octopus' => "旋转章鱼",
         'bilibili' => "哔哩哔哩",
-        'shojo' => "少女祈祷"
+        'shojo' => "少女祈祷",
+		'custom' => "自定义"
     ];
-    $LoadingImage = new Typecho_Widget_Helper_Form_Element_Radio('loading_image', $LoadingOptions, 'block', _t('图片懒加载动画'),_t(""));
+    $LoadingImage = new Typecho_Widget_Helper_Form_Element_Radio('loading_image', $LoadingOptions, 'block', _t('图片懒加载动画'),_t("选择懒加载动画的图片，若选择自定义，则需要在 images/loading 目录下添加名为 custom.gif 的文件"));
     $form->addInput($LoadingImage);
 
     //SiteBuildTime
