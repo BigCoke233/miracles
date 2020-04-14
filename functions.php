@@ -85,7 +85,10 @@ function generate_require($files,$type,$cdn,$custom) {
         $path = 'https://cdn.jsdelivr.net/gh/BigCoke233/miracles@'.themeVersion()."/";
 	}
 	elseif ($cdn=='2'){
-	    $path = 'http://raw.githack.com/BigCoke233/miracles/master/';
+	    $path = 'https://raw.githack.com/BigCoke233/miracles/master/';
+	}
+	elseif ($cdn=='4'){
+		$path = 'https://rawcdn.githack.com/BigCoke233/miracles/master/';
 	}
 	elseif ($cdn=='3'){
 		$path = $custom;
