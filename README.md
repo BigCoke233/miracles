@@ -70,6 +70,20 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 </details>
 
+### 更新日志
+**Ver.Dev.**
+
+> 这里显示的是最新开发版的更新日志，其他版本日志请查看 [change-log.md](docs/change-log.md)
+
+- 增加：短链接 `[notice][/notice]`，相当于带有 role="note" 的 div
+- 增加：短链接 `[shadow][/shadow]`，在这个容器里的图片都会带上阴影
+- 增加：加入 GitHack CDN 作为静态资源加速选择（实际上是减速x）
+- 增加：支持在设置中自定义 favicon
+- 优化：为 owo 表情提供单独的懒加载动画
+- 优化：为友情链接头像提供单独的懒加载动画
+- 优化：夜间模式下文章二维码的背景色
+- 修复：CDN 加速静态资源中选用 GitHack https 失效
+
 ## 鸣谢
 > 这些都是在开发过程中给予我帮助的项目和大佬！
 
