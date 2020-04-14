@@ -14,7 +14,7 @@ class Contents
         $text = empty($last) ? $data : $last;
         if ($widget instanceof Widget_Archive) {
 			//ParseOther
-			$text = Contents::parseKbd(Contents::parseCode(Contents::parseImages(Contents::parseHeadings(Contents::parseTextColor(Contents::parseRuby(Contents::parseTip($text)))))));
+			$text = Contents::parsePicShadow(Contents::parseNotice(Contents::parseKbd(Contents::parseCode(Contents::parseImages(Contents::parseHeadings(Contents::parseTextColor(Contents::parseRuby(Contents::parseTip($text)))))))));
 			//LazyLoad
 	        $text = preg_replace('/<img (.*?)src(.*?)(\/)?>/','<img $1src="/usr/themes/Miracles/images/loading/'.$load_image.'.gif" data-original$2 />',$text);
 			//owo
@@ -72,7 +72,15 @@ class Contents
 	 *  解析 Notice
 	 */
 	static public function parseNotice($text){
-		$text = preg_replace('/\[notice\](.*?)\[\/notice\]/s','<div class="notice" role="note"><p>${1}</p></div>',$text);
+		$text = preg_replace('/\[notice\](.*?)\[\/notice\]/s','<div class="notice" role="note">${1}</div>',$text);
+		return $text;
+	}
+	
+	/**
+	 *  图片加阴影
+	 */
+	static public function parsePicShadow($text){
+		$text = preg_replace('/\[shadow\](.*?)\[\/shadow\]/s','<div class="post-img-shadow">${1}</div>',$text);
 		return $text;
 	}
 

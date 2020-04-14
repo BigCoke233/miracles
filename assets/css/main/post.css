@@ -372,13 +372,21 @@
 .tip-group .tip br {
 	display: block;
 }
-.post-bubble .saying-content p {
-	padding: 0 20px!important;
-}
 @media (min-width:768px) {
     .tip-icon {
 		display: block
 	}
+}
+.notice {
+	background: rgb(245,245,245);
+	padding: 15px 20px;
+	border-radius: 4px
+}
+.post-img-shadow {
+	padding: 5px 3px
+}
+.post-img-shadow img {
+	box-shadow: 0 8px 15px rgba(0,0,0,0.45);
 }
 
 /* >文章分页 */
