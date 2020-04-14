@@ -14,11 +14,13 @@ class Contents
         $text = empty($last) ? $data : $last;
         if ($widget instanceof Widget_Archive) {
 			//ParseOther
-			$text = Contents::parseKbd(Contents::parseCode(Contents::parseImages(Contents::parseHeadings(Contents::parseTextColor(Contents::parseRuby(Contents::parseTip(Contents::parseLink($text))))))));
+			$text = Contents::parseKbd(Contents::parseCode(Contents::parseImages(Contents::parseHeadings(Contents::parseTextColor(Contents::parseRuby(Contents::parseTip($text)))))));
 			//LazyLoad
 	        $text = preg_replace('/<img (.*?)src(.*?)(\/)?>/','<img $1src="/usr/themes/Miracles/images/loading/'.$load_image.'.gif" data-original$2 />',$text);
 			//owo
 			$text = Contents::parseEmo($text);
+			//Links
+			$text = Contents::parseLink($text);
         }
         return $text;
     }
@@ -65,6 +67,14 @@ class Contents
 		
 		return $text;
 	}
+	
+	/**
+	 *  解析 Notice
+	 */
+	static public function parseNotice($text){
+		$text = preg_replace('/\[notice\](.*?)\[\/notice\]/s','<div class="notice" role="note"><p>${1}</p></div>',$text);
+		return $text;
+	}
 
     /**
      *  解析友链
@@ -80,7 +90,7 @@ class Contents
         $rp = '<div class="col-lg-2 col-6 col-md-3 links-container">
 		    <a href="${2}" title="${4}" target="_blank" class="links-link">
 			  <div class="links-item">
-			    <div class="links-img"><img src=\'${3}\'></div>
+			    <div class="links-img"><img src="/usr/themes/Miracles/images/loading/avatar.jpg" data-original=\'${3}\'></div>
 				<div class="links-title">
 				  <h4>${1}</h4>
 				</div>
@@ -121,7 +131,7 @@ class Contents
                 $linksList .= '<div class="col-lg-2 col-6 col-md-3 links-container">
 		    <a href="' . $link . '" title="' . $des . '" target="_blank" class="links-link">
 			  <div class="links-item">
-			    <div class="links-img"><img src=\''.$avatar.'\'></div>
+			    <div class="links-img"><img src="/usr/themes/Miracles/images/loading/avatar.jpg" data-original=\''.$avatar.'\'></div>
 				<div class="links-title">
 				  <h4>' . $name . '</h4>
 				</div>
