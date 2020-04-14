@@ -125,8 +125,10 @@ var MiraclesComment = {
     //如果成功
     if ($('.comment-waiting').length>0) {
       alertSend('评论提交成功，正在等待审核！', 'success');
+	  LazyLoad();//防止 owo 表情懒加载失效
     }else{
       alertSend('评论提交成功！', 'success');
+	  LazyLoad();//防止 owo 表情懒加载失效
     } 
     //清空被回复 ID
     dataTmp.comments.replyTo = '';
@@ -205,7 +207,6 @@ var MiraclesComment = {
 
      //评论后需要处理的事情
      afterComment(true);
-	 LazyLoad();
     }else{
      //评论失败
      afterComment(false);
