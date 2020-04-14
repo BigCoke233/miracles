@@ -205,6 +205,7 @@ var MiraclesComment = {
 
      //评论后需要处理的事情
      afterComment(true);
+	 LazyLoad();
     }else{
      //评论失败
      afterComment(false);

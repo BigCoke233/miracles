@@ -14,9 +14,11 @@ class Contents
         $text = empty($last) ? $data : $last;
         if ($widget instanceof Widget_Archive) {
 			//ParseOther
-			$text = Contents::parseEmo(Contents::parseKbd(Contents::parseCode(Contents::parseImages(Contents::parseHeadings(Contents::parseTextColor(Contents::parseRuby(Contents::parseTip(Contents::parseLink($text)))))))));
+			$text = Contents::parseKbd(Contents::parseCode(Contents::parseImages(Contents::parseHeadings(Contents::parseTextColor(Contents::parseRuby(Contents::parseTip(Contents::parseLink($text))))))));
 			//LazyLoad
 	        $text = preg_replace('/<img (.*?)src(.*?)(\/)?>/','<img $1src="/usr/themes/Miracles/images/loading/'.$load_image.'.gif" data-original$2 />',$text);
+			//owo
+			$text = Contents::parseEmo($text);
         }
         return $text;
     }
@@ -153,7 +155,7 @@ class Contents
      */
     private static function parsePaopaoBiaoqingCallback($match)
     {
-        return '<img class="owo-img" src="/usr/themes/Miracles/images/biaoqing/paopao/'. str_replace('%', '', urlencode($match[1])) . '_2x.png">';
+        return '<img class="owo-img" src="/usr/themes/Miracles/images/loading/owo.png" data-original="/usr/themes/Miracles/images/biaoqing/paopao/'. str_replace('%', '', urlencode($match[1])) . '_2x.png">';
     }
 
     /**
@@ -163,7 +165,7 @@ class Contents
      */
     private static function parseAruBiaoqingCallback($match)
     {
-        return '<img class="owo-img" src="/usr/themes/Miracles/images/biaoqing/aru/'. str_replace('%', '', urlencode($match[1])) . '_2x.png">';
+        return '<img class="owo-img" src="/usr/themes/Miracles/images/loading/owo.png" data-original="/usr/themes/Miracles/images/biaoqing/aru/'. str_replace('%', '', urlencode($match[1])) . '_2x.png">';
     }
 
     /**
@@ -173,7 +175,7 @@ class Contents
      */
     private static function parseTweBiaoqingCallback($match)
     {
-        return '<img class="owo-img" src="/usr/themes/Miracles/images/biaoqing/twemoji/'. str_replace('%', '', $match[1]) . '.png">';
+        return '<img class="owo-img" src="/usr/themes/Miracles/images/loading/owo.png" data-original="/usr/themes/Miracles/images/biaoqing/twemoji/'. str_replace('%', '', $match[1]) . '.png">';
     }
 	
 	/**
