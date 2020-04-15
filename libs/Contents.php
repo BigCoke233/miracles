@@ -233,6 +233,11 @@ class Contents
 		$id = str_replace(' ','_',$id);
 		$id = str_replace('&','_',$id);
 		$id = str_replace('?','_',$id);
+		$id = str_replace("'",'_',$id);
+		$id = str_replace('"','_',$id);
+		$id = str_replace('’','_',$id);
+		$id = str_replace('“','_',$id);
+		$id = str_replace('?','_',$id);
         return '<h'.$matchs[1].$matchs[2].' id="'.$id.'">'.$matchs[3].'<a href="#'.$id.'" title="章节链接" class="post-toc-link no-line"><i class="iconfont icon-paragraph"></i></a></h'.$matchs[1].'>';
     }
 	
