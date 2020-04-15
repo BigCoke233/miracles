@@ -82,24 +82,29 @@ array_push($views, $cid);
  */
 function generate_require($files,$type,$cdn,$custom) {
     if ($cdn=='1'){
-        $path = 'https://cdn.jsdelivr.net/gh/BigCoke233/miracles@'.themeVersion()."/";
+        $path = 'https://cdn.jsdelivr.net/gh/BigCoke233/miracles@'.themeVersion()."/assets/";
 	}
 	elseif ($cdn=='2'){
-	    $path = 'https://raw.githack.com/BigCoke233/miracles/master/';
+	    $path = 'https://raw.githack.com/BigCoke233/miracles/master/assets/';
 	}
 	elseif ($cdn=='4'){
-		$path = 'https://rawcdn.githack.com/BigCoke233/miracles/master/';
+		$path = 'https://rawcdn.githack.com/BigCoke233/miracles/master/assets/';
+	}
+	elseif ($cdn=='5'){
+		$path = 'https://cdn.9jojo.cn/Miracles/';
 	}
 	elseif ($cdn=='3'){
 		$path = $custom;
 	}else{
-		$path = Helper::options()->themeUrl("","Miracles");
+		$path = Helper::options()->themeUrl("","Miracles/assets");
 	}
     foreach ($files as $file) {
-        if ($type == "js")
-            echo "<script src=".$path."assets/".$type."/".$file.".".$type."></script>";
-        elseif ($type == "css")
-            echo "<link rel=\"stylesheet\" href=".$path."assets/".$type."/".$file.".".$type." />";
+        if ($type == "js"){
+            echo "<script src=".$path. $type."/".$file.".".$type."></script>";
+		}
+        elseif ($type == "css"){
+            echo "<link rel=\"stylesheet\" href=".$path. $type."/".$file.".".$type." />";
+		}
     }
 }
 

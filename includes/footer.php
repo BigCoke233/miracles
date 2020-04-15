@@ -36,8 +36,11 @@
     beforePjax = function() {NProgress.start();};
 	afterPjax = function() {owoLoad();<?php $this->options->pjax_complete(); ?>};<?php endif; ?></script>
 	<!-- Script that must be after-->
-	<script src="<?php Utils::indexTheme('assets/js/cmt.miracles.js'); ?>"></script>
-	<script src="<?php Utils::indexTheme('assets/js/miracles.min.js'); ?>"></script>
+	<?php
+	$js_files=array("miracles.min","cmt.miracles");
+	if($this->options->customCDN): $custom=$this->options->customCDN; else: $custom=Helper::options()->themeUrl("","Miracles"); endif;
+	generate_require($js_files,"js",$this->options->CDN,$custom);
+	?>
 	<!-- JavaScript -->
 	<script>
 	<?php if($this->options->build_time)echo "startTime(\"".$this->options->build_time."\");" ?>
