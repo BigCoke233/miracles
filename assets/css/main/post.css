@@ -388,6 +388,10 @@
 .post-img-shadow img {
 	box-shadow: 0 8px 15px rgba(0,0,0,0.45);
 }
+.post-img-alt {
+	font-size: 0.9em;
+	color: gray
+}
 
 /* >文章分页 */
 .post-pagenav,
