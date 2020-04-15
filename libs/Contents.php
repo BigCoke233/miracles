@@ -229,7 +229,10 @@ class Contents
     static public function parseHeaderCallback($matchs)
     {
         // 增加单独标记，否则冲突
-        $id = 'toc_'.(self::$CurrentTocID++);
+        $id = $matchs[3];
+		$id = str_replace(' ','\%20',$id);
+		$id = str_replace('&','\%26',$id);
+		$id = str_replace('?','\%3F;',$id);
         return '<h'.$matchs[1].$matchs[2].' id="'.$id.'">'.$matchs[3].'<a href="#'.$id.'" title="章节链接" class="post-toc-link no-line"><i class="iconfont icon-paragraph"></i></a></h'.$matchs[1].'>';
     }
 	
