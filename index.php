@@ -1,11 +1,11 @@
 <?php
 /**
  * Born to be the Miracles. 生为奇迹
- * 作者：<a href="https://guhub.cn">Eltrac</a> | 帮助文档：<a href="https://www.notion.so/eltrac/c7c631e21b3345caa2a09bd2fb5dd4b2">GitHub Wiki</a>
+ * 作者：<a href="https://guhub.cn">Eltrac</a> | 帮助文档：<a href="https://www.notion.so/eltrac/c7c631e21b3345caa2a09bd2fb5dd4b2">Wiki</a>
  * 
  * @package     Miracles
  * @author      Eltrac
- * @version     1.5.1
+ * @version     1.5.2
  * @link        https://guhub.cn
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;

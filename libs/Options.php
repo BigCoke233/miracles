@@ -48,10 +48,14 @@ function themeConfig($form) {
 	 */
     $ver = themeVersion();
     $themeDir = "/usr/themes/Miracles/";
-	echo '<link rel="stylesheet" href="'.$themeDir.'assets/css/setting.miracles.css"><link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300|Noto+Serif+SC:300&display=swap" rel="stylesheet">';
+	echo '<link rel="stylesheet" href="'.$themeDir.'assets/css/setting.miracles.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300|Noto+Serif+SC:300&display=swap" rel="stylesheet">
+	<script>var version = "'. $ver .'";</script>
+	<script src="'.$themeDir.'assets/js/jquery.js"></script>
+	<script src="'.$themeDir.'assets/js/update.miracles.js"></script>';
 	echo '<div class="miracles-pannel">
 	<h1>Miracles 主题设置面板</h1>
-	<p>欢迎使用 Miracles 主题，目前版本是：'. $ver .'<br>
+	<p>欢迎使用 Miracles 主题，目前版本是：'. $ver .'<span id="miracles-update" class="waiting">，正在获取最新版本号......</span><br>
 	作者博客：<a href="https://guhub.cn">Eltrac\'s</a> | 
 	帮助文档：<a href="https://www.notion.so/thememiracles/c7c631e21b3345caa2a09bd2fb5dd4b2">WIKI</a> | 
 	问题反馈：<a href="https://github.com/BigCoke233/miracles/issues">issues</a></p>
@@ -152,7 +156,7 @@ function themeConfig($form) {
     $form->addInput($bodyFonts);
 	$randomBanner = new Typecho_Widget_Helper_Form_Element_Textarea('randomBanner', NULL, NULL, _t('随机文章缩略图'), _t('文章没有独立设置头图时调用，写入图片链接，用半角逗号分割'));
     $form->addInput($randomBanner);
-        
+    
     //LoadingImage
     $LoadingOptions = [
         'block' => "交错方块",
