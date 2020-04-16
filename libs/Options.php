@@ -120,8 +120,10 @@ function themeConfig($form) {
     //nav
 	$navStyle = new Typecho_Widget_Helper_Form_Element_Select('navStyle',array('0'=>'顶部导航栏','1'=>'左侧抽屉栏'),'0','<h2>导航栏 Nav</h2>类型','选择导航栏的类型（若选择左侧抽屉蓝，则下一条设置失效）');
     $form->addInput($navStyle);
-	$navAero = new Typecho_Widget_Helper_Form_Element_Select('navAero',array('0'=>'是','1'=>'否'),'1','顶部透明','视口处于最顶部时，顶部导航栏是否变为透明');
+	$navAero = new Typecho_Widget_Helper_Form_Element_Select('navAero',array('0'=>'是','1'=>'否'),'1','顶部透明','视口处于最顶部时，顶部导航栏是否变为透明（BUG 比较多，不推荐）');
     $form->addInput($navAero);
+	$navSlide = new Typecho_Widget_Helper_Form_Element_Select('navSlide',array('0'=>'是','1'=>'否'),'0','Headroom','开启后，访客向下滚动页面时导航栏收起，向上滚动时导航栏展示');
+	$form->addInput($navSlide);
 	$customNav = new Typecho_Widget_Helper_Form_Element_Textarea('customNav', NULL, NULL, _t('自定义导航栏'), _t('按照格式书写，自定义导航栏内容，留空则读取所有的独立页面，书写的格式请查看 wiki<hr>'));
     $form->addInput($customNav);
 	

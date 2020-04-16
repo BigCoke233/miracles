@@ -81,6 +81,7 @@ class Utils
      * 编辑界面添加内容
      */
     public static function addButton(){
+		echo '<link rel="stylesheet" href="/usr/themes/Miracles/assets/css/setting.miracles.css" />';
 		echo '<link rel="stylesheet" href="/usr/themes/Miracles/assets/css/owo.min.css" />';
 		echo '<script src="/usr/themes/Miracles/assets/js/OwO.min.js"></script>';
 		echo '<script src="/usr/themes/Miracles/assets/js/editor.js"></script>';

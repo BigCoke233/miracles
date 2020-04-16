@@ -87,7 +87,7 @@
 }
 /* Nav/Search/login */
 .body-dark .nav {
-	background:rgba(50,50,50,.86) !important;
+	background:rgba(50,50,50,.5) !important;
 	box-shadow:0 0 20px #000;
 	-webkit-box-shadow:0 0 20px #000;
 	-moz-box-shadow:0 0 30px #000
@@ -137,8 +137,6 @@
 	-moz-box-shadow:0 0 0 #fff;
 	-webkit-box-shadow:0 0 0 #fff
 }
-.body-dark .OwO .OwO-body .OwO-items .OwO-item:hover,
-.body-dark .OwO-body,.body-dark .OwO-open .OwO-logo,
 .body-dark .bubble.saying-body:hover,
 .body-dark .comment-pagenav a,
 .body-dark .dark-button,
@@ -224,7 +222,8 @@
 .body-dark .index-banner,
 .body-dark .login-enter-admin a,
 .body-dark .comment-submit,
-.body-dark .post-content kbd {
+.body-dark .post-content kbd,
+.body-dark .notice {
 	background-color:#6e6e6e!important
 }
 .body-dark .index-banner {
@@ -366,7 +365,7 @@
 	background: rgb(248,241,228)!important
 }
 .body-sepia .nav {
-	background: rgba(250,241,228,0.86);
+	background: rgba(250,241,228,0.5);
 }
 .body-sepia .post-body,
 .body-sepia .post-item,
