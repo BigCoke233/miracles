@@ -51,3 +51,16 @@
 	<?php $this->footer(); ?>
   </body>
 </html>
+<!--
+
+Powered by Typecho,
+Theme Miracles by
+ _____ _ _                  
+| ____| | |_ _ __ __ _  ___ 
+|  _| | | __| '__/ _` |/ __|
+| |___| | |_| | | (_| | (__ 
+|_____|_|\__|_|  \__,_|\___|
+
+Repo: https://github.com/BigCoke233/miracles
+
+-->
