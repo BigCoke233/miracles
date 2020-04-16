@@ -91,7 +91,7 @@ function generate_require($files,$type,$cdn,$custom) {
 		$path = 'https://rawcdn.githack.com/BigCoke233/miracles/master/assets/';
 	}
 	elseif ($cdn=='5'){
-		$path = 'https://cdn.9jojo.cn/Miracles/';
+		$path = 'https://cdn.9jojo.cn/Miracles/'.themeVersion().'/';
 	}
 	elseif ($cdn=='3'){
 		$path = $custom;
