@@ -71,17 +71,23 @@ $ git clone https://github.com/BigCoke233/miracles.git
 </details>
 
 ### 更新日志
-**Ver.Dev.**
-
-> 这里显示的是最新开发版的更新日志，其他版本日志请查看 [change-log.md](docs/change-log.md)
+**Ver.1.5.2 Slow Down**
 
 - 增加：短链接 `[notice][/notice]`，相当于带有 role="note" 的 div
 - 增加：短链接 `[shadow][/shadow]`，在这个容器里的图片都会带上阴影
 - 增加：加入 GitHack CDN 作为静态资源加速选择（实际上是减速x）
+- 增加：小太提供的 9jojo CDN 作为静态资源加速选择
 - 增加：支持在设置中自定义 favicon
+- 增加：支持设置是否开启顶部导航栏收缩
+- 增加：后台设置自动检测更新
+- 增加：支持图题解析
+- 优化：平滑的锚点动画
+- 优化：文章章节链接的锚点链接改为读取标题内容
+- 优化：部分未能通过 CDN 调用的静态文件通过选择的 CDN 调用
 - 优化：为 owo 表情提供单独的懒加载动画
 - 优化：为友情链接头像提供单独的懒加载动画
 - 优化：夜间模式下文章二维码的背景色
+- 优化：降低导航栏的透明度
 - 修复：CDN 加速静态资源中选用 GitHack https 失效
 
 ## 鸣谢
