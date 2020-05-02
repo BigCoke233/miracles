@@ -79,7 +79,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 <details><summary>开发版更新日志 (v20200502)</summary><br>
 
-- 增加：适配夜间模式的 favicon 图标
+- 增加：适配夜间模式的 favicon 图标  
 可在根目录下创建 faviconDark.ico，如果这个文件存在而系统又为深色模式的时候，就将 favicon 替换成这个文件
 
 </details>
