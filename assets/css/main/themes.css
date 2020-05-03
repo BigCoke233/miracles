@@ -85,6 +85,10 @@
 .body-dark .aplayer-info {
 	border:none
 }
+.body-dark .aplayer .aplayer-icon {
+	filter:brightness(50%);
+	-webkit-filter:brightness(50%);
+}
 /* Nav/Search/login */
 .body-dark .nav {
 	background:rgba(50,50,50,.5) !important;
@@ -95,6 +99,8 @@
 .body-dark .mobile-menu-pagelist a:hover,
 .body-dark .nav a:hover,
 .body-dark .nav-mobile-title:hover {
+	backdrop-filter: blur(18px);
+	-webkit-backdrop-filter: blur(18px);
 	background:#646464
 }
 .body-dark .nav-icon-button {
@@ -213,7 +219,8 @@
 .body-dark .search-form input,
 .body-dark .login-form button,
 .body-dark #comment-form,
-.body-dark .comment-by-author > .comment-body-inner > .comment-main > .comment-meta > .comment-date:before {
+.body-dark .comment-by-author > .comment-body-inner > .comment-main > .comment-meta > .comment-date:before,
+.body-dark .notice {
 	background:#5a5a5a!important
 }
 /* Need #6e6e6e bg */
@@ -222,8 +229,7 @@
 .body-dark .index-banner,
 .body-dark .login-enter-admin a,
 .body-dark .comment-submit,
-.body-dark .post-content kbd,
-.body-dark .notice {
+.body-dark .post-content kbd {
 	background-color:#6e6e6e!important
 }
 .body-dark .index-banner {
@@ -400,14 +406,16 @@
 .body-sepia .footer-info,
 .body-sepia .index-banner,
 .body-sepia .links-item,
-.body-sepia .comment-meta span {
+.body-sepia .comment-meta span,
+.body-sepia .comment-by-author > .comment-body-inner > .comment-main > .comment-meta > .comment-date:before {
 	background-color: rgb(246,240,220)!important
 }
 .body-sepia .post-content h3 {
     border-color: #DD4B39
 }
 .body-sepia .archives-list li a:hover,
-.body-sepia .tags-item a {
+.body-sepia .tags-item a,
+.body-sepia .notice {
 	background: rgb(250,246,224)
 }
 .body-sepia .OwO-logo {

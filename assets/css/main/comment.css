@@ -298,8 +298,3 @@
 .comment-sending {
 	opacity: 0.6;
 }
-.comment-sending textarea {
-	background: url('/usr/themes/Miracles/images/loading/bilibili.gif') no-repeat;
-	background-position: center center;
-	background-size: cover
-}

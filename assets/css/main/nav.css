@@ -7,8 +7,8 @@
 /* Top Nav */
 .nav {
 	background: rgba(255,255,255,0.5);
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(6px);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 	width: 100%;
 	position: absolute;
 	box-shadow: 0 0 20px #ddd;
@@ -79,7 +79,7 @@
 .nav-mobile-content a:hover,
 .nav-mobile-content button:hover,
 .nav-sorts-content {
-	background: rgba(200,200,200,0.15);
+	background: rgba(200,200,200,0.35);
 	backdrop-filter: blur(18px);
 	-webkit-backdrop-filter: blur(18px);
 }

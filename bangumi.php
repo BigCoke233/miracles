@@ -90,7 +90,7 @@ if ($_GET['dbg'] == 'rawlist') {
                         if (!$error && $bgmdataraw['data']['total'] != 0): //没有东西
                             $bgmlist=$bgmdataraw['data']['list'];
                             foreach ($bgmlist as $bangumi) : ?>
-                                <div class="bangumi-item col-md-4 col-lg-3"><a href="<?php echo 'https:////www.bilibili.com/bangumi/play/ss' . $bangumi['season_id'] . '/'; ?>" target="_blank" class="no-line bangumi-link">
+                                <div class="bangumi-item col-md-4 col-lg-3 col-sm-6"><a href="<?php echo 'https:////www.bilibili.com/bangumi/play/ss' . $bangumi['season_id'] . '/'; ?>" target="_blank" class="no-line bangumi-link">
                                         <div class="bangumi-banner">
                                             <?php $db = Typecho_Db::get();
                                             $load_image = $db->fetchAll($db->select('value')->from('table.options')->where('name = %s', "theme:Miracles")->limit(1));
