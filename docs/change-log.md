@@ -1,6 +1,15 @@
 # 更新日志
 这里是 Miracles 主题的更新日志，每个发行版以及开发版的更新内容都会在这里记录，历史版本以及最新版本的下载请到 [Releases](https://github.com/BigCoke233/miracles/releases) 页面，若在使用中有任何问题，请在 issues 中提出或 Pull requests，感谢！
 
+## Ver.1.5.4 Your best nightmare
+
+- 增加：适配夜间模式的图标  
+可在根目录下创建 faviconDark.ico，如果这个文件存在而系统又为深色模式的时候，就将 favicon 替换成这个文件
+- 优化：移动端下，追番项目一行显示两个
+- 优化：优化夜间模和日落模式
+- 优化：导航栏 :hover 毛玻璃效果优化
+- 移除：提交评论时小电视动画
+
 ## Ver.1.5.2 Slow Down
 
 - 增加：短链接 `[notice][/notice]`，相当于带有 role="note" 的 div
