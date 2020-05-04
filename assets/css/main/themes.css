@@ -17,7 +17,8 @@
  */
 .body-dark,
 .body-dark .post-qr,
-.body-dark .login-form .btn {
+.body-dark .login-form .btn,
+.body-dark .notice {
 	background: #4b4b4b;
 	color: #fafafa
 }
@@ -219,8 +220,7 @@
 .body-dark .search-form input,
 .body-dark .login-form button,
 .body-dark #comment-form,
-.body-dark .comment-by-author > .comment-body-inner > .comment-main > .comment-meta > .comment-date:before,
-.body-dark .notice {
+.body-dark .comment-by-author > .comment-body-inner > .comment-main > .comment-meta > .comment-date:before {
 	background:#5a5a5a!important
 }
 /* Need #6e6e6e bg */

@@ -17,6 +17,7 @@
 > 同时，欢迎加入 QQ 交流群：924171480，或者 [Telegram](https://dev.guhub.cn/tg)
 
 ## 特色
+
 - 响应式 / 自适应设计
 - Pjax 全站无刷新
 - Ajax 评论无刷新
@@ -42,6 +43,7 @@
 - 后台设置备份
 
 ## 使用
+
 1. Star 本项目（遵循 SATA 开源协议）
 2. 下载**最新的 [Release](https://github.com/BigCoke233/miracles/releases)**
 3. 解压后，**确认目录名为`Miracles`（M 大写）**
@@ -71,23 +73,30 @@ $ git clone https://github.com/BigCoke233/miracles.git
 </details>
 
 ### 更新日志
-**Ver.1.5.3 Fuck Bugs**
 
-- 修复：修复了个寂寞，最后发现根本不是问题，就当测试更新检测好了
+**Ver.1.5.4 Your best nightmare**
+
+- 增加：适配夜间模式的图标  
+可在根目录下创建 faviconDark.ico，如果这个文件存在而系统又为深色模式的时候，就将 favicon 替换成这个文件
+- 优化：移动端下，追番项目一行显示两个
+- 优化：优化夜间模和日落模式
+- 优化：导航栏 :hover 毛玻璃效果优化
+- 移除：提交评论时小电视动画
 
 > 所有历史版本的更新日志请查看[这里](docs/change-log.md)
 
-<details><summary>开发版更新日志 (v20200502)</summary><br>
+<details><summary>开发版更新日志 (v20200503A)</summary><br>
 
-- 增加：适配夜间模式的 favicon 图标  
-可在根目录下创建 faviconDark.ico，如果这个文件存在而系统又为深色模式的时候，就将 favicon 替换成这个文件
+- 优化：夜间模式下，notice 块的背景色
 
 </details>
 
 ## 鸣谢
+
 > 这些都是在开发过程中给予我帮助的项目和大佬！
 
 ### 开源项目
+
 - [jQuery](https://github.com/jquery/jquery) - 若干开源项目和主题内一些 js 的前置
 - [FancyBox](https://github.com/fancyapps/fancybox) - 文章图片灯箱
 - [Highlight.js](https://github.com/highlightjs/highlight.js) - 代码高亮
@@ -101,6 +110,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - [qrcode.js](https://github.com/davidshimjs/qrcodejs) - 生成文章二维码
 
 ### 贡献者
+
 | 贡献者 | 贡献内容 |
 | ------ | ------- |
 | [@BigCoke233 (Eltrac)](https://github.com/BigCoke233) | 原作者 |
@@ -114,6 +124,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 [Holakit](https://github.com/wenxuanjun/Holakit) | [Material](https://github.com/idawnlight/typecho-theme-material) | [Mirages](https://get233.com/archives/mirages-intro.html)
 
 ## 相关
+
 演示站点：[我的博客](https://guhub.cn)  |  以及 Sponsor 中的站点链接  
 介绍文章：[Miracles —— 生为奇迹](https://guhub.cn/p/miracles.html)  
 说明文档：[Wiki](https://www.notion.so/eltrac/c7c631e21b3345caa2a09bd2fb5dd4b2) | [旧的 Wiki](https://mira.guhub.cn)   
@@ -122,6 +133,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 侵权网站：[black-list.md](docs/black-list.md)
 
 ## 捐助
+
 你可以通过[爱发电](https://afdian.net/@Eltrac)向我投食，~~用金钱催更~~。
 
 ---
