@@ -93,16 +93,16 @@
 /* Nav/Search/login */
 .body-dark .nav {
 	background:rgba(50,50,50,.5) !important;
-	box-shadow:0 0 20px #000;
-	-webkit-box-shadow:0 0 20px #000;
-	-moz-box-shadow:0 0 30px #000
+	box-shadow: 0 0 15px rgb(60,60,60);
+        -webkit-box-shadow: 0 0 15px rgb(60,60,60);
+        -moz-box-shadow: 0 0 15px rgb(60,60,60);
 }
 .body-dark .mobile-menu-pagelist a:hover,
 .body-dark .nav a:hover,
 .body-dark .nav-mobile-title:hover {
 	backdrop-filter: blur(18px);
 	-webkit-backdrop-filter: blur(18px);
-	background:#646464
+	background: rgba(100,100,100,0.7)
 }
 .body-dark .nav-icon-button {
 	background:#5a5a5a
