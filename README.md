@@ -85,9 +85,16 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 > 所有历史版本的更新日志请查看[这里](docs/change-log.md)
 
-<details><summary>开发版更新日志 (v20200503A)</summary><br>
+<details><summary>开发版更新日志</summary><br>
+
+**v20200503A**
 
 - 优化：夜间模式下，notice 块的背景色
+
+**v20200505A**
+
+- 优化：导航栏毛玻璃效果调整
+- 优化：导航栏透明度调整
 
 </details>
 
