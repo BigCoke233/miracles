@@ -8,7 +8,7 @@ class Contents
      */
     static public function parseContent($data, $widget, $last)
     {
-		$db=Typecho_Db::get();
+	$db=Typecho_Db::get();
         $load_image = $db->fetchAll($db->select('value')->from('table.options')->where('name = %s', "theme:Miracles")->limit(1));
         $load_image = explode("\";",explode("\"",explode("\"loading_image\";",$load_image[0]["value"],2)[1],2)[1],2)[0];
         $text = empty($last) ? $data : $last;
@@ -208,7 +208,7 @@ class Contents
 	 * 解析键盘按键
 	 */
     static public function parseKbd($text) {
-		$text = preg_replace('/\~(.*?)\~/s','<kbd>${1}</kbd>',$text);
+		$text = preg_replace('/\[\[(.*?)\]\]/s','<kbd>${1}</kbd>',$text);
 		return $text;
 	}
 
