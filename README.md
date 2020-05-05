@@ -96,6 +96,10 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - 优化：导航栏毛玻璃效果调整
 - 优化：导航栏透明度调整
 
+**v20200505B**
+
+- 优化：将 kbd 的短代吗语法修改为 `[[kbd]]`
+
 </details>
 
 ## 鸣谢
