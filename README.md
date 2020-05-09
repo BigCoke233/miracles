@@ -42,6 +42,10 @@
 - 方便排版的短代码
 - 后台设置备份
 
+### 预览
+
+[作者博客](https://guhub.cn/) | [Miracles 常用页面元素示例](https://guhub.cn/miracles-content-style-demo.html)
+
 ## 使用
 
 1. Star 本项目（遵循 SATA 开源协议）
