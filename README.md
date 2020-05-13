@@ -106,6 +106,20 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 </details>
 
+## 计划
+
+- [ ] 增加：内置站点缓存规则
+- [ ] 优化：「说说页面」的样式
+- [ ] 优化：文章缩略图自动剪裁
+- [ ] 新增：图片横向排版「相册功能」（参考：https://blog.imalan.cn/archives/282/）
+- [ ] 优化：用 web storage 替换储存夜间/日落模式等的 cookie
+- [ ] 新增：全站加密功能
+- [ ] 新增：支持 PWA - 渐进式 Web 应用
+- [ ] 新增：添加语言包功能，通过 php 数组储存各个语言版本的文字
+- [ ] 新增：嵌入 GitHub 仓库 / 用户（以卡片形式展示）
+- [ ] 新增：根据 cid 嵌入本站文章（以卡片形式展示）
+- [ ] 新增：文章目录
+
 ## 鸣谢
 
 > 这些都是在开发过程中给予我帮助的项目和大佬！
@@ -144,7 +158,6 @@ $ git clone https://github.com/BigCoke233/miracles.git
 介绍文章：[Miracles —— 生为奇迹](https://guhub.cn/p/miracles.html)  
 说明文档：[Wiki](https://www.notion.so/eltrac/c7c631e21b3345caa2a09bd2fb5dd4b2) | [旧的 Wiki](https://mira.guhub.cn)   
 更新日志：[change-log.md](docs/change-log.md)  
-更新计划：[Notion](https://www.notion.so/eltrac/55dc1c36dc204c60966defa2a7bb9690) | [plan.md（旧）](docs/plan.md)  
 侵权网站：[black-list.md](docs/black-list.md)
 
 ## 捐助
