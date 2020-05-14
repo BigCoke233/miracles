@@ -12,7 +12,7 @@
 
 这里面提到的几个部分不太好直接理解，以下是对他们的解释
 
-- `:emoji:`：就是 emoji 字符，应选用和这个 commit 内容有关的 emoji，但主要是为了美观
+- `:emoji:`：就是 emoji 字符，应选用和这个 commit 内容有关的 emoji，但主要是为了美观（以 [gitmoji](https://gitmoji.carloscuesta.me/) 为规范）
 - `<sign>`：这个 sign 用来提醒用户这个 commit 更新了什么类型的内容，通常用一下的字符替换
     - `Add`：顾名思义，用在添加新内容/功能的 commit 里
     - `Perf`：这是 perfect 的缩写，通常用于对现有功能进行优化的 commit 里
