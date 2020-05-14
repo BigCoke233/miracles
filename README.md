@@ -104,6 +104,10 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 - 优化：将 kbd 的短代吗语法修改为 `[[kbd]]`
 
+**v20200514A**
+
+- 优化：用 canvas 替换代码块的 mac 按钮图片
+
 </details>
 
 ## 计划
