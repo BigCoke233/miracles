@@ -17,6 +17,7 @@ Typecho_Plugin::factory('admin/write-page.php')->bottom = array('Utils', 'addBut
  * 主题启用时执行的方法
  */
 function themeInit($archive) {
+    if ($archive->hidden) header('HTTP/1.1 200 OK');//暴力解决访问加密文章会被 pjax 刷新页面的问题
     Helper::options()->commentsAntiSpam = false;//关闭反垃圾
 	Helper::options()->commentsHTMLTagAllowed = '<a href=""> <img src=""> <img src="" class=""> <code> <del>';
     Helper::options()->commentsMaxNestingLevels = '9999';//最大嵌套层数
