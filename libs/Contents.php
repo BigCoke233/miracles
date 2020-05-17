@@ -6,9 +6,8 @@ class Contents
      * 内容解析器入口
      * 传入的是经过 Markdown 解析后的文本
      */
-    static public function parseContent($data, $widget, $last)
-    {
-	$db=Typecho_Db::get();
+    static public function parseContent($data, $widget, $last){
+	    $db=Typecho_Db::get();
         $load_image = $db->fetchAll($db->select('value')->from('table.options')->where('name = %s', "theme:Miracles")->limit(1));
         $load_image = explode("\";",explode("\"",explode("\"loading_image\";",$load_image[0]["value"],2)[1],2)[1],2)[0];
         $text = empty($last) ? $data : $last;
@@ -240,7 +239,6 @@ class Contents
 		$id = str_replace('?','_',$id);
         return '<h'.$matchs[1].$matchs[2].' id="'.$id.'">'.$matchs[3].'<a href="#'.$id.'" title="章节链接" class="post-toc-link no-line"><i class="iconfont icon-paragraph"></i></a></h'.$matchs[1].'>';
     }
-	
 
 	/**
 	 * 解析自定义导航栏
@@ -262,8 +260,8 @@ class Contents
 				echo '<a href="'. $link .'" onclick="toggleDrawer()">'. $title .'</a>';
 			}
         }
-	}
-	
+    }
+
 	/**
      * 根据 id 返回对应的对象
      * 此方法在 Typecho 1.2 以上可以直接调用 Helper::widgetById();
