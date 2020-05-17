@@ -108,6 +108,10 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 - 优化：用 canvas 替换代码块的 mac 按钮图片
 
+**v20200517A**
+
+- 修复：暴力解决访问密码文章时被 pjax 强制刷新的问题
+
 </details>
 
 ## 计划
