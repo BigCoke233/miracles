@@ -104,6 +104,10 @@ if ($_GET['dbg'] == 'rawlist') {
                                         </div>
                                         <div class="bangumi-content">
                                             <h3 class="bangumi-title" title="<?php echo $bangumi['title']; ?>"><?php echo $bangumi['title']; ?></h3>
+                                            <?php
+                                            //番剧进度开始
+                                            if ($bangumi['both_follow']):
+                                            ?>
                                             <div class="bangumi-progress" style="width:100%">
                                                 <div class="bangumi-progress-bar"
                                                      style="width:<?php
@@ -138,6 +142,10 @@ if ($_GET['dbg'] == 'rawlist') {
                                             <div class="bangumi-progress-num">进度：<?php echo $ep;
                                                 echo ' / ';
                                                 echo $total; ?></div>
+                                                <?php
+                                            endif;
+                                                //番剧进度结束
+                                                ?>
                                         </div>
                                     </a>
                                 </div>
