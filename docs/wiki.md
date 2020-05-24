@@ -4,6 +4,40 @@
 
 感谢您支持 Miracles 主题，这里是主题的使用手册，这能帮助你解决大部分的问题。
 
+**目录**
+
+- [📥 下载与安装](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#-%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85)
+    - [主要步骤](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%E4%B8%BB%E8%A6%81%E6%AD%A5%E9%AA%A4)
+    - [温馨提示](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%E6%B8%A9%E9%A6%A8%E6%8F%90%E7%A4%BA)
+    - [下载主题](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%E4%B8%8B%E8%BD%BD%E4%B8%BB%E9%A2%98)
+    - [版权声明](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%E6%B8%A9%E9%A6%A8%E6%8F%90%E7%A4%BA)
+- [⚙️ 基础配置](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%EF%B8%8F-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE)
+    - [站点信息](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%E7%AB%99%E7%82%B9%E4%BF%A1%E6%81%AF)
+    - [导航栏](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%E5%AF%BC%E8%88%AA%E6%A0%8F)
+    - [首页大图](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%E9%A6%96%E9%A1%B5%E5%A4%A7%E5%9B%BE)
+    - [Pjax](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#pjax-%E9%A2%84%E5%8A%A0%E8%BD%BD)
+    - [优化](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%E4%BC%98%E5%8C%96)
+    - [个性化](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%E4%B8%AA%E6%80%A7%E5%8C%96)
+    - [开发者设置](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%E5%BC%80%E5%8F%91%E8%80%85%E8%AE%BE%E7%BD%AE)
+- [🛒 自定义字段](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5)
+    - [文字头图](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%E6%96%87%E7%AB%A0%E5%A4%B4%E5%9B%BE)
+    - [文章摘要](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%E6%96%87%E7%AB%A0%E6%91%98%E8%A6%81)
+    - [元信息](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%E5%85%83%E4%BF%A1%E6%81%AF)
+- [🔖 短代码](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#-%E7%9F%AD%E4%BB%A3%E7%A0%81)
+    - [友情链接](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5)
+    - [Tip](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#tip)
+    - [Ruby](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#ruby)
+    - [Text Color](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#text-color)
+    - [Keyboard (kbd)](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#keyboard-kbd)
+    - [Notice](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#notice)
+    - [Shadow](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#shadow)
+- [📖 页面模板](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#-%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF)
+    - [归档页面](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%E5%BD%92%E6%A1%A3%E9%A1%B5%E9%9D%A2)
+    - [关于页面](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2)
+    - [说说页面](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%E8%AF%B4%E8%AF%B4%E9%A1%B5%E9%9D%A2)
+    - [追番页面](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%E8%BF%BD%E7%95%AA%E9%A1%B5%E9%9D%A2)
+- [🚀 高级设置](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#-%E9%AB%98%E7%BA%A7%E8%AE%BE%E7%BD%AE)
+
 ## 📥 下载与安装
 
 Miracles 主题是为 [typecho](https://typecho.org) 设计的，首先你需要安装 typecho。
@@ -27,45 +61,7 @@ Miracles 主题是为 [typecho](https://typecho.org) 设计的，首先你需要
 
 以下是 Miracles 最新发行版（1.5.3）的下载链接，推荐使用。
 
-[Miracles.Ver.1.5.3.zip](https://github.com/BigCoke233/miracles/releases/download/1.5.3/Miracles.Ver.1.5.3.zip)
-
-<detail><summary>查看 Miracles 主题所有的历史版本</summary>
-
-**1.4.x 版本**
-
-[Miracles.Ver.1.4.3.zip](https://github.com/BigCoke233/miracles/releases/download/1.4.3/Miracles.Ver.1.4.3.zip)
-
-[Miracles.Ver.1.4.2.zip](https://github.com/BigCoke233/miracles/releases/download/1.4.2/Miracles.Ver.1.4.2.zip)
-
-[Miracles.Ver.1.4.1.zip](https://github.com/BigCoke233/miracles/releases/download/1.4.1/Miracles.Ver.1.4.1.zip)
-
-[Miracles.Ver.1.4.0.zip](https://github.com/BigCoke233/miracles/releases/download/1.4.0/Miracles.Ver.1.4.0.zip)
-
-**1.3.x 版本**
-
-[Miracles.Ver.1.3.2.zip](https://github.com/BigCoke233/miracles/releases/download/1.3.2/Miracles.Ver.1.3.2.zip)
-
-[Miracles.Ver.1.3.1.zip](https://github.com/BigCoke233/miracles/releases/download/1.3.1/Miracles.Ver.1.3.1.zip)
-
-[Miracles.Ver.1.3.0.zip](https://github.com/BigCoke233/miracles/releases/download/1.3.0/Miracles.Ver.1.3.0.zip)
-
-**1.2.x 版本**
-
-[Miracles.Ver.1.2.4.zip](https://github.com/BigCoke233/miracles/releases/download/1.2.4/Miracles.Ver.1.2.4.zip)
-
-[Miracles.Ver.1.2.3.1.zip](https://github.com/BigCoke233/miracles/releases/download/1.2.3.1/Miracles.Ver.1.2.3.1.zip)
-
-[Miracles.Ver.1.2.3.zip](https://github.com/BigCoke233/miracles/releases/download/1.2.3/Miracles.Ver.1.2.3.zip)
-
-[Miracles.Ver.1.2.2.zip](https://github.com/BigCoke233/miracles/releases/download/1.2.2/Miracles.Ver.1.2.2.zip)
-
-[Miracles.Ver.1.2.1.zip](https://github.com/BigCoke233/miracles/releases/download/1.2.1/Miracles.Ver.1.2.1.zip)
-
-[Miracles.zip](https://github.com/BigCoke233/miracles/releases/download/1.2.0/Miracles.zip)
-
-所有版本的下载列表和更新日志请查看 [GitHub Release](https://github.com/BigCoke233/miracles/releases)
-
-</detail>
+[📦 Miracles.Ver.1.5.4.zip](https://github.com/BigCoke233/miracles/releases/download/1.5.4/Miracles.Ver.1.5.4.zip)
 
 ### 版权声明
 
@@ -89,7 +85,7 @@ Miracles 主题是为 [typecho](https://typecho.org) 设计的，首先你需要
 
 **Gravatar - 全球公认的头像**，您可以在[这个网站](http://cn.gravatar.com/)上用您安装 typecho 时填写的邮箱注册账号并上传头像。
 
-<detail><summary>加速 gravatar 在国内的速度</summary>
+<details><summary>加速 gravatar 在国内的速度</summary>
 
 Gravatar 在国内很多地区的访问都十分缓慢，您可以将 gravatar 头像源修改为其他的镜像服务来改善速度，这里推荐 v2ex 的镜像。Typecho 并没有在控制台给出设置项，您需要手动修改代码。
 
@@ -100,7 +96,7 @@ Typecho 根目录下的 config.inc.php，在文件最后添加一条：
 define('__TYPECHO_GRAVATAR_PREFIX__', 'https://cdn.v2ex.com/gravatar/');
 ```
 
-</detail>
+</details>
 
 ### 导航栏
 
@@ -502,6 +498,10 @@ Firefox大同小异,只是在第三步时选择 `存储` 选项卡
 ### 语言包
 
 Miracles 正准备加入「语言包」功能，并已经在`/libs/lang/`目录下内置了简体中文、繁体中文、英语和~~萌语~~四种语言的数据，但目前尚未完善，也没有写入实际的功能。
+
+### faviconDark
+
+在系统夜间模式下，一些浏览器的外观也会变成深色，这个时候一些深色的 favicon 就会显得很违和，你可以在你的网站根目录下创建一个名为 `faviconDark.ico` 的文件来作为深色模式下显示的 favicon
 
 ## 👁‍🗨 遇到问题
 
