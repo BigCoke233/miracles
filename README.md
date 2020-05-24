@@ -111,6 +111,10 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 - 修复：暴力解决访问密码文章时被 pjax 强制刷新的问题
 
+**v20200524A**
+
+- 优化：鼠标移动到文章卡片标题上时显示完整标题
+
 </details>
 
 ## 计划
