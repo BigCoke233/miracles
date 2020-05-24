@@ -12,8 +12,7 @@
 
 ---
 
-> **使用主题时，如果需要任何基础功能上的帮助，请先查看[说明文档](https://www.notion.so/eltrac/c7c631e21b3345caa2a09bd2fb5dd4b2)！**  
-> 我用 Notion 给 Miracles 做了一个主页，欢迎访问：[Miracles 主题](https://www.notion.so/eltrac/Miracles-11ff2db10acc43bba64ba422b309138d)  
+> **使用主题时，如果需要任何基础功能上的帮助，请先查看[说明文档](docs/wiki.md)！**  
 > 同时，欢迎加入 QQ 交流群：924171480，或者 [Telegram](https://dev.guhub.cn/tg)
 
 ## 特色
@@ -171,7 +170,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 演示站点：[我的博客](https://guhub.cn)  |  以及 Sponsor 中的站点链接  
 介绍文章：[Miracles —— 生为奇迹](https://guhub.cn/p/miracles.html)  
-说明文档：[Wiki](https://www.notion.so/eltrac/c7c631e21b3345caa2a09bd2fb5dd4b2) | [旧的 Wiki](https://mira.guhub.cn)   
+说明文档：[Wiki](docs/wiki.md) | [Notion(旧)](https://www.notion.so/eltrac/c7c631e21b3345caa2a09bd2fb5dd4b2)   
 更新日志：[change-log.md](docs/change-log.md)  
 侵权网站：[black-list.md](docs/black-list.md)
 
