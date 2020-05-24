@@ -37,7 +37,7 @@ $this->need('includes/header.php');
 				</a>
 			  </div>
 			  <div class="col-md-6 post-item-content">
-			    <a href="<?php $this->permalink(); ?>" class="post-link">
+			    <a href="<?php $this->permalink(); ?>" class="post-link" title="<?php $this->title(); ?>">
 				  <h1 class="post-title"><?php $this->sticky(); ?><?php $this->title(); ?></h1>
 				</a>
 				<p class="post-excerpt">
