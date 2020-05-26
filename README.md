@@ -52,7 +52,7 @@
 3. 解压后，**确认目录名为`Miracles`（M 大写）**
 4. 将文件夹放入 Typecho 根目录下的`usr/themes/`
 5. 到后台-外观-可用的主题中，启用主题
-6. **根据 [wiki](https://www.notion.so/eltrac/c7c631e21b3345caa2a09bd2fb5dd4b2)** 配置主题
+6. **根据 [wiki](docs/wiki.md)** 配置主题
 
 <details><summary>使用开发版</summary><br>
 
@@ -65,7 +65,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 </details>
 <details><summary>遇到问题</summary><br>
 
-如果在使用过程中遇到了任何问题，可以先阅读本主题的 [Wiki](https://www.notion.so/eltrac/c7c631e21b3345caa2a09bd2fb5dd4b2)，并进行一些简单的确认：清理浏览器缓存，更换网络环境，确保 Console 内没有提示访问不到文件等自身原因。如果你无法靠自己解决问题，可以尝试联系作者，但记住**开发者没有为你解决问题的义务，只是出于好心的帮助。**  
+如果在使用过程中遇到了任何问题，可以先阅读本主题的 [Wiki](docs/wiki.md)，并进行一些简单的确认：清理浏览器缓存，更换网络环境，确保 Console 内没有提示访问不到文件等自身原因。如果你无法靠自己解决问题，可以尝试联系作者，但记住**开发者没有为你解决问题的义务，只是出于好心的帮助。**  
 在确认你遇到的现象确实是一个 Bug 后，请在 [Issues](https://github.com/BigCoke233/miracles/issues) 提交问题，并为该问题尽可能的描述清楚，按照提供的 issue 模板进行填写，谢谢配合。
 
 </details>
@@ -174,7 +174,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 演示站点：[我的博客](https://guhub.cn)  |  以及 Sponsor 中的站点链接  
 介绍文章：[Miracles —— 生为奇迹](https://guhub.cn/p/miracles.html)  
-说明文档：[Wiki](docs/wiki.md) | [Notion(旧)](https://www.notion.so/eltrac/c7c631e21b3345caa2a09bd2fb5dd4b2)   
+说明文档：[Wiki.md](docs/wiki.md) | [Notion(被墙了)](https://www.notion.so/eltrac/c7c631e21b3345caa2a09bd2fb5dd4b2)   
 更新日志：[change-log.md](docs/change-log.md)  
 侵权网站：[black-list.md](docs/black-list.md)
 
