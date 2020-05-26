@@ -123,7 +123,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - [ ] 优化：「说说页面」的样式
 - [ ] 优化：文章缩略图自动剪裁
 - [ ] 新增：图片横向排版「相册功能」（参考：https://blog.imalan.cn/archives/282/）
-- [ ] 优化：用 web storage 替换储存夜间/日落模式等的 cookie
+- [ ] 优化：用 localStorage 替换储存夜间/日落模式等的 cookie
 - [ ] 新增：全站加密功能
 - [ ] 新增：支持 PWA - 渐进式 Web 应用
 - [ ] 新增：添加语言包功能，通过 php 数组储存各个语言版本的文字
@@ -135,6 +135,8 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - [ ] 优化：对日间模式/日落模式/夜间模式的切换通过下拉面板操作，并支持禁用主题跟随系统设置
 - [ ] 新增：导航支持下拉面板
 - [ ] 优化：页面/文章评论列表隐藏时，不显示评论数
+- [ ] 优化：优化夜间模式的切换机制
+- [ ] 新增：支持快速写入`<details>`的短代码，并使用[垫片](https://github.com/javan/details-element-polyfill)优化兼容性
 
 ## 鸣谢
 
