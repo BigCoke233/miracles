@@ -13,7 +13,8 @@
 ---
 
 > **使用主题时，如果需要任何基础功能上的帮助，请先查看[说明文档](docs/wiki.md)！**  
-> 同时，欢迎加入 QQ 交流群：924171480，或者 [Telegram](https://dev.guhub.cn/tg)
+> 同时，欢迎加入 QQ 交流群：924171480，或者 [Telegram](https://dev.guhub.cn/tg)  
+> 2020/5/28 重要更改：Miracles 主题开源协议[增加条款](https://github.com/BigCoke233/miracles/commit/626b5aec42c58ba8defdcb2530dcb2a9b73cbfb1)，禁止将项目用作任何政治用途
 
 ## 特色
 
@@ -71,7 +72,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 </details>
 <details><summary>关于版权</summary><br>
 
-主题基于 SATA 协议开源，使用前你需要给这个项目点一个 Star，使用或转发时**请保留版权信息**，禁止倒卖。若需二次开发后发布，请邮件通知我`hi#guhub.cn`，并保留原作者版权信息及仓库链接。同时，如果发现有侵权行为，请告知我，屡教不改者将被列入[黑名单](docs/black-list.md)，删除版权的用户不会在遇到问题时受到来自作者的帮助，在后期可能会加入删除版权网站设置项失效的惩罚。
+主题基于 SATA-BNP 协议开源，使用前你需要给这个项目点一个 Star，使用或转发时**请保留版权信息**，禁止倒卖。若需二次开发后发布，请邮件通知我`hi#guhub.cn`，并保留原作者版权信息及仓库链接。在最近（2020-5-28），我将 SATA 协议修改为了 SATA-BNP 协议，即不能将软件用作任何政治相关的用途，特别是政治宣传，但是按原文转载相关政治家的书籍、文章，不含有任何倾向的解读也是可以接受的。同时，如果发现有侵权行为，请告知我，屡教不改者将被列入[黑名单](docs/black-list.md)，删除版权的用户不会在遇到问题时受到来自作者的帮助，在后期可能会加入删除版权网站设置项失效的惩罚。
 
 </details>
 
@@ -186,4 +187,4 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 ---
 
-Copyright &copy; 2019-2020 [Eltrac](https://github.com/BigCoke233), released under [SATA License](https://github.com/zTrix/sata-license).
+Copyright &copy; 2019-2020 [Eltrac](https://github.com/BigCoke233), released under [SATA-BNP License](https://github.com/BigCoke233/miracles/blob/master/LICENSE).
