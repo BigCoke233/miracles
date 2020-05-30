@@ -116,6 +116,11 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 - 优化：鼠标移动到文章卡片标题上时显示完整标题
 
+**v20200530A**
+
+- 新增：支持快速写入`<details>`的短代码，并使用[垫片](https://github.com/javan/details-element-polyfill)优化兼容性
+- 优化：将 FancyBox 和 Lazyload 替换为 gazeimg
+
 </details>
 
 ## 计划

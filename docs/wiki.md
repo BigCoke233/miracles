@@ -31,6 +31,7 @@
     - [Keyboard (kbd)](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#keyboard-kbd)
     - [Notice](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#notice)
     - [Shadow](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#shadow)
+    - [Details](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#details)
 - [📖 页面模板](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#-%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF)
     - [归档页面](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%E5%BD%92%E6%A1%A3%E9%A1%B5%E9%9D%A2)
     - [关于页面](https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md#%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2)
@@ -426,6 +427,16 @@ Markdown 原生语法并不支持 `<kbd>` ，Miracles 主题在 1.5.0 以后对 
 
 ```markdown
 [shadow]![](https://image.com/file.png)[/shadow]
+```
+
+### Details
+
+> 目前 Details 仅支持`v20200530A`（开发版）及以后的版本，未在正式版中加入
+
+用以下的语法快速写入 details 标签，创造一个下拉框，主题已借助 js 垫片优化了 details 标签的兼容性
+
+```markdown
+[details sum="标题"]内容[/details]
 ```
 
 ## 📖 页面模板
