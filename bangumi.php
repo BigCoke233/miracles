@@ -96,7 +96,7 @@ if ($_GET['dbg'] == 'rawlist') {
                                             $load_image = $db->fetchAll($db->select('value')->from('table.options')->where('name = %s', "theme:Miracles")->limit(1));
                                             $load_image = explode("\";", explode("\"", explode("\"loading_image\";", $load_image[0]["value"], 2)[1], 2)[1], 2)[0]; ?>
                                             <img src="<?php if (IS_HTTPS): ?>/usr/themes/Miracles/images/loading/<?php echo $load_image; ?>.gif"
-                                                 data-original="<?php echo $bangumi['cover']; else: echo $bangumi['cover'];
+                                                 data-gisrc="<?php echo $bangumi['cover']; else: echo $bangumi['cover'];
                                                  endif; ?>" referrerpolicy="no-referrer">
                                             <div class="bangumi-des">
                                                 <p><?php echo isset($bangumi['evaluate']) && $bangumi['evaluate'] != '' ? $bangumi['evaluate'] : '暂无简介'; ?></p>
