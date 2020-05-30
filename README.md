@@ -146,16 +146,16 @@ $ git clone https://github.com/BigCoke233/miracles.git
 ### 开源项目
 
 - [jQuery](https://github.com/jquery/jquery) - 若干开源项目和主题内一些 js 的前置
-- [FancyBox](https://github.com/fancyapps/fancybox) - 文章图片灯箱
 - [Highlight.js](https://github.com/highlightjs/highlight.js) - 代码高亮
 - [Hightlight-line-numbers](https://github.com/wcoder/highlightjs-line-numbers.js) - 代码行号
 - [Pjax](https://github.com/defunkt/jquery-pjax) - Pjax 预加载
 - [Nprogress](https://github.com/rstacruz/nprogress) - Pjax 滚动条动画
 - [OwO](https://github.com/DIYgod/OwO) - 评论 OwO 表情
-- [LazyLoad](https://github.com/tuupola/lazyload) - 图片懒加载
 - [Pangu.js](https://github.com/vinta/pangu.js) -分割中英文字符
 - [Normalize.css](http://necolas.github.io/normalize.css/) - 保证不同浏览器上各元素 css 默认效果相同
 - [qrcode.js](https://github.com/davidshimjs/qrcodejs) - 生成文章二维码
+- ~~[LazyLoad](https://github.com/tuupola/lazyload) - 图片懒加载~~（开发版已用新的方案替换）
+- ~~[FancyBox](https://github.com/fancyapps/fancybox) - 文章图片灯箱~~（开发版已用新的方案替换）
 
 ### 贡献者
 

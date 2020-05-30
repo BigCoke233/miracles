@@ -44,7 +44,7 @@
 	<?php $this->options->headerEcho(); ?>
 	<!-- css -->
     <?php
-	$css_files=array("codestyle","owo.min","nprogress","fancybox","main/miracles.min");
+	$css_files=array("codestyle","owo.min","nprogress","gazeimg","main/miracles.min");
 	if($this->options->customCDN): $custom=$this->options->customCDN; else: $custom=Helper::options()->themeUrl("","Miracles"); endif;
 	generate_require($css_files,"css",$this->options->CDN,$custom);
 	?>
