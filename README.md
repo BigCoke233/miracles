@@ -135,7 +135,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - [ ] 优化：「说说页面」的样式
 - [ ] 优化：文章缩略图自动剪裁
 - [ ] 新增：图片横向排版「相册功能」（参考：https://blog.imalan.cn/archives/282/）
-- [ ] 优化：用 localStorage 替换储存夜间/日落模式等的 cookie
+- [x] 优化：用 localStorage 替换储存夜间/日落模式等的 cookie
 - [ ] 新增：全站加密功能
 - [ ] 新增：支持 PWA - 渐进式 Web 应用
 - [ ] 新增：添加语言包功能，通过 php 数组储存各个语言版本的文字
