@@ -121,6 +121,12 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - 新增：支持快速写入`<details>`的短代码，并使用[垫片](https://github.com/javan/details-element-polyfill)优化兼容性
 - 优化：将 FancyBox 和 Lazyload 替换为 gazeimg
 
+**v20200530B**
+
+- 优化：归档页面，折叠往年的文章列表
+- 优化：用 localStorage 储存 theme，代替 cookie #57
+- 优化：在 php 层检测 faviconDark，避免前台出现 404 报错
+
 </details>
 
 ## 计划
