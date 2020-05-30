@@ -154,6 +154,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - [Pangu.js](https://github.com/vinta/pangu.js) -分割中英文字符
 - [Normalize.css](http://necolas.github.io/normalize.css/) - 保证不同浏览器上各元素 css 默认效果相同
 - [qrcode.js](https://github.com/davidshimjs/qrcodejs) - 生成文章二维码
+- [gazeimg](https://github.com/ganxiaozhe/gazeimg) - 图片懒加载 & 灯箱
 - ~~[LazyLoad](https://github.com/tuupola/lazyload) - 图片懒加载~~（开发版已用新的方案替换）
 - ~~[FancyBox](https://github.com/fancyapps/fancybox) - 文章图片灯箱~~（开发版已用新的方案替换）
 
