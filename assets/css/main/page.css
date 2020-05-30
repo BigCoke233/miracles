@@ -74,9 +74,13 @@
 .archives-list a:hover {
 	background: #e6e6e6
 }
-.archives-date {
-	color: gray;
+.archives-date,
+.archives-count {
+	color: gray!important;
 	letter-spacing: 0;
+}
+.archives-count {
+	margin-left: 5px
 }
 /* Links */
 .links-box {
