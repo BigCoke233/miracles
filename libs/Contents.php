@@ -13,7 +13,7 @@ class Contents
         $text = empty($last) ? $data : $last;
         if ($widget instanceof Widget_Archive) {
 			//ParseOther
-			$text = Contents::parsePicShadow(Contents::parseNotice(Contents::parseKbd(Contents::parseCode(Contents::parseImages(Contents::parseHeadings(Contents::parseTextColor(Contents::parseRuby(Contents::parseTip($text)))))))));
+			$text = Contents::parseDetails(Contents::parsePicShadow(Contents::parseNotice(Contents::parseKbd(Contents::parseCode(Contents::parseImages(Contents::parseHeadings(Contents::parseTextColor(Contents::parseRuby(Contents::parseTip($text))))))))));
 			//LazyLoad
 	        $text = preg_replace('/<img (.*?)src(.*?)(\/)?>/','<img $1src="/usr/themes/Miracles/images/loading/'.$load_image.'.gif" data-gisrc$2 data-gazeimg />',$text);
 			//owo
@@ -209,7 +209,15 @@ class Contents
     static public function parseKbd($text) {
 		$text = preg_replace('/\[\[(.*?)\]\]/s','<kbd>${1}</kbd>',$text);
 		return $text;
-	}
+    }
+    
+    /**
+	 * 解析 <details>
+	 */
+    static public function parseDetails($text) {
+        $text = preg_replace('/\[details sum="(.*?)"\](.*?)\[\/details\]/s','<details><summary>${1}</summary>${2}</details>',$text);
+        return $text;
+    }
 
 	/**
 	 *  解析章节链接

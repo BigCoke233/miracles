@@ -137,7 +137,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - [ ] 新增：导航支持下拉面板
 - [ ] 优化：页面/文章评论列表隐藏时，不显示评论数
 - [ ] 优化：优化夜间模式的切换机制
-- [ ] 新增：支持快速写入`<details>`的短代码，并使用[垫片](https://github.com/javan/details-element-polyfill)优化兼容性
+- [x] 新增：支持快速写入`<details>`的短代码，并使用[垫片](https://github.com/javan/details-element-polyfill)优化兼容性
 
 ## 鸣谢
 
@@ -155,6 +155,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - [Normalize.css](http://necolas.github.io/normalize.css/) - 保证不同浏览器上各元素 css 默认效果相同
 - [qrcode.js](https://github.com/davidshimjs/qrcodejs) - 生成文章二维码
 - [gazeimg](https://github.com/ganxiaozhe/gazeimg) - 图片懒加载 & 灯箱
+- [details-element-polyfill](https://github.com/javan/details-element-polyfill) - 优化 details 标签兼容性
 - ~~[LazyLoad](https://github.com/tuupola/lazyload) - 图片懒加载~~（开发版已用新的方案替换）
 - ~~[FancyBox](https://github.com/fancyapps/fancybox) - 文章图片灯箱~~（开发版已用新的方案替换）
 

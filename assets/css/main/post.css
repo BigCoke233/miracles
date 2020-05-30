@@ -281,6 +281,13 @@
 .post-content ol ul {
     margin-top: 0;
 }
+.post-content summary {
+	outline: none;
+	cursor: pointer;
+}
+.post-content summary:hover {
+	font-weight: bolder
+}
 /* 加密文章 */
 .post-content .protected {
 	display: flex;
