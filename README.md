@@ -127,15 +127,20 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - 优化：用 localStorage 储存 theme，代替 cookie #57
 - 优化：在 php 层检测 faviconDark，避免前台出现 404 报错
 
+**v20200531A**
+
+- 修复：评论区 owo 表情换行
+
 </details>
 
 ## 计划
 
+- [x] 优化：用 localStorage 替换储存夜间/日落模式等的 cookie
+- [x] 新增：支持快速写入`<details>`的短代码，并使用[垫片](https://github.com/javan/details-element-polyfill)优化兼容性
 - [ ] 增加：内置站点缓存规则
 - [ ] 优化：「说说页面」的样式
 - [ ] 优化：文章缩略图自动剪裁
 - [ ] 新增：图片横向排版「相册功能」（参考：https://blog.imalan.cn/archives/282/）
-- [x] 优化：用 localStorage 替换储存夜间/日落模式等的 cookie
 - [ ] 新增：全站加密功能
 - [ ] 新增：支持 PWA - 渐进式 Web 应用
 - [ ] 新增：添加语言包功能，通过 php 数组储存各个语言版本的文字
@@ -148,7 +153,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - [ ] 新增：导航支持下拉面板
 - [ ] 优化：页面/文章评论列表隐藏时，不显示评论数
 - [ ] 优化：优化夜间模式的切换机制
-- [x] 新增：支持快速写入`<details>`的短代码，并使用[垫片](https://github.com/javan/details-element-polyfill)优化兼容性
+- [ ] 优化：支持用 jsDelivr 加速主题内置图片的速度
 
 ## 鸣谢
 
