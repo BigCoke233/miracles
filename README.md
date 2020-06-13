@@ -131,6 +131,10 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 - 修复：评论区 owo 表情换行
 
+**v20200613A**
+
+- 修复：标签、分类页面不显示文章缩略图
+
 </details>
 
 ## 计划
