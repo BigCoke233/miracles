@@ -14,9 +14,9 @@
 
 > **使用主题时，如果需要任何基础功能上的帮助，请先查看[说明文档](docs/wiki.md)！**  
 > 同时，欢迎加入 QQ 交流群：924171480，或者 [Telegram](https://dev.guhub.cn/tg)  
-> 2020/5/28 重要更改：Miracles 主题开源协议[增加条款](https://github.com/BigCoke233/miracles/commit/626b5aec42c58ba8defdcb2530dcb2a9b73cbfb1)，禁止将项目用作任何政治用途
+> 2020/5/28 重要更改：Miracles 主题开源协议[增加条款](https://github.com/BigCoke233/miracles/commit/626b5aec42c58ba8defdcb2530dcb2a9b73cbfb1)，禁止将项目用作任何政治相关用途
 
-## 特色
+## 🎨 特色
 
 - 响应式 / 自适应设计
 - Pjax 全站无刷新
@@ -46,9 +46,9 @@
 
 [作者博客](https://guhub.cn/) | [Miracles 常用页面元素示例](https://guhub.cn/miracles-content-style-demo.html)
 
-## 使用
+## 🚀 使用
 
-1. Star 本项目（遵循 SATA 开源协议）
+1. Star 本项目（遵循 SATA-BNP 开源协议）
 2. 下载**最新的 [Release](https://github.com/BigCoke233/miracles/releases)**
 3. 解压后，**确认目录名为`Miracles`（M 大写）**
 4. 将文件夹放入 Typecho 根目录下的`usr/themes/`
@@ -137,7 +137,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 </details>
 
-## 计划
+## 📝 计划
 
 - [x] 优化：用 localStorage 替换储存夜间/日落模式等的 cookie
 - [x] 新增：支持快速写入`<details>`的短代码，并使用[垫片](https://github.com/javan/details-element-polyfill)优化兼容性
@@ -159,7 +159,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - [ ] 优化：优化夜间模式的切换机制
 - [ ] 优化：支持用 jsDelivr 加速主题内置图片的速度
 
-## 鸣谢
+## 💖 鸣谢
 
 > 这些都是在开发过程中给予我帮助的项目和大佬！
 
@@ -195,15 +195,15 @@ $ git clone https://github.com/BigCoke233/miracles.git
 [VOID](https://github.com/AlanDecode/Typecho-Theme-VOID) | [Castle](https://github.com/ohmyga233/castle-Typecho-Theme) |
 [Holakit](https://github.com/wenxuanjun/Holakit) | [Material](https://github.com/idawnlight/typecho-theme-material) | [Mirages](https://get233.com/archives/mirages-intro.html)
 
-## 相关
+## 🔮 相关
 
-演示站点：[我的博客](https://guhub.cn)  |  以及 Sponsor 中的站点链接  
+演示站点：[我的博客](https://guhub.cn)  
 介绍文章：[Miracles —— 生为奇迹](https://guhub.cn/p/miracles.html)  
-说明文档：[Wiki.md](docs/wiki.md) | [Notion(被墙了)](https://www.notion.so/eltrac/c7c631e21b3345caa2a09bd2fb5dd4b2)   
+说明文档：[Wiki.md](docs/wiki.md) | [Notion(被墙了,故停止维护)](https://www.notion.so/eltrac/c7c631e21b3345caa2a09bd2fb5dd4b2)   
 更新日志：[change-log.md](docs/change-log.md)  
 侵权网站：[black-list.md](docs/black-list.md)
 
-## 捐助
+## 🎁 捐助
 
 你可以通过[爱发电](https://afdian.net/@Eltrac)向我投食，~~用金钱催更~~。
 
