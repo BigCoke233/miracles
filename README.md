@@ -4,7 +4,8 @@
 <img src="https://img.shields.io/badge/build-passing-brightgreen.svg?style=flat-square"> 
 <img src="https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg?style=flat-square"> 
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-SATA-blue.svg?style=flat-square"></a> 
-<a href="https://typecho.org"><img src="https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square"></a> 
+<a href="https://typecho.org"><img src="https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square"></a> <a href="https://app.fossa.com/projects/git%2Bgithub.com%2FBigCoke233%2Fmiracles?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FBigCoke233%2Fmiracles.svg?type=shield"/></a>
+
 <a href="https://github.com/BigCoke233/miracles/releases"><img src="https://img.shields.io/github/v/release/BigCoke233/miracles?color=red&style=flat-square"></a> 
 <a href="https://github.com/BigCoke233/miracles/graphs/contributors"><img src="https://img.shields.io/github/contributors/BigCoke233/miracles?color=orange&style=flat-square"></a> 
     
@@ -210,3 +211,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 ---
 
 Copyright &copy; 2019-2020 [Eltrac](https://github.com/BigCoke233), released under [SATA-BNP License](https://github.com/BigCoke233/miracles/blob/master/LICENSE).
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FBigCoke233%2Fmiracles.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FBigCoke233%2Fmiracles?ref=badge_large)
