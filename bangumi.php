@@ -53,7 +53,7 @@ function getSubstr($str, $leftStr, $rightStr)
 if ($this->fields->uid == !'' && $this->fields->sessdata == !'') {
     if (empty($_GET['page']) || $_GET['page'] == 0) $page = 1; else $page = $_GET['page'];
     $curl = curl_init();
-    curl_setopt($curl, CURLOPT_URL, 'https://api.bilibili.com/x/space/bangumi/follow/list?type=1&follow_status=0&vmid=' . $this->fields->uid . '&ps=16&pn=' . $page);
+    curl_setopt($curl, CURLOPT_URL, 'https://api.bilibili.com/x/space/bangumi/follow/list?type=1&follow_status=0&vmid=' . $this->fields->uid . '&ps=12&pn=' . $page);
     curl_setopt($curl, CURLOPT_COOKIE, 'SESSDATA=' . $this->fields->sessdata . ';');
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     $str = curl_exec($curl);
@@ -65,6 +65,9 @@ if ($this->fields->uid == !'' && $this->fields->sessdata == !'') {
     $bgmdataraw = array();
     $bgmlist = array();
 }
+
+//force https
+$bangumi_cover = str_replace("http://", "https://", $bangumi['cover']);
 
 //  Uncomment for debugging
 /*
@@ -96,7 +99,7 @@ if ($_GET['dbg'] == 'rawlist') {
                                             $load_image = $db->fetchAll($db->select('value')->from('table.options')->where('name = %s', "theme:Miracles")->limit(1));
                                             $load_image = explode("\";", explode("\"", explode("\"loading_image\";", $load_image[0]["value"], 2)[1], 2)[1], 2)[0]; ?>
                                             <img src="<?php if (IS_HTTPS): ?>/usr/themes/Miracles/images/loading/<?php echo $load_image; ?>.gif"
-                                                 data-gisrc="<?php echo $bangumi['cover']; else: echo $bangumi['cover'];
+                                                 data-gisrc="<?php echo $bangumi_cover; else: echo $bangumi_cover;
                                                  endif; ?>" referrerpolicy="no-referrer">
                                             <div class="bangumi-des">
                                                 <p><?php echo isset($bangumi['evaluate']) && $bangumi['evaluate'] != '' ? $bangumi['evaluate'] : '暂无简介'; ?></p>
@@ -162,7 +165,7 @@ if ($_GET['dbg'] == 'rawlist') {
                 <br>
             </div>
         </div>
-		<?php if(!$error && $bgmdataraw['data']['total']>16): ?>
+		<?php if(!$error && $bgmdataraw['data']['total']>12): ?>
         <div class="post-pagenav">
             <?php if ($page != 1): ?><a class="post-pagenav-left" href="?page=<?php echo $page - 1; ?>"><i
                         class="iconfont icon-chevron-left"></i></a> <?php endif; ?>
