@@ -40,7 +40,7 @@
 			$this->options->bannerUrl();
 	endif;}?>" />
 	<link rel="icon" id="icon" type="image/png" href="<?php if($this->options->favicon):$this->options->favicon();else:echo Utils::indexTheme('favicon.ico');endif;	?>" />
-    <?php $header->header('generator=&pingback=&xmlrpc=&wlw=&commentReply=&description=&antiSpam='); ?>
+    <?php $this->header('generator=&pingback=&xmlrpc=&wlw=&commentReply=&description=&antiSpam='); ?>
 	<?php $this->options->headerEcho(); ?>
 	<!-- css -->
     <?php
