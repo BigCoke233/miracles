@@ -205,7 +205,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 ## 🎁 捐助
 
-你可以通过[爱发电](https://afdian.net/@Eltrac)向我投食，~~用金钱催更~~。
+你可以通过[爱发电](https://afdian.net/@Eltrac)向我投食，~~用金钱催更~~；或是在 [Open Collective](https://opencollective.com/miracles) 上为 Miracles 进行捐献
 
 ---
 
