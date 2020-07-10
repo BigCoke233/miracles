@@ -147,10 +147,10 @@
                   </div>
 				  <div class="header-meta-line-two">
 				    <i class="iconfont icon-clock" title="该文章发布于 <?php $this->date(); ?>"></i> <?php $this->date(); ?>&emsp;
-				    <i class="icon-view iconfont" title="该文章被浏览 <?php get_post_view($this) ?> 次"></i> <?php get_post_view($this) ?>
+				    <i class="icon-view iconfont" title="该文章被浏览 <?php Contents::postViews($this) ?> 次"></i> <?php Contents::postViews($this) ?>
                   </div>
 				  <?php else: ?>
-				    <?php $this->fields->meta(); ?><div style="display:none"><?php get_post_view($this) ?></div>
+				    <?php $this->fields->meta(); ?><div style="display:none"><?php Contents::postViews($this) ?></div>
 				  <?php endif; ?>
 				</div>
 				<?php elseif($this->is('archive')): ?>

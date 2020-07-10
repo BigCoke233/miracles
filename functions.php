@@ -18,7 +18,7 @@ Typecho_Plugin::factory('admin/write-page.php')->bottom = array('Utils', 'addBut
  */
 function themeInit($archive) {
     if ($archive->hidden) header('HTTP/1.1 200 OK');//暴力解决访问加密文章会被 pjax 刷新页面的问题
-    Helper::options()->commentsAntiSpam = false;//关闭反垃圾
+    //Helper::options()->commentsAntiSpam = false; 关闭反垃圾
 	Helper::options()->commentsHTMLTagAllowed = '<a href=""> <img src=""> <img src="" class=""> <code> <del>';
     Helper::options()->commentsMaxNestingLevels = '9999';//最大嵌套层数
     Helper::options()->commentsPageDisplay = 'first';//强制评论第一页
@@ -47,92 +47,3 @@ function themeVersion() {
     $info = Typecho_Plugin::parseInfo(__DIR__ . '/index.php');
     return $info['version'];
 }
-
-/**
- *  统计文章浏览数
- *  from:http://docs.qqdie.com/
- */
-function get_post_view($archive) {
-    $cid    = $archive->cid;
-    $db     = Typecho_Db::get();
-    $prefix = $db->getPrefix();
-    if (!array_key_exists('views', $db->fetchRow($db->select()->from('table.contents')))) {
-        $db->query('ALTER TABLE `' . $prefix . 'contents` ADD `views` INT(10) DEFAULT 0;');
-        echo 0;
-        return;
-    }
-    $row = $db->fetchRow($db->select('views')->from('table.contents')->where('cid = ?', $cid));
-    if ($archive->is('single')) {
- $views = Typecho_Cookie::get('extend_contents_views');
-        if(empty($views)){
-            $views = array();
-        }else{
-            $views = explode(',', $views);
-        }
-if(!in_array($cid,$views)){
-       $db->query($db->update('table.contents')->rows(array('views' => (int) $row['views'] + 1))->where('cid = ?', $cid));
-array_push($views, $cid);
-            $views = implode(',', $views);
-            Typecho_Cookie::set('extend_contents_views', $views); //记录查看cookie
-        }
-    }
-    echo $row['views'];
-}
-/**
- * 自动生成引用
- */
-function generate_require($files,$type,$cdn,$custom) {
-    if ($cdn=='1'){
-        $path = 'https://cdn.jsdelivr.net/gh/BigCoke233/miracles@'.themeVersion()."/assets/";
-	}
-	elseif ($cdn=='2'){
-	    $path = 'https://raw.githack.com/BigCoke233/miracles/master/assets/';
-	}
-	elseif ($cdn=='4'){
-		$path = 'https://rawcdn.githack.com/BigCoke233/miracles/master/assets/';
-	}
-	elseif ($cdn=='5'){
-		$path = 'https://cdn.9jojo.cn/Miracles/'.themeVersion().'/';
-	}
-	elseif ($cdn=='3'){
-		$path = $custom;
-	}else{
-		$path = Helper::options()->themeUrl("","Miracles/assets");
-	}
-    foreach ($files as $file) {
-        if ($type == "js"){
-            echo "<script src=".$path. $type."/".$file.".".$type."></script>";
-		}
-        elseif ($type == "css"){
-            echo "<link rel=\"stylesheet\" href=".$path. $type."/".$file.".".$type." />";
-		}
-    }
-}
-
-/**
- *  获取上级评论人
- */
-    function getCommentHF($coid){
-        $db   = Typecho_Db::get();
-        $prow = $db->fetchRow($db->select('parent')
-            ->from('table.comments')
-            ->where('coid = ? AND status = ?', $coid, 'approved'));
-        $parent = $prow['parent'];
-        if ($parent != "0") {
-            $arow = $db->fetchRow($db->select('text','author','status')
-                ->from('table.comments')
-                ->where('coid = ?', $parent));
-            $author = $arow['author'];
-            $status = $arow['status'];
-            if($author){
-                if($status=='approved'){
-                    $href   = '<a class="at" uid="'.$parent.'" href="#li-comment-'.$parent.'">@'.$author.'</a>';;
-                }else if($status=='waiting'){
-                    $href   = '<a>评论审核中···</a>';
-                }
-            }
-            echo $href;
-        } else {
-            echo "";
-        }
-    }

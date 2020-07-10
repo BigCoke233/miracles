@@ -24,7 +24,7 @@
 	<?php
 	$js_files=array("jquery","pjax.jquery","gazeimg","nprogress","OwO.min","highlight","highlight-line-number","pangu","qrcode.min","details-element-polyfill");
 	if($this->options->customCDN): $custom=$this->options->customCDN; else: $custom=Helper::options()->themeUrl("","Miracles"); endif;
-	generate_require($js_files,"js",$this->options->CDN,$custom);
+	Utils::addRequires($js_files,"js",$this->options->CDN,$custom);
 	?>
 	<!-- Options -->
 	<script>var navSlide = <?php if($this->options->navSlide==1):?>false<?php else:?>true<?php endif;?>;
@@ -42,7 +42,7 @@
 	<?php
 	$js_files=array("miracles.min","cmt.miracles");
 	if($this->options->customCDN): $custom=$this->options->customCDN; else: $custom=Helper::options()->themeUrl("","Miracles"); endif;
-	generate_require($js_files,"js",$this->options->CDN,$custom);
+	Utils::addRequires($js_files,"js",$this->options->CDN,$custom);
 	?>
 	<!-- JavaScript -->
 	<script>

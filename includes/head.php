@@ -40,13 +40,13 @@
 			$this->options->bannerUrl();
 	endif;}?>" />
 	<link rel="icon" id="icon" type="image/png" href="<?php if($this->options->favicon):$this->options->favicon();else:echo Utils::indexTheme('favicon.ico');endif;	?>" />
-    <?php $this->header('description=&commentReply='); ?>
+    <?php $header->header('generator=&pingback=&xmlrpc=&wlw=&commentReply=&description=&antiSpam='); ?>
 	<?php $this->options->headerEcho(); ?>
 	<!-- css -->
     <?php
 	$css_files=array("codestyle","owo.min","nprogress","gazeimg","main/miracles.min");
 	if($this->options->customCDN): $custom=$this->options->customCDN; else: $custom=Helper::options()->themeUrl("","Miracles"); endif;
-	generate_require($css_files,"css",$this->options->CDN,$custom);
+	Utils::addRequires($css_files,"css",$this->options->CDN,$custom);
 	?>
 	<!-- icon font -->
 	<link rel="stylesheet" href="//at.alicdn.com/t/font_1165190_1djdjjwge4m.css" />

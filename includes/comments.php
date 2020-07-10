@@ -28,7 +28,7 @@ echo $commentClass;
 		  <span class="comment-reply">
 		    <?php $comments->reply('<i class="iconfont icon-return"></i>'); ?>
 		  </span>
-		  <?php getCommentHF($comments->coid); echo Contents::parseEmo($comments->content); ?>
+		  <?php Comments::getCommentHF($comments->coid); echo Contents::parseEmo($comments->content); ?>
 	    </div>
 		<p class="comment-meta">
 		  <span class="comment-author"><a href="<?php echo $comments->url; ?>" target="_blank"><?php echo $comments->author; ?></a></span>
@@ -63,8 +63,8 @@ echo $commentClass;
             'dateFormat'    =>  'Y-m-d H:i'
             )); ?>
 		  <div class="comment-pagenav">
-            <?php $comments->pageNav('<i class="iconfont icon-chevron-left comment-pagenav-icon"></i>', '<i class="iconfont icon-chevron-right comment-pagenav-icon"></i>'); ?>
-          </div>
+        <?php $comments->pageNav('<i class="iconfont icon-chevron-left comment-pagenav-icon"></i>', '<i class="iconfont icon-chevron-right comment-pagenav-icon"></i>'); ?>
+      </div>
 		</div>
 		
         <?php endif;//有无评论判断结束?>
@@ -103,11 +103,10 @@ echo $commentClass;
              </form>
             </div>
 <!-- 若当前文章不允许进行评论 -->
-    <?php else: ?>
-    <div class="comment-hidden"><?php _e('博主已关闭本页面的评论功能'); ?></div>
-	<!-- 防止找不到 owo 容器而报错 -->
-	<div style="display:none" class="OwO"></div>
-    <?php endif; ?>
+      <?php else: ?>
+      <div class="comment-hidden"><?php _e('博主已关闭本页面的评论功能'); ?></div>
+      <?php endif; ?>
 		</div>
-	  </div>
-	
+	</div>
+  <?php //兼容 typecho 反垃圾
+  if ($this->options->commentsAntiSpam) { Comments::AntiSpam($this); } ?>

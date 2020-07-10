@@ -1,6 +1,17 @@
-<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit;
+<?php 
+/**
+ * Contents.php 
+ * 内容处理
+ * 
+ * Author:  Eltrac(BigCoke233)
+ * License: MIT
+ * Notice:  Parts of codes are from AlanDecode/Typecho-Theme-VOID
+ */
+
+if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 class Contents
 {
+    /* == 解析文章内容 == */
 	
     /**
      * 内容解析器入口
@@ -248,6 +259,8 @@ class Contents
         return '<h'.$matchs[1].$matchs[2].' id="'.$id.'">'.$matchs[3].'<a href="#'.$id.'" title="章节链接" class="post-toc-link no-line"><i class="iconfont icon-paragraph"></i></a></h'.$matchs[1].'>';
     }
 
+    /* == 其他内容 == */
+
 	/**
 	 * 解析自定义导航栏
 	 */
@@ -278,8 +291,7 @@ class Contents
      * @param string $table 表名, 支持 contents, comments, metas, users
      * @return Widget_Abstract
      */
-    public static function widgetById($table, $pkId)
-    {
+    public static function widgetById($table, $pkId) {
         $table = ucfirst($table);
         if (!in_array($table, array('Contents', 'Comments', 'Metas', 'Users'))) {
             return NULL;
@@ -304,8 +316,7 @@ class Contents
     /**
      * 输出完备的标题
      */
-    public static function title(Widget_Archive $archive)
-    {
+    public static function title(Widget_Archive $archive) {
         $archive->archiveTitle(array(
             'category'  =>  '分类 %s 下的文章',
             'search'    =>  '包含关键字 %s 的文章',
@@ -315,26 +326,57 @@ class Contents
         Helper::options()->title();
     }
 
- /**
-  * 内容归档
-  */
-  public static function archives($widget) {
-    $db = Typecho_Db::get();
-    $rows = $db->fetchAll($db->select()
-     ->from('table.contents')
-     ->order('table.contents.created', Typecho_Db::SORT_DESC)
-     ->where('table.contents.type = ?', 'post')
-     ->where('table.contents.status = ?', 'publish'));
+    /**
+     * 内容归档
+     */
+    public static function archives($widget) {
+        $db = Typecho_Db::get();
+        $rows = $db->fetchAll($db->select()
+        ->from('table.contents')
+         ->order('table.contents.created', Typecho_Db::SORT_DESC)
+        ->where('table.contents.type = ?', 'post')
+        ->where('table.contents.status = ?', 'publish'));
           
-    $stat = array();
-    foreach ($rows as $row) {
-     $row = $widget->filter($row);
-     $arr = array(
-      'title' => $row['title'],
-      'permalink' => $row['permalink']);
-  
-     $stat[date('Y', $row['created'])][$row['created']] = $arr;
+        $stat = array();
+        foreach ($rows as $row) {
+            $row = $widget->filter($row);
+            $arr = array(
+                'title' => $row['title'],
+                'permalink' => $row['permalink']
+            );
+            $stat[date('Y', $row['created'])][$row['created']] = $arr;
+        }
+        return $stat;
     }
-    return $stat;
-   }
+
+    /**
+     *  统计文章浏览数
+     *  from:http://docs.qqdie.com/
+     */
+    public static function postViews($archive) {
+        $cid    = $archive->cid;
+        $db     = Typecho_Db::get();
+        $prefix = $db->getPrefix();
+        if (!array_key_exists('views', $db->fetchRow($db->select()->from('table.contents')))) {
+            $db->query('ALTER TABLE `' . $prefix . 'contents` ADD `views` INT(10) DEFAULT 0;');
+            echo 0;
+            return;
+        }
+        $row = $db->fetchRow($db->select('views')->from('table.contents')->where('cid = ?', $cid));
+        if ($archive->is('single')) {
+            $views = Typecho_Cookie::get('extend_contents_views');
+            if(empty($views)){
+                $views = array();
+            }else{
+                $views = explode(',', $views);
+            }
+            if(!in_array($cid,$views)){
+                $db->query($db->update('table.contents')->rows(array('views' => (int) $row['views'] + 1))->where('cid = ?', $cid));
+                array_push($views, $cid);
+                $views = implode(',', $views);
+                Typecho_Cookie::set('extend_contents_views', $views); //记录查看cookie
+            }
+        }
+        echo $row['views'];
+    }
 }
