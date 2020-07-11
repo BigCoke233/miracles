@@ -142,6 +142,8 @@ $ git clone https://github.com/BigCoke233/miracles.git
 **v20200711A**
 
 - 新增：兼容 typecho 评论反垃圾
+- 新增：高级设置
+- 新增：可选择主题字体 CDN 了
 - 优化：归档页面 meta 元信息
 
 </details>
