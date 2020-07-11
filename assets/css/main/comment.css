@@ -94,6 +94,7 @@
 	border-radius: 4px;
 	min-width: 10px!important;
 	margin-left: 25px;
+	scroll-margin-top: 5em
 }
 .bubble.comment-content:before {
     border-right-color: rgb(238,238,238);

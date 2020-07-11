@@ -19,6 +19,7 @@
 /* Varriable */
 :root {
 	--shadow-color: rgb(190,190,190);
+	scroll-behavior: smooth; /* 平滑滚动 */
 }
 
 /* Icon Font */

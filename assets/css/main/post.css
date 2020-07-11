@@ -161,6 +161,13 @@
 	border-left: 6px solid #4D90FE;
 	padding-left: 10px;
 }
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5 {
+	scroll-margin-top: 5em
+}
 .post-content hr {
 	display: block;
 	margin: 20px auto;
