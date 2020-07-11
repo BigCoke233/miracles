@@ -153,4 +153,46 @@ class Utils
             ->limit(1));
         echo '一切开始于 '.date('Y-m-d', $content['created']);
     }
+
+    /**
+     * 缩略图
+     */
+    public static function postBanner($post){
+		if($post->fields->banner && $post->fields->banner=!''): 
+			$banner = $post->fields->banner; 
+		else: 
+			if($post->options->randomBanner==''){
+                $banner = '/usr/themes/Miracles/images/postbg/';
+                $banner .= srand(mb_strlen($post->title));
+                $banner .= rand(1,15).'.jpg';
+		    }
+		    else{
+		        $banner_url = explode(',',$post->options->randomBanner);
+                $banner = $banner_url[mt_rand(0,count($banner_url)-1)].'\"';
+            }
+        endif;
+        //使用 TimThumb 剪裁
+        if($GLOBALS['miraclesIfTimThumb']=='on') {
+            if($GLOBALS['miraclesIfTimThumbSize']=='regular'){
+                $banner_size = '&h=336&w=564';
+            }
+            elseif($GLOBALS['miraclesIfTimThumbSize']=='big'){
+                $banner_size = '&h=420&w=705';
+            }
+            elseif($GLOBALS['miraclesIfTimThumbSize']=='large'){
+                $banner_size = '&h=504&w=846';
+            }
+            elseif($GLOBALS['miraclesIfTimThumbSize']=='huge'){
+                $banner_size = '&h=560&w=940';
+            }
+            else{
+                //避免有憨憨打错单词，当成 big 来算
+                $banner_size = '&h=420&w=705';
+            }
+            $banner_url = '/usr/themes/Miracles/libs/TimThumb.php';
+            $banner = $banner_url.'?src='.$banner.$banner_size;
+        }
+
+        echo $banner;
+    }
 }

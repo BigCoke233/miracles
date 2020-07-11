@@ -22,17 +22,7 @@ $this->need('includes/header.php');
 			  <div class="col-md-6 post-banner-box">
 			    <a href="<?php $this->permalink(); ?>" class="post-link">
 			      <div class="post-banner">
-				    <img src="/usr/themes/Miracles/images/loading/<?php echo $this->options->loading_image ?>.gif" data-gisrc="<?php 
-					if($this->fields->banner && $this->fields->banner=!''): 
-					  echo $this->fields->banner(); 
-					else: 
-					  if($this->options->randomBanner==''){
-						echo Utils::indexTheme('images/postbg/'); srand(mb_strlen($this->title));echo rand(1,15).'.jpg';
-					  }
-					  else{
-						$banner_url = explode(',',$this->options->randomBanner);
-						echo $banner_url[mt_rand(0,count($banner_url)-1)];}
-					endif; ?>">
+				    <img src="<?php Utils::indexTheme('images/loading/'.$this->options->loading_image.'.gif') ?>" data-gisrc="<?php Utils::postBanner($this); ?>">
 				  </div>
 				</a>
 			  </div>
