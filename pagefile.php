@@ -11,17 +11,15 @@ $this->need('includes/header.php');
     <main class="main-container container" role="main">
 	  <div class="post-body">
 	    <div class="post-content page-content">
-          <h2>文章标签</h2>
 		  <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=mid&ignoreZeroCount=1&desc=0&limit=30')->to($tags); ?>
+          <h2>文章标签</h2>
           <?php if($tags->have()): ?>
           <ul class="tags-list">
           <?php while ($tags->next()): ?>
             <li class="tags-item"><a href="<?php $tags->permalink(); ?>" rel="tag" class="no-line" title="有 <?php $tags->count(); ?> 篇文章在这个标签下"><?php $tags->name(); ?></a></li>
           <?php endwhile; ?>
           </ul>
-		  <?php else: ?>
-            <p><?php _e('看来这个博主没有写标签的习惯~'); ?></p>
-          <?php endif; ?>
+      <?php endif; ?>
 		  <br />
 		  <h2>文章归档</h2>
 		  <ul class="archives-list">
