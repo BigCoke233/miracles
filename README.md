@@ -142,6 +142,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 **v20200711A**
 
 - 新增：兼容 typecho 评论反垃圾
+- 优化：归档页面 meta 元信息
 
 </details>
 
