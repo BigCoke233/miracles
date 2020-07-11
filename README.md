@@ -139,6 +139,10 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 - 优化：模板设置备份中，判断 `$_POST['type']` 存在后再进行备份处理，防止不必要的报错和其他风险
 
+**v20200711A**
+
+- 新增：兼容 typecho 评论反垃圾
+
 </details>
 
 ## 📝 计划
