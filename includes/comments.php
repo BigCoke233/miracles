@@ -109,4 +109,4 @@ echo $commentClass;
 		</div>
 	</div>
   <?php //兼容 typecho 反垃圾
-  if ($this->options->commentsAntiSpam) { Comments::AntiSpam($this); } ?>
+  if ($this->options->commentsAntiSpam) { Comments::AntiSpam($this->respondId, Typecho_Common::shuffleScriptVar($this->security->getToken(preg_replace('/\??&?_pjax=[^&]+/i','',$this->request->getRequestUrl())))); } ?>

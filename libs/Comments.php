@@ -15,9 +15,9 @@ class Comments
      *
      * @access public
      */
-    public static function AntiSpam($comment) {
+    public static function AntiSpam($id, $value) {
         if ($comment->options->switch && in_array('html', $comment->options->switch)) { echo '<!--<nocompress>-->'; }
-        echo '<script>(function(){var a=document.addEventListener?{add:"addEventListener",focus:"focus",load:"DOMContentLoaded"}:{add:"attachEvent",focus:"onfocus",load:"onload"};var c,d,e,f,b=document.getElementById("'.$comment->respondId.'");null!=b&&(c=b.getElementsByTagName("form"),c.length>0&&(d=c[0],e=d.getElementsByTagName("textarea")[0],f=!1,null!=e&&"text"==e.name&&e[a.add](a.focus,function(){if(!f){var a=document.createElement("input");a.type="hidden",a.name="_",d.appendChild(a),f=!0,a.value='.Typecho_Common::shuffleScriptVar($comment->security->getToken($comment->request->getRequestUrl())).'}})))})();</script>';
+        echo '<script>(function(){var a=document.addEventListener?{add:"addEventListener",focus:"focus",load:"DOMContentLoaded"}:{add:"attachEvent",focus:"onfocus",load:"onload"};var c,d,e,f,b=document.getElementById("'.$id.'");null!=b&&(c=b.getElementsByTagName("form"),c.length>0&&(d=c[0],e=d.getElementsByTagName("textarea")[0],f=!1,null!=e&&"text"==e.name&&e[a.add](a.focus,function(){if(!f){var a=document.createElement("input");a.type="hidden",a.name="_",d.appendChild(a),f=!0,a.value='.$value.'}})))})();</script>';
         if ($comment->options->switch && in_array('html', $comment->options->switch)) { echo '<!--</nocompress>-->'; }
     }
 

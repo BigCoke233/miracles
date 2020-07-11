@@ -113,7 +113,7 @@ class Utils
     /**
      * 自动生成引用
      */
-    function addRequires($files,$type,$cdn,$custom) {
+    public static function addRequires($files,$type,$cdn,$custom) {
         if ($cdn=='1'){
             $path = 'https://cdn.jsdelivr.net/gh/BigCoke233/miracles@'.themeVersion()."/assets/";
 	    }
