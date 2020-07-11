@@ -140,18 +140,28 @@
 				<?php elseif($this->is('post') || $this->is('page')): ?>
 				<h1><?php $this->title(); ?></h1>
 		        <div class="header-meta">
-				  <?php if($this->fields->meta==''): ?>
-				  <div class="header-meta-line-one">
-				    <?php if($this->is('post')): ?><i class="iconfont icon-block" title="文章分类"></i> <?php $this->category(','); ?>&emsp;<?php endif; ?>
-				    <i class="iconfont icon-comments" title="共 <?php $this->commentsNum('0', '1', '%d'); ?> 条评论"></i> <?php $this->commentsNum('0', '1', '%d'); ?>&emsp;
-                  </div>
-				  <div class="header-meta-line-two">
-				    <i class="iconfont icon-clock" title="该文章发布于 <?php $this->date(); ?>"></i> <?php $this->date(); ?>&emsp;
-				    <i class="icon-view iconfont" title="该文章被浏览 <?php Contents::postViews($this) ?> 次"></i> <?php Contents::postViews($this) ?>
-                  </div>
-				  <?php else: ?>
+				  <?php if($this->fields->meta==''): 
+					if($_SESSION["isPageArchive"]!=true){ ?>
+				  	<div class="header-meta-line-one">
+				    	<?php if($this->is('post')): ?><i class="iconfont icon-block" title="文章分类"></i> <?php $this->category(','); ?>&emsp;<?php endif; ?>
+				    	<i class="iconfont icon-comments" title="共 <?php $this->commentsNum('0', '1', '%d'); ?> 条评论"></i> <?php $this->commentsNum('0', '1', '%d'); ?>&emsp;
+                  	</div>
+				  	<div class="header-meta-line-two">
+				    	<i class="iconfont icon-clock" title="该文章发布于 <?php $this->date(); ?>"></i> <?php $this->date(); ?>&emsp;
+				    	<i class="icon-view iconfont" title="该文章被浏览 <?php Contents::postViews($this) ?> 次"></i> <?php Contents::postViews($this) ?>
+                  	</div>
+					<?php }else{ ?>
+					<div class="header-meta-line-one">
+						<i class="iconfont icon-clock" title="一切开始于 <?php Utils::getOldestPostDate(); ?>"></i> <?php Utils::getOldestPostDate(); ?>&emsp;
+					</div>
+					<div class="header-meta-line-two">
+					<i class="icon-view iconfont" title="该页面被浏览 <?php Contents::postViews($this) ?> 次"></i> <?php Contents::postViews($this) ?>
+					</div>
+					<?php }
+					else: ?>
 				    <?php $this->fields->meta(); ?><div style="display:none"><?php Contents::postViews($this) ?></div>
-				  <?php endif; ?>
+				  <?php endif; 
+				  $_SESSION["isPageArchive"]=false; //清除归档页面标识，避免不必要的问题?>
 				</div>
 				<?php elseif($this->is('archive')): ?>
 				<h1><?php $this->archiveTitle(array(

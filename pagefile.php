@@ -6,6 +6,7 @@
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('includes/head.php');
+$_SESSION["isPageArchive"] = true; //归档页面标识
 $this->need('includes/header.php');
 ?>
     <main class="main-container container" role="main">
@@ -22,8 +23,7 @@ $this->need('includes/header.php');
       <?php endif; ?>
 		  <br />
 		  <h2>文章归档</h2>
-		  <ul class="archives-list">
-      <?php
+		  <ul class="archives-list"><?php
       $archives = Contents::archives($this);
       $number = 0;
       foreach($archives as $year => $posts) {
@@ -38,8 +38,7 @@ $this->need('includes/header.php');
         }
        echo '</details>';
        $number++;
-      }
-     ?>
+      }?>
 		  </ul>
 		</div>
 	  </div>
