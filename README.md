@@ -50,10 +50,11 @@
 
 1. Star 本项目（遵循 SATA-BNP 开源协议）
 2. 下载**最新的 [Release](https://github.com/BigCoke233/miracles/releases)**
-3. 解压后，**确认目录名为`Miracles`（M 大写）**
-4. 将文件夹放入 Typecho 根目录下的`usr/themes/`
-5. 到后台-外观-可用的主题中，启用主题
-6. **根据 [wiki](docs/wiki.md)** 配置主题
+3. 确保自身 PHP 环境在 7.1.0 及以上版本，并装有 CURL 拓展（否则一些功能无法正常使用）
+4. 解压后，**确认目录名为`Miracles`（M 大写）**
+5. 将文件夹放入 Typecho 根目录下的`usr/themes/`
+6. 到后台-外观-可用的主题中，启用主题
+7. **根据 [wiki](docs/wiki.md)** 配置主题
 
 <details><summary>使用开发版</summary><br>
 

@@ -1,4 +1,4 @@
-# 黑名单
+# 封锁名单
 
 ## 说明
 
@@ -13,6 +13,7 @@
 
 ## API
 我准备了一个储存违规站点信息的 json 文件，可以通过以下的链接调用，为以后的惩罚功能做准备（微笑
+
 ```
-https://cdn.jsdelivr.net/gh/BigCoke233/miracles/docs/black-list.json
+https://cdn.jsdelivr.net/gh/BigCoke233/miracles/docs/block-list.json
 ```
