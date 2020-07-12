@@ -10,7 +10,7 @@
 		echo $this->options->build_time?"记录已延续了 <span id=\"build-time\"></span>":"";
 		if($faces=$this->options->anime_face){
 		  $faces = explode("&&",$faces);
-		  $faces = "<span class=\"anime-face\">".$faces[mt_rand(0,count($faces))]."</span>";
+		  $faces = "<span class=\"anime-face\">".$faces[mt_rand(0,count($faces)-1)]."</span>";
 		}
 		if($faces && $this->options->build_time)echo $faces;
 		?></p>
