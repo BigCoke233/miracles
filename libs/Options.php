@@ -101,8 +101,8 @@ function themeConfig($form) {
 			?><script language="JavaScript">window.setTimeout("location=\'<?php Helper::options()->adminUrl('options-theme.php'); ?>\'", 1500);</script><?php
 		  }
 		}
-		echo '<br></div>';
 	}
+	echo '<br></div>';
 	
 	
 	/**
