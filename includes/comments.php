@@ -54,7 +54,7 @@ echo $commentClass;
 	    <?php $this->comments()->to($comments); ?>
     <?php if($this->fields->commentShow == 0)://如果显示评论列表 ?>
         <?php if ($comments->have())://如果有评论 则显示 ?>
-		<div class="comment-container">
+		<div class="comment-container" id="comments">
 		  <h3 class="comment-title" id="response"><?php $this->commentsNum(_t('暂无评论'), _t('已有 1 条评论'), _t('已有 %d 条评论')); ?></h3>
           <?php $comments->listComments(array(
             'before'        =>  '<div class="comment-list" role="list">',
