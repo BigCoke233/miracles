@@ -7,11 +7,15 @@
  * 通常 'on' 表示开启；'off' 则表示关闭
  */
 
+/* 字体 */
+
 //主题字体 CDN
 $GLOBALS['miraclesFontCDN'] = array(
     'if' => 'on', //是否开启字体 CDN（使用思源宋体/黑体）
     'cdn' => 'google_font' //默认 Google Font，可选项：google_font / font_lolinet，或者直接输入字体文件 url
 );
+
+/* 文章缩略图 */
 
 //是否剪裁文章缩略图
 //使用 TimThumb 剪裁文章缩略图能达到最好效果，但会消耗服务器资源
@@ -34,3 +38,9 @@ $GLOBALS['miraclesTimThumbAllowList'] = array (
     'tinypic.com',
     'jsdelivr.net'
 );
+
+/* 页面压缩 */
+
+//是否压缩 HTML 源代码
+//压缩能优化页面传输速度，但可能会给服务器增加一定负担（不过也还好
+$GLOBALS['miraclesIfCompressHTML'] = 'on';

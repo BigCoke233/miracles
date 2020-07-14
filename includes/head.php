@@ -1,4 +1,5 @@
-<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; 
+if($GLOBALS['miraclesIfCompressHTML']=='on') ob_start(); //ob 截取开始 ?>
 <!DOCTYPE HTML>
 <html<?php if($this->options->grayTheme && $this->options->grayTheme=1): ?> class="html-filter-gray"<?php endif; ?>>
   <head>

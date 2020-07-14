@@ -148,6 +148,16 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - 新增：可以使用 TimThumb 裁剪文章缩略图了（需要在高级设置 themeConfig.php 里打开）
 - 优化：归档页面 meta 元信息
 
+**v20200713A**
+
+- 优化：改进番剧页面（Done by Kengwang）
+- 修复：解决随机颜文字可能报错的问题
+- 修复：评论列表缺失 #comments id
+
+**v20200714A**
+
+- 修复：删除不必要的判断
+
 </details>
 
 ## 📝 计划

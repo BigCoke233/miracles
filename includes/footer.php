@@ -12,7 +12,7 @@
 		  $faces = explode("&&",$faces);
 		  $faces = "<span class=\"anime-face\">".$faces[mt_rand(0,count($faces)-1)]."</span>";
 		}
-		if($faces && $this->options->build_time)echo $faces;
+		if($faces && $this->options->build_time) echo $faces;
 		?></p>
 	  </div>
     </footer>
@@ -26,7 +26,7 @@
 	if($this->options->customCDN): $custom=$this->options->customCDN; else: $custom=Helper::options()->themeUrl("","Miracles"); endif;
 	Utils::addRequires($js_files,"js",$this->options->CDN,$custom);
 	?>
-	<!-- Options -->
+	<!-- Options --><!--<nocompress>-->
 	<script>var navSlide = <?php if($this->options->navSlide==1):?>false<?php else:?>true<?php endif;?>;
 	var panguLoadAllow = <?php if($this->options->pangu==1):?>false<?php else:?>true<?php endif;?>;
 	var allowNavAero = <?php if($this->options->navAero==1):?>false<?php else:?>true<?php endif;?>;
@@ -37,7 +37,7 @@
 	if($faviconDarkExist=true): echo 'true'; else: echo 'false'; endif; ?>;
 	<?php if($this->options->pjax && $this->options->pjax!=0) :?>var loadPjax = true;
     beforePjax = function() {NProgress.start();};
-	afterPjax = function() {owoLoad();<?php $this->options->pjax_complete(); ?>};<?php endif; ?></script>
+	afterPjax = function() {owoLoad();<?php $this->options->pjax_complete(); ?>};<?php endif; ?></script><!--</nocompress>-->
 	<!-- Script that must be after-->
 	<?php
 	$js_files=array("miracles.min","cmt.miracles");
@@ -45,15 +45,19 @@
 	Utils::addRequires($js_files,"js",$this->options->CDN,$custom);
 	?>
 	<!-- JavaScript -->
-	<script>
+	<!--<nocompress>--><script>
 	<?php if($this->options->build_time)echo "startTime(\"".$this->options->build_time."\");" ?>
-	</script>
+	</script><!--</nocompress>-->
 	<!-- Send News and Loaders -->
 	<script><?php if($this->is('post') || $this->is('page')): ?>owoLoad();<?php endif; ?><?php $this->options->jsEcho(); ?></script>
     <!-- Others -->
 	<?php $this->footer(); ?>
   </body>
 </html>
+<?php if($GLOBALS['miraclesIfCompressHTML']=='on') {
+	$html_source = ob_get_contents(); //获取 ob 截取内容
+	ob_clean(); print Utils::compressHtml($html_source); ob_end_flush(); //完成截取、压缩 HTML
+} ?>
 <!--
 
 Powered by Typecho,
