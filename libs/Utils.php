@@ -157,18 +157,18 @@ class Utils
     /**
      * 缩略图
      */
-    public static function postBanner($post, $random){
+    public static function postBanner($post){
 		if($post->fields->banner && $post->fields->banner=!''): 
 			$banner = $post->fields->banner; 
 		else: 
-			if($random==''){
+			if($GLOBALS['miraclesOptions_randomBanner']==''){
                 $banner = '/usr/themes/Miracles/images/postbg/';
                 $banner .= srand(mb_strlen($post->title));
-                $banner .= rand(1,15).'.jpg';
+                $banner .= mt_rand(1,15).'.jpg';
 		    }
 		    else{
-		        $banner_url = explode(',',$random);
-                $banner = $banner_url[mt_rand(0,count($banner_url)-1)].'\"';
+		        $banner_url = explode(',', $GLOBALS['miraclesOptions_randomBanner']);
+                $banner = $banner_url[mt_rand(0,count($banner_url)-1)];
             }
         endif;
         //使用 TimThumb 剪裁
@@ -192,6 +192,8 @@ class Utils
             $banner_url = '/usr/themes/Miracles/libs/TimThumb.php';
             $banner = $banner_url.'?src='.$banner.$banner_size;
         }
+        //不知道为什么会有奇怪的空格，所以这里用暴力的方法去掉
+        $banner = trim($banner);
 
         echo $banner;
     }

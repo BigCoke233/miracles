@@ -22,7 +22,7 @@ $this->need('includes/header.php');
 			  <div class="col-md-6 post-banner-box">
 			    <a href="<?php $this->permalink(); ?>" class="post-link">
 			      <div class="post-banner">
-				    <img src="<?php Utils::indexTheme('images/loading/'.$this->options->loading_image.'.gif') ?>" data-gisrc="<?php Utils::postBanner($this, $post->options->randomBanner); ?>">
+				    <img src="<?php Utils::indexTheme('images/loading/'.$this->options->loading_image.'.gif') ?>" data-gisrc="<?php Utils::postBanner($this); ?>">
 				  </div>
 				</a>
 			  </div>
