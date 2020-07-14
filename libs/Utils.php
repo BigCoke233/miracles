@@ -1,6 +1,14 @@
 <?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
+/**
+ * Utils.php
+ * 辅助工具
+ * 
+ * Author:  Eltrac(BigCoke233)
+ * License: MIT
+ */
+
 class Utils
 {
 	
@@ -139,19 +147,6 @@ class Utils
                 echo "<link rel=\"stylesheet\" href=".$path. $type."/".$file.".".$type." />";
 		    }
         }
-    }
-
-    /**
-     * 获取最早文章创建时间
-     */
-    public static function getOldestPostDate() {
-        $db = Typecho_Db::get();
-        $content = $db->fetchRow($db->select()->from('table.contents')
-            ->where('table.contents.status = ?', 'publish')
-            ->where('table.contents.password IS NULL')
-            ->order('table.contents.created', Typecho_Db::SORT_ASC)
-            ->limit(1));
-        echo '一切开始于 '.date('Y-m-d', $content['created']);
     }
 
     /**

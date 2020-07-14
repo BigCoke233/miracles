@@ -46,10 +46,10 @@ echo $commentClass;
 	    <?php if($this->user->hasLogin()): ?>
 	    <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" class="saying-form" role="form">
           <p>
-            <textarea rows="8" cols="50" name="text" id="textarea" placeholder="Anything interesting happening?" class="OwO-textarea comment-textarea textarea" required ><?php $this->remember('text'); ?></textarea>
+            <textarea rows="8" cols="50" name="text" id="textarea" placeholder="<?php gtecho('sayingPageTexts','sayingPlaceholder'); ?>" class="OwO-textarea comment-textarea textarea" required ><?php $this->remember('text'); ?></textarea>
           </p>
 	      <p>
-            <button type="submit" class="comment-submit submit"><?php _e('发表新鲜事'); ?></button>
+            <button type="submit" class="comment-submit submit"><?php gtecho('sayingPageTexts','sayingSubmit'); ?></button>
           </p>
 		</form>
 		<br>

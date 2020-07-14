@@ -234,7 +234,7 @@
 	width: 45px;
 	border-radius: 100%;
 	background: rgb(246,246,246);
-	transition: background: 0.2s;
+	transition: background 0.2s;
 	margin: 0 3px;
 	border: none;
 	outline: none;
@@ -333,7 +333,7 @@
 	padding-top: 5px;
 	background: rgba(0,0,0,0);
 	border: none;
-    margin-left: -90px;
+    margin-left: -70px;
 }
 .search-close,
 .search-form button,

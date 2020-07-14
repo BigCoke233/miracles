@@ -106,7 +106,6 @@
 	-webkit-box-shadow: 0 0 0 #fff;
 }
 .comment-by-author > .comment-body-inner > .comment-main > .comment-meta > .comment-date:before {
-	content: '博主';
 	color: gray;
 	font-size: 0.8em;
     background: rgb(240,240,240);

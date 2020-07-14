@@ -1,5 +1,5 @@
 {
-	"颜文字": {
+	"Emotes": {
 		"type": "emoticon",
 		"container": [{
 			"icon": "OωO",
@@ -87,7 +87,7 @@
 			"text": ""
 		}]
 	},
-	"阿鲁": {
+	"Aru": {
 		"type": "image",
 		"container": [{
 			"icon": "<img class=\"biaoqing\" data-src=\"/usr/themes/Miracles/images/biaoqing/aru/E9AB98E585B4_2x.png\">",
@@ -339,7 +339,7 @@
 			"text": "中刀"
 		}]
 	},
-	"泡泡": {
+	"Paopao": {
 		"type": "image",
 		"container": [{
 			"icon": "<img class=\"biaoqing\" data-src=\"/usr/themes/Miracles/images/biaoqing/paopao/E591B5E591B5_2x.png\">",
@@ -615,7 +615,7 @@
 			"text": "弱"
 		}]
 	},
-	"推特": {
+	"Twemoji": {
 		"type": "image",
 		"container": [{
 			"icon": "<img class=\"biaoqing\" data-src=\"/usr/themes/Miracles/images/biaoqing/twemoji/angry.png\">",

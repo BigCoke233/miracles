@@ -1,6 +1,10 @@
 <?php
 /**
+ * Options.php
  * 主题后台设置
+ * 
+ * Author:  Eltrac(BigCoke233)
+ * License: MIT
  */
 function themeConfig($form) {
 

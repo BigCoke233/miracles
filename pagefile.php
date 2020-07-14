@@ -13,7 +13,7 @@ $this->need('includes/header.php');
 	  <div class="post-body">
 	    <div class="post-content page-content">
 		  <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=mid&ignoreZeroCount=1&desc=0&limit=30')->to($tags); ?>
-          <h2>文章标签</h2>
+          <h2><?php gtecho('archivePageTexts','archiveTagTitle'); ?></h2>
           <?php if($tags->have()): ?>
           <ul class="tags-list">
           <?php while ($tags->next()): ?>
@@ -22,14 +22,14 @@ $this->need('includes/header.php');
           </ul>
       <?php endif; ?>
 		  <br />
-		  <h2>文章归档</h2>
+		  <h2><?php gtecho('archivePageTexts','archivePostTitle'); ?></h2>
 		  <ul class="archives-list"><?php
       $archives = Contents::archives($this);
       $number = 0;
       foreach($archives as $year => $posts) {
        $detailsOpen = ($number === 0) ? ' open' : NULL;
        echo '<details'.$detailsOpen.'>';
-       echo '<summary>'.$year.' 年<small class="archives-count">共 '.count($posts).' 篇文章</small></summary>';
+       echo '<summary>'.$year.' '.gt('archivePageTexts','archiveTimeYear').'<small class="archives-count">'.gta('archivePageTexts','archiveYearTotal',count($posts)).'</small></summary>';
         foreach($posts as $created => $post) {
          echo '<li><a href="'.$post['permalink'].'" class="no-line">
           <span class="archives-date">'.date('m-d', $created).'</span>

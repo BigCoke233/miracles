@@ -16,21 +16,21 @@
 @import url("special.css");
 @import url("themes.css");
 
+/* iconfont */
+@font-face {
+	font-family: 'iconfont';  /* project id 1165190 */
+	src: url('//at.alicdn.com/t/font_1165190_1djdjjwge4m.eot');
+	src: url('//at.alicdn.com/t/font_1165190_1djdjjwge4m.eot?#iefix') format('embedded-opentype'),
+	url('//at.alicdn.com/t/font_1165190_1djdjjwge4m.woff2') format('woff2'),
+	url('//at.alicdn.com/t/font_1165190_1djdjjwge4m.woff') format('woff'),
+	url('//at.alicdn.com/t/font_1165190_1djdjjwge4m.ttf') format('truetype'),
+	url('//at.alicdn.com/t/font_1165190_1djdjjwge4m.svg#iconfont') format('svg');
+  }
+
 /* Varriable */
 :root {
 	--shadow-color: rgb(190,190,190);
 	scroll-behavior: smooth; /* 平滑滚动 */
-}
-
-/* Icon Font */
-@font-face {
-  font-family: 'iconfont';  /* project id 1165190 */
-  src: url('//at.alicdn.com/t/font_1165190_t5sh6mq8n6i.eot');
-  src: url('//at.alicdn.com/t/font_1165190_t5sh6mq8n6i.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1165190_t5sh6mq8n6i.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1165190_t5sh6mq8n6i.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1165190_t5sh6mq8n6i.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1165190_t5sh6mq8n6i.svg#iconfont') format('svg');
 }
 
 ::selection{

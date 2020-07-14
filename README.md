@@ -156,7 +156,11 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 **v20200714A**
 
+- 新增：加入 html 压缩
+- 新增：多语言功能
+- 优化：将 title 改为 hint.css 提供的 tooltip
 - 修复：删除不必要的判断
+- 修复：自定义随机图失效
 
 </details>
 
@@ -164,13 +168,13 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 - [x] 优化：用 localStorage 替换储存夜间/日落模式等的 cookie
 - [x] 新增：支持快速写入`<details>`的短代码，并使用[垫片](https://github.com/javan/details-element-polyfill)优化兼容性
+- [x] 新增：添加语言包功能，通过 php 数组储存各个语言版本的文字
+- [x] 优化：文章缩略图自动剪裁
 - [ ] 增加：内置站点缓存规则
 - [ ] 优化：「说说页面」的样式
-- [ ] 优化：文章缩略图自动剪裁
 - [ ] 新增：图片横向排版「相册功能」（参考：https://blog.imalan.cn/archives/282/）
 - [ ] 新增：全站加密功能
 - [ ] 新增：支持 PWA - 渐进式 Web 应用
-- [ ] 新增：添加语言包功能，通过 php 数组储存各个语言版本的文字
 - [ ] 新增：嵌入 GitHub 仓库 / 用户（以卡片形式展示）
 - [ ] 新增：根据 cid 嵌入本站文章（以卡片形式展示）
 - [ ] 新增：文章目录
@@ -199,6 +203,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - [qrcode.js](https://github.com/davidshimjs/qrcodejs) - 生成文章二维码
 - [gazeimg](https://github.com/ganxiaozhe/gazeimg) - 图片懒加载 & 灯箱
 - [details-element-polyfill](https://github.com/javan/details-element-polyfill) - 优化 details 标签兼容性
+- [hint.css](https://kushagra.dev/lab/hint/) - 工具提示 Tooltip
 - ~~[LazyLoad](https://github.com/tuupola/lazyload) - 图片懒加载~~（开发版已用新的方案替换）
 - ~~[FancyBox](https://github.com/fancyapps/fancybox) - 文章图片灯箱~~（开发版已用新的方案替换）
 

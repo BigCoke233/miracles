@@ -39,7 +39,7 @@ $this->need('includes/header.php');
 				  ?>
 				</p>
 				<p class="post-meta"><i class="iconfont icon-block"></i> <?php $this->category(','); ?>&emsp;<i class="iconfont icon-comments"></i> <?php $this->commentsNum('0', '1', '%d'); ?>&emsp;<i class="iconfont icon-clock"></i> <?php $this->date(); ?></p>
-				<p class="post-button-box large-screen"><a href="<?php $this->permalink(); ?>" class="button post-button">Read More</a></p>
+				<p class="post-button-box large-screen"><a href="<?php $this->permalink(); ?>" class="button post-button"><?php gtecho('postTexts','read_more'); ?></a></p>
 			  </div>
 			</div></div>
 		  </div>

@@ -6,7 +6,7 @@
 	    <form method="post" action="">
           <div class="search-form">
 		    <input type="text" name="s" class="text" size="32" /> 
-			<button type="submit" class="submit">搜索</button>
+			<button type="submit" class="submit"><i class="iconfont" style="font-size:30px">&#xe600;</i></button>
 		  </div>
         </form>
 	  </div>
@@ -14,19 +14,19 @@
 	  <div class="login ready">
 	    <button class="login-close ready" id="login-close"><i class="iconfont icon-x"></i></button>
 		<?php if($this->user->hasLogin()): ?>
-		<h1>你已经登陆了</h1>
-		<p class="large-screen" style="margin-top:0">&emsp;不过康纳很乐意再次见到 <?php $this->user->screenName(); ?> 呢~</p>
-		<p class="login-enter-admin"><a href="/admin" class="col-md-3">进入后台</a></p>
+		<h1><?php gtecho('headerTexts','loginAlready'); ?></h1>
+		<p class="large-screen" style="margin-top:0">&emsp;<?php gtaecho('headerTexts','loginAlreadyInfo',$this->user->screenName); ?></p>
+		<p class="login-enter-admin"><a href="/admin" class="col-md-3"><?php gtecho('headerTexts','loginAdminEntrance');?></a></p>
 		<?php else: ?>
 	    <form action="<?php $this->options->loginAction(); ?>" id="login-form" method="post" name="login" role="form" class="login-form">
-		  <h1>登录后台</h1>
-          <input type="text" name="name" autocomplete="username" placeholder="请输入用户名" required />
-          <input type="password" name="password" autocomplete="current-password" placeholder="请输入密码" required />
+		  <h1><?php gtecho('headerTexts','loginTitle');?></h1>
+          <input type="text" name="name" autocomplete="username" placeholder="<?php gtecho('headerTexts','loginUsername');?>" required />
+          <input type="password" name="password" autocomplete="current-password" placeholder="<?php gtecho('headerTexts','loginPassword');?>" required />
           <input type="hidden" name="referer" value="<?php 
             if($this->is('index')) $this->options->siteUrl();
             else $this->permalink();
             ?>">
-          <button class="btn btn-normal" type="submit">登录</button>                          
+          <button class="btn btn-normal" type="submit"><?php gtecho('headerTexts','loginSubmit');?></button>                          
         </form>
 		<?php endif; ?>
 	  </div>
@@ -36,7 +36,7 @@
       <!-- 移动端导航面板 -->
 	  <div class="mobile-menu ready">
 	    <button class="mobile-menu-close ready" id="toggle-mobile-menu-close"><i class="iconfont icon-x"></i></button>
-		<h2 class="mobile-menu-title">页面导航</h2>
+		<h2 class="mobile-menu-title"><?php gtecho('headerTexts','navTitle'); ?></h2>
 		<div class="mobile-menu-pagelist" role="navigation"><div class="container-fluid"><div class="row">
 		  <?php 
 		  if($this->options->customNav=='') {
@@ -99,7 +99,7 @@
 		    </div>
 	      </div>
 		  <div class="drawer-content">
-		    <a href="<?php $this->options->SiteUrl(); ?>" onclick="toggleDrawer()">首页</a>
+		    <a href="<?php $this->options->SiteUrl(); ?>" onclick="toggleDrawer()"><?php gtecho('headerTexts','drawerHome'); ?></a>
 			<?php 
 			if($this->options->customNav=='') {
 			  $this->widget('Widget_Contents_Page_List')
@@ -143,33 +143,28 @@
 				  <?php if($this->fields->meta==''): 
 					if($_SESSION["isPageArchive"]!=true){ ?>
 				  	<div class="header-meta-line-one">
-				    	<?php if($this->is('post')): ?><i class="iconfont icon-block" title="文章分类"></i> <?php $this->category(','); ?>&emsp;<?php endif; ?>
-				    	<i class="iconfont icon-comments" title="共 <?php $this->commentsNum('0', '1', '%d'); ?> 条评论"></i> <?php $this->commentsNum('0', '1', '%d'); ?>&emsp;
+				    	<?php if($this->is('post')): ?><span class="hint--bottom" data-tooltip="<?php gtaecho('postTexts','sort_title',$this->category) ?>"><i class="iconfont">&#xe80e;</i> <?php $this->category(','); ?></span>&emsp;<?php endif; ?>
+						<span class="hint--bottom" data-tooltip="<?php if($this->commentsNum=='0'): gtecho('commentListTexts', 'commentNumNone'); else:gtaecho('commentListTexts', 'commentNum', $this->commentsNum);endif; ?>"><i class="iconfont">&#xe65e;</i> <?php $this->commentsNum('0', '1', '%d'); ?></span>&emsp;
                   	</div>
 				  	<div class="header-meta-line-two">
-				    	<i class="iconfont icon-clock" title="该文章发布于 <?php $this->date(); ?>"></i> <?php $this->date(); ?>&emsp;
-				    	<i class="icon-view iconfont" title="该文章被浏览 <?php Contents::postViews($this) ?> 次"></i> <?php Contents::postViews($this) ?>
+						<span class="hint--bottom" data-tooltip="<?php gtaecho('postTexts', 'post_time', date('Y-m-d',$this->created)); ?>"><i class="iconfont">&#xedb9;</i> <?php $this->date(); ?></span>&emsp;
+						<span class="hint--bottom" data-tooltip="<?php gtaecho('postTexts', 'post_views', Contents::postViews($this)) ?>"><i class="iconfont">&#xe692;</i> <?php echo Contents::postViews($this) ?></span>
                   	</div>
 					<?php }else{ ?>
 					<div class="header-meta-line-one">
-						<i class="iconfont icon-clock" title="一切开始于 <?php Utils::getOldestPostDate(); ?>"></i> <?php Utils::getOldestPostDate(); ?>&emsp;
+						<i class="iconfont">&#xedb9;</i> <?php gtaecho('archivePageTexts', 'archiveStart', Contents::getOldestPostDate());?>&emsp;
 					</div>
 					<div class="header-meta-line-two">
-					<i class="icon-view iconfont" title="该页面被浏览 <?php Contents::postViews($this) ?> 次"></i> <?php Contents::postViews($this) ?>
+						<span class="hint--bottom" data-tooltip="<?php gtaecho('postTexts', 'post_views', Contents::postViews($this)) ?>"><i class="iconfont">&#xe692;</i> <?php echo Contents::postViews($this) ?></span>
 					</div>
 					<?php }
 					else: ?>
 				    <?php $this->fields->meta(); ?><div style="display:none"><?php Contents::postViews($this) ?></div>
 				  <?php endif; 
-				  $_SESSION["isPageArchive"]=false; //清除归档页面标识，避免不必要的问题?>
+				  $_SESSION["isPageArchive"]=false; //clear ?>
 				</div>
 				<?php elseif($this->is('archive')): ?>
-				<h1><?php $this->archiveTitle(array(
-                  'category'  =>  _t('分类 %s 下的文章'),
-                  'search'    =>  _t('包含关键字 %s 的文章'),
-                  'tag'       =>  _t('标签 %s 下的文章'),
-                  'author'    =>  _t('%s 发布的文章')
-                ), '', '');?></h1><?php else: endif; ?>
+				<h1><?php $this->archiveTitle($GLOBALS['archivesTitles'], '', '');?></h1><?php else: endif; ?>
 			  </div>
 			</div>
 		  </div>

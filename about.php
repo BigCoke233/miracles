@@ -20,16 +20,16 @@ $this->need('includes/header.php');
 		  </div>
 		  <div class="about-social"><!-- 社交按钮 -->
 		    <?php if($this->fields->github==!''): ?>
-			<a href="https://github.com/<?php echo $this->fields->github(); ?>" target="_blank" title="GayHub"><i class="iconfont icon-github"></i></a>
+			<a href="https://github.com/<?php echo $this->fields->github(); ?>" target="_blank" title="<?php gtecho('aboutPageTexts','aboutShareGitHub'); ?>"><i class="iconfont icon-github"></i></a>
 			<?php endif; ?>
 			<?php if($this->fields->qq==!''): ?>
-			<a href="tencent://Message/?Uin=<?php echo $this->fields->qq(); ?>&amp;websiteName=q-zone.qq.com&amp;Menu=yes" target="_blank" title="QQ"><i class="iconfont icon-qq1"></i></a>
+			<a href="tencent://Message/?Uin=<?php echo $this->fields->qq(); ?>&amp;websiteName=q-zone.qq.com&amp;Menu=yes" target="_blank" title="<?php gtecho('aboutPageTexts','aboutShareQQ'); ?>"><i class="iconfont icon-qq1"></i></a>
 			<?php endif; ?>
 			<?php if($this->fields->bilibili==!''): ?>
-			<a href="https://space.bilibili.com/<?php echo $this->fields->bilibili(); ?>" target="_blank" title="Bilibili"><i class="iconfont icon-bilibili-"></i></a>
+			<a href="https://space.bilibili.com/<?php echo $this->fields->bilibili(); ?>" target="_blank" title="<?php gtecho('aboutPageTexts','aboutShareB'); ?>"><i class="iconfont icon-bilibili-"></i></a>
 			<?php endif; ?>
 			<?php if($this->fields->email==!''): ?>
-			<a href="mailto:<?php echo $this->fields->email(); ?>"><i class="iconfont icon-mail_fill" target="_blank" title="email"></i></a>
+			<a href="mailto:<?php echo $this->fields->email(); ?>"><i class="iconfont icon-mail_fill" target="_blank" title="<?php gtecho('aboutPageTexts','aboutShareEmail'); ?>"></i></a>
 			<?php endif; ?>
 		  </div>
 		</div>

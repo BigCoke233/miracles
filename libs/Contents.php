@@ -246,17 +246,8 @@ class Contents
     static private $CurrentTocID = 0;
     static public function parseHeaderCallback($matchs)
     {
-        // 增加单独标记，否则冲突
-        $id = $matchs[3];
-		$id = str_replace(' ','_',$id);
-		$id = str_replace('&','_',$id);
-		$id = str_replace('?','_',$id);
-		$id = str_replace("'",'_',$id);
-		$id = str_replace('"','_',$id);
-		$id = str_replace('’','_',$id);
-		$id = str_replace('“','_',$id);
-		$id = str_replace('?','_',$id);
-        return '<h'.$matchs[1].$matchs[2].' id="'.$id.'">'.$matchs[3].'<a href="#'.$id.'" title="章节链接" class="post-toc-link no-line"><i class="iconfont icon-paragraph"></i></a></h'.$matchs[1].'>';
+        $id = trim($matchs[3]);
+        return '<h'.$matchs[1].$matchs[2].' id="'.$id.'">'.$matchs[3].'<a href="#'.$id.'" title="'.$GLOBALS['postTexts']['post_anchor'].'" class="post-toc-link no-line"><i class="iconfont icon-paragraph"></i></a></h'.$matchs[1].'>';
     }
 
     /* == 其他内容 == */
@@ -377,6 +368,19 @@ class Contents
                 Typecho_Cookie::set('extend_contents_views', $views); //记录查看cookie
             }
         }
-        echo $row['views'];
+        return $row['views'];
+    }
+
+    /**
+     * 获取最早文章创建时间
+     */
+    public static function getOldestPostDate() {
+        $db = Typecho_Db::get();
+        $content = $db->fetchRow($db->select()->from('table.contents')
+            ->where('table.contents.status = ?', 'publish')
+            ->where('table.contents.password IS NULL')
+            ->order('table.contents.created', Typecho_Db::SORT_ASC)
+            ->limit(1));
+        return date('Y-m-d', $content['created']);
     }
 }

@@ -7,6 +7,9 @@
  * 通常 'on' 表示开启；'off' 则表示关闭
  */
 
+/* 语言 */
+$GLOBALS['miraclesLang'] = 'zh-cn'; //在这里写入语言文件的名字（如 zh-cn.php 就是 zh-cn）
+
 /* 字体 */
 
 //主题字体 CDN

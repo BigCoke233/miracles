@@ -8,6 +8,9 @@ require_once("libs/Utils.php");
 require_once("libs/Contents.php");
 require_once("libs/Comments.php");
 require_once("libs/Options.php");
+require_once("libs/Language.php");
+//引入语言文件
+require_once("libs/lang/".$GLOBALS['miraclesLang'].".php");
 
 /**
  * 注册文章解析 hook
