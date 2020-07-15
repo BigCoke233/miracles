@@ -144,7 +144,7 @@
 					if($_SESSION["isPageArchive"]!=true){ ?>
 				  	<div class="header-meta-line-one">
 				    	<?php if($this->is('post')): ?><span class="hint--bottom" data-tooltip="<?php gtaecho('postTexts','sort_title',$this->category) ?>"><i class="iconfont">&#xe80e;</i> <?php $this->category(','); ?></span>&emsp;<?php endif; ?>
-						<span class="hint--bottom" data-tooltip="<?php if($this->commentsNum=='0'): gtecho('commentListTexts', 'commentNumNone'); else:gtaecho('commentListTexts', 'commentNum', $this->commentsNum);endif; ?>"><i class="iconfont">&#xe65e;</i> <?php $this->commentsNum('0', '1', '%d'); ?></span>&emsp;
+						<?php if($this->fields->commentShow=='0'):?><span class="hint--bottom" data-tooltip="<?php if($this->commentsNum=='0'): gtecho('commentListTexts', 'commentNumNone'); else:gtaecho('commentListTexts', 'commentNum', $this->commentsNum);endif; ?>"><i class="iconfont">&#xe65e;</i> <?php $this->commentsNum('0', '1', '%d'); ?></span>&emsp;<?php endif;?>
                   	</div>
 				  	<div class="header-meta-line-two">
 						<span class="hint--bottom" data-tooltip="<?php gtaecho('postTexts', 'post_time', date('Y-m-d',$this->created)); ?>"><i class="iconfont">&#xedb9;</i> <?php $this->date(); ?></span>&emsp;

@@ -159,8 +159,14 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - 新增：加入 html 压缩
 - 新增：多语言功能
 - 优化：将 title 改为 hint.css 提供的 tooltip
+- 优化：将鼠标悬停在文章元信息上时，会显示对应的 tooltip
 - 修复：删除不必要的判断
 - 修复：自定义随机图失效
+
+**v20200715A**
+
+- 优化：用 alertify.js 替换自己的提示框
+- 优化：页面/文章评论列表隐藏时，不显示评论数
 
 </details>
 
@@ -170,6 +176,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - [x] 新增：支持快速写入`<details>`的短代码，并使用[垫片](https://github.com/javan/details-element-polyfill)优化兼容性
 - [x] 新增：添加语言包功能，通过 php 数组储存各个语言版本的文字
 - [x] 优化：文章缩略图自动剪裁
+- [x] 优化：页面/文章评论列表隐藏时，不显示评论数
 - [ ] 增加：内置站点缓存规则
 - [ ] 优化：「说说页面」的样式
 - [ ] 新增：图片横向排版「相册功能」（参考：https://blog.imalan.cn/archives/282/）
@@ -182,7 +189,6 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - [ ] 新增：全站公告
 - [ ] 优化：对日间模式/日落模式/夜间模式的切换通过下拉面板操作，并支持禁用主题跟随系统设置
 - [ ] 新增：导航支持下拉面板
-- [ ] 优化：页面/文章评论列表隐藏时，不显示评论数
 - [ ] 优化：优化夜间模式的切换机制
 - [ ] 优化：支持用 jsDelivr 加速主题内置图片的速度
 
@@ -204,6 +210,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - [gazeimg](https://github.com/ganxiaozhe/gazeimg) - 图片懒加载 & 灯箱
 - [details-element-polyfill](https://github.com/javan/details-element-polyfill) - 优化 details 标签兼容性
 - [hint.css](https://kushagra.dev/lab/hint/) - 工具提示 Tooltip
+- [alertify](https://github.com/MohammadYounes/AlertifyJS) - 对话框和 snackbar(notifier)
 - ~~[LazyLoad](https://github.com/tuupola/lazyload) - 图片懒加载~~（开发版已用新的方案替换）
 - ~~[FancyBox](https://github.com/fancyapps/fancybox) - 文章图片灯箱~~（开发版已用新的方案替换）
 
