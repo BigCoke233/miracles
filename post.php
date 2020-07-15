@@ -32,7 +32,7 @@ $this->need('includes/header.php');
 		    <a class="social-share qq hint--bottom"  target="_blank" href="https://connect.qq.com/widget/shareqq/index.html?url=<?php $this->permalink() ?>&title=<?php $this->title() ?>&summary=<?php $this->excerpt(100); ?>" data-tooltip="QQ"><i class="iconfont icon-qq1-copy"></i></a>
 		    <a class="social-share weibo hint--bottom"  target="_blank" href="http://service.weibo.com/share/share.php?url=<?php $this->permalink() ?>/&appkey=<?php $this->options->title(); ?>/&title=<?php $this->title() ?>" data-tooltip="Weibo"><i class="iconfont icon-weibo-copy"></i></a>
 		    <a class="social-share twitter hint--bottom"  target="_blank" href="https://twitter.com/intent/tweet?text=<?php $this->excerpt(100); ?>&amp;url=<?php $this->permalink() ?>" data-tooltip="Twitter"><i class="iconfont icon-twitter-copy"></i></a>
-            <a class="social-share copyright" onclick="alertSend('<?php gtecho('otherTexts','copyrightAlert'); ?>')"><i class="iconfont icon-info1"></i></a>
+            <a class="social-share copyright" onclick="alertify.alert('<?php gtecho('otherTexts','copyrightAlertTitle'); ?>', '<?php gtaecho('otherTexts','copyrightAlert', $this->permalink); ?>')"><i class="iconfont icon-info1"></i></a>
 		  </div>
 		  <span class="post-tags"><i class="iconfont icon-tags"></i> <?php $this->tags(' ', true, gt('postTexts','post_tag')); ?></span>
 		</div>

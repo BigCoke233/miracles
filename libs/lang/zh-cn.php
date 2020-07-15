@@ -86,6 +86,6 @@ $GLOBALS['sayingPageTexts'] = array(
 );
 //其他
 $GLOBALS['otherTexts'] = array(
-	"copyrightAlert" => "文章未声明即为原创，请注明原作者",
+	"copyrightAlert" => "文章内容若未经过特别声明均为原创内容，转载需要注明原文作者和本文的链接：%s。原文中的任何内容不允许转载者进行修改、演绎以及一些商业用途，请尊重版权。",
 	"goTop" => "返回顶部"
 );

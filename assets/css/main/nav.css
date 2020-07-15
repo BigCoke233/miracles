@@ -6,12 +6,12 @@
  */
 /* Top Nav */
 .nav {
-        background: rgba(255,255,255,0.6);
-        backdrop-filter: blur(40px);
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(40px);
 	-webkit-backdrop-filter: blur(40px);
-        box-shadow: 0 0 10px rgb(180,180,180);
-        -webkit-box-shadow: 0 0 10px rgb(180,180,180);
-        -moz-box-shadow: 0 0 10px rgb(180,180,180);
+    box-shadow: 0 0 10px rgb(180,180,180);
+    -webkit-box-shadow: 0 0 10px rgb(180,180,180);
+    -moz-box-shadow: 0 0 10px rgb(180,180,180);
 	width: 100%;
 	position: absolute;
 	display: table;
@@ -73,7 +73,7 @@
 .nav-aero .nav-mobile-content a:hover,
 .nav-aero .nav-mobile-content button:hover,
 .nav-aero .nav-sorts-content {
-    background: rgba(250, 250, 250, 0.3);
+    background: rgba(250, 250, 250, 0.2);
 }
 .nav-content a:hover,
 .nav-mobile-content a:hover,
@@ -94,7 +94,7 @@
 	border-radius: 10000px;
 	border: none;
 	padding: 10px 12px;
-	background: rgb(240,240,240);
+	background: rgba(250,250,250,.4);
 	transition: background .2s;
 	outline: 0;
 	position: absolute;
@@ -190,7 +190,7 @@
 }
 .drawer-button:hover {
 	cursor: pointer;
-	background: rgba(200,200,200,0.4);
+	background: rgba(200,200,200,0.2);
 }
 .drawer-open .drawer {
 	left: 0;

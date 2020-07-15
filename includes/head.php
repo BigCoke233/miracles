@@ -45,7 +45,7 @@ if($GLOBALS['miraclesIfCompressHTML']=='on') ob_start(); //ob 截取开始 ?>
 	<?php $this->options->headerEcho(); ?>
 	<!-- css -->
     <?php
-	$css_files=array("codestyle","owo.min","nprogress","gazeimg","hint.min","main/miracles.min");
+	$css_files=array("codestyle","owo.min","nprogress","gazeimg","hint.min","main/miracles.min","alertify");
 	if($this->options->customCDN): $custom=$this->options->customCDN; else: $custom=Helper::options()->themeUrl("","Miracles"); endif;
 	Utils::addRequires($css_files,"css",$this->options->CDN,$custom);
 	?>

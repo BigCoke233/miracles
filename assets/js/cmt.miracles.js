@@ -95,12 +95,12 @@ var MiraclesComment = {
 
   /* ===== 检查是否完整 =====*/
   if (!$('#comment-form #textarea').val()) {
-   alertSend('请填写评论内容！', 'failed');
+   alertSend('请填写评论内容！', 'error');
    return false;
   }
 
   if ($('#comment-form .comment-input #author').length && !$('#comment-form .comment-input #author').val()) {
-   alertSend('请填写您的昵称！', 'failed');
+   alertSend('请填写您的昵称！', 'error');
    return false;
   }
 
@@ -134,7 +134,7 @@ var MiraclesComment = {
     dataTmp.comments.replyTo = '';
    }else{
     //如果失败
-    alertSend('评论提交失败！', 'failed');
+    alertSend('评论提交失败！', 'error');
    }
 
    //无论是否成功都要重新绑定回复按钮 ID
@@ -158,7 +158,7 @@ var MiraclesComment = {
      if (data.html()) {
       dataTmp.comments.NewID = $(".comment-list", data).html().match(/id=\"?comment-\d+/g).join().match(/\d+/g).sort(function (a, b) { return a - b }).pop();
      }else{
-      alertSend('评论失败！请刷新页面', 'failed');
+      alertSend('评论失败！请刷新页面', 'error');
       return false;
      }
 

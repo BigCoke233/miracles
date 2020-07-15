@@ -24,7 +24,7 @@
 	</div>
 	<!-- JavaScript Require-->
 	<?php
-	$js_files=array("jquery","pjax.jquery","gazeimg","nprogress","OwO.min","highlight","highlight-line-number","pangu","qrcode.min","details-element-polyfill");
+	$js_files=array("jquery","pjax.jquery","gazeimg","nprogress","OwO.min","highlight","highlight-line-number","pangu","qrcode.min","details-element-polyfill","alertify");
 	if($this->options->customCDN): $custom=$this->options->customCDN; else: $custom=Helper::options()->themeUrl("","Miracles"); endif;
 	Utils::addRequires($js_files,"js",$this->options->CDN,$custom);
 	?>

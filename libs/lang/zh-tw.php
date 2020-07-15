@@ -86,6 +86,7 @@ $GLOBALS['sayingPageTexts'] = array(
 );
 //其他
 $GLOBALS['otherTexts'] = array(
-	"copyrightAlert" => "文章未聲明即為原創，請註明原作者",
+    "copyrightAlertTitle" => "版權",
+	"copyrightAlert" => "文章內容若未經過特別聲明均為原創內容，轉載需要註明原文作者和本文的鏈接：%s。原文中的任何內容不允許轉載者進行修改、演繹以及壹些商業用途，請尊重版權。",
 	"goTop" => "返回頂部"
 );

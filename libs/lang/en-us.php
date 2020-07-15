@@ -75,6 +75,7 @@ $GLOBALS['sayingPageTexts'] = array(
 	"sayingSubmit" => "Publish"
 );
 $GLOBALS['otherTexts'] = array(
-	"copyrightAlert" => "The article is original if not stated, please credit the original author.",
+	"copyrightAlertTitle" => "Copyright",
+	"copyrightAlert" => "The content of the article is original unless otherwise stated. If you need to reproduce this article, remember to link to the original document (%s).The reproduction of any content is not allowed for modification, interpretation or commercial use, please respect the copyright.",
 	"goTop" => "Go Top"
 );

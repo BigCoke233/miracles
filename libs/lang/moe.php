@@ -86,6 +86,7 @@ $GLOBALS['sayingPageTexts'] = array(
 );
 //其他
 $GLOBALS['otherTexts'] = array(
-	"copyrightAlert" => "呐呐呐，没有说的话这篇文就是我写的，转载请注明我的名字鸭",
+	"copyrightAlertTitle" => "水文也有版权！",
+	"copyrightAlert" => "文章内容若未经过特别声明均为原创内容，转载需要注明原文作者和本文的链接：%s。原文中的任何内容不允许转载者进行修改、演绎以及一些商业用途，不尊重版权的憨憨会被大灰狼次掉。",
 	"goTop" => "爬到上面"
 );
