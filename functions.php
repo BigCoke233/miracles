@@ -9,6 +9,7 @@ require_once("libs/Contents.php");
 require_once("libs/Comments.php");
 require_once("libs/Options.php");
 require_once("libs/Language.php");
+require_once('libs/TableContents.php');
 //引入语言文件
 require_once("libs/lang/".$GLOBALS['miraclesLang'].".php");
 

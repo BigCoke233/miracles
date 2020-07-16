@@ -30,7 +30,9 @@ class Contents
 			//owo
 			$text = Contents::parseEmo($text);
 			//Links
-			$text = Contents::parseLink($text);
+            $text = Contents::parseLink($text);
+            //toc
+            $text = preg_replace('/{:toc:}/s',Contents::tableOfContents($text),$text);
         }
         return $text;
     }
@@ -230,6 +232,8 @@ class Contents
         return $text;
     }
 
+    /* == 文章目录 == */
+
 	/**
 	 *  解析章节链接
 	 */ 
@@ -248,6 +252,24 @@ class Contents
     {
         $id = trim($matchs[3]);
         return '<h'.$matchs[1].$matchs[2].' id="'.$id.'">'.$matchs[3].'<a href="#'.$id.'" title="'.$GLOBALS['postTexts']['post_anchor'].'" class="post-toc-link no-line"><i class="iconfont icon-paragraph"></i></a></h'.$matchs[1].'>';
+    }
+
+    /**
+     * 文章目录
+     */
+    public static function tableOfContents($html) {
+        $pattern = '/<h([2-5]) id=["\'](.*?)["\'].*?>(.*?)<\/h\1>/';
+        preg_match_all($pattern, $html, $matches, PREG_SET_ORDER);
+        $output = "";
+        foreach ($matches as $item) {
+            $output .= '
+                <li class="toc-level-' . $item[1] . '">
+                    <a href="#' . $item[2] . '">' . $item[3] . '</a>
+                </li>';
+        }
+        return (!empty($output)) ? 
+            "<ul class='toc'>" . $output . "</ul>" : 
+            "";
     }
 
     /* == 其他内容 == */

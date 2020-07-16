@@ -211,6 +211,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - [details-element-polyfill](https://github.com/javan/details-element-polyfill) - 优化 details 标签兼容性
 - [hint.css](https://kushagra.dev/lab/hint/) - 工具提示 Tooltip
 - [alertify](https://github.com/MohammadYounes/AlertifyJS) - 对话框和 snackbar(notifier)
+- [TableContents](https://github.com/lutdev/table-contents) - 生成文章目录
 - ~~[LazyLoad](https://github.com/tuupola/lazyload) - 图片懒加载~~（开发版已用新的方案替换）
 - ~~[FancyBox](https://github.com/fancyapps/fancybox) - 文章图片灯箱~~（开发版已用新的方案替换）
 
