@@ -12,10 +12,15 @@
 // http://www.ganxiaozhe.com/p/gazeimg/
 // Copyright 2020 Ganxiaozhe
 //
+//
+// 根据 GPLv3 协议,下面是对此文件的修改说明
+// + 添加对 ReferrerPolicy 的支持以便绕过同源检测 => Line: 294
+// -- @kengwang at 2020/07/16
+//
 // ==================================================
 ;(function($,window,document){
 	'use strict';
-	
+
 	if(!$) {return '缺少JQuery！';}
 	let g = {t:{}};
 	g.colors = [
@@ -286,6 +291,9 @@ $(window).scroll(function(){
 		if( t.ietop < t.deh ){
 			let i = new Image();
 			i.src = $(this).attr('data-gisrc');
+			if (this.referrerPolicy==="no-referrer"){
+				i.referrerPolicy="no-referrer";
+			}
 			i.obj = $(this);
 
 			if (i.complete) {icomplete(i.obj);return;};
