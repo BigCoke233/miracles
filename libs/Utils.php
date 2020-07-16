@@ -135,7 +135,7 @@ class Utils
 		    $path = 'https://cdn.9jojo.cn/Miracles/'.themeVersion().'/';
 	    }
 	    elseif ($cdn=='3'){
-		    $path = $custom;
+            $path = $custom;
 	    }else{
 		    $path = Helper::options()->themeUrl("","Miracles/assets");
 	    }
@@ -147,6 +147,39 @@ class Utils
                 echo "<link rel=\"stylesheet\" href=".$path. $type."/".$file.".".$type." />";
 		    }
         }
+    }
+
+    /**
+     * 自动生成懒加载图片 url
+     */
+    public static function addLoadingImages($cdn, $loading_image, $type){
+        if ($type=='normal'):
+            $loading = $loading_image;
+        elseif($type=='link'):
+            $loading = 'avatar';
+        elseif($type=='owo'):
+            $loading = 'owo';
+        endif;
+
+        if ($cdn=='1' || $cdn=='6'){
+            $path = 'https://cdn.jsdelivr.net/gh/BigCoke233/miracles@'.themeVersion()."/images/loading/".$loading.'.gif';
+	    }
+	    elseif ($cdn=='2'){
+	        $path = 'https://raw.githack.com/BigCoke233/miracles/master/images/loading/'.$loading.'.gif';
+	    }
+	    elseif ($cdn=='4'){
+		    $path = 'https://rawcdn.githack.com/BigCoke233/miracles/master/images/loading/'.$loading.'.gif';
+	    }
+	    elseif ($cdn=='5'){
+            //9jojo CDN 并未提供图片缓存 则换用 jsDelivr
+		    $path = 'https://cdn.jsdelivr.net/gh/BigCoke233/miracles@'.themeVersion()."/images/loading/".$loading.'.gif';
+        }
+	    elseif ($cdn=='3'){
+		    $path = $custom;
+	    }else{
+		    $path = Helper::options()->themeUrl("","Miracles/images/loading").$loading.'.gif';
+        }
+        return $path;
     }
 
     /**

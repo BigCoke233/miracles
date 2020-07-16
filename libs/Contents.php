@@ -26,7 +26,7 @@ class Contents
 			//ParseOther
 			$text = Contents::parseDetails(Contents::parsePicShadow(Contents::parseNotice(Contents::parseKbd(Contents::parseCode(Contents::parseImages(Contents::parseHeadings(Contents::parseTextColor(Contents::parseRuby(Contents::parseTip($text))))))))));
 			//LazyLoad
-	        $text = preg_replace('/<img (.*?)src(.*?)(\/)?>/','<img $1src="/usr/themes/Miracles/images/loading/'.$load_image.'.gif" data-gisrc$2 data-gazeimg />',$text);
+	        $text = preg_replace('/<img (.*?)src(.*?)(\/)?>/','<img $1src="'.Utils::addLoadingImages($GLOBALS['miraclesOptions_CDN'], $GLOBALS['miraclesOptions_loading_image'], 'normal').'" data-gisrc$2 data-gazeimg />',$text);
 			//owo
 			$text = Contents::parseEmo($text);
 			//Links
@@ -110,7 +110,7 @@ class Contents
         $rp = '<div class="col-lg-2 col-6 col-md-3 links-container">
 		    <a href="${2}" title="${4}" target="_blank" class="links-link">
 			  <div class="links-item">
-			    <div class="links-img"><img src="/usr/themes/Miracles/images/loading/avatar.jpg" data-gisrc=\'${3}\'></div>
+			    <div class="links-img"><img src="'.Utils::addLoadingImages($GLOBALS['miraclesOptions_CDN'], $GLOBALS['miraclesOptions_loading_image'], 'link').'" data-gisrc=\'${3}\'></div>
 				<div class="links-title">
 				  <h4>${1}</h4>
 				</div>
@@ -185,7 +185,7 @@ class Contents
      */
     private static function parsePaopaoBiaoqingCallback($match)
     {
-        return '<img class="owo-img" src="/usr/themes/Miracles/images/loading/owo.png" data-gisrc="/usr/themes/Miracles/images/biaoqing/paopao/'. str_replace('%', '', urlencode($match[1])) . '_2x.png">';
+        return '<img class="owo-img" src="'.Utils::addLoadingImages($GLOBALS['miraclesOptions_CDN'], $GLOBALS['miraclesOptions_loading_image'], 'owo').'" data-gisrc="/usr/themes/Miracles/images/biaoqing/paopao/'. str_replace('%', '', urlencode($match[1])) . '_2x.png">';
     }
 
     /**
@@ -195,7 +195,7 @@ class Contents
      */
     private static function parseAruBiaoqingCallback($match)
     {
-        return '<img class="owo-img" src="/usr/themes/Miracles/images/loading/owo.png" data-gisrc="/usr/themes/Miracles/images/biaoqing/aru/'. str_replace('%', '', urlencode($match[1])) . '_2x.png">';
+        return '<img class="owo-img" src="'.Utils::addLoadingImages($GLOBALS['miraclesOptions_CDN'], $GLOBALS['miraclesOptions_loading_image'], 'owo').'" data-gisrc="/usr/themes/Miracles/images/biaoqing/aru/'. str_replace('%', '', urlencode($match[1])) . '_2x.png">';
     }
 
     /**
@@ -205,7 +205,7 @@ class Contents
      */
     private static function parseTweBiaoqingCallback($match)
     {
-        return '<img class="owo-img" src="/usr/themes/Miracles/images/loading/owo.png" data-gisrc="/usr/themes/Miracles/images/biaoqing/twemoji/'. str_replace('%', '', $match[1]) . '.png">';
+        return '<img class="owo-img" src="'.Utils::addLoadingImages($GLOBALS['miraclesOptions_CDN'], $GLOBALS['miraclesOptions_loading_image'], 'owo').'" data-gisrc="/usr/themes/Miracles/images/biaoqing/twemoji/'. str_replace('%', '', $match[1]) . '.png">';
     }
 	
 	/**

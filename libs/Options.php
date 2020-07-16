@@ -153,6 +153,7 @@ function themeConfig($form) {
 	$CDN = new Typecho_Widget_Helper_Form_Element_Select('CDN',array(
 	  '0'=>'关闭',
 	  '1'=>'jsDelivr',
+	  '6'=>'jsDelivr(仅图片)',
 	  '5'=>'9jojo CDN',
 	  '2'=>'GitHack(实时更新)',
 	  '4'=>'GitHack CDN(较慢)',
