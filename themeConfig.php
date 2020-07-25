@@ -8,7 +8,7 @@
  */
 
 /* 语言 */
-$GLOBALS['miraclesLang'] = 'en-us'; //在这里写入语言文件的名字（如 zh-cn.php 就是 zh-cn）
+$GLOBALS['miraclesLang'] = 'zh-cn'; //在这里写入语言文件的名字（如 zh-cn.php 就是 zh-cn）
 
 /* 字体 */
 
