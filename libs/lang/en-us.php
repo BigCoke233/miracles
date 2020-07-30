@@ -54,6 +54,7 @@ $GLOBALS['headerTexts'] = array(
 $GLOBALS['archivePageTexts'] = array(
     "archiveTagTitle" => "Tags",
 	"archivePostTitle" => "Posts",
+	"archiveCategoryTitle" => "Category",
 	"archiveTimeYear" => "",
 	"archiveYearTotal" => "%s articles in total",
 	"archiveStart" => "Everything started on %s"

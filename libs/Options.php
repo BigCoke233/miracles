@@ -129,8 +129,10 @@ function themeConfig($form) {
     $form->addInput($navAero);
 	$navSlide = new Typecho_Widget_Helper_Form_Element_Select('navSlide',array('0'=>'是','1'=>'否'),'0','Headroom','开启后，访客向下滚动页面时导航栏收起，向上滚动时导航栏展示');
 	$form->addInput($navSlide);
-	$customNav = new Typecho_Widget_Helper_Form_Element_Textarea('customNav', NULL, NULL, _t('自定义导航栏'), _t('按照格式书写，自定义导航栏内容，留空则读取所有的独立页面，书写的格式请查看 wiki<hr>'));
-    $form->addInput($customNav);
+	$customNav = new Typecho_Widget_Helper_Form_Element_Textarea('customNav', NULL, NULL, _t('自定义导航栏'), _t('按照格式书写，自定义导航栏内容，留空则读取所有的独立页面，书写的格式请查看 wiki'));
+	$form->addInput($customNav);
+	$customNavIcon = new Typecho_Widget_Helper_Form_Element_Textarea('customNavIcon', NULL, NULL, _t('自定义导航小图标'), _t('按照格式书写，自定义内导航栏右侧的小图标，留空则展示默认的图标按钮，书写的格式请查看 wiki<hr>'));
+    $form->addInput($customNavIcon);
 	
 	//index-banner
 	$bannerUrl = new Typecho_Widget_Helper_Form_Element_Text('bannerUrl', NULL, NULL, _t('<h2>首页大图 Banner</h2>图片 Url'), _t('首页大图的图片地址'));
@@ -146,7 +148,7 @@ function themeConfig($form) {
 	  '1'=>'开启'
 	),'1','<h2>Pjax 预加载</h2>是否开启','Pjax 预加载功能的开关');
     $form->addInput($pjax);
-	$pjax_complete = new Typecho_Widget_Helper_Form_Element_Textarea('pjax_complete', NULL, NULL, _t('完成后执行事件'), _t('Pjax 跳转页面后执行的事件，写入 js 代码，一般将 Pjax 重载(回调)函数写在这里。<hr>'));
+	$pjax_complete = new Typecho_Widget_Helper_Form_Element_Textarea('pjax_complete', NULL, NULL, _t('Pjax 回调函数'), _t('Pjax 跳转页面后执行的事件，写入 js 代码，一般将 Pjax 重载(回调)函数写在这里。<hr>'));
     $form->addInput($pjax_complete);
 	
 	//improve

@@ -44,7 +44,7 @@
               ->parse('<div class="col-6"><a href="{permalink}">{title}</a></div>');
           }
           else {
-			  echo Contents::paresNav($this->options->customNav, "mobile");
+			  echo Contents::parseNav($this->options->customNav, "mobile");
 		  }?>
 		</div></div></div>
 		<div class="mobile-menu-footer">
@@ -56,9 +56,13 @@
 	  <nav class="small-screen nav nav-mobile nav-fixed"<?php if($this->options->navStyle==1): ?> style="display:none!important"<?php endif; ?> id="navBarMobile">
         <div class="nav-mobile-content" role="navigation">
 		  <a href="<?php $this->options->SiteUrl(); ?>" style="float:left"><i class="iconfont icon-xuanzhongshangcheng"></i></a>
+		  <?php if(!$this->options->customNavIcon)://如果没有自定义图标 ?>
 		  <a id="search-open-mobile" style="float:left"><i class="iconfont icon-chaxun"></i></a>
 		  <a id="login-open-mobile" style="float:left"><i class="iconfont icon-user"></i></a>
 		  <a id="toggle-dark-mobile" style="float:left"><i class="iconfont icon-sun"></i></a>
+		  <?php else://如果有自定义图标
+		  	echo Contents::parseNavIcon($this->options->customNavIcon, "mobile"); 
+		  endif; ?> 
 		  <a id="toggle-mobile-menu-button" style="float:right">MENU <i class="iconfont icon-list"></i></a>
 		</div>
 	  </nav>
@@ -78,13 +82,17 @@
               ->parse('<a href="{permalink}">{title}</a>');
             }
             else {
-              echo Contents::paresNav($this->options->customNav, "top-nav");
+              echo Contents::parseNav($this->options->customNav, "top-nav");
 			}?>
 			</span>
 		  </p>
+		  <?php if(!$this->options->customNavIcon)://如果没有自定义图标 ?>
 		  <button class="nav-icon-button search-button" id="search-open-button"><i class="iconfont icon-chaxun"></i></button>
 		  <button class="nav-icon-button login-button" id="login-open"><i class="iconfont icon-user"></i></button>
 		  <button class="nav-icon-button setting-button" id="toggle-dark-button"><i class="iconfont icon-sun"></i></button>
+		  <?php else://如果有自定义图标
+		  	echo Contents::parseNavIcon($this->options->customNavIcon, "top-nav"); 
+		  endif; ?> 
 		</div>
 	  </nav>
 	  <?php elseif($this->options->navStyle==1): ?>
@@ -106,14 +114,18 @@
               ->parse('<a href="{permalink}" onclick="toggleDrawer()">{title}</a>');
             }
             else {
-              echo Contents::paresNav($this->options->customNav, "drawer");
+              echo Contents::parseNav($this->options->customNav, "drawer");
 			}?>
 		  </div>
 		</div>
 		<div class="drawer-footer">
+		  <?php if(!$this->options->customNavIcon)://如果没有自定义图标 ?>
 		  <button class="drawer-icon" id="search-open-button"><i class="iconfont icon-chaxun"></i></button>
 		  <button class="drawer-icon" id="login-open"><i class="iconfont icon-user"></i></button>
           <button class="drawer-icon" id="toggle-dark-button"><i class="iconfont icon-sun"></i></button>
+		  <?php else://如果有自定义图标
+		  	echo Contents::parseNavIcon($this->options->customNavIcon, "drawer"); 
+		  endif; ?> 
 		</div>
 	  </div></nav>
 	  <?php endif;?>

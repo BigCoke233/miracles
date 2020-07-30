@@ -230,6 +230,7 @@
 	background: rgb(240,240,240);
 }
 .drawer-icon {
+	display: inline-block;
 	height: 45px;
 	width: 45px;
 	border-radius: 100%;
@@ -238,9 +239,13 @@
 	margin: 0 3px;
 	border: none;
 	outline: none;
+	padding: 1px 6px;
 }
 .drawer-icon:hover {
 	background: rgb(240,240,240);
+}
+a.drawer-icon {
+	line-height: 2.55
 }
 
 /* Search/Login/Menu */

@@ -46,7 +46,7 @@ $GLOBALS['miraclesTimThumbAllowList'] = array (
 
 //是否压缩 HTML 源代码
 //压缩能优化页面传输速度，但可能会给服务器增加一定负担（不过也还好
-$GLOBALS['miraclesIfCompressHTML'] = 'on';
+$GLOBALS['miraclesIfCompressHTML'] = 'off';
 
 /** ========= NOTICE ========== *
  *  每次更新前都请备份您的 themeConfig.php 文件

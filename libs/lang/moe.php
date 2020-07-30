@@ -59,7 +59,8 @@ $GLOBALS['headerTexts'] = array(
 );
 //归档页面
 $GLOBALS['archivePageTexts'] = array(
-    "archiveTagTitle" => "博主贴的标签",
+	"archiveTagTitle" => "博主贴的标签",
+	"archiveCategoryTitle" => "乱分的类",
 	"archivePostTitle" => "博主写的水文",
 	"archiveTimeYear" => "年的水",
 	"archiveYearTotal" => "这年水了 %s 篇文",

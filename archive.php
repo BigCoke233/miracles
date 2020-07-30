@@ -14,7 +14,7 @@ $this->need('includes/header.php');
 			  <div class="col-md-6 post-banner-box">
 			    <a href="<?php $this->permalink(); ?>" class="post-link">
 			      <div class="post-banner">
-				    <img src="/usr/themes/Miracles/images/loading/<?php echo $this->options->loading_image ?>.gif" data-gisrc="<?php if($this->fields->banner && $this->fields->banner=!''): ?><?php echo $this->fields->banner(); ?><?php else: ?><?php Utils::indexTheme('images/postbg/'); ?><?php echo mt_rand(1,20); ?>.jpg<?php endif; ?>">
+				    <img src="<?php echo Utils::addLoadingImages($this->options->CDN, $this->options->loading_image, 'normal'); ?>" data-gisrc="<?php Utils::postBanner($this); ?>">
 				  </div>
 				</a>
 			  </div>

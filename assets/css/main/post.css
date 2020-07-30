@@ -444,3 +444,28 @@
 .post-item-content{
     padding: 0 35px 10px 35px;
 }
+
+/* 文章目录 **/
+
+.toc-box {
+	border: 1px solid #ddd;
+	background: rgb(245,245,245);
+	padding: 1em 2em;
+	border-radius: .2em
+}
+
+.toc-level-3 {
+	margin-left: 1em;
+}
+
+.toc-level-4 {
+	margin-left: 2em;
+}
+
+.toc-level-5 {
+	margin-left: 3em;
+}
+
+.toc-level-6 {
+	margin-left: 4em;
+}

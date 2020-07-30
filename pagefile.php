@@ -21,7 +21,15 @@ $this->need('includes/header.php');
           <?php endwhile; ?>
           </ul>
       <?php endif; ?>
-		  <br />
+
+      <h2><?php gtecho('archivePageTexts','archiveCategoryTitle'); ?></h2>
+      <?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
+      <ul class="tags-list category">
+      <?php while($category->next()): ?>
+          <li class="tags-item"><a class="no-line" href="<?php $category->permalink(); ?>" title="<?php $category->name(); ?>"><?php $category->name(); ?></a></li>
+      <?php endwhile; ?>
+      </ul>
+
 		  <h2><?php gtecho('archivePageTexts','archivePostTitle'); ?></h2>
 		  <ul class="archives-list"><?php
       $archives = Contents::archives($this);

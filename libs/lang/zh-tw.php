@@ -61,6 +61,7 @@ $GLOBALS['headerTexts'] = array(
 $GLOBALS['archivePageTexts'] = array(
     "archiveTagTitle" => "文章標籤",
     "archivePostTitle" => "文章歸檔",
+    "archiveCategoryTitle" => "文章分類",
     "archiveTimeYear" => "年",
 	"archiveYearTotal" => "共 %s 篇文章",
 	"archiveStart" => "壹切開始於 %s"

@@ -32,7 +32,7 @@ class Contents
 			//Links
             $text = Contents::parseLink($text);
             //toc
-            $text = preg_replace('/{:toc:}/s',Contents::tableOfContents($text),$text);
+            $text = preg_replace('/{:toc:}/s', '<div class="toc-box">'.Contents::tableOfContents($text).'</div>', $text);
         }
         return $text;
     }
@@ -277,7 +277,7 @@ class Contents
 	/**
 	 * 解析自定义导航栏
 	 */
-	static public function paresNav($data, $type) {
+	static public function parseNav($data, $type) {
 		$de_json = json_decode($data, true);
 		$count_json = count($de_json);
         for ($i = 0; $i < $count_json; $i++) {
@@ -293,6 +293,46 @@ class Contents
 			elseif($type=="drawer") {
 				echo '<a href="'. $link .'" onclick="toggleDrawer()">'. $title .'</a>';
 			}
+        }
+    }
+
+    static public function parseNavIcon($data, $type) {
+        $de_json = json_decode($data, true);
+		$count_json = count($de_json);
+        for ($i = 0; $i < $count_json; $i++) {
+            $icon = $de_json[$i]['icon'];
+            $link = $de_json[$i]['link'];
+            $action = $de_json[$i]['action'];
+            //定义 class
+            if($type=="top-nav"){
+                $class = 'nav-icon-button';
+            }
+            elseif($type=="drawer"){
+                $class = 'drawer-icon';
+            }
+            elseif($type=="mobile"){
+                $class = 'nav-mobile-icon';
+            }
+            else{
+                $class= 'unknown';
+            }
+            if($de_json[$i]['class']) $class.= ' '.$de_json[$i]['class'];//自定义 class
+            //计算 right 距离
+            $right_more=$i*45;
+            $right=20+$right_more;
+            //添加 $other
+            if($type=="top-nav") $other=' style="right: '.$right.'px"';
+            //输出导航图标按钮
+            if($type=="top-nav"||$type=="drawer"){
+                if(!$action): echo '<a href="'.$link.'" class="'.$class.'"'.$other.'><i class="iconfont icon-'.$icon.'"></i></a>';
+                else: echo '<button class="'.$class.'" onclick="'.$action.'"'.$other.'><i class="iconfont icon-'.$icon.'"></i></button>';
+                endif;
+            }
+            elseif($type=="mobile"){
+                if(!$action): echo '<a style="float:left" href="'.$link.'"'.$other.'><i class="iconfont icon-'.$icon.'"></i></a>';
+                else: echo '<a style="float:left" onclick="'.$action.'"'.$other.'><i class="iconfont icon-'.$icon.'"></i></a>';
+                endif;
+            }
         }
     }
 
