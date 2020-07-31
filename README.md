@@ -8,7 +8,7 @@ Miracles 主题 1.x 系版本已经停止更新，目前我发布了最新的 1.
 
 你可以通过[爱发电](https://afdian.net/@Eltrac)向我投食，以支持我对 Miracles 主题的维护
 
-<img src="alipay.png" width="70%">
+<img src="https://cdn.jsdelivr.com/gh/BigCoke233/miracles@1.5.4/alipay.png" width="70%">
 
 ---
 
