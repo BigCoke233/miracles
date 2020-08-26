@@ -11,12 +11,6 @@ Miracles 主题 1.x 系版本已经停止更新，目前我发布了最新的 1.
 
 联系方式：QQ 1415757672
 
-## 🎁 捐助
-
-你可以通过[爱发电](https://afdian.net/@Eltrac)向我投食，以支持我对 Miracles 主题的维护
-
-<img src="alipay.png" width="70%">
-
 ---
 
-Copyright &copy; 2019-2020 [Eltrac](https://github.com/BigCoke233), released under [SATA-BNP License](https://github.com/BigCoke233/miracles/blob/master/LICENSE).
+原来的版本在 1.x 分支里，有需要请自取
