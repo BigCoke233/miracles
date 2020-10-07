@@ -1,0 +1,471 @@
+@charset 'utf-8';
+/*
+ * Style of Posts
+ * Author:  Eltrac
+ * License: MIT
+ */
+/* 文章 */
+.post-list,
+.post-body,
+.saying-body {
+	margin-top: -70px!important;
+	transition: .8s;
+}
+.post-item {
+	margin-bottom: 5px;
+}
+.post-body,.post-item,.saying-item,#comment-form {
+	background: #fff;
+	box-shadow: 0 2px 10px var(--shadow-color);
+	-moz-box-shadow: 0 2px 10px var(--shadow-color);
+	-webkit-box-shadow: 0 2px 10px var(--shadow-color);
+	transition: background .1s
+}
+.post-banner-box {
+	height: 100%;
+	overflow: hidden;
+	padding: 0;
+}
+.post-banner img {
+	width: 100%;
+	height: 100%;
+	margin-right: -40px
+}
+.post-title {
+	margin-top: 30px;
+	transition: color .2s;
+	overflow: hidden;
+	height: 40px;
+	white-space: nowrap;
+	text-overflow: ellipsis
+}
+.post-excerpt {
+	overflow: hidden;
+	text-overflow: ellipsis
+}
+.post-meta,.post-meta a {
+	color: gray
+}
+.post-button-box {
+	margin-top: 15px
+}
+.post-button {
+	float: right
+}
+.post-footer {
+	color: #c8c8c8;
+	font-size: 14px;
+	padding: 26px;
+	padding-top: 0!important;
+}
+.post-tags a {
+	color: #bebebe;
+	padding: 2px 4px;
+	border-radius: 2px;
+	background: #f0f0f0;
+	transition: background .2s
+}
+.post-tags a:hover {
+	background: #f5f5f5
+}
+.post-share {
+	border-top: 1px solid rgb(230,230,230);
+	border-bottom: 1px solid rgb(230,230,230);
+	padding: 18px 0;
+	margin: 20px 0;
+    vertical-align:middle;
+}
+.post-share .social-share {
+	margin-right: 10px;
+	vertical-align:middle;
+	background: transparent;
+	border: none
+}
+.post-share .social-share i {
+    transition: color .2s
+}
+.post-share .social-share.qq:hover i {
+	color: rgb(2,83,218);
+}
+.post-share .social-share.weibo:hover i {
+	color: red;
+}
+.post-share .social-share.twitter:hover i {
+	color: rgb(29,161,242);
+}
+.post-share .social-share.qrcode:hover i {
+	color: #000
+}
+.post-share .social-share.copyright i {
+	float: right;
+	font-size: 20px;
+	margin-top: 7px;
+	margin-right: 17px;
+	cursor: pointer;
+	display: none/*移动端不显示*/
+}
+.post-share .social-share.qrcode {
+	margin-right: 3px
+}
+
+.post-share .iconfont {
+	color: rgb(200,200,200);
+	font-size: 25px;
+}
+.post-toc-link {
+	color: gray;
+	opacity: 0;
+	transition: .3s;
+	margin-left: 10px;
+}
+.post-content h2:hover .post-toc-link,
+.post-content h3:hover .post-toc-link {
+	opacity: 1
+}
+.post-qr {
+	background: #f1f1f1;
+	max-height: 0;
+	overflow: hidden;
+	transition: .6s
+}
+.post-qr-open {
+	max-height: 250px;
+	transition: .6s
+}
+.post-qr img {
+	display: block;
+	margin: 10px auto;
+	max-width: 200px
+}
+
+/* >文章内容 */
+.post-content,
+.saying-inner {
+	padding: 26px;
+	padding-bottom: 5px!important;
+	line-height: 28px;
+	letter-spacing: 2px;
+	word-break: break-all
+}
+.page-content {
+	padding-bottom: 30px;
+}
+.page-content {
+	padding-bottom: 26px!important;
+}
+.post-content h2 {
+	margin: 45px 0;
+	margin-bottom: 10px;
+}
+.post-content h3 {
+	border-left: 6px solid #4D90FE;
+	padding-left: 10px;
+}
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5 {
+	scroll-margin-top: 5em
+}
+.post-content hr {
+	display: block;
+	margin: 20px auto;
+	width: 100%;
+	border: 2px dashed #f1f1f1
+}
+.post-content kbd {
+	display: inline-block;
+    padding: 3px 5px;
+    font: 0.84em sans-serif;
+    line-height: 15px;
+    color: #444d56;
+    vertical-align: middle;
+    background-color: #fafbfc;
+    border: solid 1px #d1d5da;
+    border-bottom-color: #c6cbd1;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 -1px 0 #c6cbd1;
+    box-shadow: inset 0 -1px 0 #c6cbd1
+}
+.post-content code {
+	font-size: 0.95em;
+	background: #f0f0f0;
+	border-radius: 2px;
+	font-family: 'Noto Sans SC',sans-serif!important;
+	color: gray;
+	padding: 0 4px;
+	margin: 0 1px;
+}
+.post-content pre>code {
+	background: rgb(63,63,63)!important;
+	color: #fff!important;
+	text-indent: 0!important;
+	border-radius: 4px
+}
+.post-content img {
+	display: block;
+	border-radius: 3px;
+	max-width: 100%
+}
+.post-content img:not(.owo-img, .links-img img) {
+	margin: 25px auto;
+}
+.post-content blockquote p {
+	margin: 0
+}
+.post-content blockquote {
+	border-left: 5px solid #ddd;
+	padding-left: 10px;
+	margin-left: 0;
+	color: rgb(70,70,70);
+}
+.post-content table {
+	width: 100%;
+	border-left: 1px solid #ccc;
+	border-top: 2px solid #ccc;
+	border-spacing: 0
+}
+.post-content td,.post-content th {
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 6px 8px
+}
+.post-content th {
+	background: #fff!important
+}
+.post-content tr:nth-child(odd) {
+	background: #f5f5f5
+}
+.post-content a:not(.no-line) {
+	position: relative;
+	color: rgb(40,40,40);
+	border-bottom: 2px solid #f0f0f0;
+	transition: .2s
+}
+.post-content a:not(.no-line):hover {
+	opacity: 0.85
+}
+.post-content a:not(.no-line)::before {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background-color: #000;
+	transform-origin: bottom right;
+	transform: scaleX(0);
+	transition: transform .5s ease
+}
+.post-content a:not(.no-line):hover::before {
+	transform-origin: bottom left;
+	transform: scaleX(1);
+}
+.post-content p {
+	vertical-align: middle;
+}
+.post-content ul ul,
+.post-content ol ol,
+.post-content ol ul,
+.post-content ul ol {
+	margin-top: -15px;
+}
+.post-content .owo-img {
+	box-shadow: 0 0 0 #fff;
+	-moz-box-shadow: 0 0 0 #fff;
+	-webkit-box-shadow: 0 0 0 #fff;
+	display: inline;
+	vertical-align: middle;
+}
+.post-content ul li p,
+.post-content ol li p {
+    margin: 0!important
+}
+.post-content ul ul,
+.post-content ul ol,
+.post-content ol ol,
+.post-content ol ul {
+    margin-top: 0;
+}
+.post-content summary {
+	outline: none;
+	cursor: pointer;
+}
+.post-content summary:hover {
+	font-weight: bolder
+}
+/* 加密文章 */
+.post-content .protected {
+	display: flex;
+	align-items: center;
+    justify-content: center;
+}
+
+.post-content .protected .word:after {
+	content:"：";
+}
+
+.post-content .protected .text {
+    border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	margin-right: -7px;
+}
+
+.post-content .protected .submit {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	margin-left: -7xp;
+	color: rgb(80,80,80);
+	background: rgb(237,237,237);
+	cursor: pointer;
+}
+
+.post-content .protected .submit:hover {
+	opacity: 0.8;
+}
+
+.post-content .protected .submit,
+.post-content .protected .text {
+	border: 1px solid #ccc;
+	padding: 8px 14px;
+	box-shadow: 0 1px 4px #ddd;
+	transition: .3s;
+}
+
+.post-content .protected {
+	margin: 20px 0;
+}
+
+/* >短代码 */
+.tip {
+	border: 1px solid rgb(235,235,235);
+	border-radius: 3px;
+	padding: 15px;
+	border-left: 5px solid gray;
+}
+.tip-icon {
+	color: gray;
+	display: none/*移动端不显示*/
+}
+.tip.red {
+	border-left-color: #DD4B39;
+}
+.tip.red .tip-icon {
+	color: #DD4B39;
+}
+.tip.blue {
+	border-left-color: #4D90FE;
+}
+.tip.blue .tip-icon {
+	color: #4D90FE;
+}
+.tip.green {
+	border-left-color: #2FBB4F;
+}
+.tip.green .tip-icon {
+	color: #2FBB4F;
+}
+.tip.yellow {
+	border-left-color: #FFDD11;
+}
+.tip.yellow .tip-icon {
+	color: #FFDD11;
+}
+.tip-group {
+	margin: 15px 0;
+}
+.tip-group .tip {
+	margin: 0;
+	margin-top: -1px;
+	border-radius: 0;
+}
+.tip-group br {
+	display: none;
+}
+.tip-group .tip br {
+	display: block;
+}
+@media (min-width:768px) {
+    .tip-icon {
+		display: block
+	}
+}
+.notice {
+	background: rgb(245,245,245);
+	padding: 15px 20px;
+	border-radius: 4px
+}
+.post-img-shadow {
+	padding: 5px 3px
+}
+.post-img-shadow img {
+	box-shadow: 0 8px 15px rgba(0,0,0,0.45);
+}
+.post-img-alt {
+	font-size: 0.9em;
+	color: gray
+}
+
+/* >文章分页 */
+.post-pagenav,
+.comment-pagenav {
+	margin-top: 40px;
+	margin-bottom: 60px
+}
+.post-pagenav a {
+	font-size: 20px;
+	background: #fff;
+	color: #000;
+	padding: 13px 20px;
+	transition: .2s;
+}
+.post-pagenav a:hover {
+	background: rgb(249,249,249);
+}
+.post-pagenav a,
+.comment-pagenav a {
+	border-radius: 10000px;
+	box-shadow: 0 0 10px #ccc;
+	-moz-box-shadow: 0 0 10px #ccc;
+	-webkit-box-shadow: 0 0 10px #ccc
+}
+.post-pagenav a:hover {
+	box-shadow: 0 0 25px #ccc;
+	-moz-box-shadow: 0 0 25px #ccc;
+	-webkit-box-shadow: 0 0 25px #ccc
+}
+.post-pagenav-left {
+	float: left
+}
+.post-pagenav-right {
+	float: right
+}
+.post-item-content{
+    padding: 0 35px 10px 35px;
+}
+
+/* 文章目录 **/
+
+.toc-box {
+	border: 1px solid #ddd;
+	background: rgb(245,245,245);
+	padding: 1em 2em;
+	border-radius: .2em
+}
+
+.toc-level-3 {
+	margin-left: 1em;
+}
+
+.toc-level-4 {
+	margin-left: 2em;
+}
+
+.toc-level-5 {
+	margin-left: 3em;
+}
+
+.toc-level-6 {
+	margin-left: 4em;
+}

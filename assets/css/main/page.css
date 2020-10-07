@@ -1,0 +1,235 @@
+@charset 'utf-8';
+/*
+ * Style of Some parts of custom pages
+ * Author:  Eltrac
+ * License: MIT
+ */
+/* About Page */
+.about-avatar img {
+	margin: 0 auto;
+	display: block;
+	padding: 2px;
+	border: 3px solid #ddd;
+	border-radius: 100%;
+	height: 200px;
+	width: 200px;
+}
+.about-name {
+	text-align: center;
+	font-size: 35px;
+	margin: 20px 0;
+	margin-bottom: 0;
+}
+.about-social {
+	text-align: center;
+	margin-top: 15px;
+}
+.about-social a {
+	transform: scale(1.2);
+	border-radius: 100%;
+	padding: 5px 10px;
+}
+.about-social a:hover {
+	background: rgb(246,246,246);
+}
+
+/* Tag List */
+.tags-list {
+	margin-left: -30px
+}
+
+.tags-item a {
+	background: rgb(240,240,240);
+	border-radius: 80px;
+	color: rgb(60,60,60);
+	padding: 6px 14px;
+	font-size: 15px;
+	transition: all .2s;
+	margin: 5px 3px;
+}
+.tags-item a:hover {
+	background: rgb(230,230,230);
+}
+.tags-item {
+	position: relative;
+	display: inline-block;
+    margin-top: 10px;
+}
+/* Archives 归档 */
+.archives-list {
+	list-style-type: none;
+	margin-left: -40px
+}
+.archives-list a {
+	display: block;
+	border-radius: 3px;
+	transition: background .2s;
+	padding: 6px 10px;
+	white-space:nowrap;
+	width: 100%;
+	overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.archives-list a:hover {
+	background: #e6e6e6
+}
+.archives-date,
+.archives-count {
+	color: gray!important;
+	letter-spacing: 0;
+}
+.archives-count {
+	margin-left: 5px
+}
+/* Links */
+.links-box {
+	margin: 10px;
+	margin-left: 0;
+	margin-top: 10px
+}
+.links-box h2 {
+	text-align: Center;
+	border-bottom: 1px solid #e6e6fa;
+	padding-bottom: 20px;
+	font-weight: 700;
+	color: black;
+}
+.links-link {
+	color: black!important;
+}
+.links-link:hover {
+	opacity: 1!important
+}
+.links-item {
+	background: #fff;
+	box-shadow: 0 1px 3px #ccc;
+	-webkit-box-shadow: 0 1px 3px #ccc;
+	-moz-box-shadow: 0 1px 3px #ccc;
+	overflow: hidden;
+	transition: all .2s!important;
+	margin-bottom: 5px;
+	border-radius: 3px
+}
+.links-item:hover {
+	transform: scale(1.05);
+	box-shadow: 0 6px 28px #ccc;
+	-webkit-box-shadow: 0 6px 28px #ccc;
+	-moz-box-shadow: 0 6px 28px #ccc;
+	transform: translateY(-6px)
+}
+.link-box a {
+	color: #000
+}
+.links-title {
+	text-align: center
+}
+.links-title h4 {
+	font-weight: 700;
+	letter-spacing: 2px;
+	white-space: nowrap;
+	font-size: 15px;
+	margin: 14px 0
+}
+.links-container {
+	padding: 6px;
+}
+.links-img {
+	padding: 0;
+	width: 100%;
+	height: 100%
+}
+.links-img img {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover
+}
+
+/* Saying 说说 */
+.saying-meta {
+	color: gray!important;
+	margin-top: -5px!important;
+	line-height: 22px;
+}
+.saying-meta img {
+	float: left;
+	height: 45px;
+	width: 45px;
+	border-radius: 100%;
+	margin-right: 15px;
+	box-shadow: 1px 1px 2px #bababa;
+	webkit-box-shadow: 1px 1px 2px #bababa;
+	-moz-box-shadow: 1px 1px 2px #bababa;
+}
+.saying-author {
+	font-size: 18px;
+}
+.saying-hr {
+	border-bottom: 1px solid #ddd;
+}
+.saying-header.saying-inner {
+	padding-bottom: 0;
+}
+.saying-middle.saying-inner {
+	padding-top: 0;
+	padding-bottom: 10px;
+}
+.saying-form {
+	margin-bottom: -10px!important;
+}
+
+/* bangumi 追番 */
+.bangumi-item {
+	padding-top: 0;
+	padding-bottom: 0;
+	border: none;
+}
+.bangumi-link {
+	padding: 12px;
+	border: none
+}
+.bangumi-banner {
+    position: relative;
+	overflow: hidden
+}
+.bangumi-banner img {
+	width: 100%
+}
+.bangumi-des {
+    position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(255,255,255,0.8);
+	padding: 6px;
+	opacity: 0;
+	transition: .3s;
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	overflow: auto
+}
+.bangumi-des p {
+	margin: 0
+}
+.bangumi-banner:hover .bangumi-des {
+	opacity: 1
+}
+.bangumi-title {
+	border: none!important;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.bangumi-progress, .bangumi-progress-bar {
+	border-radius: 4px;
+	height: 8px
+}
+.bangumi-progress {
+	background: #ddd
+}
+.bangumi-progress-bar {
+    background: gray
+}

@@ -1,0 +1,440 @@
+@charset 'utf-8';
+/*
+ * Fonts, Themes and filter
+ * Author:  Eltrac
+ * License: MIT
+ */
+
+/**
+ * Font
+ */
+.body-serif {
+	font-family: 'Noto Serif SC',serif
+}
+
+/**
+ *  Dark
+ */
+.body-dark,
+.body-dark .post-qr,
+.body-dark .login-form .btn,
+.body-dark .notice {
+	background: #4b4b4b;
+	color: #fafafa
+}
+.body-dark .login-form .btn {
+	background: rgb(70,70,70)!important;
+	transition: .3s
+}
+.body-dark .login-form .btn:hover {
+	opacity: 0.8
+}
+/* Post Content */
+.body-dark .post-content code {
+	background:#505050
+}
+.body-dark .post-content tr:nth-child(odd) {
+	background:#6e6e6e
+}
+.body-dark .post-content hr {
+	border: 3px dashed #787878!important
+}
+/* Pio Plugin */
+.body-dark .pio-container .pio-dialog {
+	color:#fff;
+	box-shadow:1px 1px 15px #505050;
+	-webkit-box-shadow:1px 1px 15px #505050;
+	-moz-box-shadow:1px 1px 15px #505050;
+	background:rgba(90,90,90,.9)
+}
+.body-dark .pio-action span {
+	background-color:rgba(90,90,90,.9)
+}
+/* Aplayer */
+.body-dark .aplayer,
+.body-dark .aplayer .aplayer-author,
+.body-dark .aplayer .aplayer-controller,
+.body-dark .aplayer .aplayer-icon,
+.body-dark .aplayer .aplayer-info,
+.body-dark .aplayer .aplayer-lrc-contents p,
+.body-dark .aplayer-list-author,
+.body-dark .aplayer-list-index {
+	color:#f0f0f0!important
+}
+.body-dark .aplayer {
+	background:#646464
+}
+.body-dark .aplayer .aplayer-list ol li:hover,
+.body-dark .aplayer-list-light {
+	background:#8c8c8c!important
+}
+.body-dark .aplayer .aplayer-lrc:after,
+.body-dark .aplayer .aplayer-lrc:before {
+	background:0 0;
+	background:0 0;
+	filter:none
+}
+.body-dark .aplayer .aplayer-list ol li {
+	border-color:#787878
+}
+.body-dark .aplayer-list::-webkit-scrollbar {
+	background:#6e6e6e!important
+}
+.body-dark .aplayer-list::-webkit-scrollbar-thumb {
+	background:#505050
+}
+.body-dark .aplayer-info {
+	border:none
+}
+.body-dark .aplayer .aplayer-icon {
+	filter:brightness(50%);
+	-webkit-filter:brightness(50%);
+}
+/* Nav/Search/login */
+.body-dark .nav {
+	background:rgba(50,50,50,.5) !important;
+	box-shadow: 0 0 15px rgb(60,60,60);
+        -webkit-box-shadow: 0 0 15px rgb(60,60,60);
+        -moz-box-shadow: 0 0 15px rgb(60,60,60);
+}
+.body-dark .mobile-menu-pagelist a:hover,
+.body-dark .nav a:hover,
+.body-dark .nav-mobile-title:hover {
+	backdrop-filter: blur(18px);
+	-webkit-backdrop-filter: blur(18px);
+	background: rgba(100,100,100,0.7)
+}
+.body-dark .nav-icon-button {
+	background:#5a5a5a
+}
+.body-dark .nav-icon-button {
+	color:#fff
+}
+.body-dark .nav-icon-button:hover,
+.body-dark .search-close {
+	background:#5a5a5a
+}
+.body-dark .login,
+.body-dark .mobile-menu,
+.body-dark .search,
+.body-dark .bangumi-des {
+	background:rgba(90,90,90,.95)
+}
+/* Bangumi */
+.body-dark .bangumi-progress {
+	background: gray
+}
+.body-dark .bangumi-progress-bar {
+    background: rgb(180,180,180)
+}
+
+/* Others */
+.body-dark .post-meta a {
+	color: gray!important
+}
+.body-dark .comment-reply a {
+	background: 0 0
+}
+.body-dark .footer-info {
+	background:#3c3c3c!important
+}
+/* Need shadow */
+.body-dark .options {
+	box-shadow:0 0 0 #fff;
+	-moz-box-shadow:0 0 0 #fff;
+	-webkit-box-shadow:0 0 0 #fff
+}
+.body-dark .bubble.saying-body:hover,
+.body-dark .comment-pagenav a,
+.body-dark .dark-button,
+.body-dark .options,
+.body-dark .post-body,
+.body-dark .saying-item,
+.body-dark .post-item,
+.body-dark .post-pagenav a,
+.body-dark #comment-form {
+	box-shadow:0 1px 10px #323232;
+	-moz-box-shadow:0 1px 10px #323232;
+	-webkit-box-shadow:0 1px 10px #323232
+}
+.body-dark .gotop-button,
+.body-dark .links-item,
+.body-dark .alert {
+	box-shadow:0 1px 3px #323232;
+	-moz-box-shadow:0 1px 3px #323232;
+	-webkit-box-shadow:0 1px 3px #323232
+}
+.body-dark .gotop-button:hover,
+.body-dark .links-item:hover {
+	box-shadow:0 4px 22px #323232;
+	-moz-box-shadow:0 4px 22px #323232;
+	-webkit-box-shadow:0 4px 22px #323232;
+}
+/* No Shadow */
+.body-dark .options-with-drawer {
+	box-shadow: 0 0 0 #fff;
+	-moz-box-shadow: 0 0 0 #fff;
+	-webkit-box-shadow: 0 0 0 #fff;
+}
+/* Need #646464 bg */
+.body-dark .archives-list a:hover,
+.body-dark .bubble.comment-content,
+.body-dark .bubble.saying-body,
+.body-dark .comment-author,
+.body-dark .comment-by-author .bubble.comment-content,
+.body-dark .comment-pagenav a,
+.body-dark .comment-submit button,
+.body-dark .drawer-content a:hover,
+.body-dark .drawer-footer,
+.body-dark .drawer-header,
+.body-dark .options-button-active,
+.body-dark .tags-item a,
+.body-dark .post-tags a,
+.body-dark .about-social a:hover,
+.body-dark .comment-hidden,
+.body-dark .comment-input input,
+.body-dark .comment-textarea {
+	background: #646464!important
+}
+/* Need #5a5a5a bg */
+.body-dark .OwO-body,
+.body-dark .OwO-logo,
+.body-dark .OwO-package-active,
+.body-dark .OwO-packages li:hover,
+.body-dark .comment-form input,
+.body-dark .comment-form textarea,
+.body-dark .saying-item textarea,
+.body-dark .comment-reply a:hover,
+.body-dark .dark-button,.body-dark .dialog,
+.body-dark .drawer,
+.body-dark .drawer-icon,
+.body-dark .gotop-button,.body-dark .links-item,
+.body-dark .options,
+.body-dark .options-family-button,
+.body-dark .options-theme-label,
+.body-dark .post-body,
+.body-dark .saying-item,
+.body-dark .post-content th,
+.body-dark .post-item,
+.body-dark .post-pagenav a,
+.body-dark .search-form input,
+.body-dark .login-form button,
+.body-dark #comment-form,
+.body-dark .comment-by-author > .comment-body-inner > .comment-main > .comment-meta > .comment-date:before {
+	background:#5a5a5a!important
+}
+/* Need #6e6e6e bg */
+.body-dark .OwO-bar,
+.body-dark .OwO-item,
+.body-dark .index-banner,
+.body-dark .login-enter-admin a,
+.body-dark .comment-submit,
+.body-dark .post-content kbd {
+	background-color:#6e6e6e!important
+}
+.body-dark .index-banner {
+	background-color: rgb(80,80,80)!important
+}
+/* Need white fonts */
+.body-dark .login-enter-admin,
+.body-darl .login-form button,
+.body-dark .OwO-bar,
+.body-dark .OwO-logo,
+.body-dark .comment,
+.body-dark .comment a,
+.body-dark .comment-content p,
+.body-dark .comment-form input,
+.body-dark .comment-form textarea,
+.body-dark .saying-item textarea,
+.body-dark .dark-button,
+.body-dark .drawer,
+.body-dark .drawer a,
+.body-dark .drawer-icon,
+.body-dark .drawer-open .drawer-button,
+.body-dark .footer-info,
+.body-dark .footer-info a,
+.body-dark .gotop-button,
+.body-dark .login,
+.body-dark .login-close,
+.body-dark .mobile-menu,
+.body-dark .mobile-menu a,
+.body-dark .mobile-menu-close,
+.body-dark .mobile-menu-footer,
+.body-dark .nav,
+.body-dark .nav a,
+.body-dark .options-contentsize-button,
+.body-dark .options-family-button,
+.body-dark .options-theme-item:hover .options-theme-label,
+.body-dark .post-body,
+.body-dark .saying-item,
+.body-dark .saying-item a,
+.body-dark .post-body a,
+.body-dark .post-content blockquote,
+.body-dark .post-item,
+.body-dark .post-item a,
+.body-dark .search-close,
+.body-dark .search-form button,
+.body-darl .login a,
+.body-dark .banner-content.banner-font-black,
+.body-dark .post-pagenav a,
+.body-dark .comment-submit,
+.body-dark .header-meta a,
+.body-dark .alert,
+.body-dark .respond input,
+.body-dark .respond textarea,
+.body-dark .login-enter-admin a,
+.body-dark .post-content kbd {
+	color:#fafafa!important
+}
+.body-dark .options-theme-label {
+	color:#5a5a5a!important
+}
+/* Need border color */
+.body-dark .OwO-body,
+.body-dark .OwO-logo,
+.body-dark .comment-form input,
+.body-dark .comment-form textarea,
+.body-dark .saying-item textarea,
+.body-dark .drawer,
+.body-dark .mobile-menu-footer,
+.body-dark .mobile-menu-title,
+.body-dark .options hr,
+.body-dark .post-content blockquote,
+.body-dark .post-content table,
+.body-dark .post-content td,
+.body-dark .post-content th,
+.body-dark .post-content tr,
+.body-dark .saying-hr,
+.body-dark .post-share,
+.body-dark .post-content kbd {
+	border-color:#6e6e6e!important
+}
+.body-dark .post-content kbd  {
+	border-bottom-color: #6e6e6e!important
+}
+.body-dark .tip {
+	border-top-color:#6e6e6e!important;
+	border-bottom-color:#6e6e6e!important;
+	border-right-color:#6e6e6e!important
+}
+.body-dark .bubble.comment-content:before,
+.body-dark .bubble.saying-body:before,
+.body-dark .comment-by-author .bubble.comment-content:before {
+	border-right-color:#646464!important
+}
+/* Need darker mask */
+.body-dark .banner-mask {
+	background:rgba(10,10,10,.4)
+}
+/* Need filter */
+.body-dark img,
+.body-dark .links-img {
+	filter:brightness(80%)
+}
+.body-dark .aplayer-pic,
+.body-dark .post-banner,
+.body-dark iframe {
+	filter:brightness(72%)
+}
+/* Dark shade */
+.body-dark .dark-shade {
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-color:#00000085;
+    z-index:100;
+    pointer-events:none
+}
+
+/**
+ * Gray
+ */
+.html-filter-gray {
+	filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+}
+
+/**
+ * Sepia
+ */
+.body-sepia,
+.body-sepia .drawer-content,
+.body-sepia .drawer-relative,
+.body-sepia .drawer-icon,
+.body-sepia .post-qr,
+.body-sepia .comment-input input,
+.body-sepia .comment-textarea {
+	background: rgb(248,241,228)!important
+}
+.body-sepia .nav {
+	background: rgba(250,241,228,0.5);
+}
+.body-sepia .post-body,
+.body-sepia .post-item,
+.body-sepia #comment-form,
+.body-sepia .drawer-header,
+.body-sepia .drawer-footer,
+.body-sepia .drawer-content a:hover,
+.body-sepia .login-enter-admin a {
+	background: rgb(245,238,218)
+}
+.body-sepia .banner-mask {
+	background: rgba(164,120,114,0.3)
+}
+.body-sepia img {
+	filter: sepia(20%);
+}
+.body-sepia .nav-icon-button {
+	background: rgba(248,241,228,0.9);
+}
+.body-sepia .nav-icon-button:hover {
+	background: rgba(248,241,228,0.7);
+}
+.body-sepia .search,
+.body-sepia .login,
+.body-sepia .mobile-menu,
+.body-sepia .bangumi-des {
+	background-color: rgba(248,241,228,0.98);
+}
+.body-sepia .search-form input {
+	background-color: rgba(245,241,228)
+}
+.body-sepia .footer-info,
+.body-sepia .index-banner,
+.body-sepia .links-item,
+.body-sepia .comment-meta span,
+.body-sepia .comment-by-author > .comment-body-inner > .comment-main > .comment-meta > .comment-date:before {
+	background-color: rgb(246,240,220)!important
+}
+.body-sepia .post-content h3 {
+    border-color: #DD4B39
+}
+.body-sepia .archives-list li a:hover,
+.body-sepia .tags-item a,
+.body-sepia .notice {
+	background: rgb(250,246,224)
+}
+.body-sepia .OwO-logo {
+	background: transparent
+}
+.body-sepia .OwO-logo:hover {
+	opacity: 0.9;
+	background: transparent
+}
+.body-sepia .fixed-button,
+.body-sepia .post-pagenav a,
+.body-sepia .post-content kbd {
+	background: rgb(250,246,224)!important
+}
+.body-sepia .comment-content,
+.body-sepia .login-form .btn,
+.body-sepia .post-tags a {
+	background-color: rgb(250,230,220)
+}
+.body-sepia .comment-content.bubble::before {
+	border-right-color: rgb(250,230,220)
+}

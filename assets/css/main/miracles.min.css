@@ -1,0 +1,513 @@
+@charset 'utf-8';
+
+/*
+ * The main CSS file for Miracles
+ * Author:  Eltrac
+ * License: MIT
+ */
+ 
+@import url("col.css");
+@import url("element.css");
+@import url("component.css");
+@import url("nav.css");
+@import url("post.css");
+@import url("page.css");
+@import url("comment.css");
+@import url("special.css");
+@import url("themes.css");
+
+/* iconfont */
+@font-face {
+	font-family: 'iconfont';  /* project id 1165190 */
+	src: url('//at.alicdn.com/t/font_1165190_1djdjjwge4m.eot');
+	src: url('//at.alicdn.com/t/font_1165190_1djdjjwge4m.eot?#iefix') format('embedded-opentype'),
+	url('//at.alicdn.com/t/font_1165190_1djdjjwge4m.woff2') format('woff2'),
+	url('//at.alicdn.com/t/font_1165190_1djdjjwge4m.woff') format('woff'),
+	url('//at.alicdn.com/t/font_1165190_1djdjjwge4m.ttf') format('truetype'),
+	url('//at.alicdn.com/t/font_1165190_1djdjjwge4m.svg#iconfont') format('svg');
+  }
+
+/* Varriable */
+:root {
+	--shadow-color: rgb(190,190,190);
+	scroll-behavior: smooth; /* 平滑滚动 */
+}
+
+::selection{
+    background: rgb(230,230,230);
+    color:black;
+}
+/* ScrollBar */
+::-webkit-scrollbar {
+	width: 6px;
+	height: 5px
+}
+::-webkit-scrollbar-button {
+	display: none
+}
+::-webkit-scrollbar-thumb {
+	background: rgb(120,120,120);
+	border-radius: 2px;
+	transition: .2s
+}
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(100,100,100)
+}
+/* Selection */
+::-moz-selection,
+::-webkit-selection,
+::selection {
+	background-color: #f1f1f1
+}
+/* Responsive Web design */
+.large-screen {
+	display: none
+}
+.small-screen {
+	display: block
+}
+/* Mobile phone */
+@media (max-width:767px) {
+	.drawer {
+		width: 100vw;
+	}
+	.mobile-menu-close {
+	right: 20px;
+    left: auto;
+	}
+	.post-title{
+		font-size: 1.5rem;
+	}
+}
+/* > Pad and up */
+@media (min-width:768px) {
+	.header-meta-line-one,
+    .header-meta-line-two {
+	    display: inline-block!important
+	}
+	
+	.post-share .iconfont {
+		font-size: 30px;
+	}
+	
+	.post-share .social-share.copyright i {
+		display: block;
+	}
+	
+	.alert {
+		min-width: 300px;
+	    max-width: 700px
+	}
+	.drawer-avatar img {
+		height: 160px;
+		width: 160px;
+	}
+	.drawer {
+		width: 360px;
+	    left: -400px;
+	}
+	.drawer-content a {
+		font-size: 19px;
+	    padding: 11px 0;
+	}
+	.drawer-main {
+		height: 87vh;
+	}
+	.drawer-footer {
+		height: 68px;
+	}
+	.drawer-header {
+		height: 220px;
+	}
+	.fixed-button {
+		height: 60px;
+		width: 60px;
+	}
+	
+	.options {
+	    width: 300px!important;
+		left: auto!important;
+		top: 90px;
+		right: 10px;
+    }
+
+    .options:before {
+    	border-right: 8px solid transparent;
+        border-top: 16px solid rgb(254,254,254,0.96);
+        border-left: 8px solid transparent;
+        position: absolute;
+        top: 80px;
+        right: 40px;
+    }
+
+	.comment-content p {
+		font-size: 18px;
+	}
+	
+	.comment-input input {
+	    display: inline-block;
+	    width: 33.23%;
+        padding: 10px 5px;
+        max-width: 100%;
+    }
+	
+	.comment-input #url {
+	    width: 32.39%;
+    }
+	
+	.nav-content a {
+		font-size: 19px;
+		padding: 27.5px 8px
+	}
+
+	.index-banner {
+		text-align: left
+	}
+
+	.banner-content h1 {
+		font-size: 40px
+	}
+
+	.index-content {
+		margin: 10px 80px
+	}
+
+	.post-title {
+		margin: 25px 0;
+		margin-bottom: 10px;
+		font-size: 2rem;
+	}
+
+	.post-excerpt {
+		height: 38px
+	}
+	
+	.post-banner-box,
+    .post-banner img {
+		height: 230px
+	}
+
+	.large-screen {
+		display: block
+	}
+
+	.small-screen {
+		display: none
+	}
+
+	.post-content {
+		padding: 36px;
+		padding-top: 25px;
+		font-size: 18px;
+		line-height: 26px;
+		letter-spacing: 2px
+	}
+	
+	.page-content {
+		padding-bottom: 25px!important;
+	}
+	
+	#comment-form {
+		padding: 36px;
+	}
+	
+	.post-footer {
+		padding: 36px;
+	}
+
+	.fixed-button {
+		padding: 15px 20px;
+		right: 28px
+	}
+
+	.gotop-button {
+		bottom: 20px
+	}
+
+	.options-button {
+		bottom: 90px
+	}
+
+	.pio-container {
+		display: block
+	}
+
+	iframe[src*="//player.bilibili.com/player.html"] {
+		height: 390px
+	}
+	.search-form input,
+    .login-form input,
+    .login-form button	{
+		width: 350px;
+	}
+	.post-list,
+    .post-body,
+    .saying-body {
+	    margin-top: -130px
+    }
+	.links-container {
+	    padding: 10px;
+    }
+	.comment-children {
+		margin-left: 80px;
+	}
+	.search-close,
+	.login-close,
+	.mobile-menu-close{
+		right: 20px;
+        left: auto;
+	}
+}
+/* Desktop and up */
+@media (min-width:992px) {
+	.drawer-content a {
+		font-size: 21px;
+	    padding: 14px 0;
+	}
+	.drawer-avatar img {
+		height: 180px;
+		width: 180px;
+	}
+	.drawer-header {
+		height: 240px;
+	}
+
+	.comment-content p {
+		font-size: 19px;
+	}
+	
+	.comment-input #url {
+	    width: 32.47%;
+    }
+	
+	.nav-content a {
+		font-size: 20px;
+		padding: 28px 8px
+	}
+
+	.index-banner {
+		text-align: left
+	}
+
+	.banner-content h1 {
+		font-size: 50px
+	}
+
+	.index-content {
+		margin: 10px 80px
+	}
+
+
+	.post-title {
+		margin: 30px 0;
+		margin-bottom: 25px
+	}
+
+	.post-excerpt {
+		height: 75px
+	}
+	
+	.post-banner-box,
+    .post-banner img {
+		height: 280px
+	}
+
+	.large-screen {
+		display: block
+	}
+
+	.small-screen {
+		display: none
+	}
+
+	.post-content {
+		padding: 48px;
+		padding-top: 30px;
+		font-size: 18px;
+		line-height: 28px;
+		letter-spacing: 2px
+	}
+	
+	.page-content {
+		padding-bottom: 30px!important;
+	}
+	
+	#comment-form {
+		padding: 48px;
+	}
+	
+	.post-footer {
+		padding: 48px;
+	}
+
+	.fixed-button {
+		padding: 18px 23px;
+		right: 38px
+	}
+
+	.gotop-button {
+		bottom: 40px
+	}
+
+	.options-button {
+		bottom: 120px
+	}
+
+	.pio-container {
+		display: block
+	}
+
+	iframe[src*="//player.bilibili.com/player.html"] {
+		height: 480px
+	}
+	
+	.search-form input,
+    .login-form input,
+    .login-form button	{
+		width: 400px;
+	}
+	.post-list,
+    .post-body,
+    .saying-body {
+	    margin-top: -110px
+    }
+	.links-container {
+	    padding: 12px;
+    }
+	#live2dcanvas {
+		display: block!important;
+		transform: scale(0.8)!important;
+		z-index: 0!important
+	}
+}
+/* Computer screen and up */
+@media (min-width:1200px) {
+	.login-entrance {
+		width: 250px!important;
+		display: block!important;
+		margin: 20px auto!important;
+	}
+	
+	.drawer-header {
+		height: 250px;
+	}
+	.drawer-footer {
+		height: 65px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	.drawer-avatar img {
+		height: 190px;
+		width: 190px;
+	}
+	.comment-content p {
+		font-size: 21px;
+	}
+	.comment-input #url {
+	    width: 32.56%;
+    }
+	.nav-content a {
+		font-size: 20px;
+		padding: 28px 8px
+	}
+
+	.index-banner {
+		text-align: left
+	}
+
+	.banner-content h1 {
+		font-size: 50px
+	}
+
+	.index-content {
+		margin: 10px 100px
+	}
+	
+	.post-title {
+		margin: 30px 0;
+		margin-bottom: 25px
+	}
+
+	.post-excerpt {
+		height: 72px
+	}
+
+	.large-screen {
+		display: block
+	}
+
+	.small-screen {
+		display: none
+	}
+
+	.post-content {
+		padding: 50px;
+		font-size: 20px;
+		line-height: 30px;
+		letter-spacing: 2px;
+		padding-top: 35px;
+	}
+	.page-content {
+		padding-bottom: 38px!important;
+	}
+	
+	#comment-form {
+		padding: 50px;
+	}
+	
+	.post-footer {
+		padding: 50px;
+	}
+	
+	.fixed-button {
+		padding: 18px 23px;
+		right: 38px
+	}
+
+	.gotop-button {
+		bottom: 40px
+	}
+
+	.options-button {
+		bottom: 120px
+	}
+
+	.pio-container {
+		display: block
+	}
+
+	iframe[src*="//player.bilibili.com/player.html"] {
+		height: 550px
+	}
+	.search-form input,
+    .login-form input,
+    .login-form button	{
+		width: 550px;
+	}
+	.post-list,
+    .post-body,
+	.saying-body {
+	    margin-top: -125px
+    }
+	.links-container {
+	    padding: 15px;
+    }
+	#live2dcanvas {
+		transform: scale(1);
+	}
+}
+/* 有 Drawer 时的设置面板 */
+.options-with-drawer {
+	background: rgb(246,246,246);
+	box-shadow: 0 0 0 #fff;
+	-moz-box-shadow: 0 0 0 #fff;
+	-webkit-box-shadow: 0 0 0 #fff;
+	width: 360px!important;
+	height: 210px!important;
+	top: auto!important;
+	right: auto!important;
+	bottom: 10vh!important;
+	z-index: 40!important;
+}

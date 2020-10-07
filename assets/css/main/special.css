@@ -1,0 +1,372 @@
+@charset 'utf-8';
+/*
+ * Style of something special
+ * Author:  Eltrac
+ * License: MIT
+ */
+/* Index Banner */
+.index-banner {
+	width: 100%;
+	min-height: 50vh;
+	text-align: center;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+	background-color: #f1f1f1!important
+}
+.banner-mask {
+	width: 100%;
+	height: 100%;
+	background: rgba(30,30,30,.15);
+	z-index: 1;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center
+}
+.banner-content {
+	vertical-align: middle
+}
+.banner-content h1 {
+	margin-bottom: 0
+}
+.banner-content .header-meta {
+	margin-top: 11px
+}
+.banner-content:not(.banner-font-black) a,
+.banner-mask:not(.banner-font-black) a {
+	color: white
+}
+.banner-font-black,
+.banner-font-black a {
+	color: black!important;
+}
+
+/* Font Size */
+.post-content,
+.comment-content p,
+.banner-content,
+.nav-content {
+	font-size: 100%!important;
+}
+
+/* Footer */
+.footer-info {
+	background: #f0f0f0;
+	color: #000;
+	text-align: center;
+	margin: 0;
+	margin-top: 50px!important;
+	padding: 25px 10px;
+	line-height: 26px;
+	width: 100%;
+	font-size: 12px;
+	font-size: 15px;
+	line-height: 18px;
+}
+.footer-dark a {
+	color: #000
+}
+.footer-info a {
+	color: #1e1e1e;
+	text-decoration: none;
+	transition: opacity .2s;
+	display: inline!important
+}
+.footer-info a:hover {
+	opacity: .9
+}
+/* Shadow */
+.no-shadow {
+	box-shadow: 0 0 0 #000!important;
+	-webkit-box-shadow: 0 0 0 #000!important;
+	-moz-box-shadow: 0 0 0 #000!important;
+}
+/* Header Meta */
+.header-meta a {
+	color: #fff;
+	text-decoration: none
+}
+/* Pio Plugin */
+.pio-container .pio-dialog {
+	margin-bottom: -60px;
+	border-color: rgba(255,255,255,.9);
+	border-radius: 4px;
+	text-shadow: 0 0 1px #bababa;
+	border: none;
+	background: rgba(255,255,255,.9);
+	box-shadow: 1px 1px 5px #bababa;
+	-moz-box-shadow: 1px 1px 5px #bababa;
+	-webkit-box-shadow: 1px 1px 5px #bababa
+}
+.pio-container {
+	display: none
+}
+/* Bilibili iframe */
+iframe[src*="//player.bilibili.com/player.html"] {
+	width: 100%;
+	height: 150px;
+	position: relative
+}
+/* Live2D */
+#live2dcanvas {
+	display: none;
+	transition: all 0.3s;
+	z-index: 0!important
+}
+/* Animation Helper */
+.fadeout {
+	opacity: 0;
+}
+.fadein {
+	opacity: 1;
+}
+/*底部动画字符*/
+.anime-face {
+    animation: anime-face 5s infinite ease-in-out;
+    display: inline-block;
+    margin: 0 5px;
+}
+@-webkit-keyframes anime-face {
+    2%,24%,80% {
+        -webkit-transform: translate(0,1.5px) rotate(1.5deg);
+        transform: translate(0,1.5px) rotate(1.5deg)
+    }
+
+    4%,68%,98% {
+        -webkit-transform: translate(0,-1.5px) rotate(-.5deg);
+        transform: translate(0,-1.5px) rotate(-.5deg)
+    }
+
+    38%,6% {
+        -webkit-transform: translate(0,1.5px) rotate(-1.5deg);
+        transform: translate(0,1.5px) rotate(-1.5deg)
+    }
+
+    8%,86% {
+        -webkit-transform: translate(0,-1.5px) rotate(-1.5deg);
+        transform: translate(0,-1.5px) rotate(-1.5deg)
+    }
+
+    10%,72% {
+        -webkit-transform: translate(0,2.5px) rotate(1.5deg);
+        transform: translate(0,2.5px) rotate(1.5deg)
+    }
+
+    12%,64%,78%,96% {
+        -webkit-transform: translate(0,-.5px) rotate(1.5deg);
+        transform: translate(0,-.5px) rotate(1.5deg)
+    }
+
+    14%,54% {
+        -webkit-transform: translate(0,-1.5px) rotate(1.5deg);
+        transform: translate(0,-1.5px) rotate(1.5deg)
+    }
+
+    16% {
+        -webkit-transform: translate(0,-.5px) rotate(-1.5deg);
+        transform: translate(0,-.5px) rotate(-1.5deg)
+    }
+
+    18%,22% {
+        -webkit-transform: translate(0,.5px) rotate(-1.5deg);
+        transform: translate(0,.5px) rotate(-1.5deg)
+    }
+
+    20%,36%,46% {
+        -webkit-transform: translate(0,-1.5px) rotate(2.5deg);
+        transform: translate(0,-1.5px) rotate(2.5deg)
+    }
+
+    26%,50% {
+        -webkit-transform: translate(0,.5px) rotate(.5deg);
+        transform: translate(0,.5px) rotate(.5deg)
+    }
+
+    28% {
+        -webkit-transform: translate(0,.5px) rotate(1.5deg);
+        transform: translate(0,.5px) rotate(1.5deg)
+    }
+
+    30%,40%,62%,76%,88% {
+        -webkit-transform: translate(0,-.5px) rotate(2.5deg);
+        transform: translate(0,-.5px) rotate(2.5deg)
+    }
+
+    32%,34%,66% {
+        -webkit-transform: translate(0,1.5px) rotate(-.5deg);
+        transform: translate(0,1.5px) rotate(-.5deg)
+    }
+
+    42% {
+        -webkit-transform: translate(0,2.5px) rotate(-1.5deg);
+        transform: translate(0,2.5px) rotate(-1.5deg)
+    }
+
+    44%,70% {
+        -webkit-transform: translate(0,1.5px) rotate(.5deg);
+        transform: translate(0,1.5px) rotate(.5deg)
+    }
+
+    48%,74%,82% {
+        -webkit-transform: translate(0,-.5px) rotate(.5deg);
+        transform: translate(0,-.5px) rotate(.5deg)
+    }
+
+    52%,56%,60% {
+        -webkit-transform: translate(0,2.5px) rotate(2.5deg);
+        transform: translate(0,2.5px) rotate(2.5deg)
+    }
+
+    58% {
+        -webkit-transform: translate(0,.5px) rotate(2.5deg);
+        transform: translate(0,.5px) rotate(2.5deg)
+    }
+
+    84% {
+        -webkit-transform: translate(0,1.5px) rotate(2.5deg);
+        transform: translate(0,1.5px) rotate(2.5deg)
+    }
+
+    90% {
+        -webkit-transform: translate(0,2.5px) rotate(-.5deg);
+        transform: translate(0,2.5px) rotate(-.5deg)
+    }
+
+    92% {
+        -webkit-transform: translate(0,.5px) rotate(-.5deg);
+        transform: translate(0,.5px) rotate(-.5deg)
+    }
+
+    94% {
+        -webkit-transform: translate(0,2.5px) rotate(.5deg);
+        transform: translate(0,2.5px) rotate(.5deg)
+    }
+
+    0%,100% {
+        -webkit-transform: translate(0,0) rotate(0);
+        transform: translate(0,0) rotate(0)
+    }
+}
+
+@keyframes anime-face {
+    2%,24%,80% {
+        -webkit-transform: translate(0,1.5px) rotate(1.5deg);
+        transform: translate(0,1.5px) rotate(1.5deg)
+    }
+
+    4%,68%,98% {
+        -webkit-transform: translate(0,-1.5px) rotate(-.5deg);
+        transform: translate(0,-1.5px) rotate(-.5deg)
+    }
+
+    38%,6% {
+        -webkit-transform: translate(0,1.5px) rotate(-1.5deg);
+        transform: translate(0,1.5px) rotate(-1.5deg)
+    }
+
+    8%,86% {
+        -webkit-transform: translate(0,-1.5px) rotate(-1.5deg);
+        transform: translate(0,-1.5px) rotate(-1.5deg)
+    }
+
+    10%,72% {
+        -webkit-transform: translate(0,2.5px) rotate(1.5deg);
+        transform: translate(0,2.5px) rotate(1.5deg)
+    }
+
+    12%,64%,78%,96% {
+        -webkit-transform: translate(0,-.5px) rotate(1.5deg);
+        transform: translate(0,-.5px) rotate(1.5deg)
+    }
+
+    14%,54% {
+        -webkit-transform: translate(0,-1.5px) rotate(1.5deg);
+        transform: translate(0,-1.5px) rotate(1.5deg)
+    }
+
+    16% {
+        -webkit-transform: translate(0,-.5px) rotate(-1.5deg);
+        transform: translate(0,-.5px) rotate(-1.5deg)
+    }
+
+    18%,22% {
+        -webkit-transform: translate(0,.5px) rotate(-1.5deg);
+        transform: translate(0,.5px) rotate(-1.5deg)
+    }
+
+    20%,36%,46% {
+        -webkit-transform: translate(0,-1.5px) rotate(2.5deg);
+        transform: translate(0,-1.5px) rotate(2.5deg)
+    }
+
+    26%,50% {
+        -webkit-transform: translate(0,.5px) rotate(.5deg);
+        transform: translate(0,.5px) rotate(.5deg)
+    }
+
+    28% {
+        -webkit-transform: translate(0,.5px) rotate(1.5deg);
+        transform: translate(0,.5px) rotate(1.5deg)
+    }
+
+    30%,40%,62%,76%,88% {
+        -webkit-transform: translate(0,-.5px) rotate(2.5deg);
+        transform: translate(0,-.5px) rotate(2.5deg)
+    }
+
+    32%,34%,66% {
+        -webkit-transform: translate(0,1.5px) rotate(-.5deg);
+        transform: translate(0,1.5px) rotate(-.5deg)
+    }
+
+    42% {
+        -webkit-transform: translate(0,2.5px) rotate(-1.5deg);
+        transform: translate(0,2.5px) rotate(-1.5deg)
+    }
+
+    44%,70% {
+        -webkit-transform: translate(0,1.5px) rotate(.5deg);
+        transform: translate(0,1.5px) rotate(.5deg)
+    }
+
+    48%,74%,82% {
+        -webkit-transform: translate(0,-.5px) rotate(.5deg);
+        transform: translate(0,-.5px) rotate(.5deg)
+    }
+
+    52%,56%,60% {
+        -webkit-transform: translate(0,2.5px) rotate(2.5deg);
+        transform: translate(0,2.5px) rotate(2.5deg)
+    }
+
+    58% {
+        -webkit-transform: translate(0,.5px) rotate(2.5deg);
+        transform: translate(0,.5px) rotate(2.5deg)
+    }
+
+    84% {
+        -webkit-transform: translate(0,1.5px) rotate(2.5deg);
+        transform: translate(0,1.5px) rotate(2.5deg)
+    }
+
+    90% {
+        -webkit-transform: translate(0,2.5px) rotate(-.5deg);
+        transform: translate(0,2.5px) rotate(-.5deg)
+    }
+
+    92% {
+        -webkit-transform: translate(0,.5px) rotate(-.5deg);
+        transform: translate(0,.5px) rotate(-.5deg)
+    }
+
+    94% {
+        -webkit-transform: translate(0,2.5px) rotate(.5deg);
+        transform: translate(0,2.5px) rotate(.5deg)
+    }
+
+    0%,100% {
+        -webkit-transform: translate(0,0) rotate(0);
+        transform: translate(0,0) rotate(0)
+    }
+}
