@@ -7,14 +7,18 @@
 <a href="https://typecho.org"><img src="https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square"></a> 
 <a href="https://github.com/BigCoke233/miracles/releases"><img src="https://img.shields.io/github/v/release/BigCoke233/miracles?color=red&style=flat-square"></a> 
 <a href="https://github.com/BigCoke233/miracles/graphs/contributors"><img src="https://img.shields.io/github/contributors/BigCoke233/miracles?color=orange&style=flat-square"></a> 
-    
+
 <p align="center"><strong>记录你心中的奇迹，书写你自己的篇章</strong></p>
 
 ---
 
-> **使用主题时，如果需要任何基础功能上的帮助，请先查看[说明文档](docs/wiki.md)！**  
-> 同时，欢迎加入 QQ 交流群：924171480，或者 [Telegram](https://dev.guhub.cn/tg)  
-> 2020/5/28 重要更改：Miracles 主题开源协议[增加条款](https://github.com/BigCoke233/miracles/commit/626b5aec42c58ba8defdcb2530dcb2a9b73cbfb1)，禁止将项目用作任何政治相关用途
+## 停更说明
+
+Miracles 目前已经停止更新，正在着手开发新的主题，可以当作 Miracles 的第二代版本 —— **Miracle!**，除非有严重的 bug，这个版本基本是不会再维护了。
+
+如果你喜欢这个主题，你可以给我点一个 star，或者支持一下新的 Miracle!，不过这是一款付费的主题，继承了 Miracles 的设计风格，标准版价格是 44 元，详细信息可以看：https://blog.guhub.cn/p/miracle-on-sale.html
+
+---
 
 ## 🎨 特色
 
