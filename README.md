@@ -187,7 +187,7 @@ $ git clone https://github.com/BigCoke233/miracles.git
 
 ## 🔮 相关
 
-演示站点：[我的博客](https://guhub.cn)  
+演示站点：~~[我的博客](https://guhub.cn)~~（博客是第二代版本）  
 介绍文章：[Miracles —— 生为奇迹](https://guhub.cn/p/miracles.html)  
 说明文档：[Wiki.md](docs/wiki.md) | [Notion(被墙了,故停止维护)](https://www.notion.so/eltrac/c7c631e21b3345caa2a09bd2fb5dd4b2)   
 更新日志：[change-log.md](docs/change-log.md)  
