@@ -14,9 +14,9 @@
 
 ## 停更说明
 
-Miracles 目前已经停止更新，正在着手开发新的主题，可以当作 Miracles 的第二代版本 —— **Miracle!**，除非有严重的 bug，这个版本基本是不会再维护了。
+Miracles 目前已经停止更新，除非有严重的 bug，这个版本基本是不会再维护了。
 
-如果你喜欢这个主题，你可以给我点一个 star，或者支持一下新的 Miracle!，不过这是一款付费的主题，继承了 Miracles 的设计风格，标准版价格是 44 元，详细信息可以看：https://blog.guhub.cn/p/miracle-on-sale.html
+如果你感兴趣的话，可以支持一下我的[新主题 Matcha](https://github.com/BigCoke233/matcha)。
 
 ---
 
