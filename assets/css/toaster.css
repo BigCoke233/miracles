@@ -1,0 +1,121 @@
+/**
+ * Toaster.css
+ * 
+ * Repository: https://github.com/BigCoke233/toaster.js
+ * Version: 0.1
+ */
+
+ @charset 'utf-8';
+
+ .toaster {
+     position: fixed;
+     transition-property: top, bottom, left, right, transform;
+     transition: .3s;
+     font-size: 16px;
+     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+     line-height: 1.5;
+     word-break: break-all;
+     overflow: hidden;
+     z-index: 20220819;
+     user-select: none;
+ 
+     max-width: 25vw;
+     color: #fff;
+     padding: 1em 1.3em;
+     border-radius: 2px;
+     box-shadow: 0.2em 0 .5em rgba(0,0,0,.06);
+     cursor: pointer
+ }
+ 
+ .toaster-right-top,
+ .toaster-left-top {
+     top: -6em;
+ }
+ .toaster-right-bottom,
+ .toaster-right-top {
+     right: 1em;
+ }
+ .toaster-right-bottom,
+ .toaster-left-bottom {
+     bottom: -6em;
+ }
+ .toaster-left-bottom,
+ .toaster-left-top {
+     left: 1em;
+ }
+ .toaster-center {
+     top: auto;
+     bottom: auto;
+     left: auto;
+     right: auto;
+     opacity: 0;
+     transform: scale(0);
+     transition: .3s
+ }
+ 
+ .toaster-right-top.toasting,
+ .toaster-right-top.toast-dismissed,
+ .toaster-left-top.toasting,
+ .toaster-left-top.toast-dismissed {
+     top: 1em
+ }
+ .toaster-right-bottom.toasting,
+ .toaster-right-bottom.toast-dismissed,
+ .toaster-left-bottom.toasting,
+ .toaster-left-bottom.toast-dismissed {
+     bottom: 1em
+ }
+ 
+ .toaster-left-top.toast-dismissed,
+ .toaster-left-bottom.toast-dismissed,
+ .toaster-right-top.toast-dismissed,
+ .toaster-right-bottom.toast-dismissed {
+     transition: .6s;
+     animation: fadeOut .4s;
+ }
+ .toaster-right-top.toast-dismissed,
+ .toaster-right-bottom.toast-dismissed {
+     transform: translateX(30vw);
+ }
+ .toaster-left-top.toast-dismissed,
+ .toaster-left-bottom.toast-dismissed {
+     transform: translateX(-30vw);
+ }
+ .toaster-center.toasting {
+     opacity: 1;
+     transform: scale(1);
+ }
+ @media(max-width: 768px){
+     .toaster-right-top.toast-dismissed,
+     .toaster-left-top.toast-dismissed {
+         transition: .8s;
+         transform: translateX(0);
+         transform: translateY(-50vh);
+     }
+     .toaster-left-bottom.toast-dismissed,
+     .toaster-right-bottom.toast-dismissed {
+         transition: .8s;
+         transform: translateX(0);
+         transform: translateY(50vh);
+     }
+     .toaster {
+         left: 0;
+         right: 0;
+         width: 100vw;
+         max-width: 100vw
+     }
+     .toaster-left-top.toasting,
+     .toaster-right-top.toasting {
+         top: 0
+     }
+     .toaster-left-bottom.toasting,
+     .toaster-right-bottom.toasting {
+         bottom: 0;
+     }
+ }
+ 
+ @keyframes fadeOut {
+     0% { opacity: 1 }
+     10% { opacity: 1 }
+     100% { opacity: 0 }
+ }
