@@ -48,7 +48,7 @@ $GLOBALS['footerTexts'] = array(
 //頁眉
 $GLOBALS['headerTexts'] = array(
     "loginAlready" => "你已經登陸了",
-    "loginAlreadyInfo" => "不過康納很樂意再次見到 %s 呢～",
+    "loginAlreadyInfo" => "不過很樂意再次見到 %s～",
     "loginAdminEntrance" => "進入後台",
     "loginTitle" => "登錄後台",
     "loginUsername" => "請輸入用戶名",
