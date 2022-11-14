@@ -24,6 +24,9 @@ $this->need('includes/header.php');
 		  <?php endif;?>
 		  <?php $this->content(); ?>
 		</div>
+		<div class="post-footer"><!-- Post Footer -->
+		  <span class="post-tags"><i class="iconfont icon-tags"></i> <?php $this->tags(' ', true, gt('postTexts','post_tag')); ?></span>
+		</div>
 	  </div>
 <?php $this->need('includes/comments.php'); ?>
 	</main>
