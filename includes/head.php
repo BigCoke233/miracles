@@ -33,7 +33,7 @@ if($GLOBALS['miraclesIfCompressHTML']=='on') ob_start(); //ob 截取开始 ?>
     <meta name="twitter:title" content="<?php Contents::title($this); ?>" />
     <meta name="twitter:description" content="<?php if($description != '') echo $description; else $this->excerpt(50); ?>" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:image" content="<?php if($this->is('post') || $this->is('page')){$this->fields->banner();}
+    <meta name="twitter:image" content="<?php if(($this->is('post') || $this->is('page')) && $this->fields->banner!=''){$this->fields->banner();}
 	else{
 		if(empty($this->options->bannerUrl)):
 			echo Utils::indexTheme('favicon.ico');
