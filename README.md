@@ -14,7 +14,9 @@
 
 ## 停更说明
 
-Miracles 目前已经停止更新，除非有严重的 bug，这个版本基本是不会再维护了。
+~~Miracles 目前已经停止更新，除非有严重的 bug，这个版本基本是不会再维护了。~~
+
+**2022/11/14 更新说明**：因为发现还有人用所以就稍微更新了一下，但没有发布正式版。主要内容是修复 bug 和移除一些不必要的功能，同时替换了 Alertify，使用 [Toaster](https://github.com/BigCoke233/toaster.js)
 
 如果你感兴趣的话，可以支持一下我的[新主题 Matcha](https://github.com/BigCoke233/matcha)。
 
@@ -165,7 +167,8 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - [gazeimg](https://github.com/ganxiaozhe/gazeimg) - 图片懒加载 & 灯箱
 - [details-element-polyfill](https://github.com/javan/details-element-polyfill) - 优化 details 标签兼容性
 - [hint.css](https://kushagra.dev/lab/hint/) - 工具提示 Tooltip
-- [alertify](https://github.com/MohammadYounes/AlertifyJS) - 对话框和 snackbar(notifier)
+- [toaster.js](https://github.com/BigCoke233/toaster.js/) - Toast 提示框
+~~- [alertify](https://github.com/MohammadYounes/AlertifyJS) - 对话框和 snackbar(notifier)~~
 - [TableContents](https://github.com/lutdev/table-contents) - 生成文章目录
 - ~~[LazyLoad](https://github.com/tuupola/lazyload) - 图片懒加载~~（开发版已用新的方案替换）
 - ~~[FancyBox](https://github.com/fancyapps/fancybox) - 文章图片灯箱~~（开发版已用新的方案替换）
