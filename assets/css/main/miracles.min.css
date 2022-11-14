@@ -29,7 +29,7 @@
 
 /* Varriable */
 :root {
-	--shadow-color: rgb(190,190,190);
+	--shadow-color: rgba(0,0,0,0.2);
 	scroll-behavior: smooth; /* 平滑滚动 */
 }
 
