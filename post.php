@@ -24,18 +24,6 @@ $this->need('includes/header.php');
 		  <?php endif;?>
 		  <?php $this->content(); ?>
 		</div>
-		<div class="post-qr" id="post-qr">
-		</div>
-		<div class="post-footer"><!-- Post Footer -->
-		  <div class="post-share"><?php gtecho('postTexts','post_share'); ?>
-            <button class="social-share qrcode" id="post-qrcode-btn"><i class="iconfont icon-qr_code"></i></button>
-		    <a class="social-share qq hint--bottom"  target="_blank" href="https://connect.qq.com/widget/shareqq/index.html?url=<?php $this->permalink() ?>&title=<?php $this->title() ?>&summary=<?php $this->excerpt(100); ?>" data-tooltip="QQ"><i class="iconfont icon-qq1-copy"></i></a>
-		    <a class="social-share weibo hint--bottom"  target="_blank" href="http://service.weibo.com/share/share.php?url=<?php $this->permalink() ?>/&appkey=<?php $this->options->title(); ?>/&title=<?php $this->title() ?>" data-tooltip="Weibo"><i class="iconfont icon-weibo-copy"></i></a>
-		    <a class="social-share twitter hint--bottom"  target="_blank" href="https://twitter.com/intent/tweet?text=<?php $this->excerpt(100); ?>&amp;url=<?php $this->permalink() ?>" data-tooltip="Twitter"><i class="iconfont icon-twitter-copy"></i></a>
-            <a class="social-share copyright" onclick="alertify.alert('<?php gtecho('otherTexts','copyrightAlertTitle'); ?>', '<?php gtaecho('otherTexts','copyrightAlert', $this->permalink); ?>')"><i class="iconfont icon-info1"></i></a>
-		  </div>
-		  <span class="post-tags"><i class="iconfont icon-tags"></i> <?php $this->tags(' ', true, gt('postTexts','post_tag')); ?></span>
-		</div>
 	  </div>
 <?php $this->need('includes/comments.php'); ?>
 	</main>

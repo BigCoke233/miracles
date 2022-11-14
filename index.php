@@ -1,11 +1,11 @@
 <?php
 /**
- * Born to be the Miracles. 生为奇迹
+ * The miraculous things you hold.
  * 作者：<a href="https://guhub.cn">Eltrac</a> | 帮助文档：<a href="https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md">Wiki</a>
  * 
  * @package     Miracles
  * @author      Eltrac
- * @version     1.5.5
+ * @version     2.0.0
  * @link        https://guhub.cn
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
