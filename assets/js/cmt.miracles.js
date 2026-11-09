@@ -125,10 +125,8 @@ var MiraclesComment = {
     //如果成功
     if ($('.comment-waiting').length>0) {
       alertSend('评论提交成功，正在等待审核！', 'success');
-	  LazyLoad();//防止 owo 表情懒加载失效
     }else{
       alertSend('评论提交成功！', 'success');
-	  LazyLoad();//防止 owo 表情懒加载失效
     } 
     //清空被回复 ID
     dataTmp.comments.replyTo = '';
