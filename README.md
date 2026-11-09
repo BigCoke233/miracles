@@ -1,17 +1,17 @@
+> [!important]
+> 本项目已经近六年未更新，尚未兼容最新的、修复了 PHP2Shell 漏洞的 PHP 版本。新版本将在一两个月内发布，目前不建议使用最新发行版，可以临时使用 `master` 分支中的最新开发版。
+
 <div align="center">
 
 # Miracles
 
-> [!important]
-> 本项目已经近六年未更新，尚未兼容最新的、修复了 PHP2Shell 漏洞的 PHP 版本。新版本将在一两个月内发布，目前不建议使用最新发行版，可以临时使用 `master` 分支中的最新开发版。
-
 <img src="https://img.shields.io/badge/made%20with-%E2%9D%A4-ff69b4.svg?style=flat-square"> 
-<a href="LICENSE"><img src="https://img.shields.io/badge/license-AGPL-v3-blue.svg?style=flat-square"></a> 
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-AGPLv3-blue.svg?style=flat-square"></a> 
 <a href="https://typecho.org"><img src="https://img.shields.io/badge/for-Typecho-blueviolet.svg?style=flat-square"></a> 
 <a href="https://github.com/BigCoke233/miracles/releases"><img src="https://img.shields.io/github/v/release/BigCoke233/miracles?color=red&style=flat-square"></a> 
 <a href="https://github.com/BigCoke233/miracles/graphs/contributors"><img src="https://img.shields.io/github/contributors/BigCoke233/miracles?color=orange&style=flat-square"></a> 
 
-<p align="center"><strong>Hand-crafted since 2019</strong>
+<p align="center">🖐️ <strong>Hand-crafted since 2019</strong>
 
 </div>
 
