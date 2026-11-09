@@ -20,7 +20,7 @@ $this->need('includes/header.php');
 		  </div>
 		  <div class="about-social"><!-- 社交按钮 -->
 		    <?php if($this->fields->github==!''): ?>
-			<a href="https://github.com/<?php echo $this->fields->github(); ?>" target="_blank" title="<?php gtecho('aboutPageTexts','aboutShareGitHub'); ?>"><i class="iconfont icon-github"></i></a>
+			<a href="https://github.com/<?php echo $this->fields->github(); ?>" target="_blank" title="<?php gtecho('aboutPageTexts','aboutShareGithub'); ?>"><i class="iconfont icon-github"></i></a>
 			<?php endif; ?>
 			<?php if($this->fields->qq==!''): ?>
 			<a href="tencent://Message/?Uin=<?php echo $this->fields->qq(); ?>&amp;websiteName=q-zone.qq.com&amp;Menu=yes" target="_blank" title="<?php gtecho('aboutPageTexts','aboutShareQQ'); ?>"><i class="iconfont icon-qq1"></i></a>
