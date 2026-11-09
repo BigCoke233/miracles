@@ -83,10 +83,10 @@ $ git clone https://github.com/BigCoke233/miracles.git
 - [Pangu.js](https://github.com/vinta/pangu.js) -分割中英文字符
 - [Normalize.css](http://necolas.github.io/normalize.css/) - 保证不同浏览器上各元素 css 默认效果相同
 - [qrcode.js](https://github.com/davidshimjs/qrcodejs) - 生成文章二维码
-- [gazeimg](https://github.com/ganxiaozhe/gazeimg) - 图片懒加载 & 灯箱
 - [details-element-polyfill](https://github.com/javan/details-element-polyfill) - 优化 details 标签兼容性
 - [hint.css](https://kushagra.dev/lab/hint/) - 工具提示 Tooltip
 - [toaster.js](https://github.com/BigCoke233/toaster.js/) - Toast 提示框
+- [libra.js](https://codeberg.org/eltrac/libra) - 图片灯箱
 - [TableContents](https://github.com/lutdev/table-contents) - 生成文章目录
 
 ### 贡献者

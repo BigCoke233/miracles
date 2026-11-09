@@ -53,6 +53,13 @@
 	if($this->options->customCDN): $custom=$this->options->customCDN; else: $custom=Helper::options()->themeUrl("","Miracles"); endif;
 	Utils::addRequires($js_files,"js",$this->options->CDN,$custom);
 	?>
+
+    <!-- Load libra.js (lightbox) -->
+    <script type="module">
+        import LightBox from '<?php Utils::indexTheme('assets/js/libra.min.js') ?>';
+        new LightBox();
+    </script>
+
 	<!-- JavaScript -->
 	<!--<nocompress>--><script>
 	<?php if($this->options->build_time)echo "startTime(\"".$this->options->build_time."\");" ?>
