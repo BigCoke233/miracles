@@ -14,7 +14,7 @@ $this->need('includes/header.php');
 			  <div class="col-md-6 post-banner-box">
 			    <a href="<?php $this->permalink(); ?>" class="post-link">
 			      <div class="post-banner">
-				    <img src="<?php echo Utils::addLoadingImages($this->options->CDN, $this->options->loading_image, 'normal'); ?>" data-gisrc="<?php Utils::postBanner($this); ?>">
+				    <img src="<?php Utils::postBanner($this); ?>" loading="lazy">
 				  </div>
 				</a>
 			  </div>
