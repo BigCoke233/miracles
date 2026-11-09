@@ -37,6 +37,20 @@ function themeInit($archive) {
     $GLOBALS['miraclesOptions_randomBanner'] = Helper::options()->randomBanner;
     $GLOBALS['miraclesOptions_CDN'] = Helper::options()->CDN;
     $GLOBALS['miraclesOptions_loading_image'] = Helper::options()->loading_image;
+
+    // 适配 Typecho v1.3.0 的补丁
+    if ($archive->is('single') && !$archive->is('index') && !$archive->hidden) {
+        $content = $archive->content;
+        // 上方通过 Tyepcho_Plugin 注册的 ContentEx 和 ExcerptEx 在 Typecho v1.3.0 失效
+        // 以下是临时补丁，在内容明显没有被解析的情况下再次执行解析
+        if (
+            strpos($content, 'data-libra') === false
+            && strpos($content, 'post-toc-link') === false
+        ) {
+            $archive->content = Contents::parseContent($content, $archive, null);
+        }
+    }
+
 }
 
 /**
