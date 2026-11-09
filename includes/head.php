@@ -40,7 +40,7 @@ if($GLOBALS['miraclesIfCompressHTML']=='on') ob_start(); //ob 截取开始 ?>
 		else:
 			$this->options->bannerUrl();
 	endif;}?>" />
-	<link rel="icon" id="icon" type="image/png" href="<?php if($this->options->favicon):$this->options->favicon();else:echo Utils::indexTheme('favicon.ico');endif;	?>" />
+	<link rel="icon" href="<?php if($this->options->favicon):$this->options->favicon();else:echo Utils::indexTheme('favicon.ico');endif;	?>" />
     <?php $this->header('generator=&pingback=&xmlrpc=&wlw=&commentReply=&description=&antiSpam='); ?>
 	<?php $this->options->headerEcho(); ?>
 	<!-- css -->
