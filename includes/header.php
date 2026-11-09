@@ -1,5 +1,5 @@
 <?php
-session_start();
+if(!isset($_SESSION)) session_start();
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 ?>
 <?php if($this->options->navStyle==1): ?><div class="mask" id="full-mask"></div><?php endif; ?>
