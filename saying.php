@@ -42,9 +42,10 @@ echo $commentClass;
 </div>
 <?php } ?>
     <main class="main-container container">
-	  <div class="saying-body">
+	  <div class="saying-body" role="comment" id="<?php $this->respondId(); ?>">
 	    <?php if($this->user->hasLogin()): ?>
 	    <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" class="saying-form" role="form">
+          <input type="hidden" name="_" value="<?php echo $this->security->getToken($this->request->getRequestUrl()); ?>">
           <p>
             <textarea rows="8" cols="50" name="text" id="textarea" placeholder="<?php gtecho('sayingPageTexts','sayingPlaceholder'); ?>" class="OwO-textarea comment-textarea textarea" required ><?php $this->remember('text'); ?></textarea>
           </p>
